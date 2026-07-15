@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="每日抓取、翻译并检索 arXiv 论文的个人中文阅读站。">
+    <title>ArXiv 中文日报</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>α</text></svg>">
+    <link rel="stylesheet" href="assets/styles.css">
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+    <script src="assets/app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="ArXiv 中文日报首页">
+        <span class="brand-mark" aria-hidden="true"><i data-lucide="book-open"></i></span>
+        <span>
+          <strong>ArXiv 中文日报</strong>
+          <small>PERSONAL RESEARCH FEED</small>
+        </span>
+      </a>
+
+      <form class="global-search" id="searchForm" role="search">
+        <i data-lucide="search" aria-hidden="true"></i>
+        <input id="searchInput" type="search" autocomplete="off" placeholder="搜索标题、摘要、作者或关键词">
+        <button class="icon-button search-submit" type="submit" title="搜索" aria-label="搜索">
+          <i data-lucide="arrow-right"></i>
+        </button>
+      </form>
+
+      <div class="top-actions">
+        <div class="sync-meta">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span id="syncText">正在读取数据</span>
+        </div>
+        <button class="icon-button mobile-filter-button" id="mobileFilterButton" type="button" title="筛选" aria-label="打开筛选">
+          <i data-lucide="list-filter"></i>
+        </button>
+        <button class="icon-button" id="settingsButton" type="button" title="设置" aria-label="打开设置">
+          <i data-lucide="settings-2"></i>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobile-backdrop" id="mobileBackdrop" hidden></div>
+
+    <div class="app-layout">
+      <aside class="sidebar" id="filterSidebar" aria-label="论文筛选">
+        <section class="sidebar-section date-section">
+          <div class="section-label">论文日期</div>
+          <div class="date-control">
+            <button class="icon-button compact" id="olderDateButton" type="button" title="前一日" aria-label="前一日">
+              <i data-lucide="chevron-left"></i>
+            </button>
+            <input id="datePicker" type="date" aria-label="选择论文日期">
+            <button class="icon-button compact" id="newerDateButton" type="button" title="后一日" aria-label="后一日">
+              <i data-lucide="chevron-right"></i>
+            </button>
+          </div>
+        </section>
+
+        <section class="sidebar-section">
+          <div class="section-heading">
+            <span class="section-label">研究领域</span>
+            <button class="text-button" id="clearCategoryButton" type="button">全部</button>
+          </div>
+          <nav class="category-list" id="categoryList" aria-label="研究领域"></nav>
+        </section>
+
+        <section class="sidebar-section">
+          <div class="section-label">关注关键词</div>
+          <div class="keyword-list" id="keywordList"></div>
+        </section>
+
+        <section class="sidebar-section source-section">
+          <div class="section-label">数据状态</div>
+          <dl class="source-stats">
+            <div><dt>当前日期</dt><dd id="dayPaperCount">0 篇</dd></div>
+            <div><dt>历史归档</dt><dd id="archivePaperCount">0 篇</dd></div>
+            <div><dt>摘要翻译</dt><dd id="translatedPaperCount">0 篇</dd></div>
+          </dl>
+          <a class="source-link" href="https://arxiv.org/" target="_blank" rel="noreferrer">
+            <span>数据来源 arXiv</span>
+            <i data-lucide="external-link"></i>
+          </a>
+        </section>
+      </aside>
+
+      <main class="main-content">
+        <div class="content-header">
+          <div>
+            <div class="title-line">
+              <h1 id="pageTitle">今日论文</h1>
+              <span class="demo-badge" id="demoBadge" hidden>演示数据</span>
+            </div>
+            <p id="resultSummary">正在加载论文数据</p>
+          </div>
+          <div class="segmented-control" id="scopeControl" aria-label="搜索范围">
+            <label>
+              <input type="radio" name="searchScope" value="day" checked>
+              <span>当前日期</span>
+            </label>
+            <label>
+              <input type="radio" name="searchScope" value="history">
+              <span>历史数据</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="active-filters" id="activeFilters" hidden></div>
+
+        <div class="history-progress" id="historyProgress" hidden>
+          <div><span>正在读取历史归档</span><strong id="historyProgressText">0/0</strong></div>
+          <progress id="historyProgressBar" value="0" max="1"></progress>
+        </div>
+
+        <section class="paper-list" id="paperList" aria-live="polite"></section>
+
+        <div class="empty-state" id="emptyState" hidden>
+          <i data-lucide="search-x"></i>
+          <h2>没有找到符合条件的论文</h2>
+          <button class="secondary-button" id="resetFiltersButton" type="button">
+            <i data-lucide="rotate-ccw"></i>
+            重置筛选
+          </button>
+        </div>
+
+        <div class="load-more-wrap" id="loadMoreWrap" hidden>
+          <button class="secondary-button" id="loadMoreButton" type="button">
+            <i data-lucide="chevrons-down"></i>
+            加载更多
+          </button>
+        </div>
+      </main>
+    </div>
+
+    <dialog class="settings-dialog" id="settingsDialog">
+      <form id="settingsForm">
+        <header class="dialog-header">
+          <div>
+            <span class="dialog-kicker">PERSONAL CONFIG</span>
+            <h2>自动化设置</h2>
+          </div>
+          <button class="icon-button" id="closeSettingsButton" type="button" title="关闭" aria-label="关闭设置">
+            <i data-lucide="x"></i>
+          </button>
+        </header>
+
+        <div class="dialog-body">
+          <section class="settings-section">
+            <div class="settings-section-title">
+              <i data-lucide="layers-3"></i>
+              <h3>研究领域</h3>
+            </div>
+            <div class="settings-category-grid" id="settingsCategoryGrid"></div>
+          </section>
+
+          <section class="settings-section">
+            <div class="settings-section-title">
+              <i data-lucide="tags"></i>
+              <h3>关键词</h3>
+            </div>
+            <label class="field-label" for="settingsKeywords">英文关键词，以逗号分隔</label>
+            <input class="text-input" id="settingsKeywords" type="text" autocomplete="off">
+            <div class="radio-row">
+              <label><input type="radio" name="keywordMode" value="highlight" checked> 仅标记</label>
+              <label><input type="radio" name="keywordMode" value="filter"> 抓取时过滤</label>
+            </div>
+          </section>
+
+          <section class="settings-section">
+            <div class="settings-section-title">
+              <i data-lucide="sparkles"></i>
+              <h3>AI 摘要翻译</h3>
+            </div>
+            <div class="field-grid">
+              <label>
+                <span class="field-label">OpenAI 兼容接口</span>
+                <input class="text-input" id="apiBaseInput" type="url" autocomplete="off">
+              </label>
+              <label>
+                <span class="field-label">模型</span>
+                <input class="text-input" id="modelInput" type="text" autocomplete="off">
+              </label>
+              <label>
+                <span class="field-label">目标语言</span>
+                <input class="text-input" id="targetLanguageInput" type="text" autocomplete="off">
+              </label>
+              <label>
+                <span class="field-label">Temperature</span>
+                <input class="text-input" id="temperatureInput" type="number" min="0" max="1" step="0.1">
+              </label>
+            </div>
+            <div class="secret-row">
+              <span><i data-lucide="key-round"></i> API 密钥</span>
+              <code>OPENAI_API_KEY</code>
+              <span class="secure-badge">GitHub Secret</span>
+            </div>
+          </section>
+        </div>
+
+        <footer class="dialog-footer">
+          <button class="secondary-button" id="exportSettingsButton" type="button">
+            <i data-lucide="download"></i>
+            导出配置
+          </button>
+          <button class="primary-button" type="submit">
+            <i data-lucide="save"></i>
+            保存设置
+          </button>
+        </footer>
+      </form>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" hidden></div>
+  </body>
+</html>
