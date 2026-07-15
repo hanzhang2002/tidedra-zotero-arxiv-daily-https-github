@@ -22,7 +22,7 @@
 
       <form class="global-search" id="searchForm" role="search">
         <i data-lucide="search" aria-hidden="true"></i>
-        <input id="searchInput" type="search" autocomplete="off" placeholder="搜索标题、摘要、作者或关键词">
+        <input id="searchInput" type="search" autocomplete="off" placeholder="搜索已收录论文的标题、摘要或作者">
         <button class="icon-button search-submit" type="submit" title="搜索" aria-label="搜索">
           <i data-lucide="arrow-right"></i>
         </button>
@@ -171,30 +171,11 @@
           <section class="settings-section">
             <div class="settings-section-title">
               <i data-lucide="sparkles"></i>
-              <h3>AI 摘要翻译</h3>
+              <h3>摘要翻译</h3>
             </div>
-            <div class="field-grid">
-              <label>
-                <span class="field-label">OpenAI 兼容接口</span>
-                <input class="text-input" id="apiBaseInput" type="url" autocomplete="off">
-              </label>
-              <label>
-                <span class="field-label">模型</span>
-                <input class="text-input" id="modelInput" type="text" autocomplete="off">
-              </label>
-              <label>
-                <span class="field-label">目标语言</span>
-                <input class="text-input" id="targetLanguageInput" type="text" autocomplete="off">
-              </label>
-              <label>
-                <span class="field-label">Temperature</span>
-                <input class="text-input" id="temperatureInput" type="number" min="0" max="1" step="0.1">
-              </label>
-            </div>
-            <div class="secret-row">
-              <span><i data-lucide="key-round"></i> API 密钥</span>
-              <code>OPENAI_API_KEY</code>
-              <span class="secure-badge">GitHub Secret</span>
+            <div class="translation-provider">
+              <i data-lucide="languages"></i>
+              <span>摘要翻译由 <strong>DeepSeek</strong> 模型完成</span>
             </div>
           </section>
         </div>

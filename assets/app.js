@@ -5,7 +5,7 @@ const PATHS = {
   month: (month) => `data/months/${month}.json`,
 };
 
-const STORAGE_KEY = "personal-arxiv-daily-settings-v2";
+const STORAGE_KEY = "personal-arxiv-daily-settings-v3";
 const PAGE_SIZE = 20;
 
 const state = {
@@ -22,7 +22,6 @@ const state = {
   searchQuery: "",
   searchScope: "day",
   visibleCount: PAGE_SIZE,
-  localAI: {},
 };
 
 const elements = {};
@@ -64,14 +63,14 @@ function cacheElements() {
     "activeFilters", "historyProgress", "historyProgressText", "historyProgressBar", "paperList",
     "emptyState", "resetFiltersButton", "loadMoreWrap", "loadMoreButton", "settingsDialog",
     "settingsForm", "closeSettingsButton", "settingsCategoryGrid", "settingsKeywords",
-    "apiBaseInput", "modelInput", "targetLanguageInput", "temperatureInput", "exportSettingsButton",
-    "toast",
+    "exportSettingsButton", "toast",
   ];
   for (const id of ids) elements[id] = document.getElementById(id);
 }
 
 function bindEvents() {
   elements.searchForm.addEventListener("submit", handleSearch);
+  elements.searchInput.addEventListener("input", handleSearchInput);
   elements.settingsButton.addEventListener("click", openSettings);
   elements.closeSettingsButton.addEventListener("click", () => elements.settingsDialog.close());
   elements.settingsDialog.addEventListener("click", handleDialogBackdropClick);
@@ -110,12 +109,10 @@ function applySavedSettings() {
     saved = {};
   }
   const research = state.config.research || {};
-  const ai = state.config.ai || {};
   state.automationCategories = saved.categories || research.categories || [];
   state.selectedCategories = new Set(state.automationCategories);
   state.keywords = saved.keywords || research.keywords || [];
   state.keywordMode = saved.keywordMode || research.keyword_mode || "highlight";
-  state.localAI = { ...ai, ...(saved.ai || {}) };
 }
 
 async function loadDay(date) {
@@ -171,6 +168,12 @@ async function handleSearch(event) {
   if (state.searchScope === "history") await loadHistory();
   render();
   closeMobileSidebar();
+}
+
+function handleSearchInput(event) {
+  state.searchQuery = event.target.value.trim();
+  state.visibleCount = PAGE_SIZE;
+  render();
 }
 
 async function handleScopeChange(event) {
@@ -297,15 +300,34 @@ function renderCategoryList() {
     for (const category of paper.categories || []) counts.set(category, (counts.get(category) || 0) + 1);
   }
   const available = state.config.available_categories || [];
-  elements.categoryList.innerHTML = available
-    .filter((item) => counts.has(item.code) || state.config.research.categories.includes(item.code))
-    .map((item) => `
-      <button class="category-button ${state.selectedCategories.has(item.code) ? "active" : ""}" type="button" data-category="${escapeAttribute(item.code)}">
-        <span class="category-name">${escapeHTML(item.name)} <small>${escapeHTML(item.code)}</small></span>
-        <span class="category-count">${counts.get(item.code) || 0}</span>
-      </button>
+  const visible = available.filter(
+    (item) => counts.has(item.code) || state.automationCategories.includes(item.code),
+  );
+  elements.categoryList.innerHTML = groupCategories(visible)
+    .map((group) => `
+      <section class="category-group">
+        <h3>${escapeHTML(group.name)}</h3>
+        <div class="category-group-items">
+          ${group.items.map((item) => `
+            <button class="category-button ${state.selectedCategories.has(item.code) ? "active" : ""}" type="button" data-category="${escapeAttribute(item.code)}">
+              <span class="category-name">${escapeHTML(item.name)} <small>${escapeHTML(item.code)}</small></span>
+              <span class="category-count">${counts.get(item.code) || 0}</span>
+            </button>
+          `).join("")}
+        </div>
+      </section>
     `)
     .join("");
+}
+
+function groupCategories(categories) {
+  const groups = new Map();
+  for (const item of categories) {
+    const group = item.group || "其他";
+    if (!groups.has(group)) groups.set(group, []);
+    groups.get(group).push(item);
+  }
+  return [...groups].map(([name, items]) => ({ name, items }));
 }
 
 function renderKeywords() {
@@ -318,8 +340,10 @@ function renderActiveFilters() {
   const chips = [];
   if (state.searchQuery) chips.push(`搜索：${escapeHTML(state.searchQuery)}`);
   if (state.selectedCategories.size) {
-    const names = [...state.selectedCategories].map(categoryName).join("、");
-    chips.push(`领域：${escapeHTML(names)}`);
+    const selectedGroups = new Set(
+      [...state.selectedCategories].map(categoryGroup),
+    );
+    chips.push(`领域：${escapeHTML([...selectedGroups].join("、"))}（${state.selectedCategories.size} 项）`);
   }
   if (state.searchScope === "history") chips.push("范围：历史数据");
   elements.activeFilters.innerHTML = chips.map((chip) => `<span class="filter-chip">${chip}</span>`).join("");
@@ -328,6 +352,10 @@ function renderActiveFilters() {
 
 function categoryName(code) {
   return state.config.available_categories.find((item) => item.code === code)?.name || code;
+}
+
+function categoryGroup(code) {
+  return state.config.available_categories.find((item) => item.code === code)?.group || categoryName(code);
 }
 
 function renderPapers() {
@@ -401,19 +429,24 @@ function updateGlobalMeta() {
 }
 
 function populateSettingsDialog() {
-  elements.settingsCategoryGrid.innerHTML = (state.config.available_categories || []).map((item) => `
-    <label>
-      <input type="checkbox" name="settingsCategory" value="${escapeAttribute(item.code)}" ${state.automationCategories.includes(item.code) ? "checked" : ""}>
-      <span>${escapeHTML(item.name)}<br><small>${escapeHTML(item.code)}</small></span>
-    </label>
-  `).join("");
+  elements.settingsCategoryGrid.innerHTML = groupCategories(state.config.available_categories || [])
+    .map((group) => `
+      <fieldset class="settings-category-group">
+        <legend>${escapeHTML(group.name)}</legend>
+        <div class="settings-category-options">
+          ${group.items.map((item) => `
+            <label>
+              <input type="checkbox" name="settingsCategory" value="${escapeAttribute(item.code)}" ${state.automationCategories.includes(item.code) ? "checked" : ""}>
+              <span>${escapeHTML(item.name)}<br><small>${escapeHTML(item.code)}</small></span>
+            </label>
+          `).join("")}
+        </div>
+      </fieldset>
+    `)
+    .join("");
   elements.settingsKeywords.value = state.keywords.join(", ");
   const keywordRadio = elements.settingsForm.querySelector(`input[name="keywordMode"][value="${state.keywordMode}"]`);
   if (keywordRadio) keywordRadio.checked = true;
-  elements.apiBaseInput.value = state.localAI.api_base || "";
-  elements.modelInput.value = state.localAI.model || "";
-  elements.targetLanguageInput.value = state.localAI.target_language || "简体中文";
-  elements.temperatureInput.value = state.localAI.temperature ?? 0.2;
   refreshIcons();
 }
 
@@ -434,13 +467,6 @@ function collectSettings() {
     categories,
     keywords,
     keywordMode,
-    ai: {
-      ...state.localAI,
-      api_base: elements.apiBaseInput.value.trim(),
-      model: elements.modelInput.value.trim(),
-      target_language: elements.targetLanguageInput.value.trim(),
-      temperature: Number(elements.temperatureInput.value || 0.2),
-    },
   };
 }
 
@@ -455,7 +481,6 @@ function saveSettings(event) {
   state.selectedCategories = new Set(settings.categories);
   state.keywords = settings.keywords;
   state.keywordMode = settings.keywordMode;
-  state.localAI = settings.ai;
   localStorage.setItem(STORAGE_KEY, JSON.stringify(settings));
   elements.settingsDialog.close();
   state.visibleCount = PAGE_SIZE;
@@ -473,7 +498,6 @@ function exportSettings() {
   exported.research.categories = settings.categories;
   exported.research.keywords = settings.keywords;
   exported.research.keyword_mode = settings.keywordMode;
-  exported.ai = { ...exported.ai, ...settings.ai };
   const blob = new Blob([`${JSON.stringify(exported, null, 2)}\n`], { type: "application/json;charset=utf-8" });
   const url = URL.createObjectURL(blob);
   const anchor = document.createElement("a");

@@ -301,6 +301,18 @@ a {
 
 .category-list {
   display: grid;
+  gap: 16px;
+}
+
+.category-group h3 {
+  margin: 0 0 5px;
+  color: #747d77;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.category-group-items {
+  display: grid;
   gap: 4px;
 }
 
@@ -878,11 +890,30 @@ button.keyword-chip {
 
 .settings-category-grid {
   display: grid;
+  gap: 17px;
+}
+
+.settings-category-group {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.settings-category-group legend {
+  margin-bottom: 8px;
+  color: var(--ink-soft);
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.settings-category-options {
+  display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
 }
 
-.settings-category-grid label {
+.settings-category-options label {
   display: flex;
   gap: 8px;
   align-items: center;
@@ -895,13 +926,13 @@ button.keyword-chip {
   background: var(--surface-muted);
 }
 
-.settings-category-grid label:has(input:checked) {
+.settings-category-options label:has(input:checked) {
   border-color: #a9c8b5;
   color: #0d5c3b;
   background: var(--green-soft);
 }
 
-.settings-category-grid input,
+.settings-category-options input,
 .radio-row input {
   accent-color: var(--green);
 }
@@ -944,49 +975,19 @@ button.keyword-chip {
   align-items: center;
 }
 
-.field-grid {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 14px;
-}
-
-.secret-row {
+.translation-provider {
   display: flex;
-  flex-wrap: wrap;
   gap: 9px;
   align-items: center;
-  margin-top: 16px;
-  padding: 11px 12px;
-  border: 1px solid #bdd1c5;
-  border-radius: 6px;
-  font-size: 12px;
-  background: var(--green-soft);
+  min-height: 36px;
+  color: var(--ink-soft);
+  font-size: 13px;
 }
 
-.secret-row > span:first-child {
-  display: inline-flex;
-  gap: 6px;
-  align-items: center;
+.translation-provider svg {
+  width: 18px;
+  height: 18px;
   color: var(--green);
-  font-weight: 700;
-}
-
-.secret-row svg {
-  width: 15px;
-  height: 15px;
-}
-
-.secret-row code {
-  padding: 3px 6px;
-  border-radius: 4px;
-  background: rgb(255 255 255 / 70%);
-}
-
-.secure-badge {
-  margin-left: auto;
-  color: var(--green);
-  font-size: 10px;
-  font-weight: 800;
 }
 
 .toast {
@@ -1132,8 +1133,7 @@ button.keyword-chip {
     font-size: 13px;
   }
 
-  .settings-category-grid,
-  .field-grid {
+  .settings-category-options {
     grid-template-columns: 1fr;
   }
 

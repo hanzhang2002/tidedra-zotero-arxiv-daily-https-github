@@ -1,17 +1,27 @@
 # ArXiv 中文日报
 
-面向单人使用的静态 arXiv 论文阅读站。GitHub Actions 定时抓取指定领域的新论文，通过 OpenAI 兼容接口翻译标题和完整摘要，并把按日、按月归档的 JSON 数据提交到仓库；GitHub Pages 负责展示中文主页和历史检索。
+面向单人使用的静态 arXiv 论文阅读站。GitHub Actions 定时抓取指定领域的新论文，通过 DeepSeek 翻译标题和完整摘要，并把按日、按月归档的 JSON 数据提交到仓库；GitHub Pages 负责展示中文主页和历史检索。
 
 ## 已实现
 
 - 按 arXiv 分类抓取论文，支持交叉分类
 - 自定义英文关键词，可选择仅标记或抓取时过滤
-- OpenAI 兼容翻译接口，默认配置为 DeepSeek
+- DeepSeek 自动翻译标题和完整摘要
 - 中文标题与完整摘要，保留英文标题、原摘要、PDF 和 arXiv 链接
 - 按日期浏览、领域筛选、当前日期搜索和历史归档搜索
 - 按日及按月保存数据，自动去重并复用已有翻译
 - GitHub Actions 工作日定时更新，GitHub Pages 自动部署
-- 网页设置保存在浏览器，并可导出为 `settings.json`
+- 网页可设置领域和关键词，配置保存在浏览器并可导出为 `settings.json`
+
+## arXiv 领域分类
+
+领域编号来自 [arXiv Category Taxonomy](https://arxiv.org/category_taxonomy)，不是自定义论文标签。默认关注范围以统计学为主：
+
+- 统计学：`stat.AP`、`stat.CO`、`stat.ME`、`stat.ML`、`stat.OT`、`stat.TH`
+- 数学：`math.PR`、`math.OC`、`math.NA`，并提供组合数学和动力系统作为可选类别
+- 数据与计算：从 arXiv Computer Science 中整理 `cs.DB`、`cs.LG`、`cs.IR` 等数据相关类别
+
+arXiv 没有单独的 “Big Data” 顶层分区，因此“数据与计算”是本站对官方类别的导航分组；每篇论文仍保留原始 arXiv 分类编号。`stat.TH` 是官方对 `math.ST` 的别名，本站只列一次以避免重复。
 
 ## 本地预览
 
@@ -62,7 +72,7 @@ python scripts/update_papers.py --date 2026-07-14 --no-translate
 
 API Key 不应写入配置文件或前端，只由 GitHub Secret `OPENAI_API_KEY` 提供。
 
-网页设置面板可以修改领域、关键词、接口地址和模型名。“保存到本机”只影响当前浏览器；“导出配置”会下载完整 `settings.json`；“编辑 GitHub 配置”会打开仓库中的实际配置文件，提交后下一次 GitHub Action 就会采用新配置。
+网页设置面板只提供领域和关键词配置，不暴露模型接口或密钥。“保存到本机”只影响当前浏览器；“导出配置”会下载完整 `settings.json`；“打开 GitHub 配置”会进入仓库中的实际配置文件，提交后下一次 GitHub Action 就会采用新配置。
 
 ## 数据结构
 

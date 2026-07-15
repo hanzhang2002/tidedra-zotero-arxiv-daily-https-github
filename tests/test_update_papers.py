@@ -43,6 +43,26 @@ SAMPLE_FEED = b"""<?xml version="1.0" encoding="UTF-8"?>
 
 
 class UpdatePapersTests(unittest.TestCase):
+    def test_config_uses_official_statistics_categories(self):
+        config = json.loads(Path("config/settings.json").read_text(encoding="utf-8"))
+        categories = {item["code"]: item for item in config["available_categories"]}
+        statistics_codes = {"stat.AP", "stat.CO", "stat.ME", "stat.ML", "stat.OT", "stat.TH"}
+
+        self.assertTrue(statistics_codes.issubset(config["research"]["categories"]))
+        self.assertTrue(statistics_codes.issubset(categories))
+        self.assertTrue(all(categories[code]["group"] == "统计学" for code in statistics_codes))
+        self.assertEqual(config["research"]["keyword_mode"], "filter")
+
+    def test_frontend_hides_ai_connection_fields(self):
+        html = Path("index.html").read_text(encoding="utf-8")
+        app = Path("assets/app.js").read_text(encoding="utf-8")
+
+        self.assertIn("摘要翻译由 <strong>DeepSeek</strong> 模型完成", html)
+        self.assertIn("搜索已收录论文的标题、摘要或作者", html)
+        self.assertNotIn("apiBaseInput", html + app)
+        self.assertNotIn("modelInput", html + app)
+        self.assertIn('searchInput.addEventListener("input", handleSearchInput)', app)
+
     def test_build_search_query(self):
         query = build_search_query(["cs.AI", "cs.CL"], date(2026, 7, 14), date(2026, 7, 15))
         self.assertIn("cat:cs.AI OR cat:cs.CL", query)

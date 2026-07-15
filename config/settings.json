@@ -6,15 +6,32 @@
   },
   "research": {
     "categories": [
-      "cs.AI",
-      "cs.CL",
-      "cs.CV",
-      "cs.LG"
+      "stat.AP",
+      "stat.CO",
+      "stat.ME",
+      "stat.ML",
+      "stat.OT",
+      "stat.TH",
+      "math.PR",
+      "math.OC",
+      "math.NA",
+      "cs.DB",
+      "cs.LG",
+      "cs.IR"
     ],
     "keywords": [
-      "large language model",
-      "agent",
-      "multimodal"
+      "statistical",
+      "statistics",
+      "bayesian",
+      "causal",
+      "time series",
+      "stochastic",
+      "probability",
+      "regression",
+      "high-dimensional",
+      "optimization",
+      "machine learning",
+      "data analysis"
     ],
     "keyword_mode": "filter"
   },
@@ -35,21 +52,29 @@
     "max_consecutive_failures": 3
   },
   "available_categories": [
-    {"code": "cs.AI", "name": "人工智能", "group": "计算机"},
-    {"code": "cs.CL", "name": "计算语言学", "group": "计算机"},
-    {"code": "cs.CV", "name": "计算机视觉", "group": "计算机"},
-    {"code": "cs.LG", "name": "机器学习", "group": "计算机"},
-    {"code": "cs.IR", "name": "信息检索", "group": "计算机"},
-    {"code": "cs.RO", "name": "机器人", "group": "计算机"},
-    {"code": "cs.HC", "name": "人机交互", "group": "计算机"},
-    {"code": "cs.SE", "name": "软件工程", "group": "计算机"},
-    {"code": "stat.ML", "name": "统计机器学习", "group": "数学与统计"},
-    {"code": "math.OC", "name": "优化与控制", "group": "数学与统计"},
-    {"code": "eess.AS", "name": "音频与语音", "group": "电子工程"},
-    {"code": "eess.IV", "name": "图像与视频", "group": "电子工程"},
-    {"code": "q-bio.QM", "name": "定量方法", "group": "生命科学"},
-    {"code": "q-bio.GN", "name": "基因组学", "group": "生命科学"},
-    {"code": "astro-ph.GA", "name": "星系天体物理", "group": "物理"},
-    {"code": "cond-mat.mtrl-sci", "name": "材料科学", "group": "物理"}
+    {"code": "stat.AP", "name": "应用统计", "group": "统计学"},
+    {"code": "stat.CO", "name": "统计计算", "group": "统计学"},
+    {"code": "stat.ME", "name": "统计方法", "group": "统计学"},
+    {"code": "stat.ML", "name": "统计机器学习", "group": "统计学"},
+    {"code": "stat.OT", "name": "其他统计", "group": "统计学"},
+    {"code": "stat.TH", "name": "统计理论", "group": "统计学"},
+
+    {"code": "math.PR", "name": "概率论", "group": "数学"},
+    {"code": "math.OC", "name": "优化与控制", "group": "数学"},
+    {"code": "math.NA", "name": "数值分析", "group": "数学"},
+    {"code": "math.CO", "name": "组合数学", "group": "数学"},
+    {"code": "math.DS", "name": "动力系统", "group": "数学"},
+
+    {"code": "cs.DB", "name": "数据库与数据处理", "group": "数据与计算"},
+    {"code": "cs.LG", "name": "机器学习", "group": "数据与计算"},
+    {"code": "cs.IR", "name": "信息检索", "group": "数据与计算"},
+    {"code": "cs.SI", "name": "社会与信息网络", "group": "数据与计算"},
+    {"code": "cs.DS", "name": "数据结构与算法", "group": "数据与计算"},
+    {"code": "cs.CE", "name": "计算工程、金融与科学", "group": "数据与计算"},
+
+    {"code": "cs.AI", "name": "人工智能", "group": "人工智能"},
+    {"code": "cs.CL", "name": "计算语言学", "group": "人工智能"},
+    {"code": "cs.CV", "name": "计算机视觉", "group": "人工智能"},
+    {"code": "cs.RO", "name": "机器人", "group": "人工智能"}
   ]
 }
