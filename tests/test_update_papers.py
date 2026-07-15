@@ -1,7 +1,9 @@
+import io
 import json
 import os
 import tempfile
 import unittest
+from contextlib import redirect_stdout
 from datetime import date
 from pathlib import Path
 from urllib.error import URLError
@@ -99,12 +101,21 @@ class UpdatePapersTests(unittest.TestCase):
     def test_translator_requests_json_object_response(self):
         config = {
             "api_base": "https://api.deepseek.com",
-            "model": "deepseek-chat",
+            "model": "deepseek-v4-flash",
+            "thinking": "disabled",
+            "max_tokens": 4096,
             "max_retries": 1,
         }
         response = MagicMock()
         response.__enter__.return_value.read.return_value = json.dumps(
-            {"choices": [{"message": {"content": '{"title_zh":"标题","abstract_zh":"摘要"}'}}]}
+            {
+                "choices": [
+                    {
+                        "message": {"content": '{"title_zh":"标题","abstract_zh":"摘要"}'},
+                        "finish_reason": "stop",
+                    }
+                ]
+            }
         ).encode("utf-8")
 
         with patch("scripts.update_papers.urllib.request.urlopen", return_value=response) as urlopen:
@@ -113,35 +124,71 @@ class UpdatePapersTests(unittest.TestCase):
 
         request = urlopen.call_args.args[0]
         payload = json.loads(request.data.decode("utf-8"))
+        self.assertEqual(payload["model"], "deepseek-v4-flash")
+        self.assertEqual(payload["thinking"], {"type": "disabled"})
+        self.assertEqual(payload["max_tokens"], 4096)
         self.assertEqual(payload["response_format"], {"type": "json_object"})
+        self.assertIn('{"title_zh":"中文标题"', payload["messages"][0]["content"])
         self.assertEqual(translated, ("标题", "摘要"))
 
-    def test_translate_papers_stops_after_three_consecutive_failures(self):
-        papers = [{"id": str(index), "title": "Title", "abstract": "Abstract"} for index in range(1, 5)]
+    def test_translator_reports_truncated_json_diagnostics(self):
         config = {
             "api_base": "https://api.deepseek.com",
-            "model": "deepseek-chat",
+            "model": "deepseek-v4-flash",
+            "max_retries": 1,
+        }
+        content = '{"title_zh":"标题","abstract_zh":"未结束'
+        response = MagicMock()
+        response.__enter__.return_value.read.return_value = json.dumps(
+            {"choices": [{"message": {"content": content}, "finish_reason": "length"}]}
+        ).encode("utf-8")
+
+        with patch("scripts.update_papers.urllib.request.urlopen", return_value=response):
+            translator = OpenAICompatibleTranslator(config, "test-key")
+            with self.assertRaisesRegex(
+                RuntimeError,
+                rf"finish_reason=length; content_chars={len(content)}",
+            ):
+                translator.translate({"id": "1", "title": "Title", "abstract": "Abstract"})
+
+    def test_translate_papers_pauses_and_preserves_partial_results(self):
+        papers = [{"id": str(index), "title": "Title", "abstract": "Abstract"} for index in range(1, 6)]
+        config = {
+            "api_base": "https://api.deepseek.com",
+            "model": "deepseek-v4-flash",
             "max_consecutive_failures": 3,
         }
 
-        with patch.dict(os.environ, {"OPENAI_API_KEY": "test-key"}, clear=True):
+        output = io.StringIO()
+        with patch.dict(
+            os.environ,
+            {"OPENAI_API_KEY": "test-key", "GITHUB_ACTIONS": "true"},
+            clear=True,
+        ):
             with patch("scripts.update_papers.OpenAICompatibleTranslator") as translator_class:
-                translator_class.return_value.translate.side_effect = RuntimeError("API failure")
-                with self.assertRaisesRegex(RuntimeError, "3 consecutive translation failures"):
-                    translate_papers(papers, config)
+                translator_class.return_value.translate.side_effect = [
+                    ("标题", "摘要"),
+                    RuntimeError("API failure"),
+                    RuntimeError("API failure"),
+                    RuntimeError("API failure"),
+                ]
+                with redirect_stdout(output):
+                    stats = translate_papers(papers, config)
 
-        self.assertEqual(translator_class.return_value.translate.call_count, 3)
+        self.assertEqual(translator_class.return_value.translate.call_count, 4)
         self.assertEqual(
             [paper.get("translation_status") for paper in papers],
-            ["failed", "failed", "failed", None],
+            ["translated", "failed", "failed", "failed", "deferred"],
         )
+        self.assertEqual(stats, {"translated": 1, "reused": 0, "failed": 3, "skipped": 0, "deferred": 1})
+        self.assertIn("::warning title=AI translation paused::", output.getvalue())
 
     def test_update_data_writes_day_month_and_manifest(self):
         config = {
             "site": {"timezone": "Asia/Shanghai"},
             "research": {"categories": ["cs.AI"], "keywords": ["agent"], "keyword_mode": "highlight"},
             "fetch": {"lookback_days": 1, "max_results": 20, "retention_months": 12},
-            "ai": {"api_base": "https://api.deepseek.com", "model": "deepseek-chat"},
+            "ai": {"api_base": "https://api.deepseek.com", "model": "deepseek-v4-flash"},
         }
         with tempfile.TemporaryDirectory() as directory:
             data_dir = Path(directory)

@@ -161,6 +161,8 @@ class OpenAICompatibleTranslator:
         self.model = config["model"]
         self.target_language = config.get("target_language", "简体中文")
         self.temperature = float(config.get("temperature", 0.2))
+        self.max_tokens = int(config.get("max_tokens", 4096))
+        self.thinking = str(config.get("thinking", "")).strip()
         self.timeout = int(config.get("timeout_seconds", 90))
         self.max_retries = int(config.get("max_retries", 3))
         self.api_key = api_key
@@ -174,18 +176,22 @@ class OpenAICompatibleTranslator:
         payload = {
             "model": self.model,
             "temperature": self.temperature,
+            "max_tokens": self.max_tokens,
             "response_format": {"type": "json_object"},
             "messages": [
                 {
                     "role": "system",
                     "content": (
                         "你是严谨的学术论文翻译器。准确翻译标题和完整摘要，不扩写、不总结、"
-                        "不改变公式、数字、缩写和专有名词。只返回 JSON 对象，键为 title_zh 和 abstract_zh。"
+                        "不改变公式、数字、缩写和专有名词。只返回有效 json 对象，不要使用 Markdown 代码围栏。"
+                        "输出格式示例：{\"title_zh\":\"中文标题\",\"abstract_zh\":\"完整中文摘要\"}"
                     ),
                 },
                 {"role": "user", "content": json.dumps(prompt, ensure_ascii=False)},
             ],
         }
+        if self.thinking:
+            payload["thinking"] = {"type": self.thinking}
         request = urllib.request.Request(
             self.endpoint,
             data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
@@ -201,8 +207,18 @@ class OpenAICompatibleTranslator:
             try:
                 with urllib.request.urlopen(request, timeout=self.timeout) as response:
                     response_payload = json.loads(response.read().decode("utf-8"))
-                content = response_payload["choices"][0]["message"]["content"].strip()
-                parsed = parse_json_object(content)
+                choice = response_payload["choices"][0]
+                raw_content = choice["message"].get("content")
+                finish_reason = choice.get("finish_reason") or "unknown"
+                if not isinstance(raw_content, str) or not raw_content.strip():
+                    raise ValueError(f"Model returned empty content; finish_reason={finish_reason}")
+                content = raw_content.strip()
+                try:
+                    parsed = parse_json_object(content)
+                except (ValueError, json.JSONDecodeError) as error:
+                    raise ValueError(
+                        f"{error}; finish_reason={finish_reason}; content_chars={len(content)}"
+                    ) from error
                 return compact_text(parsed["title_zh"]), compact_text(parsed["abstract_zh"])
             except (urllib.error.URLError, TimeoutError, KeyError, ValueError, json.JSONDecodeError) as error:
                 if attempt + 1 >= self.max_retries:
@@ -245,9 +261,10 @@ def translate_papers(
 ) -> dict[str, int]:
     api_key = os.environ.get("OPENAI_API_KEY", "").strip()
     translator = None if no_translate or not api_key else OpenAICompatibleTranslator(ai_config, api_key)
-    stats = {"translated": 0, "reused": 0, "failed": 0, "skipped": 0}
+    stats = {"translated": 0, "reused": 0, "failed": 0, "skipped": 0, "deferred": 0}
     consecutive_failures = 0
     max_consecutive_failures = int(ai_config.get("max_consecutive_failures", 3))
+    translation_paused = False
     if translator is None:
         reason = "disabled" if no_translate else "OPENAI_API_KEY is not set"
         print(f"Translation skipped: {reason}", flush=True)
@@ -255,6 +272,10 @@ def translate_papers(
     for index, paper in enumerate(papers, start=1):
         if paper.get("abstract_zh"):
             stats["reused"] += 1
+            continue
+        if translation_paused:
+            paper["translation_status"] = "deferred"
+            stats["deferred"] += 1
             continue
         if translator is None:
             paper["translation_status"] = "skipped"
@@ -272,14 +293,19 @@ def translate_papers(
             stats["failed"] += 1
             consecutive_failures += 1
             if consecutive_failures >= max_consecutive_failures:
-                raise RuntimeError(
-                    f"Stopped after {consecutive_failures} consecutive translation failures to protect API quota"
-                ) from error
+                translation_paused = True
+                pause_message = (
+                    f"Translation paused after {consecutive_failures} consecutive failures; "
+                    "successful results will be stored and remaining papers deferred"
+                )
+                print(pause_message, file=sys.stderr, flush=True)
+                if os.environ.get("GITHUB_ACTIONS") == "true":
+                    print(f"::warning title=AI translation paused::{pause_message}", flush=True)
 
     print(
         "Translation summary: "
         f"translated={stats['translated']}, reused={stats['reused']}, "
-        f"failed={stats['failed']}, skipped={stats['skipped']}",
+        f"failed={stats['failed']}, skipped={stats['skipped']}, deferred={stats['deferred']}",
         flush=True,
     )
     return stats

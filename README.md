@@ -42,7 +42,7 @@ python scripts/update_papers.py --date 2026-07-14 --no-translate
 
 工作流默认在工作日 `10:30 UTC`（北京时间 `18:30`）运行。第一次运行会创建真实论文数据。
 
-工作流会实时输出每篇论文的翻译进度。单篇翻译最多尝试 2 次；连续 3 篇失败时任务会终止，避免接口异常时持续消耗 API。整个任务最长运行 30 分钟。
+工作流会实时输出每篇论文的翻译进度。单篇翻译最多尝试 2 次；连续 3 篇失败时会暂停后续 AI 调用，但仍保存此前成功结果和未翻译论文，避免接口异常时持续消耗 API。后续运行会自动重试尚未翻译的论文。整个任务最长运行 30 分钟。
 
 ## DeepSeek
 
@@ -52,15 +52,17 @@ python scripts/update_papers.py --date 2026-07-14 --no-translate
 {
   "ai": {
     "api_base": "https://api.deepseek.com",
-    "model": "deepseek-chat",
-    "target_language": "简体中文"
+    "model": "deepseek-v4-flash",
+    "target_language": "简体中文",
+    "thinking": "disabled",
+    "max_tokens": 4096
   }
 }
 ```
 
 API Key 不应写入配置文件或前端，只由 GitHub Secret `OPENAI_API_KEY` 提供。
 
-网页设置面板可以修改领域、关键词、接口地址和模型名。浏览器中的“保存设置”只影响当前设备的浏览与筛选；点击“导出配置”后，用下载的文件替换 `config/settings.json`，下一次 GitHub Action 就会采用新配置。
+网页设置面板可以修改领域、关键词、接口地址和模型名。“保存到本机”只影响当前浏览器；“导出配置”会下载完整 `settings.json`；“编辑 GitHub 配置”会打开仓库中的实际配置文件，提交后下一次 GitHub Action 就会采用新配置。
 
 ## 数据结构
 

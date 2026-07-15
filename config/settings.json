@@ -25,9 +25,11 @@
   },
   "ai": {
     "api_base": "https://api.deepseek.com",
-    "model": "deepseek-chat",
+    "model": "deepseek-v4-flash",
     "target_language": "简体中文",
-    "temperature": 0.2,
+    "thinking": "disabled",
+    "temperature": 0.1,
+    "max_tokens": 4096,
     "timeout_seconds": 90,
     "max_retries": 2,
     "max_consecutive_failures": 3

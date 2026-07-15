@@ -845,6 +845,10 @@ button.keyword-chip {
   background: var(--surface-muted);
 }
 
+.dialog-footer .secondary-button {
+  text-decoration: none;
+}
+
 .settings-section {
   padding: 24px 0;
   border-bottom: 1px solid var(--line);
@@ -1169,10 +1173,11 @@ button.keyword-chip {
 
   .dialog-footer {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
-  .dialog-footer button {
+  .dialog-footer button,
+  .dialog-footer > a {
     width: 100%;
   }
 }

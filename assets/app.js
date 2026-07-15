@@ -5,7 +5,7 @@ const PATHS = {
   month: (month) => `data/months/${month}.json`,
 };
 
-const STORAGE_KEY = "personal-arxiv-daily-settings-v1";
+const STORAGE_KEY = "personal-arxiv-daily-settings-v2";
 const PAGE_SIZE = 20;
 
 const state = {
@@ -460,7 +460,7 @@ function saveSettings(event) {
   elements.settingsDialog.close();
   state.visibleCount = PAGE_SIZE;
   render();
-  showToast("设置已保存在当前浏览器；导出配置后可更新 GitHub 自动化");
+  showToast("设置已保存到当前浏览器");
 }
 
 function exportSettings() {
