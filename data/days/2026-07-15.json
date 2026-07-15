@@ -1,6 +1,6 @@
 {
   "date": "2026-07-15",
-  "updated_at": "2026-07-15T12:01:35Z",
+  "updated_at": "2026-07-15T12:44:41Z",
   "papers": [
     {
       "id": "2607.13034",
@@ -31,6 +31,64 @@
       "matched_keywords": [
         "large language model",
         "agent"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.13031",
+      "arxiv_id": "2607.13031v1",
+      "version": "v1",
+      "title": "The Seriality Gap in Video Diffusion Models",
+      "title_zh": "视频扩散模型中的序列性差距",
+      "authors": [
+        "Jorge Diaz Chao",
+        "Konpat Preechakul",
+        "Yuxi Liu",
+        "Yutong Bai"
+      ],
+      "abstract": "When one ball strikes another, then another, video models should predict the consequences of each bounce. In controlled experiments on multi-ball hard-sphere dynamics, we find that the performance of standard bidirectional video diffusion degrades as the causal chain lengthens, even when provided more denoising steps. In a length-matched single-ball control, where ball-ball interactions are absent, the degradation largely disappears, isolating dependent-event structure rather than video length as the cause. Across intervention studies, methods that increase effective serial computation improve performance disproportionately, including autoregressive/blockwise generation and architectural depth. We identify this pattern as the seriality gap: a mismatch between tasks requiring growing serial computation and video diffusion models whose denoising loop does not provide scalable serial compute. We then prove that, for deterministic video prediction, denoising steps do not add serial computation beyond the backbone, indicating a structural obstacle for video diffusion on serial reasoning and simulation tasks.",
+      "abstract_zh": "当一个球撞击另一个球，再撞击另一个时，视频模型应预测每次弹跳的后果。在多球硬球动力学的受控实验中，我们发现标准双向视频扩散的性能随着因果链的延长而下降，即使提供更多的去噪步骤也是如此。在长度匹配的单球对照中，由于不存在球-球相互作用，这种退化基本消失，从而将依赖事件结构而非视频长度确定为原因。在干预研究中，增加有效串行计算的方法（包括自回归/分块生成和架构深度）能不成比例地提高性能。我们将这种模式识别为序列性差距：需要增长串行计算的任务与去噪循环不提供可扩展串行计算的视频扩散模型之间的不匹配。然后我们证明，对于确定性视频预测，去噪步骤不会在骨干网络之外增加串行计算，这表明视频扩散在串行推理和模拟任务上存在结构性障碍。",
+      "categories": [
+        "cs.LG",
+        "cs.CV"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-14T17:59:22Z",
+      "updated": "2026-07-14T17:59:22Z",
+      "announcement_date": "2026-07-15",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.13031v1",
+        "pdf": "https://arxiv.org/pdf/2607.13031v1"
+      },
+      "matched_keywords": [
+        "causal"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.13029",
+      "arxiv_id": "2607.13029v1",
+      "version": "v1",
+      "title": "Online Control via Counterfactual Tracking",
+      "title_zh": "基于反事实跟踪的在线控制",
+      "authors": [
+        "Yunzong Xu"
+      ],
+      "abstract": "We develop a method for online control that competes with general classes of causal policies, beyond the linear-controller classes used by most existing algorithms. Over a horizon of \\(T\\) rounds, we consider a known linear dynamical system subject to adversarial disturbances and convex costs revealed after each action. The method simulates the benchmark policies on the revealed history, uses their counterfactual state--input pairs to form a moving reference, and applies a fixed stabilizing controller to track that reference on the physical system. We call this method \\emph{counterfactual tracking}. Counterfactual tracking applies to any measurable class of causal policies that can be simulated from the revealed history and whose counterfactual state--input pairs have bounded diameter at every round. The policies may be nonlinear or dynamic and need not share a parameterization. We establish PAC-Bayes regret guarantees that hold for every posterior over policies and depend on its relative entropy to a chosen prior. On a fixed plant with a tracker of bounded impulse-response gain, a finite class of \\(N\\) policies admits the minimax-optimal \\(\\sqrt{T\\log N}\\) dependence on \\(T\\) and \\(N\\) when \\(\\log N=O(T)\\). As a central application, we compete with a system-level response ball of stabilizing linear dynamical controllers. The ball bounds the summed impulse-response deviation from the fixed tracker, but imposes no common decay envelope, memory length, or controller-order bound. To our knowledge, this is the first online-control guarantee uniform over such a class. A matching lower bound shows that our guarantee is tight up to constants.",
+      "abstract_zh": "我们开发了一种在线控制方法，能够与一般类别的因果策略竞争，超越了大多数现有算法使用的线性控制器类别。在T轮的时间范围内，我们考虑一个已知的线性动态系统，该系统受到对抗性扰动的影响，并且在每次行动后揭示凸成本。该方法在已揭示的历史上模拟基准策略，利用其反事实状态-输入对形成移动参考，并在物理系统上应用一个固定的稳定控制器来跟踪该参考。我们将这种方法称为反事实跟踪。反事实跟踪适用于任何可测的因果策略类别，这些策略可以从已揭示的历史中模拟，并且其反事实状态-输入对在每一轮中具有有界直径。这些策略可以是非线性或动态的，并且不需要共享参数化。我们建立了PAC-Bayes遗憾保证，该保证适用于策略上的任何后验分布，并取决于其与选定先验的相对熵。在具有有界脉冲响应增益跟踪器的固定被控对象上，一个包含N个策略的有限类别在log N = O(T)时，对T和N具有极小极大最优的√(T log N)依赖关系。作为一个核心应用，我们与一个稳定线性动态控制器的系统级响应球竞争。该球限制了与固定跟踪器的总脉冲响应偏差，但不施加共同的衰减包络、记忆长度或控制器阶数界限。据我们所知，这是首个在此类策略上一致的在线控制保证。一个匹配的下界表明，我们的保证在常数因子内是紧的。",
+      "categories": [
+        "math.OC"
+      ],
+      "primary_category": "math.OC",
+      "published": "2026-07-14T17:59:06Z",
+      "updated": "2026-07-14T17:59:06Z",
+      "announcement_date": "2026-07-15",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.13029v1",
+        "pdf": "https://arxiv.org/pdf/2607.13029v1"
+      },
+      "matched_keywords": [
+        "causal"
       ],
       "translation_status": "translated"
     },
@@ -102,6 +160,107 @@
       "translation_status": "translated"
     },
     {
+      "id": "2607.13022",
+      "arxiv_id": "2607.13022v1",
+      "version": "v1",
+      "title": "A Shortcut to Statistically Steady-State Turbulence with Flow Matching",
+      "title_zh": "",
+      "authors": [
+        "Gianluca Galletti",
+        "Gerald Gutenbrunner",
+        "William Hornsby",
+        "Lorenzo Zanisi",
+        "Naomi Carey",
+        "Stanislas Pamela",
+        "Johannes Brandstetter",
+        "Fabian Paischer"
+      ],
+      "abstract": "Many nonlinear physical systems exhibit an initial transient phase in which perturbations grow before nonlinear interactions lead to a statistically steady state. While this saturated regime is of primary interest, direct numerical simulations must resolve the full transient dynamics before reaching it, incurring significant computational cost. In Computational Fluid Dynamics, reduced-order approaches such as Large Eddy Simulation mitigate computational cost by modeling small-scale dynamics, enabling tractable approximations of turbulent flows. In contrast, for systems such as gyrokinetics, comparably effective closures for the full dynamics are not generally available, and high-fidelity simulations remain necessary. Existing surrogate modeling approaches for these systems are autoregressive, hence they suffer from accumulating error. We instead propose to bypass explicit time evolution by directly modeling the distribution of saturated states under an ergodicity assumption, stating that ensemble averages over samples are equivalent to time averages of a single long simulation. We introduce GyroFlow, a latent generative model that directly estimates steady-state statistics of gyrokinetic turbulence in 5D phase space, without resolving the transient phase. GyroFlow generates saturated snapshots from noise, conditioned on dimensionless operating parameters and outperforms autoregressive, reduced-order, and other generative approaches, while providing substantial speedup. To evaluate generation quality we propose FGyD, a distributional metric computed in the latent space of a pretrained gyrokinetic model, and show that it correlates with downstream flux accuracy and solver convergence. Finally, GyroFlow can be used to warm-start the numerical code used to produce the data.",
+      "abstract_zh": "",
+      "categories": [
+        "physics.plasm-ph",
+        "cs.LG"
+      ],
+      "primary_category": "physics.plasm-ph",
+      "published": "2026-07-14T17:58:13Z",
+      "updated": "2026-07-14T17:58:13Z",
+      "announcement_date": "2026-07-15",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.13022v1",
+        "pdf": "https://arxiv.org/pdf/2607.13022v1"
+      },
+      "matched_keywords": [
+        "statistical",
+        "statistics"
+      ],
+      "translation_status": "failed"
+    },
+    {
+      "id": "2607.13003",
+      "arxiv_id": "2607.13003v1",
+      "version": "v1",
+      "title": "Watermark Forensics for Generative Models: An Information-Theoretic Perspective",
+      "title_zh": "生成模型的水印取证：信息论视角",
+      "authors": [
+        "Xiaoyu Li",
+        "Zheng Gao",
+        "Xiaoyan Feng",
+        "Jiaojiao Jiang",
+        "Yulei Sui",
+        "Jiankun Hu"
+      ],
+      "abstract": "A watermark in a generative model's output is usually asked only whether a text is machine-made. The same mark can do more: attribute it to the user who produced it, extract a hidden payload, or localize the part that survives editing. These form a forensic ladder, and we ask what each rung costs in the sample length $n$. One object organizes the answers. Let $S$ be the secret the mark carries (a user's identity or payload), and let the information profile $ν(t)=I(S;X_t\\mid X_{<t})$ record how much the $t$-th token reveals about $S$ given the earlier ones. Its total mass pays for attribution and extraction; how that mass is spread pays for localization; and detection alone is paid for not by information but by presence, the distance from the marked to the unmarked distribution. The literature's two quality models, a mark subtle on every token and one that stamps a few tokens loudly, are two incomparable ways of capping this profile. Our main theorem settles the ladder's entropy column. For statistically distortion-free schemes, attributing a text to one of $N$ users costs $Θ(\\log N/h)$ tokens over every stationary-ergodic source of entropy rate $h$, sharp to a $(1+o(1))$ factor: to our knowledge the first tight entropy-rate law for multi-user attribution (via exact alignment). The natural collision-counting analysis overcharges without bound; only a decoder thresholding each candidate by its own realized surprisal attains the rate while almost never implicating an innocent user. A matching converse makes the law two-sided, and extraction of an $\\ell$-bit payload costs $Θ(\\ell/h)$. Two gaps are real, not modeling artifacts: a $Θ(\\log N)$-token window in which a text is provably machine-made yet unattributable, and a footprint-resolution uncertainty principle. Experiments on GPT-2, Pythia-410M, and Qwen2.5 recover the predicted constants.",
+      "abstract_zh": "生成模型输出中的水印通常仅用于判断文本是否为机器生成。但同一水印可以做得更多：将其归因于生成它的用户、提取隐藏的有效载荷，或定位在编辑后幸存的部分。这些构成了一个取证阶梯，我们询问每个阶梯在样本长度n上的代价。一个对象组织了答案。设S为水印携带的秘密（用户身份或有效载荷），信息轮廓ν(t)=I(S;X_t|X_{<t})记录了在给定先前令牌的情况下，第t个令牌揭示了关于S的多少信息。其总质量用于归因和提取；质量的分布用于定位；而仅检测并非由信息支付，而是由存在性——标记分布与未标记分布之间的距离——支付。文献中的两种质量模型，一种在每个令牌上微妙标记，另一种在少数令牌上大声标记，是限制此轮廓的两种不可比较的方式。我们的主要定理解决了阶梯的熵列。对于统计无失真方案，将文本归因于N个用户之一，在熵率为h的每个平稳遍历源上，代价为Θ(log N/h)个令牌，精确到(1+o(1))因子：据我们所知，这是多用户归因的第一个紧熵率定律（通过精确对齐）。自然的碰撞计数分析会无界地过度收费；只有通过每个候选者自身的实现惊奇度阈值化的解码器才能达到该速率，同时几乎不牵连无辜用户。匹配的逆定理使该定律成为双向的，提取ℓ位有效载荷的代价为Θ(ℓ/h)。两个差距是真实的，而非建模伪影：一个Θ(log N)令牌窗口，其中文本可证明是机器生成但不可归因，以及一个足迹-分辨率不确定性原理。在GPT-2、Pythia-410M和Qwen2.5上的实验恢复了预测的常数。",
+      "categories": [
+        "cs.CR",
+        "cs.IT",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CR",
+      "published": "2026-07-14T17:49:52Z",
+      "updated": "2026-07-14T17:49:52Z",
+      "announcement_date": "2026-07-15",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.13003v1",
+        "pdf": "https://arxiv.org/pdf/2607.13003v1"
+      },
+      "matched_keywords": [
+        "statistical"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.12991",
+      "arxiv_id": "2607.12991v1",
+      "version": "v1",
+      "title": "Factorial clinical trials in the presence and absence of plausible statistical interactions between treatment factors. A historical review of the methodological literature",
+      "title_zh": "存在与不存在治疗因素间合理统计交互作用时的析因临床试验：方法学文献的历史回顾",
+      "authors": [
+        "Rebecca E. A. Walwyn",
+        "Pritaporn Kingkaew",
+        "Alan A. Montgomery",
+        "Alexandra Wright-Hughes",
+        "Steven G. Gilmour"
+      ],
+      "abstract": "Factorial trials can be conducted when statistical interactions between two or more treatment factors are not anticipated, but also when they are. A k-in-1 factorial trial answers k single-factor questions with the same number of units as one parallel-group trial if there are no interactions. Literature on k-in-1 factorial trials has dominated trialists understanding of factorial trials in the UK. However, factorial experiments originated from the Design of Experiments field to enable interactions to be robustly estimated. Seemingly conflicting guidance from these literatures poses a source of confusion and misunderstanding for trialists. We bring these literatures together to provide clarity on the arguments that have been used to recommend use of factorial trials in the presence and absence of interactions. We outline motivating examples. We summarise the rationales for using factorial trials, the treatment contrasts of interest, and the properties of their estimators, for the two schools of thought. We describe the debate, going back to 1935, and use an empirical example to illustrate the impact of different analysis approaches. We conclude that it is vital that trialists carefully and clearly specify their objectives. Estimands of interest and treatment contrasts follow, with properties of estimators dictated by this choice.",
+      "abstract_zh": "当两个或多个治疗因素之间预期不存在统计交互作用时，可以进行析因试验，但预期存在交互作用时也可以进行。如果不存在交互作用，一个k合1析因试验可以用与一个平行组试验相同数量的单位回答k个单因素问题。关于k合1析因试验的文献主导了英国试验者对析因试验的理解。然而，析因实验起源于实验设计领域，旨在稳健地估计交互作用。这些文献看似矛盾的指导给试验者带来了困惑和误解。我们将这些文献汇集在一起，以澄清在存在和不存在交互作用的情况下推荐使用析因试验的论点。我们概述了激励性示例。我们总结了两种思想流派使用析因试验的理由、感兴趣的治疗对比以及其估计量的性质。我们描述了自1935年以来的争论，并使用一个实证例子来说明不同分析方法的影响。我们得出结论，试验者仔细且清晰地明确其目标至关重要。感兴趣的处理效应和相应的治疗对比随之确定，而估计量的性质则由这一选择决定。",
+      "categories": [
+        "stat.ME"
+      ],
+      "primary_category": "stat.ME",
+      "published": "2026-07-14T17:42:28Z",
+      "updated": "2026-07-14T17:42:28Z",
+      "announcement_date": "2026-07-15",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.12991v1",
+        "pdf": "https://arxiv.org/pdf/2607.12991v1"
+      },
+      "matched_keywords": [
+        "statistical"
+      ],
+      "translation_status": "translated"
+    },
+    {
       "id": "2607.12982",
       "arxiv_id": "2607.12982v1",
       "version": "v1",
@@ -161,7 +320,7 @@
         "pdf": "https://arxiv.org/pdf/2607.12975v1"
       },
       "matched_keywords": [
-        "multimodal"
+        "stochastic"
       ],
       "translation_status": "translated"
     },
@@ -226,6 +385,68 @@
       },
       "matched_keywords": [
         "agent"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.12954",
+      "arxiv_id": "2607.12954v1",
+      "version": "v1",
+      "title": "Robustness of Deep Learning Models for PV Power Forecasting under NWP Forecast Errors: A Spatiotemporal and Physically Interpretable Analysis",
+      "title_zh": "深度学习模型在NWP预报误差下光伏功率预测的鲁棒性：时空与物理可解释分析",
+      "authors": [
+        "Dandan Chen",
+        "Yan Zhao",
+        "Xuepeng Chen"
+      ],
+      "abstract": "Engineering use of AI forecasting models requires not only high nominal accuracy but also predictable behavior under uncertain inputs. In photovoltaic (PV) forecasting, this requirement is especially challenging because numerical weather prediction (NWP) errors are temporally correlated, state dependent, and physically coupled across variables. Existing evaluations, however, often rely on perfect forecast assumptions or simplistic perturbations that do not reflect these characteristics. This study presents a physically constrained robustness evaluation framework based on simulation, using virtual PV power as a controlled response variable to isolate the propagation of input uncertainty from confounders at the plant level. Six representative machine learning and deep sequence models, including PatchTST, GRU, N-HITS, and LightGBM, are evaluated under dynamic NWP perturbations with heteroscedasticity modulated by clear-sky conditions and Erbs reconstruction that preserves radiation consistency. The results show that sequence models provide stronger noise filtering and temporal resilience than a strong tabular baseline under medium to high disturbance regimes. SHapley Additive exPlanations (SHAP) and Integrated Gradients (IG) further support a feature reallocation tendency at the case level, in which predictive reliance shifts from corrupted future forecasts toward more stable historical observations and deterministic physical priors. A Pareto analysis of accuracy under clean conditions, robustness, and computational latency then translates these findings into engineering implications for robustness assessment and model selection under forecast uncertainty.",
+      "abstract_zh": "AI预测模型的工程应用不仅需要高名义精度，还需要在输入不确定的情况下具有可预测的行为。在光伏（PV）预测中，这一要求尤其具有挑战性，因为数值天气预报（NWP）误差在时间上相关、状态依赖，并且变量之间存在物理耦合。然而，现有的评估通常依赖于完美预报假设或不能反映这些特征的简单扰动。本研究提出了一个基于仿真的物理约束鲁棒性评估框架，使用虚拟光伏功率作为受控响应变量，以隔离输入不确定性从电厂层面混杂因素中的传播。在动态NWP扰动下，评估了六种代表性的机器学习和深度序列模型，包括PatchTST、GRU、N-HITS和LightGBM，这些扰动具有由晴空条件调节的异方差性和保持辐射一致性的Erbs重建。结果表明，在中高扰动条件下，序列模型比强表格基线提供了更强的噪声过滤和时间鲁棒性。SHapley Additive exPlanations（SHAP）和Integrated Gradients（IG）进一步支持了个案层面的特征重新分配趋势，其中预测依赖从被破坏的未来预报转向更稳定的历史观测和确定性物理先验。对清洁条件下的精度、鲁棒性和计算延迟的帕累托分析将这些发现转化为在预报不确定性下进行鲁棒性评估和模型选择的工程意义。",
+      "categories": [
+        "physics.ao-ph",
+        "cs.LG"
+      ],
+      "primary_category": "physics.ao-ph",
+      "published": "2026-07-14T16:48:07Z",
+      "updated": "2026-07-14T16:48:07Z",
+      "announcement_date": "2026-07-15",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.12954v1",
+        "pdf": "https://arxiv.org/pdf/2607.12954v1"
+      },
+      "matched_keywords": [
+        "machine learning"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.12938",
+      "arxiv_id": "2607.12938v1",
+      "version": "v1",
+      "title": "Sharp Optimal Algorithm for Derivative-Free Stochastic Convex Optimization in One Dimension",
+      "title_zh": "一维无导数随机凸优化的尖锐最优算法",
+      "authors": [
+        "Alexandra Carpentier",
+        "Chloé Rouyer",
+        "Alexandre Tsybakov",
+        "Arya Akhavan"
+      ],
+      "abstract": "Stochastic convex optimization is a classical problem with well-understood guarantees under first-order feedback. In contrast, for zero-order optimization with noisy function evaluations, a logarithmic gap has persisted between known upper bounds and the $Ω(1/\\sqrt{T})$ lower bound, even in the one-dimensional case. In this work, we study the problem of minimizing a convex function $f : [0,1] \\to [0,1]$ using a zero-order oracle with subGaussian noise. We propose a computationally efficient algorithm that achieves the optimal $O(1/\\sqrt{T})$ convergence rate, matching the lower bound. The result closes the existing gap in one dimension, providing the first sharp rate guarantee in this setting.",
+      "abstract_zh": "随机凸优化是一个经典问题，在一阶反馈下已有充分理解的保证。相比之下，对于具有噪声函数评估的零阶优化，即使在一维情况下，已知上界与$Ω(1/\\sqrt{T})$下界之间仍存在对数差距。在这项工作中，我们研究了使用具有次高斯噪声的零阶预言机最小化凸函数$f : [0,1] \\to [0,1]$的问题。我们提出了一种计算高效的算法，实现了最优的$O(1/\\sqrt{T})$收敛速率，匹配下界。该结果缩小了一维情况下的现有差距，提供了该设置下的第一个尖锐速率保证。",
+      "categories": [
+        "math.OC",
+        "stat.ML"
+      ],
+      "primary_category": "math.OC",
+      "published": "2026-07-14T16:10:33Z",
+      "updated": "2026-07-14T16:10:33Z",
+      "announcement_date": "2026-07-15",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.12938v1",
+        "pdf": "https://arxiv.org/pdf/2607.12938v1"
+      },
+      "matched_keywords": [
+        "stochastic",
+        "optimization"
       ],
       "translation_status": "translated"
     }
