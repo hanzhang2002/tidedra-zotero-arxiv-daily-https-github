@@ -1,19 +1,19 @@
 {
   "date": "2026-07-15",
-  "updated_at": "2026-07-15T09:28:09Z",
+  "updated_at": "2026-07-15T10:31:32Z",
   "papers": [
     {
       "id": "2607.13034",
       "arxiv_id": "2607.13034v1",
       "version": "v1",
       "title": "Do AI Agents Know When a Task Is Simple? Toward Complexity-Aware Reasoning and Execution",
-      "title_zh": "",
+      "title_zh": "AI代理知道任务何时简单吗？迈向复杂度感知的推理与执行",
       "authors": [
         "Junjie Yin",
         "Xinyu Feng"
       ],
       "abstract": "Large language model (LLM) agents increasingly automate multi-step engineering and informatics workflows, yet they rarely ask how much effort a task actually requires. They often follow a maximum-context-first strategy--re-reading files and dependencies they have already seen--turning a one-line edit into a small code-base audit. We argue the missing capability is task-aware execution-scope estimation: judging a task's difficulty, the information it truly needs, and the shortest reliable path before committing budget. We formalize minimum-sufficient execution and the Agent Cognitive Redundancy Ratio (ACRR), and propose E3 (Estimate, Execute, Expand): the agent estimates an initial operating point, executes a minimum viable path, and expands scope only when verification fails. On MSE-Bench--a deterministic benchmark of 121 edits in a capability-controlled simulator--E3 matches the strongest baseline's 100% success while cutting cost by 85%, tokens by 91%, and inspected files by 92%, and further beats a strong adaptive retrieval baseline by 16%; the gains survive held-out instruction wording and essentially every cost weighting. A companion real-model harness (LLM-Case) corroborates the effect on a live gpt-4o agent editing a real open-source library, with every candidate patch graded by actually running the project's real pytest suite against a measured oracle: the over-reading is milder but real, and E3 is the leanest and fastest policy at comparable task success--its one shortfall a provider rate-limit, not a wrong edit. We frame this as a controlled probe of execution redundancy, not a measurement of any deployed agent, and position task-aware execution as a step toward engineering-grounded AI (EGAI)--agents whose effort is anchored in the engineering reality of the task. We release the framework and benchmark.",
-      "abstract_zh": "",
+      "abstract_zh": "大型语言模型（LLM）代理越来越多地自动化多步骤工程和信息学工作流程，但它们很少询问一项任务实际需要多少努力。它们通常遵循最大上下文优先策略——重新读取已经看过的文件和依赖项——将一行编辑变成一次小型代码库审计。我们认为缺失的能力是任务感知的执行范围估计：在投入预算之前判断任务的难度、真正需要的信息以及最短的可靠路径。我们形式化了最小充分执行和代理认知冗余比（ACRR），并提出了E3（估计、执行、扩展）：代理估计初始操作点，执行最小可行路径，仅在验证失败时扩展范围。在MSE-Bench（一个确定性基准，包含121次编辑，在能力可控的模拟器中）上，E3匹配了最强基线的100%成功率，同时将成本降低85%，令牌减少91%，检查文件减少92%，并进一步比强自适应检索基线高出16%；这些收益在保留的指令措辞和几乎每个成本权重下都成立。一个配套的真实模型框架（LLM-Case）在实时gpt-4o代理编辑真实开源库上证实了该效果，每个候选补丁通过实际运行项目的真实pytest套件对照测量标准进行评分：过度读取较温和但真实存在，E3在可比较的任务成功率下是最精简和最快的策略——其唯一不足是提供商的速率限制，而非错误编辑。我们将此视为执行冗余的受控探测，而非对任何已部署代理的测量，并将任务感知执行定位为迈向工程基础AI（EGAI）的一步——代理的努力锚定在任务的工程现实中。我们发布了框架和基准。",
       "categories": [
         "cs.AI",
         "cs.CL",
@@ -32,14 +32,14 @@
         "large language model",
         "agent"
       ],
-      "translation_status": "skipped"
+      "translation_status": "translated"
     },
     {
       "id": "2607.13028",
       "arxiv_id": "2607.13028v1",
       "version": "v1",
       "title": "TerraZero: Procedural Driving Simulation for Zero-Demonstration Self-Play at Scale",
-      "title_zh": "",
+      "title_zh": "TerraZero：面向零演示大规模自我对弈的程序化驾驶仿真",
       "authors": [
         "Zhouchonghao Wu",
         "Akshay Rangesh",
@@ -50,7 +50,7 @@
         "Wei Zhan"
       ],
       "abstract": "Training robust autonomous driving agents requires a simulator that is fast enough for reinforcement learning at scale, realistic enough to ground behavior in real-world map structure, and diverse enough to cover the safety-critical long tail that logged data rarely contains. We present TerraZero, a procedural driving simulator and self-play training stack. A configurable C engine runs simulation on the CPU and policy inference on the GPU over a zero-copy path, sustaining 1.3M agent-steps per second on a single server-grade GPU, far faster than existing object-level simulators, while keeping fidelity lighter single-agent systems omit: heterogeneous agents, multiple dynamics models, and full traffic-rule enforcement. TerraZero treats logged data only as a source of real-world map geometry, populating each map with randomized rule-based road users and signal controllers and randomizing agent dynamics, rewards, and sizes per episode, so a map yields an unbounded set of scenarios. Every reported policy trains from scratch by reinforcement learning alone on a compute-efficient self-play recipe across GPUs, with zero human demonstrations and no fallback planner at inference. Policies generalize zero-shot across cities and datasets, including emergent left-hand-traffic driving without explicit supervision. As an ego policy, TerraZero is the first fully learned policy to top the InterPlan long-tail benchmark, ahead of larger learned planners; on routine-driving val14 it ranks among the best approaches and is the safest, posting the best collision and time-to-collision scores. On Waymo Open Sim Agents realism the same recipe outperforms other demonstration-free methods and is competitive with the strongest reference-anchored self-play method. One stack serves both roles: driving policies across dynamics for cars and trucks, and sim agents that jointly control vehicles, pedestrians, and cyclists.",
-      "abstract_zh": "",
+      "abstract_zh": "训练鲁棒的自动驾驶智能体需要一个仿真器，该仿真器需足够快以支持大规模强化学习，足够真实以将行为锚定于真实世界地图结构，并且足够多样化以覆盖日志数据中罕见的安全关键长尾场景。我们提出了TerraZero，一个程序化驾驶仿真器和自我对弈训练栈。一个可配置的C引擎在CPU上运行仿真，在GPU上通过零拷贝路径执行策略推理，在单个服务器级GPU上每秒维持130万智能体步数，远快于现有的对象级仿真器，同时保持了较轻量级单智能体系统所忽略的保真度：异构智能体、多种动力学模型以及完整的交通规则执行。TerraZero仅将日志数据作为真实世界地图几何信息的来源，通过随机化的基于规则的道路使用者和信号控制器填充每个地图，并在每个回合中随机化智能体动力学、奖励和尺寸，从而使一个地图产生无限多的场景。所有报告的策略均通过强化学习在跨GPU的计算高效自我对弈配方上从头训练，无需任何人类演示，推理时也无后备规划器。策略在跨城市和数据集上实现零样本泛化，包括在没有显式监督的情况下涌现出左侧交通驾驶行为。作为自我策略，TerraZero是首个在InterPlan长尾基准测试中排名第一的完全学习策略，超越了更大的学习型规划器；在常规驾驶基准val14上，它位列最佳方法之中，并且是最安全的，取得了最佳的碰撞和碰撞时间分数。在Waymo开放仿真智能体真实性基准上，相同的配方优于其他无演示方法，并与最强的参考锚定自我对弈方法竞争。一个栈服务于两个角色：针对汽车和卡车的跨动力学驾驶策略，以及联合控制车辆、行人和骑自行车者的仿真智能体。",
       "categories": [
         "cs.LG",
         "cs.AI",
@@ -67,14 +67,14 @@
       "matched_keywords": [
         "agent"
       ],
-      "translation_status": "skipped"
+      "translation_status": "translated"
     },
     {
       "id": "2607.13027",
       "arxiv_id": "2607.13027v1",
       "version": "v1",
       "title": "PalmClaw: A Native On-Device Agent Framework for Mobile Phones",
-      "title_zh": "",
+      "title_zh": "PalmClaw：一种原生移动设备上的智能体框架",
       "authors": [
         "Hongru Cai",
         "Yongqi Li",
@@ -82,7 +82,7 @@
         "Wenjie Li"
       ],
       "abstract": "Large Language Model (LLM) agents have moved beyond generating responses to executing multi-step tasks by calling tools, observing the results, and iteratively deciding the next action. Most agent systems run on desktops or servers, which support tool use and task automation. Mobile devices are also important agent environments because they are widely accessible and contain users' data, sensors, and daily-use applications. Existing mobile agents mainly operate smartphones through graphical user interface (GUI) actions such as tapping, swiping, and typing, which often form long, interface-dependent sequences, cannot directly access device capabilities, and make execution boundaries difficult to define. We present \\textbf{PalmClaw}, an open-source agent framework that runs natively on mobile phones and manages the sessions, memory, skills, tools, and agent loop directly on the device. PalmClaw exposes device capabilities as device tools with explicit arguments, structured results, and clearly defined execution boundaries. This design enables agents to use mobile capabilities directly while keeping each action explicit and controlled. Experiments show an 11.5\\% relative improvement in task success and a 94.9\\% reduction in completion time over the strongest baseline, with lower setup burden and traces illustrating how execution boundaries are applied. Code is available at https://github.com/ModalityDance/PalmClaw.",
-      "abstract_zh": "",
+      "abstract_zh": "大型语言模型（LLM）智能体已从生成响应扩展到通过调用工具、观察结果并迭代决定下一步行动来执行多步骤任务。大多数智能体系统运行在桌面或服务器上，支持工具使用和任务自动化。移动设备也是重要的智能体环境，因为它们广泛可用且包含用户数据、传感器和日常使用的应用程序。现有的移动智能体主要通过图形用户界面（GUI）操作（如点击、滑动和输入）来操控智能手机，这些操作通常形成长且依赖界面的序列，无法直接访问设备能力，且使执行边界难以定义。我们提出了 extbf{PalmClaw}，一个开源智能体框架，原生运行在手机上，并直接在设备上管理会话、记忆、技能、工具和智能体循环。PalmClaw将设备能力暴露为具有明确参数、结构化结果和清晰定义执行边界的设备工具。这种设计使智能体能够直接使用移动能力，同时保持每个动作明确且可控。实验表明，与最强基线相比，任务成功率相对提高了11.5%，完成时间减少了94.9%，设置负担更低，且轨迹说明了执行边界的应用方式。代码可在https://github.com/ModalityDance/PalmClaw获取。",
       "categories": [
         "cs.CL",
         "cs.AI"
@@ -99,21 +99,21 @@
         "large language model",
         "agent"
       ],
-      "translation_status": "skipped"
+      "translation_status": "translated"
     },
     {
       "id": "2607.12982",
       "arxiv_id": "2607.12982v1",
       "version": "v1",
       "title": "FormalAnalyticGeo: A Neural-Symbolic Based Framework for Multimodal Analytic Geometry Problem Generation",
-      "title_zh": "",
+      "title_zh": "FormalAnalyticGeo：一种基于神经符号的多模态解析几何问题生成框架",
       "authors": [
         "Ruoran Xu",
         "Wending Gao",
         "Qiufeng Wang"
       ],
       "abstract": "Math reasoning has achieved significant progress with the rapid advancement of Multimodal Large Language Models (MLLMs), however analytic geometry remains largely underexplored, primarily due to the scarcity of annotated samples. Existing diagram generation approaches struggle with analytic geometry: template methods cannot handle constraint-driven layouts, and generative models lack the geometric precision to render annotated conic curves correctly. We present FormalAnalyticGeo, a scalable framework for fully automatic generation of multimodal analytic geometry problems. Leveraging the rigor of formal languages, we design the framework around CDL (Condition Description Language), a formal intermediate representation that bridges free-form problem text with precise diagram rendering via a Signed Distance Field (SDF) engine. The framework employs four specialized LLM components in sequence: a Generator that produces diverse analytic geometry problems, a Formalizer that converts each problem into CDL for SDF-based rendering, a Measurer that extracts ground-truth answers through vision-based measurement on the rendered diagrams, and a Quality Verifier that checks outputs at three stages. Structured feedback from the Quality Verifier drives automatic retry, forming a closed loop that eliminates any need for human annotation. Applying FormalAnalyticGeo at scale yields AnalyticGeo7K, a dataset of over 7K verified multimodal problems, each with aligned text, diagram, formal annotation, and ground truth.Experiments show that the generated problems achieve a median ground-truth relative error of 0.70\\%, with 82.3\\% of answers falling within 5\\% of the exact symbolic solution. Our framework and dataset will be publicly released.",
-      "abstract_zh": "",
+      "abstract_zh": "随着多模态大语言模型的快速发展，数学推理取得了显著进展，然而解析几何仍然在很大程度上未被充分探索，这主要是由于标注样本的稀缺。现有的图表生成方法难以处理解析几何：模板方法无法处理约束驱动的布局，而生成模型缺乏精确渲染带标注圆锥曲线的几何精度。我们提出了FormalAnalyticGeo，一个用于全自动生成多模态解析几何问题的可扩展框架。利用形式语言的严谨性，我们围绕CDL（条件描述语言）设计该框架，这是一种形式化中间表示，通过符号距离场引擎连接自由形式的问题文本与精确的图表渲染。该框架依次使用四个专门的LLM组件：生成器产生多样化的解析几何问题，形式化器将每个问题转换为CDL以进行基于SDF的渲染，测量器通过基于视觉的测量从渲染图表中提取真实答案，以及质量验证器在三个阶段检查输出。来自质量验证器的结构化反馈驱动自动重试，形成一个闭环，消除了任何人工标注的需求。大规模应用FormalAnalyticGeo产生了AnalyticGeo7K，一个包含超过7K个经过验证的多模态问题的数据集，每个问题都有对齐的文本、图表、形式化标注和真实答案。实验表明，生成的问题的中位真实相对误差为0.70%，其中82.3%的答案在精确符号解的5%以内。我们的框架和数据集将公开发布。",
       "categories": [
         "cs.AI",
         "cs.MA",
@@ -131,21 +131,21 @@
         "large language model",
         "multimodal"
       ],
-      "translation_status": "skipped"
+      "translation_status": "translated"
     },
     {
       "id": "2607.12975",
       "arxiv_id": "2607.12975v1",
       "version": "v1",
       "title": "Ensemble Controlled-Flow Filtering for Implicit Data Assimilation",
-      "title_zh": "",
+      "title_zh": "用于隐式数据同化的集成控制流滤波",
       "authors": [
         "Zhuoyuan Li",
         "Yue Zhao",
         "Ming Li"
       ],
       "abstract": "Data assimilation estimates the state of a dynamical system from model forecasts and incoming observations. Many observation mechanisms, however, are many-to-one, implicit, non-smooth, or accessible only through simulation, and need not provide the residual structures or likelihood guidance required by existing ensemble filters. We introduce implicit data assimilation, in which the analysis law is defined as an energy tilt of the forecast distribution. We then propose the Ensemble Controlled-flow Filter (EnCF), which realizes this update through a stochastic controlled flow and learns the observation-dependent control by adjoint matching from terminal energy gradients. For simulator-defined observations, EnCF-LF learns a surrogate conditional energy from samples and applies the same controlled-flow solver. We prove ideal exactness, derive a one-step error decomposition, and establish non-accumulation of local errors under filter stability. Numerical results show that Kalman-type filters remain preferable for smooth additive-Gaussian observations, while the proposed methods are better suited to non-Gaussian, many-to-one, multimodal, and implicit observation models.",
-      "abstract_zh": "",
+      "abstract_zh": "数据同化通过模型预报和传入观测来估计动力系统的状态。然而，许多观测机制是多对一、隐式、非光滑的，或仅能通过模拟访问，且无需提供现有集成滤波器所需的残差结构或似然引导。我们引入隐式数据同化，其中分析律被定义为预报分布的能量倾斜。然后我们提出集成控制流滤波器（EnCF），该滤波器通过随机控制流实现这一更新，并通过伴随匹配从终端能量梯度学习观测依赖的控制。对于模拟器定义的观测，EnCF-LF从样本中学习代理条件能量，并应用相同的控制流求解器。我们证明了理想的精确性，推导了一步误差分解，并建立了在滤波器稳定性下局部误差的非累积性。数值结果表明，卡尔曼型滤波器对于平滑加性高斯观测仍然更优，而所提出的方法更适合非高斯、多对一、多模态和隐式观测模型。",
       "categories": [
         "stat.ML",
         "cs.LG",
@@ -163,21 +163,21 @@
       "matched_keywords": [
         "multimodal"
       ],
-      "translation_status": "skipped"
+      "translation_status": "translated"
     },
     {
       "id": "2607.12963",
       "arxiv_id": "2607.12963v1",
       "version": "v1",
       "title": "The Illusion of Robustness: Aggregate Accuracy Hides Prediction Flips under Task-Irrelevant Context",
-      "title_zh": "",
+      "title_zh": "鲁棒性的假象：聚合准确性掩盖了任务无关上下文下的预测翻转",
       "authors": [
         "Yanzhe Zhang",
         "Sanmi Koyejo",
         "Diyi Yang"
       ],
       "abstract": "As large language models (LLMs) grow more capable, they are increasingly deployed in context-rich settings where task inputs are often accompanied by long, partially irrelevant context. In a controlled setting, we find that state-of-the-art models often appear robust to task-irrelevant context at the aggregate level: prepending it to benchmark questions causes little change in overall accuracy. This aggregate stability, however, masks significant per-example instability. Even semantically meaningless pseudo-words, formed by randomly combining characters, can markedly shift model predictions on a small fraction of examples, degrading performance on some while improving it on others. This two-sided effect holds consistently across a wide range of models and datasets, yet the affected examples are largely model-specific. We further show that this instability is modulated by context type, context length, test-time compute, and model development stage. Together, our findings reveal context-induced tail risks concealed by aggregate accuracy, motivating per-example reliability evaluation of language models.",
-      "abstract_zh": "",
+      "abstract_zh": "随着大型语言模型（LLM）能力的增强，它们越来越多地被部署在上下文丰富的场景中，其中任务输入通常伴随着长而部分无关的上下文。在受控环境中，我们发现最先进的模型在聚合层面上通常对任务无关的上下文表现出鲁棒性：将其附加到基准问题前对整体准确性影响很小。然而，这种聚合稳定性掩盖了显著的逐示例不稳定性。即使是语义上无意义的伪词（由随机组合的字符构成），也能在少量示例上显著改变模型预测，降低某些示例的性能同时提升其他示例的性能。这种双向效应在广泛的模型和数据集上一致存在，但受影响的示例在很大程度上是模型特定的。我们进一步表明，这种不稳定性受到上下文类型、上下文长度、测试时计算和模型开发阶段的调节。总之，我们的发现揭示了被聚合准确性掩盖的上下文引发的尾部风险，从而激励对语言模型进行逐示例的可靠性评估。",
       "categories": [
         "cs.CL"
       ],
@@ -192,14 +192,14 @@
       "matched_keywords": [
         "large language model"
       ],
-      "translation_status": "skipped"
+      "translation_status": "translated"
     },
     {
       "id": "2607.12959",
       "arxiv_id": "2607.12959v1",
       "version": "v1",
       "title": "ViCo3D: Empowering LiDAR-based Collaborative 3D Object Detection with Vision Foundation Models",
-      "title_zh": "",
+      "title_zh": "ViCo3D：利用视觉基础模型增强基于激光雷达的协同3D目标检测",
       "authors": [
         "Haojie Ren",
         "Songrui Luo",
@@ -212,7 +212,7 @@
         "Yanyong Zhang"
       ],
       "abstract": "LiDAR-based collaborative 3D perception in Vehicle-to-Everything (V2X) systems typically relies on fusing bird's-eye-view (BEV) features across agents. However, current BEV representations, typically extracted by LiDAR backbones trained from scratch, are geometry-dominated and lack general semantic priors, inherently limiting the efficacy of feature-level collaboration. Meanwhile, vision foundation models (VFMs) pretrained on large-scale image data have demonstrated strong capability in learning general-purpose and informative visual representations for 2D tasks, and have the potential to enhance agent-wise LiDAR BEV representations for collaboration. Despite this potential, adapting VFMs to LiDAR-based 3D detection remains challenging due to the substantial image-point cloud modality gap. To bridge this gap, we propose ViCo3D, a collaborative 3D object detection framework powered by VFMs. Specifically, ViCo3D adapts VFMs to LiDAR-based collaborative perception from three aspects: First, ViCo3D projects point clouds onto the BEV plane as three-channel images, enabling DINOv2 to extract BEV-space visual features from LiDAR inputs. Besides, to effectively integrate these DINOv2-derived features with LiDAR geometric features, ViCo3D introduces a multi-scale BEV fusion module within the single-agent encoder. In addition, ViCo3D adopts an ego-centric cross-agent fusion strategy to aggregate complementary information from multiple agents. Experiments on DAIR-V2X and V2XSet demonstrate that ViCo3D achieves state-of-the-art 3D detection performance. Remarkably, it delivers up to 1.8x greater collaborative gains than prior methods on DAIR-V2X. The code will be made public available for future investigation.",
-      "abstract_zh": "",
+      "abstract_zh": "在车联网（V2X）系统中，基于激光雷达的协同3D感知通常依赖于跨智能体融合鸟瞰图（BEV）特征。然而，当前由从头训练的激光雷达主干网络提取的BEV表示以几何为主，缺乏通用的语义先验，这从根本上限制了特征级协同的有效性。与此同时，在大规模图像数据上预训练的视觉基础模型（VFM）已展现出为2D任务学习通用且信息丰富的视觉表示的强大能力，并具有增强智能体间激光雷达BEV表示以促进协同的潜力。尽管有这种潜力，但由于图像-点云模态差异巨大，将VFM适应于基于激光雷达的3D检测仍然具有挑战性。为弥合这一差距，我们提出了ViCo3D，一个由VFM驱动的协同3D目标检测框架。具体而言，ViCo3D从三个方面将VFM适应于基于激光雷达的协同感知：首先，ViCo3D将点云投影到BEV平面作为三通道图像，使DINOv2能够从激光雷达输入中提取BEV空间视觉特征。此外，为了有效整合这些DINOv2导出的特征与激光雷达几何特征，ViCo3D在单智能体编码器中引入了多尺度BEV融合模块。另外，ViCo3D采用以自我为中心的多智能体融合策略来聚合来自多个智能体的互补信息。在DAIR-V2X和V2XSet上的实验表明，ViCo3D实现了最先进的3D检测性能。值得注意的是，它在DAIR-V2X上比先前方法提供了高达1.8倍的协同增益。代码将公开以供未来研究使用。",
       "categories": [
         "cs.CV"
       ],
@@ -227,7 +227,7 @@
       "matched_keywords": [
         "agent"
       ],
-      "translation_status": "skipped"
+      "translation_status": "translated"
     }
   ]
 }

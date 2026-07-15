@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-07-15T09:28:09Z",
+  "updated_at": "2026-07-15T10:31:32Z",
   "latest_date": "2026-07-15",
   "dates": [
     {
       "date": "2026-07-15",
       "count": 7,
-      "translated": 0
+      "translated": 7
     },
     {
       "date": "2026-07-14",
       "count": 77,
-      "translated": 0
+      "translated": 76
     }
   ],
   "months": [
@@ -18,7 +18,7 @@
   ],
   "stats": {
     "total": 84,
-    "translated": 0
+    "translated": 83
   },
   "demo": false
 }
