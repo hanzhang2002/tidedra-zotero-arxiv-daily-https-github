@@ -4,13 +4,18 @@ import tempfile
 import unittest
 from datetime import date
 from pathlib import Path
-from unittest.mock import patch
+from urllib.error import URLError
+from unittest.mock import MagicMock, patch
 
 from scripts.update_papers import (
+    OpenAICompatibleTranslator,
     apply_keyword_rules,
     build_search_query,
+    fetch_arxiv,
     merge_papers,
     parse_arxiv_feed,
+    parse_json_object,
+    translate_papers,
     update_data,
 )
 
@@ -49,6 +54,24 @@ class UpdatePapersTests(unittest.TestCase):
         self.assertEqual(papers[0]["primary_category"], "cs.AI")
         self.assertEqual(papers[0]["authors"], ["Junjie Yin", "Xinyu Feng"])
 
+    def test_fetch_arxiv_retries_transient_network_error(self):
+        response = MagicMock()
+        response.__enter__.return_value.read.return_value = SAMPLE_FEED
+        opener = MagicMock(side_effect=[URLError("temporary"), response])
+
+        with patch("scripts.update_papers.time.sleep"):
+            feed = fetch_arxiv(
+                ["cs.AI"],
+                date(2026, 7, 14),
+                date(2026, 7, 15),
+                20,
+                opener=opener,
+                max_retries=2,
+            )
+
+        self.assertEqual(feed, SAMPLE_FEED)
+        self.assertEqual(opener.call_count, 2)
+
     def test_keyword_rules_support_highlight_and_filter(self):
         papers = parse_arxiv_feed(SAMPLE_FEED)
         highlighted = apply_keyword_rules(papers, ["agent", "robot"], "highlight")
@@ -62,6 +85,56 @@ class UpdatePapersTests(unittest.TestCase):
         merged = merge_papers(existing, incoming)
         self.assertEqual(merged[0]["abstract_zh"], "摘要")
         self.assertEqual(merged[0]["translation_status"], "translated")
+
+    def test_parse_json_object_accepts_unescaped_newline(self):
+        content = '{"title_zh":"标题","abstract_zh":"第一行\n第二行"}'
+        parsed = parse_json_object(content)
+        self.assertEqual(parsed["abstract_zh"], "第一行\n第二行")
+
+    def test_parse_json_object_accepts_fenced_json(self):
+        content = '```json\n{"title_zh":"标题","abstract_zh":"摘要"}\n```'
+        parsed = parse_json_object(content)
+        self.assertEqual(parsed, {"title_zh": "标题", "abstract_zh": "摘要"})
+
+    def test_translator_requests_json_object_response(self):
+        config = {
+            "api_base": "https://api.deepseek.com",
+            "model": "deepseek-chat",
+            "max_retries": 1,
+        }
+        response = MagicMock()
+        response.__enter__.return_value.read.return_value = json.dumps(
+            {"choices": [{"message": {"content": '{"title_zh":"标题","abstract_zh":"摘要"}'}}]}
+        ).encode("utf-8")
+
+        with patch("scripts.update_papers.urllib.request.urlopen", return_value=response) as urlopen:
+            translator = OpenAICompatibleTranslator(config, "test-key")
+            translated = translator.translate({"id": "1", "title": "Title", "abstract": "Abstract"})
+
+        request = urlopen.call_args.args[0]
+        payload = json.loads(request.data.decode("utf-8"))
+        self.assertEqual(payload["response_format"], {"type": "json_object"})
+        self.assertEqual(translated, ("标题", "摘要"))
+
+    def test_translate_papers_stops_after_three_consecutive_failures(self):
+        papers = [{"id": str(index), "title": "Title", "abstract": "Abstract"} for index in range(1, 5)]
+        config = {
+            "api_base": "https://api.deepseek.com",
+            "model": "deepseek-chat",
+            "max_consecutive_failures": 3,
+        }
+
+        with patch.dict(os.environ, {"OPENAI_API_KEY": "test-key"}, clear=True):
+            with patch("scripts.update_papers.OpenAICompatibleTranslator") as translator_class:
+                translator_class.return_value.translate.side_effect = RuntimeError("API failure")
+                with self.assertRaisesRegex(RuntimeError, "3 consecutive translation failures"):
+                    translate_papers(papers, config)
+
+        self.assertEqual(translator_class.return_value.translate.call_count, 3)
+        self.assertEqual(
+            [paper.get("translation_status") for paper in papers],
+            ["failed", "failed", "failed", None],
+        )
 
     def test_update_data_writes_day_month_and_manifest(self):
         config = {

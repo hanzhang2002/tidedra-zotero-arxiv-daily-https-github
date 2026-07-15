@@ -40,7 +40,9 @@ python scripts/update_papers.py --date 2026-07-14 --no-translate
 3. 在 `Settings > Pages` 中将 Source 设为 `GitHub Actions`。
 4. 打开 Actions，手动运行一次“更新 arXiv 数据”和“部署 GitHub Pages”。
 
-工作流默认在工作日 `10:30 UTC`（北京时间 `18:30`）运行。第一次运行会用真实数据替换仓库中的演示数据。
+工作流默认在工作日 `10:30 UTC`（北京时间 `18:30`）运行。第一次运行会创建真实论文数据。
+
+工作流会实时输出每篇论文的翻译进度。单篇翻译最多尝试 2 次；连续 3 篇失败时任务会终止，避免接口异常时持续消耗 API。整个任务最长运行 30 分钟。
 
 ## DeepSeek
 

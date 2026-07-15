@@ -61,6 +61,7 @@ def fetch_arxiv(
     max_results: int,
     *,
     opener: Any = urllib.request.urlopen,
+    max_retries: int = 3,
 ) -> bytes:
     params = urllib.parse.urlencode(
         {
@@ -75,8 +76,15 @@ def fetch_arxiv(
         f"{ARXIV_API_URL}?{params}",
         headers={"User-Agent": USER_AGENT, "Accept": "application/atom+xml"},
     )
-    with opener(request, timeout=60) as response:
-        return response.read()
+    for attempt in range(max_retries):
+        try:
+            with opener(request, timeout=60) as response:
+                return response.read()
+        except (urllib.error.URLError, TimeoutError) as error:
+            if attempt + 1 >= max_retries:
+                raise RuntimeError(f"arXiv request failed after {max_retries} attempts: {error}") from error
+            time.sleep(2**attempt)
+    raise RuntimeError("arXiv request failed")
 
 
 def parse_arxiv_feed(xml_bytes: bytes, timezone_name: str = "Asia/Shanghai") -> list[dict[str, Any]]:
@@ -166,6 +174,7 @@ class OpenAICompatibleTranslator:
         payload = {
             "model": self.model,
             "temperature": self.temperature,
+            "response_format": {"type": "json_object"},
             "messages": [
                 {
                     "role": "system",
@@ -208,7 +217,13 @@ def parse_json_object(content: str) -> dict[str, Any]:
     end = cleaned.rfind("}")
     if start == -1 or end == -1:
         raise ValueError("Model response did not contain a JSON object")
-    return json.loads(cleaned[start : end + 1])
+    parsed = json.loads(cleaned[start : end + 1], strict=False)
+    if not isinstance(parsed, dict):
+        raise ValueError("Model response JSON was not an object")
+    for key in ("title_zh", "abstract_zh"):
+        if not isinstance(parsed.get(key), str) or not parsed[key].strip():
+            raise ValueError(f"Model response is missing a non-empty {key}")
+    return parsed
 
 
 def load_existing_translations(data_dir: Path) -> dict[str, dict[str, str]]:
@@ -227,26 +242,47 @@ def load_existing_translations(data_dir: Path) -> dict[str, dict[str, str]]:
 
 def translate_papers(
     papers: list[dict[str, Any]], ai_config: dict[str, Any], *, no_translate: bool = False
-) -> None:
+) -> dict[str, int]:
     api_key = os.environ.get("OPENAI_API_KEY", "").strip()
     translator = None if no_translate or not api_key else OpenAICompatibleTranslator(ai_config, api_key)
+    stats = {"translated": 0, "reused": 0, "failed": 0, "skipped": 0}
+    consecutive_failures = 0
+    max_consecutive_failures = int(ai_config.get("max_consecutive_failures", 3))
     if translator is None:
         reason = "disabled" if no_translate else "OPENAI_API_KEY is not set"
-        print(f"Translation skipped: {reason}")
+        print(f"Translation skipped: {reason}", flush=True)
 
     for index, paper in enumerate(papers, start=1):
         if paper.get("abstract_zh"):
+            stats["reused"] += 1
             continue
         if translator is None:
             paper["translation_status"] = "skipped"
+            stats["skipped"] += 1
             continue
-        print(f"Translating {index}/{len(papers)}: {paper['id']}")
+        print(f"Translating {index}/{len(papers)}: {paper['id']}", flush=True)
         try:
             paper["title_zh"], paper["abstract_zh"] = translator.translate(paper)
             paper["translation_status"] = "translated"
+            stats["translated"] += 1
+            consecutive_failures = 0
         except RuntimeError as error:
-            print(str(error), file=sys.stderr)
+            print(str(error), file=sys.stderr, flush=True)
             paper["translation_status"] = "failed"
+            stats["failed"] += 1
+            consecutive_failures += 1
+            if consecutive_failures >= max_consecutive_failures:
+                raise RuntimeError(
+                    f"Stopped after {consecutive_failures} consecutive translation failures to protect API quota"
+                ) from error
+
+    print(
+        "Translation summary: "
+        f"translated={stats['translated']}, reused={stats['reused']}, "
+        f"failed={stats['failed']}, skipped={stats['skipped']}",
+        flush=True,
+    )
+    return stats
 
 
 def merge_papers(existing: list[dict[str, Any]], incoming: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -317,7 +353,7 @@ def update_data(
     categories = list(config["research"]["categories"])
     generated_at = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
-    print(f"Fetching {', '.join(categories)} from {start_date} to {end_date}")
+    print(f"Fetching {', '.join(categories)} from {start_date} to {end_date}", flush=True)
     feed = fetch_arxiv(categories, start_date, end_date, int(config["fetch"]["max_results"]))
     papers = parse_arxiv_feed(feed, config["site"].get("timezone", "Asia/Shanghai"))
     papers = apply_keyword_rules(
@@ -348,7 +384,10 @@ def update_data(
         rebuild_month(data_dir, month, generated_at)
     prune_history(data_dir, int(config["fetch"].get("retention_months", 24)), end_date)
     manifest = rebuild_manifest(data_dir, generated_at)
-    print(f"Stored {len(papers)} fetched papers; archive contains {manifest['stats']['total']} papers")
+    print(
+        f"Stored {len(papers)} fetched papers; archive contains {manifest['stats']['total']} papers",
+        flush=True,
+    )
     return manifest
 
 

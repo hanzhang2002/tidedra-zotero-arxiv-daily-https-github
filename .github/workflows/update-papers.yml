@@ -18,9 +18,14 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: arxiv-data-update
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
 
@@ -31,13 +36,14 @@ jobs:
       - name: 抓取并翻译论文
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          PYTHONUNBUFFERED: "1"
           INPUT_DATE: ${{ inputs.date }}
           NO_TRANSLATE: ${{ inputs.no_translate }}
         run: |
           args=()
           if [ -n "$INPUT_DATE" ]; then args+=(--date "$INPUT_DATE"); fi
           if [ "$NO_TRANSLATE" = "true" ]; then args+=(--no-translate); fi
-          python scripts/update_papers.py "${args[@]}"
+          python -u scripts/update_papers.py "${args[@]}"
 
       - name: 提交数据更新
         run: |
