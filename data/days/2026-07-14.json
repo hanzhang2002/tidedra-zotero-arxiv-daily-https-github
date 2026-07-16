@@ -1,6 +1,6 @@
 {
   "date": "2026-07-14",
-  "updated_at": "2026-07-15T12:44:41Z",
+  "updated_at": "2026-07-16T12:02:25Z",
   "papers": [
     {
       "id": "2607.12924",
@@ -1349,8 +1349,8 @@
     },
     {
       "id": "2607.12704",
-      "arxiv_id": "2607.12704v1",
-      "version": "v1",
+      "arxiv_id": "2607.12704v2",
+      "version": "v2",
       "title": "Label-Decoupled Style Augmentation for Domain Generalization in Multi-Label Remote Sensing Scene Classification",
       "title_zh": "标签解耦风格增强用于多标签遥感场景分类的域泛化",
       "authors": [
@@ -1365,11 +1365,11 @@
       ],
       "primary_category": "cs.CV",
       "published": "2026-07-14T12:28:15Z",
-      "updated": "2026-07-14T12:28:15Z",
+      "updated": "2026-07-15T15:26:42Z",
       "announcement_date": "2026-07-14",
       "links": {
-        "abs": "https://arxiv.org/abs/2607.12704v1",
-        "pdf": "https://arxiv.org/pdf/2607.12704v1"
+        "abs": "https://arxiv.org/abs/2607.12704v2",
+        "pdf": "https://arxiv.org/pdf/2607.12704v2"
       },
       "matched_keywords": [
         "statistics"
@@ -2041,6 +2041,35 @@
       "translation_status": "translated"
     },
     {
+      "id": "2607.12579",
+      "arxiv_id": "2607.12579v1",
+      "version": "v1",
+      "title": "Wasserstein gradient flows for Coulomb discrepancies",
+      "title_zh": "库仑差异的Wasserstein梯度流",
+      "authors": [
+        "Antonin Chodron de Courcel",
+        "Matthew Rosenzweig"
+      ],
+      "abstract": "We study the long-time behavior of the Wasserstein gradient flow of the squared Maximum Mean Discrepancy (MMD) between a probability measure $ρ$ and a target measure $μ$, where the underlying kernel is given by a Coulomb potential. First, we establish the existence of global weak solutions starting from arbitrary Borel probability measures and prove an ultracontractive estimate, showing that the density $ρ_t$ becomes instantly bounded in $L^\\infty$ for $t>0$. We also investigate the regularity of these solutions, showing that the Hölder norm can grow exponentially in time. Second, on the flat torus $\\mathbb T^\\mathsf{d}$, we prove exponential decay of the squared MMD along the flow toward a uniformly positive target $μ$, without requiring a lower bound on the initial data. This result is based on a ''defective Polyak-Lojasiewicz (PL) inequality'' whose defect term accounts for possible vacuum regions in the evolving density. We also prove that the usual PL inequality may fail when the target vanishes only at one point, and, in dimensions at least two, that no coercivity constant can depend only on a prescribed positive lower bound for the target. Finally, on $\\mathbb R^\\mathsf{d}$, we identify an obstruction at spatial infinity. For a compactly supported target, uniformly localized sources initially separated from the target by distance $D$ retain a fixed fraction of their initial squared MMD for times of order $D$. Consequently, neither a multiplicative squared-MMD decay modulus uniform over the initial datum nor a global PL inequality can hold on the unrestricted whole-space class. By contrast, under radial symmetry, source-support inclusion, and target-positivity assumptions, we establish a PL inequality and exponential convergence.",
+      "abstract_zh": "我们研究了概率测度ρ与目标测度μ之间的平方最大均值差异（MMD）的Wasserstein梯度流的长时间行为，其中底层核由库仑势给出。首先，我们建立了从任意Borel概率测度出发的全局弱解的存在性，并证明了一个超压缩估计，表明密度ρ_t在t>0时立即在L^∞中有界。我们还研究了这些解的正则性，表明Hölder范数可以随时间指数增长。其次，在平坦环面T^d上，我们证明了沿流朝向一致正目标μ的平方MMD的指数衰减，而不需要对初始数据施加下界。这一结果基于一个“有缺陷的Polyak-Lojasiewicz（PL）不等式”，其缺陷项考虑了演化密度中可能的真空区域。我们还证明了当目标仅在一个点消失时，通常的PL不等式可能失效，并且在至少二维的情况下，不存在仅依赖于目标规定的正下界的强制常数。最后，在R^d上，我们识别了空间无穷远处的障碍。对于紧支撑的目标，最初与目标距离为D的均匀局部化源在时间阶为D内保持其初始平方MMD的固定比例。因此，在无限制的全空间类上，既不能成立初始数据上均匀的乘法平方MMD衰减模，也不能成立全局PL不等式。相比之下，在径向对称、源支撑包含和目标正性假设下，我们建立了PL不等式和指数收敛。",
+      "categories": [
+        "math.AP",
+        "stat.ML"
+      ],
+      "primary_category": "math.AP",
+      "published": "2026-07-14T09:49:46Z",
+      "updated": "2026-07-14T09:49:46Z",
+      "announcement_date": "2026-07-14",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.12579v1",
+        "pdf": "https://arxiv.org/pdf/2607.12579v1"
+      },
+      "matched_keywords": [
+        "probability"
+      ],
+      "translation_status": "translated"
+    },
+    {
       "id": "2607.12578",
       "arxiv_id": "2607.12578v1",
       "version": "v1",
@@ -2128,6 +2157,38 @@
       },
       "matched_keywords": [
         "statistical"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.13103",
+      "arxiv_id": "2607.13103v1",
+      "version": "v1",
+      "title": "Disentangling Knowledge States with Ability and Proficiency Modeling for Knowledge Tracing",
+      "title_zh": "通过能力与熟练度建模解耦知识状态以进行知识追踪",
+      "authors": [
+        "Duantengchuan Li",
+        "Yingqian Bi",
+        "Jinsong Chen",
+        "Rui Zhang",
+        "Mingwen Tong"
+      ],
+      "abstract": "Knowledge tracing (KT) aims to predict students' future performance by modeling their evolving knowledge states from historical interactions. Existing KT methods usually treat the raw interaction sequence as a unified behavioral process, overlooking the phase-specific nature of learning behaviors. Our preliminary observations show that students are more likely to correctly answer previously failed knowledge concepts after sufficient practice, suggesting a transition from ability-building to proficiency-oriented learning. Motivated by this, we propose Phase-Aware Knowledge Tracing (PAKT), a KT framework that decomposes student interactions into ability and proficiency phases based on the tailored decomposition mechanism. To effectively exploit the decomposed sequences, we design a multi-branch Transformer with a type-aware readout module to jointly capture phase-specific and holistic knowledge states. We further provide a causal analysis to reveal the confounding bias caused by entangling complex learning behaviors in phase-agnostic KT models. Extensive experiments on six public benchmarks demonstrate that our method consistently outperforms representative baselines, with a maximum AUC gain of 1.33% and an average gain of 0.82%.",
+      "abstract_zh": "知识追踪旨在通过建模学生从历史交互中不断演变的知识状态来预测其未来表现。现有知识追踪方法通常将原始交互序列视为统一的行为过程，忽略了学习行为的阶段性特征。我们的初步观察表明，学生在充分练习后更有可能正确回答先前失败的知识概念，这表明从能力构建向熟练度导向的学习转变。受此启发，我们提出阶段感知知识追踪（PAKT），这是一个基于定制化分解机制将学生交互分解为能力阶段和熟练度阶段的知识追踪框架。为了有效利用分解后的序列，我们设计了一个多分支Transformer，并配备类型感知读出模块，以联合捕获阶段特定和整体的知识状态。我们进一步提供了因果分析，以揭示在阶段无关的知识追踪模型中，复杂学习行为纠缠所导致的混杂偏差。在六个公开基准上的大量实验表明，我们的方法始终优于代表性基线，最大AUC提升1.33%，平均提升0.82%。",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-14T09:11:59Z",
+      "updated": "2026-07-14T09:11:59Z",
+      "announcement_date": "2026-07-14",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.13103v1",
+        "pdf": "https://arxiv.org/pdf/2607.13103v1"
+      },
+      "matched_keywords": [
+        "causal"
       ],
       "translation_status": "translated"
     },
@@ -2445,8 +2506,8 @@
     },
     {
       "id": "2607.12479",
-      "arxiv_id": "2607.12479v1",
-      "version": "v1",
+      "arxiv_id": "2607.12479v2",
+      "version": "v2",
       "title": "Ito-Wentzell Formula and Dupire Stochastic PDE",
       "title_zh": "Ito-Wentzell公式与Dupire随机偏微分方程",
       "authors": [
@@ -2460,11 +2521,11 @@
       ],
       "primary_category": "q-fin.MF",
       "published": "2026-07-14T08:07:02Z",
-      "updated": "2026-07-14T08:07:02Z",
+      "updated": "2026-07-15T07:45:16Z",
       "announcement_date": "2026-07-14",
       "links": {
-        "abs": "https://arxiv.org/abs/2607.12479v1",
-        "pdf": "https://arxiv.org/pdf/2607.12479v1"
+        "abs": "https://arxiv.org/abs/2607.12479v2",
+        "pdf": "https://arxiv.org/pdf/2607.12479v2"
       },
       "matched_keywords": [
         "stochastic"
@@ -2654,6 +2715,43 @@
       },
       "matched_keywords": [
         "probability"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.13101",
+      "arxiv_id": "2607.13101v1",
+      "version": "v1",
+      "title": "TSSM: Triaxial State Space Model for Global Station Weather Forecasting with Temporal-Variable-Historical Modeling",
+      "title_zh": "TSSM：面向全球站点天气预报的三轴状态空间模型与时-变-历联合建模",
+      "authors": [
+        "Songru Yang",
+        "Zili Liu",
+        "Tao Han",
+        "Ben Fei",
+        "Fenghua Ling",
+        "Lei Bai",
+        "Chang Liu",
+        "Xiangyang Ji",
+        "Zhenwei Shi",
+        "Zhengxia Zou"
+      ],
+      "abstract": "Global Station Weather Forecasting (GSWF) is pivotal for localized and extreme weather prediction over key regions. Despite efforts to exploit look-back windows, existing methods show limited accuracy gains and struggle with extreme events and error accumulation. These limitations stem from overreliance on short-term patterns, which are insufficient to capture chaotic weather dynamics, especially under partial observations. To address this problem, we propose a novel Triaxial State Space Model (TSSM) with a history-enhanced Temporal-VariableHistorical paradigm, which incorporates period-aligned historical weather data to compensate for long-term, large-scale periodic, and full-window weather patterns beyond the temporal lookback window. Specifically, TSSM stacks historical samples into period-aligned batches, where forecasting is causally supported by historical and current observations. Temporal, variable, and historical scanning are designed to capture axial temporal dependencies, variable correlations, and historical evolution. This structure is hierarchically shared to model seasonal to extreme events while alleviating misalignment across historical patterns. TSSM achieves SOTA performance on Weather-5K, the largest station weather dataset to date, with 10% and 61% gains in accuracy and extreme event metrics, and obtains 95% best or second-best results on human-involved datasets. Its advantages are more pronounced in long-horizon and iterative forecasting, reaching a 37.5% gain at 240h and up to 103.5% under a 48h times 5 iterative setting. Moreover, TSSM retains > 90% performance under up to 80% missing observations, compared with < 43% for baselines, demonstrating robustness and practical potential for reliable GSWF in global in-situ observation networks.",
+      "abstract_zh": "全球站点天气预报（GSWF）对于关键区域的局地和极端天气预测至关重要。尽管已有研究尝试利用回溯窗口，但现有方法在精度提升上有限，且在极端事件和误差累积方面表现不佳。这些局限性源于过度依赖短期模式，而短期模式难以捕捉混沌的天气动态，尤其是在部分观测条件下。为解决这一问题，我们提出了一种新颖的三轴状态空间模型（TSSM），并采用历史增强的时-变-历范式，该范式引入周期对齐的历史天气数据，以补偿时间回溯窗口之外的长周期、大尺度周期性和全窗口天气模式。具体而言，TSSM将历史样本堆叠成周期对齐的批次，其中预测由历史和当前观测因果支持。设计了时间轴、变量轴和历史轴扫描，以捕获轴向时间依赖关系、变量相关性和历史演化。该结构通过层次共享来建模从季节性到极端事件的各种模式，同时缓解历史模式间的错位。TSSM在迄今为止最大的站点天气数据集Weather-5K上取得了最先进性能，在精度和极端事件指标上分别提升10%和61%，并在涉及人类的数据集上获得95%的最佳或次佳结果。其优势在长时程和迭代预测中更为显著，在240小时预测中提升37.5%，在48小时×5次迭代设置下提升高达103.5%。此外，在高达80%的观测缺失情况下，TSSM仍保持>90%的性能，而基线方法低于43%，展示了在全球原位观测网络中实现可靠GSWF的鲁棒性和实际潜力。",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-14T07:36:19Z",
+      "updated": "2026-07-14T07:36:19Z",
+      "announcement_date": "2026-07-14",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.13101v1",
+        "pdf": "https://arxiv.org/pdf/2607.13101v1"
+      },
+      "matched_keywords": [
+        "causal"
       ],
       "translation_status": "translated"
     },
@@ -4369,6 +4467,34 @@
       "translation_status": "translated"
     },
     {
+      "id": "2607.12201",
+      "arxiv_id": "2607.12201v1",
+      "version": "v1",
+      "title": "Revisiting Simultaneous Methods for Dynamic Optimization in the GPU Era",
+      "title_zh": "重新审视GPU时代动态优化的同步方法",
+      "authors": [
+        "Joseph W. Choi",
+        "Sungho Shin"
+      ],
+      "abstract": "We revisit the classical topic in dynamic optimization: sequential vs simultaneous methods for solving DAE-constrained optimization problems, with a particular focus on how graphics processing unit (GPU) computing changes their effectiveness. Sequential methods offer key advantages through adaptive time stepping at the differential-algebraic equation (DAE) solver level, which is especially effective for handling stiff systems. However, long-time-horizon simulations remain a computational bottleneck, as time integration is inherently sequential and limits parallelization within the optimization algorithm. In contrast, simultaneous approaches are well-suited for parallel computing. They address these limitations by exploiting the highly repetitive structure of discretized DAE systems at the function evaluation level and leveraging sparse linear algebra routines that enable elimination tree-level parallelism. Although simultaneous methods typically lack adaptive time stepping, this limitation can often be mitigated by choosing a sufficiently fine initial mesh or iteratively adjusting mesh coarseness in an outer loop. In this work, we revisit the capabilities of the simultaneous approach in a GPU computing environment and assess its performance against a sequential method baseline. We employ a simultaneous approach based on orthogonal collocation within an open-source modeling framework and apply it to parameter estimation benchmarks from systems biology. We evaluate both GPU and CPU solvers on the simultaneous formulation. Our results show that, although less reliable, the simultaneous approach achieves up to 5.4x speedup compared to the sequential baseline among the largest instances where both methods solve successfully. The advantage of the simultaneous method with respect to problem size is more pronounced on GPUs than on CPUs.",
+      "abstract_zh": "我们重新审视动态优化中的经典主题：求解DAE约束优化问题的序贯方法与同步方法，特别关注图形处理单元（GPU）计算如何改变它们的有效性。序贯方法通过在微分代数方程（DAE）求解器层面采用自适应时间步长提供关键优势，这对于处理刚性系统尤其有效。然而，长时间范围的模拟仍然是计算瓶颈，因为时间积分本质上是序贯的，限制了优化算法内的并行化。相比之下，同步方法非常适合并行计算。它们通过在函数评估层面利用离散化DAE系统的高度重复结构，并利用支持消去树级并行的稀疏线性代数例程，来解决这些限制。尽管同步方法通常缺乏自适应时间步长，但这一限制通常可以通过选择足够精细的初始网格或在外部循环中迭代调整网格粗糙度来缓解。在这项工作中，我们重新审视了GPU计算环境中同步方法的能力，并评估其相对于序贯方法基线的性能。我们采用基于正交配置的同步方法，在开源建模框架内实现，并将其应用于系统生物学的参数估计基准测试。我们在同步公式上评估了GPU和CPU求解器。我们的结果表明，尽管可靠性较低，但在两种方法都成功求解的最大实例中，同步方法相比序贯基线实现了高达5.4倍的加速。同步方法相对于问题规模的优势在GPU上比在CPU上更为显著。",
+      "categories": [
+        "math.OC"
+      ],
+      "primary_category": "math.OC",
+      "published": "2026-07-13T23:05:54Z",
+      "updated": "2026-07-13T23:05:54Z",
+      "announcement_date": "2026-07-14",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.12201v1",
+        "pdf": "https://arxiv.org/pdf/2607.12201v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
       "id": "2607.12195",
       "arxiv_id": "2607.12195v1",
       "version": "v1",
@@ -4514,7 +4640,65 @@
         "pdf": "https://arxiv.org/pdf/2607.12172v1"
       },
       "matched_keywords": [
-        "agent"
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.12171",
+      "arxiv_id": "2607.12171v1",
+      "version": "v1",
+      "title": "Self-Consistent Flow: Unifying Velocity and Endpoint Prediction for Rectified Flow Models",
+      "title_zh": "自洽流：统一修正流模型中的速度与端点预测",
+      "authors": [
+        "Xu Han",
+        "Jiajing Hu",
+        "Li-Ping Liu"
+      ],
+      "abstract": "In rectified-flow-based generative models, the neural network can be trained to predict two different targets, such as the instantaneous velocity or the data endpoint, to perform denoising. Although prior work shows that these parameterizations lead to different empirical behaviors, the mechanisms underlying their respective advantages remain to be underexplored, and how to combine them effectively is still unclear. In this work, we analyze how learning errors from different parameterizations affect the generation performance. We show that predicting the data endpoint has a clear training signal that stabilizes training, whereas predicting the velocity maintains stable sampling dynamics near the data manifold. Motivated by these insights, we propose Self-Consistent Flow (SC-Flow), a new method that unifies the benefits of both parameterizations. By employing a lightweight consistency loss, SC-Flow jointly trains a single network to predict both the local velocity and the data endpoint, and the consistency between the two predictions improves the model's performance. The method requires no major architectural changes and adds minimal computational overhead. Extensive experiments on image generation tasks demonstrate that SC-Flow substantially stabilizes optimization and improves the straightness of generation paths, leading to significant gains in generation quality over standard rectified-flow baselines.",
+      "abstract_zh": "在基于修正流的生成模型中，神经网络可以训练来预测两个不同的目标，例如瞬时速度或数据端点，以执行去噪。尽管先前的工作表明这些参数化会导致不同的经验行为，但其各自优势背后的机制仍待探索，且如何有效结合它们尚不清楚。在这项工作中，我们分析了不同参数化的学习误差如何影响生成性能。我们表明，预测数据端点具有清晰的训练信号，能够稳定训练，而预测速度则在数据流形附近保持稳定的采样动态。受这些见解的启发，我们提出了自洽流（SC-Flow），一种统一两种参数化优势的新方法。通过采用轻量级一致性损失，SC-Flow联合训练单个网络以同时预测局部速度和数据端点，并且两个预测之间的一致性提高了模型的性能。该方法不需要重大的架构更改，且增加了最小的计算开销。在图像生成任务上的大量实验表明，SC-Flow显著稳定了优化过程并改善了生成路径的直线性，从而在生成质量上相对于标准修正流基线取得了显著提升。",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CV",
+      "published": "2026-07-13T21:31:45Z",
+      "updated": "2026-07-13T21:31:45Z",
+      "announcement_date": "2026-07-14",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.12171v1",
+        "pdf": "https://arxiv.org/pdf/2607.12171v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.12166",
+      "arxiv_id": "2607.12166v1",
+      "version": "v1",
+      "title": "From Geometric Recovery to Causal Validation: A Reproducible Audit of Sparse Autoencoder Features, from Superposition Geometry to Causal Inertness",
+      "title_zh": "从几何恢复到因果验证：稀疏自编码器特征的可重复审计——从叠加几何到因果惰性",
+      "authors": [
+        "Mohamed Abdessalem Bal"
+      ],
+      "abstract": "Sparse autoencoders (SAEs) are the standard for decomposing superposed neural representations into interpretable features, and evaluation relies predominantly on correlational recovery metrics -- cosine similarity between ground-truth directions and decoder atoms. We show this conflates two distinct claims: decoder-geometry alignment and encoder-activation behavior. We reproduce the superposition phase diagram of Elhage et al. (2022), identifying a convergence artifact at high sparsity and an under-described diffuse sharing regime at extreme overcompleteness. We reproduce the TopK-versus-L1 comparison of Gao et al. (2024), with direct evidence of L1 shrinkage. Our central result is causal: subjecting every recovered feature to ablation and steering, we find up to 77% of features passing a recovery bar (cosine >= 0.90) in a degraded SAE -- and 9% in a well-trained one -- are causally inert: the matched atom never fires when the feature is present, including matches at cosine ~1.000. We package the method as sae-causal-audit, a model-agnostic instrument with a deterministic pipeline. Re-auditing refines the finding: inertness decomposes by cause into structural inertness (antipodal-pair geometry, present in good SAEs) and competitive inertness (a TopK pathology of degraded SAEs), and by direction into read- and write-inertness, which five antipodal pairs dissociate completely -- unmonitorable yet steerable through the same atom, with steering specificities of 143-310 attached to zero ablation effects. We document why byte-exact reproducibility is unavailable by construction, and propose reporting it as a stack of claims with explicit scopes. Applying the instrument to a production SAE reproduces the pattern at small scale (14% inert) and surfaces an atom-collision signal: a handful of atoms recur as the nearest match for dozens of unrelated concepts, replicated across three batches.",
+      "abstract_zh": "稀疏自编码器（SAE）是分解叠加神经表征为可解释特征的标准方法，其评估主要依赖于相关性恢复指标——真实方向与解码器原子之间的余弦相似度。我们表明这混淆了两个不同的主张：解码器几何对齐和编码器激活行为。我们重现了Elhage等人（2022）的叠加相图，识别出高稀疏度下的收敛伪影和极端过完备性下未充分描述的扩散共享机制。我们重现了Gao等人（2024）的TopK与L1比较，直接证明了L1收缩。我们的核心结果是因果性的：对每个恢复的特征进行消融和引导，我们发现退化SAE中高达77%通过恢复标准（余弦≥0.90）的特征——以及良好训练SAE中9%的特征——是因果惰性的：匹配的原子在特征存在时从未激活，包括余弦~1.000的匹配。我们将该方法打包为sae-causal-audit，一个具有确定性流程的模型无关工具。重新审计细化了发现：惰性按原因分解为结构惰性（对映对几何，存在于良好SAE中）和竞争惰性（退化SAE的TopK病理），按方向分解为读取惰性和写入惰性，五个对映对完全分离了这些——通过同一原子不可监控但可引导，引导特异性为143-310，而消融效果为零。我们记录了为什么字节精确的可重复性在构造上不可用，并建议将其报告为具有明确范围的主张堆栈。将该工具应用于生产SAE，在小规模上重现了模式（14%惰性），并浮现出原子碰撞信号：少数原子作为数十个无关概念的最近匹配重复出现，跨三个批次复制。",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-13T21:18:52Z",
+      "updated": "2026-07-13T21:18:52Z",
+      "announcement_date": "2026-07-14",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.12166v1",
+        "pdf": "https://arxiv.org/pdf/2607.12166v1"
+      },
+      "matched_keywords": [
+        "causal"
       ],
       "translation_status": "translated"
     },
@@ -4547,6 +4731,128 @@
       "translation_status": "translated"
     },
     {
+      "id": "2607.12145",
+      "arxiv_id": "2607.12145v1",
+      "version": "v1",
+      "title": "Falsifying Causal Graphs With Outlier Events",
+      "title_zh": "用异常事件证伪因果图",
+      "authors": [
+        "William Roy Orchard",
+        "Philipp M. Faller",
+        "Dominik Janzing"
+      ],
+      "abstract": "True causal relationships are rarely known, and inferring causal graphs from data is hard. A fundamental challenge is how to assess whether a given causal graph is good in the absence of a ground truth. We propose falsifying candidate causal graphs based on whether they can explain the propagation of an outlier event. Our approach leverages a key principle: weak outliers rarely cause strong ones. While this principle has previously been used in root cause analysis to identify root causes without prior knowledge of the graph, we turn it on its head and use it to falsify candidate causal graphs whose implied outlier propagation is inconsistent with the data. To this end, we present the first statistical tests for the hypothesis that a candidate graph is the true causal graph, and show they have false positive control, power guarantees against incorrect causal graphs, and can operate with a single outlier sample.",
+      "abstract_zh": "真实的因果关系很少是已知的，从数据中推断因果图是困难的。一个基本挑战是如何在没有真实情况的情况下评估给定的因果图是否良好。我们提出基于候选因果图能否解释异常事件的传播来证伪它们。我们的方法利用了一个关键原则：弱异常很少引起强异常。虽然这一原则先前已被用于根因分析中，在无需图先验知识的情况下识别根因，但我们将其反过来，用于证伪那些隐含的异常传播与数据不一致的候选因果图。为此，我们首次提出了针对候选图是否为真实因果图这一假设的统计检验，并证明它们具有假阳性控制、对错误因果图的功效保证，并且可以仅使用单个异常样本进行操作。",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ],
+      "primary_category": "stat.ML",
+      "published": "2026-07-13T20:51:25Z",
+      "updated": "2026-07-13T20:51:25Z",
+      "announcement_date": "2026-07-14",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.12145v1",
+        "pdf": "https://arxiv.org/pdf/2607.12145v1"
+      },
+      "matched_keywords": [
+        "statistical",
+        "causal"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.12140",
+      "arxiv_id": "2607.12140v1",
+      "version": "v1",
+      "title": "Causal Graphs, Markov Properties and Do-calculus for Stochastic Differential Equations",
+      "title_zh": "随机微分方程的因果图、马尔可夫性质与do-演算",
+      "authors": [
+        "Philip Boeken",
+        "Joris M. Mooij"
+      ],
+      "abstract": "Stochastic differential equations (SDEs) are widely used to model continuous-time dynamical systems, but graphical causal models for them are not yet well-understood. We consider systems of causal SDEs that are equipped with an explicit causal semantics. We pose solvability conditions for systems of causal SDEs such that they have well-defined observational and interventional distributions - even after marginalisation - and provide a general class of Lipschitz semimartingale SDEs that satisfies these conditions. As core results we establish the $σ$-separation Markov property and the do-calculus in terms of the system's causal graph for probabilistic independence and interventions on the level of sample paths. For a class of additive-noise SDEs we prove a stronger $d$-separation Markov property, even if the system is cyclic. As a corollary of the do-calculus, we obtain an explicit causal interpretation of the graph: that the absence of a directed path implies the absence of a causal effect. We further introduce time-split systems, which consider the causal relations between the processes when evaluated on disjoint intervals or time-points, and use them to reason about subsampled time-series, continuous-time Granger non-causality and local independence. Finally, we discuss how constraint-based causal discovery algorithms (PC, FCI, CCD, CCI) apply directly to SDEs within our framework when conditional independence between sample paths can be consistently tested.",
+      "abstract_zh": "随机微分方程广泛用于建模连续时间动力系统，但其图形因果模型尚未得到充分理解。我们考虑配备了显式因果语义的因果SDE系统。我们提出了因果SDE系统的可解性条件，使得它们具有定义良好的观测分布和干预分布——即使在边缘化之后——并提供了满足这些条件的一类一般的Lipschitz半鞅SDE。作为核心结果，我们建立了基于系统因果图的σ-分离马尔可夫性质以及针对样本路径层面上的概率独立性和干预的do-演算。对于一类加性噪声SDE，我们证明了更强的d-分离马尔可夫性质，即使系统是循环的。作为do-演算的推论，我们得到了图的显式因果解释：有向路径的缺失意味着因果效应的缺失。我们进一步引入了时间分割系统，该系统考虑了在不相交区间或时间点上评估的过程之间的因果关系，并用它们来推理子采样时间序列、连续时间Granger非因果性和局部独立性。最后，我们讨论了当样本路径之间的条件独立性可以被一致检验时，基于约束的因果发现算法（PC、FCI、CCD、CCI）如何直接应用于我们框架内的SDE。",
+      "categories": [
+        "math.ST",
+        "stat.ML"
+      ],
+      "primary_category": "math.ST",
+      "published": "2026-07-13T20:45:21Z",
+      "updated": "2026-07-13T20:45:21Z",
+      "announcement_date": "2026-07-14",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.12140v1",
+        "pdf": "https://arxiv.org/pdf/2607.12140v1"
+      },
+      "matched_keywords": [
+        "causal",
+        "stochastic"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.12135",
+      "arxiv_id": "2607.12135v1",
+      "version": "v1",
+      "title": "LQG solution for POMDP without estimating states: A minimum variance approach",
+      "title_zh": "无需状态估计的POMDP的LQG解：一种最小方差方法",
+      "authors": [
+        "Ranjan Sarkar",
+        "Prabhat K. Mishra"
+      ],
+      "abstract": "This paper investigates the control of discrete-time linear time-invariant (LTI) systems subject to incomplete and corrupted measurements. Specifically, we focus on designing a Linear Quadratic Gaussian (LQG) controller without relying on explicit state estimation. By leveraging minimum variance duality, our approach allows the current control input to be represented as a linear function of available measurements and previously applied inputs, successfully reducing the task to a tractable deterministic optimization problem. We provide theoretical justification for this framework and demonstrate its practical effectiveness through numerical experiments.",
+      "abstract_zh": "本文研究了受不完整和损坏测量影响的离散时间线性时不变（LTI）系统的控制问题。具体而言，我们专注于设计一种不依赖显式状态估计的线性二次高斯（LQG）控制器。通过利用最小方差对偶性，我们的方法允许当前控制输入表示为可用测量值和先前施加输入的线性函数，成功地将任务简化为一个可处理的确定性优化问题。我们为该框架提供了理论依据，并通过数值实验证明了其实际有效性。",
+      "categories": [
+        "math.OC",
+        "cs.RO",
+        "eess.SY"
+      ],
+      "primary_category": "math.OC",
+      "published": "2026-07-13T20:38:04Z",
+      "updated": "2026-07-13T20:38:04Z",
+      "announcement_date": "2026-07-14",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.12135v1",
+        "pdf": "https://arxiv.org/pdf/2607.12135v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.12132",
+      "arxiv_id": "2607.12132v1",
+      "version": "v1",
+      "title": "Extracting Bayesian Evidence from Frequentist p-Values",
+      "title_zh": "从频率学派p值中提取贝叶斯证据",
+      "authors": [
+        "Frederik Aust",
+        "Samuel Pawel",
+        "Eric-Jan Wagenmakers"
+      ],
+      "abstract": "The $p$-value and the Bayes factor are measures of evidence that are often considered to be philosophically and mathematically incompatible: The $p$-value quantifies conflict between data and $H_0$ (\"surprise\"), whereas the Bayes factor quantifies the relative predictive accuracy of $H_0$ versus $H_1$ (\"evidence\"). We revisit Jeffreys's Approximate Bayes factor (JAB) -- a simple, largely overlooked approximation dating back to the 1930s -- which connects these two paradigms for objective hypothesis testing of the existence of an effect. Under a unit-information prior the approximation requires only the $p$-value and the effective sample size $n_\\text{eff}$. We clarify the core assumptions and boundary conditions for the application of JAB and show across 704 published $t$-tests and 39 comparisons of proportions that JAB approximates objective Bayes factors remarkably well. The connection between $p$-values and JAB has a practical implication: The evidence implied by a $p$-value depends strongly on $n_\\text{eff}$. Conventional verbal labels for $p$-values (e.g., \"strong surprise\" for .001 < $p$ < .01) correspond to similarly graded Bayes factors only around $n_\\text{eff} \\approx 8$; for larger samples the same $p$-value implies weaker evidence. In moderately sized to large samples, $p > .10$ can amount to moderate or even strong evidence for $H_0$. JAB offers a cheap, sample-size-sensitive supplement to $p$-values, computable from routinely reported statistics, that remains valid even under optional stopping.",
+      "abstract_zh": "p值和贝叶斯因子是通常被认为在哲学和数学上不相容的证据度量：p值量化数据与H0之间的冲突（“惊讶”），而贝叶斯因子量化H0相对于H1的预测准确性（“证据”）。我们重新审视杰弗里斯近似贝叶斯因子（JAB）——一个简单但很大程度上被忽视的、可追溯到20世纪30年代的近似方法——它连接了这两种用于客观检验效应存在性的范式。在单位信息先验下，该近似仅需要p值和有效样本量n_eff。我们阐明了JAB应用的核心假设和边界条件，并在704个已发表的t检验和39个比例比较中显示，JAB能极好地近似客观贝叶斯因子。p值与JAB之间的联系具有实际意义：p值所隐含的证据强烈依赖于n_eff。p值的常规语言标签（例如，对于0.001 < p < 0.01的“强烈惊讶”）仅在n_eff ≈ 8附近对应类似分级的贝叶斯因子；对于更大的样本，相同的p值意味着更弱的证据。在中等至大样本中，p > 0.10可能相当于中等甚至强烈的H0证据。JAB为p值提供了一种廉价、样本量敏感的补充，可从常规报告的统计量计算，即使在可选停止下也保持有效。",
+      "categories": [
+        "stat.ME",
+        "math.ST"
+      ],
+      "primary_category": "stat.ME",
+      "published": "2026-07-13T20:30:51Z",
+      "updated": "2026-07-13T20:30:51Z",
+      "announcement_date": "2026-07-14",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.12132v1",
+        "pdf": "https://arxiv.org/pdf/2607.12132v1"
+      },
+      "matched_keywords": [
+        "statistics",
+        "bayesian"
+      ],
+      "translation_status": "translated"
+    },
+    {
       "id": "2607.12122",
       "arxiv_id": "2607.12122v1",
       "version": "v1",
@@ -4570,7 +4876,41 @@
         "pdf": "https://arxiv.org/pdf/2607.12122v1"
       },
       "matched_keywords": [
-        "agent"
+        "regression"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.12121",
+      "arxiv_id": "2607.12121v1",
+      "version": "v1",
+      "title": "FlashDiff: Efficient Regional Execution and Scheduling for Diffusion Model Serving",
+      "title_zh": "FlashDiff：面向扩散模型服务的高效区域执行与调度",
+      "authors": [
+        "Yaqi Qiao",
+        "Ping He",
+        "Songrun Xie",
+        "Ayush Barik",
+        "Chensong Zhang",
+        "Zhengzhong Tu",
+        "Fan Lai"
+      ],
+      "abstract": "Diffusion models have become the central backbone for modern image, video, and audio generation, but their efficient service remains a challenge. Unlike autoregressive decoding, diffusion inference repeatedly updates high-dimensional spatial or temporal latents over many denoising steps. This all-region execution pattern makes generation latency high and limits serving throughput. Existing multi-GPU parallelization methods can reduce per-step computation, but often introduce substantial activation exchange overhead, causing communication to offset or even outweigh the benefits of parallel execution. This paper presents FlashDiff, a diffusion serving system that improves inference efficiency through adaptive regional execution and scheduling. FlashDiff is based on the observation that diffusion refinement is not uniform across latent regions or denoising steps: different regions often stabilize at different rates, while neighboring steps exhibit strong temporal correlation. FlashDiff leverages these properties to selectively execute only regions that require further refinement and to reallocate the resulting compute slack across concurrent serving requests. FlashDiff consists of three mechanisms. First, it decomposes the latent representation into coherent execution regions using early-stage attention signals, preserving semantic structure while exposing fine-grained parallelism. Second, it uses a lightweight runtime controller to estimate region activity and bypass low-impact updates when further refinement is unlikely to affect output quality. Third, it applies an affinity-aware online scheduler that co-locates dependent regions, balances residual load across GPUs, and reuses reclaimed compute capacity to improve serving efficiency. Across real-world image, video, and audio workloads, FlashDiff reduces end-to-end serving latency by 30-97% and improves throughput by 1.2-2.2x.",
+      "abstract_zh": "扩散模型已成为现代图像、视频和音频生成的核心骨干，但其高效服务仍面临挑战。与自回归解码不同，扩散推理在多个去噪步骤中反复更新高维空间或时间潜变量。这种全区域执行模式导致生成延迟高，并限制了服务吞吐量。现有的多GPU并行化方法可以减少每步计算量，但通常会引入大量的激活交换开销，导致通信抵消甚至超过并行执行的优势。本文提出FlashDiff，一种通过自适应区域执行与调度提升推理效率的扩散服务系统。FlashDiff基于以下观察：扩散细化在潜变量区域或去噪步骤之间并不均匀——不同区域通常以不同速率稳定，而相邻步骤表现出强时间相关性。FlashDiff利用这些特性，仅选择性地执行需要进一步细化的区域，并将由此产生的计算空闲重新分配给并发服务请求。FlashDiff包含三种机制。首先，它利用早期注意力信号将潜变量表示分解为连贯的执行区域，在保留语义结构的同时暴露细粒度并行性。其次，它使用轻量级运行时控制器估计区域活跃度，并在进一步细化不太可能影响输出质量时绕过低影响更新。第三，它应用亲和性感知的在线调度器，将依赖区域共置，平衡各GPU的剩余负载，并重用回收的计算容量以提升服务效率。在真实世界的图像、视频和音频工作负载上，FlashDiff将端到端服务延迟降低30-97%，并将吞吐量提升1.2-2.2倍。",
+      "categories": [
+        "cs.DC",
+        "cs.LG"
+      ],
+      "primary_category": "cs.DC",
+      "published": "2026-07-13T20:00:39Z",
+      "updated": "2026-07-13T20:00:39Z",
+      "announcement_date": "2026-07-14",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.12121v1",
+        "pdf": "https://arxiv.org/pdf/2607.12121v1"
+      },
+      "matched_keywords": [
+        "high-dimensional"
       ],
       "translation_status": "translated"
     },
@@ -4662,8 +5002,7 @@
         "pdf": "https://arxiv.org/pdf/2607.12112v1"
       },
       "matched_keywords": [
-        "large language model",
-        "multimodal"
+        "optimization"
       ],
       "translation_status": "translated"
     },
@@ -4704,6 +5043,128 @@
         "large language model",
         "agent",
         "multimodal"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.12104",
+      "arxiv_id": "2607.12104v1",
+      "version": "v1",
+      "title": "TraceSynth: Generating Production-Quality Kernel Traces with Constraint-Guided Diffusion Models",
+      "title_zh": "TraceSynth：使用约束引导扩散模型生成生产级内核跟踪",
+      "authors": [
+        "Yuvraj Sehgal",
+        "Sneh Patel",
+        "Mahsa Panahandeh",
+        "Naser Ezzati-Jivan",
+        "Francois Tetreault"
+      ],
+      "abstract": "Machine learning models for system diagnostics rely on kernel execution traces to capture fine-grained system behavior, but collecting production traces in industrial systems is costly due to runtime overhead, storage demands, and privacy constraints. We present TraceSynth, a diffusion-based framework for generating synthetic kernel traces that augment limited real data for downstream ML tasks. TraceSynth models traces as multi-channel sequences (event types, timestamps, CPU affinity, thread identifiers, and process metadata) using a Transformer-based denoising diffusion process with constraint-guided repair to enforce system invariants. Across six benchmarks, results show strong workload dependence. For deterministic, compute-heavy workloads (scimark2), synthetic augmentation achieves 87.2% F1-Macro at context length L=4096, only 2.6 percentage points below real-only baselines. Context length is the dominant quality factor, with L=4096 yielding a +104% relative improvement over L=256, while constraint-guided repair improves synthetic data quality by up to 4.3%. Ablation studies show that lightweight 2-channel models retain 97-99% of the performance of full 6-channel models at roughly half the computational cost. TraceSynth supports cost-effective augmentation of kernel execution traces in production observability pipelines and helps identify when synthetic data can substitute for limited real traces.",
+      "abstract_zh": "用于系统诊断的机器学习模型依赖内核执行跟踪来捕获细粒度的系统行为，但在工业系统中收集生产跟踪由于运行时开销、存储需求和隐私约束而成本高昂。我们提出了TraceSynth，一个基于扩散的框架，用于生成合成内核跟踪，以增强有限的真实数据用于下游机器学习任务。TraceSynth将跟踪建模为多通道序列（事件类型、时间戳、CPU亲和性、线程标识符和进程元数据），使用基于Transformer的去噪扩散过程，并结合约束引导修复来强制执行系统不变量。在六个基准测试中，结果显示强烈的工作负载依赖性。对于确定性的、计算密集型工作负载（scimark2），在上下文长度L=4096时，合成增强实现了87.2%的F1-Macro，仅比仅使用真实数据的基线低2.6个百分点。上下文长度是主要的质量因素，L=4096相比L=256实现了+104%的相对改进，而约束引导修复将合成数据质量提高了最多4.3%。消融研究表明，轻量级的2通道模型保留了完整6通道模型97-99%的性能，而计算成本大约减半。TraceSynth支持在生产可观测性管道中经济高效地增强内核执行跟踪，并有助于识别合成数据何时可以替代有限的真实跟踪。",
+      "categories": [
+        "cs.SE",
+        "cs.LG"
+      ],
+      "primary_category": "cs.SE",
+      "published": "2026-07-13T19:25:26Z",
+      "updated": "2026-07-13T19:25:26Z",
+      "announcement_date": "2026-07-14",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.12104v1",
+        "pdf": "https://arxiv.org/pdf/2607.12104v1"
+      },
+      "matched_keywords": [
+        "machine learning"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.12098",
+      "arxiv_id": "2607.12098v1",
+      "version": "v1",
+      "title": "Explaining When PRF Fails: Participatory Auditing for Selective Query Expansion",
+      "title_zh": "解释伪相关反馈何时失败：面向选择性查询扩展的参与式审计",
+      "authors": [
+        "Zeyan Liang",
+        "Graham McDonald",
+        "Iadh Ounis"
+      ],
+      "abstract": "Pseudo-Relevance Feedback (PRF) improves retrieval effectiveness on average, but harms a substantial fraction of queries through query drift, an asymmetry hidden by aggregate offline metrics. Existing Selective PRF (sPRF) approaches typically rely on Query Performance Prediction (QPP) methods derived from the same ranking statistics, and therefore inherit, rather than resolve, this opacity. We argue that this is a core explainability problem in IR, and propose a two-stage audit-then-automate framework. In Stage 1, a participatory audit with 108 users across 43 TREC Deep Learning 2019 queries shows that only 20.9% of queries benefit from PRF, while 25.6% suffer a degraded user experience, and that avoiding harm is nearly twice as valuable as exploiting successful expansion. In Stage 2, we repurpose LLM-based rerankers as system preference predictors that replicate these user-derived labels automatically, grounded in inspectable document evidence. Together, the two stages explain which queries PRF harms, why an sPRF decision is made, and how the decision can be inspected at scale, turning an opaque retrieval component into an auditable, user-grounded one.",
+      "abstract_zh": "伪相关反馈（PRF）平均而言能提升检索效果，但通过查询漂移损害了相当一部分查询，这种不对称性被聚合的离线指标所掩盖。现有的选择性PRF（sPRF）方法通常依赖于源自相同排序统计信息的查询性能预测（QPP）方法，因此继承而非解决了这种不透明性。我们认为这是信息检索中的一个核心可解释性问题，并提出了一个两阶段的审计-然后-自动化框架。在第一阶段，针对43个TREC深度学习2019查询的108名用户进行的参与式审计显示，只有20.9%的查询从PRF中受益，而25.6%的查询用户体验下降，并且避免损害的价值几乎是利用成功扩展的两倍。在第二阶段，我们将基于LLM的重排序器重新用作系统偏好预测器，自动复制这些用户生成的标签，并基于可检查的文档证据。这两个阶段共同解释了哪些查询被PRF损害，为什么做出sPRF决策，以及如何大规模检查该决策，将一个不透明的检索组件转变为可审计、基于用户的组件。",
+      "categories": [
+        "cs.IR"
+      ],
+      "primary_category": "cs.IR",
+      "published": "2026-07-13T19:14:21Z",
+      "updated": "2026-07-13T19:14:21Z",
+      "announcement_date": "2026-07-14",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.12098v1",
+        "pdf": "https://arxiv.org/pdf/2607.12098v1"
+      },
+      "matched_keywords": [
+        "statistics"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.12095",
+      "arxiv_id": "2607.12095v1",
+      "version": "v1",
+      "title": "Dynamic Online Processor-Native Inference for State Estimation",
+      "title_zh": "面向状态估计的动态在线处理器原生推理",
+      "authors": [
+        "Orestis Kaparounakis"
+      ],
+      "abstract": "Sensor-rich data-driven applications increasingly use Bayesian approaches to infer latent states of dynamic systems from noisy sensor measurements and physical models. Yet the computation of the likelihood remains an essential bottleneck for accurate posteriors and performant inference. This paper presents a Bayesian filtering technique that uses processor-native uncertainty tracking for both uncertainty propagation and inference. The technique implements deterministic hierarchical importance restructuring through a native operation, giving deterministic latency and bounded memory use for arbitrary models written as program code. Benchmarks across three nonlinear state-space systems compare the approach against particle filters and Monte-Carlo-based likelihood estimators. The technique enables deterministic approximate filtering with as high as 805$\\times$ average speedup against direct Monte Carlo work at matched result quality for model evaluation, and Pareto-dominant accuracy-latency trade-offs for posterior inference while remaining competitive in RMSE with baseline particle filters.",
+      "abstract_zh": "基于丰富传感器数据驱动的应用越来越多地使用贝叶斯方法，从噪声传感器测量和物理模型中推断动态系统的潜在状态。然而，似然计算仍然是实现精确后验和高效推理的关键瓶颈。本文提出了一种贝叶斯滤波技术，该技术利用处理器原生的不确定性跟踪进行不确定性传播和推理。该技术通过原生操作实现确定性分层重要性重构，为任意以程序代码编写的模型提供确定性的延迟和有界的内存使用。在三个非线性状态空间系统上的基准测试将该方法与粒子滤波器和基于蒙特卡洛的似然估计器进行了比较。该技术实现了确定性近似滤波，在模型评估中，与直接蒙特卡洛工作相比，在匹配结果质量下平均加速高达805倍，在后验推理中实现了帕累托主导的精度-延迟权衡，同时在RMSE上与基线粒子滤波器保持竞争力。",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "eess.SP"
+      ],
+      "primary_category": "stat.ML",
+      "published": "2026-07-13T19:13:45Z",
+      "updated": "2026-07-13T19:13:45Z",
+      "announcement_date": "2026-07-14",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.12095v1",
+        "pdf": "https://arxiv.org/pdf/2607.12095v1"
+      },
+      "matched_keywords": [
+        "bayesian"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.12094",
+      "arxiv_id": "2607.12094v1",
+      "version": "v1",
+      "title": "Sparse Autoencoders for Interpretable Out-of-Distribution Detection",
+      "title_zh": "用于可解释分布外检测的稀疏自编码器",
+      "authors": [
+        "Ayush Karmacharya",
+        "Luke Luschwitz",
+        "Lucia Romero",
+        "Yanan Niu",
+        "Joseph Campbell"
+      ],
+      "abstract": "Reliable detection of out-of-distribution (OOD) samples is crucial for the safe deployment of machine learning models. Neural networks often produce overconfident predictions for inputs that deviate from their training data, leading to significant degradation in performance. While many OOD detection methods focus on the final output layer, they neglect the rich hierarchical information present in intermediate network layers. This paper introduces a novel approach that leverages sparse autoencoders (SAEs) to learn interpretable features from these intermediate activations. We find that in-distribution (ID) and OOD data activate distinct sets of these sparse features. We propose a new OOD score derived from the cosine similarity between the sparse feature activations of a test sample and the mean activations of ID classes. Our post-hoc detection method not only achieves state-of-the-art performance on standard OOD detection benchmarks, but yields interpretable insights into how distribution shift affects learned representations.",
+      "abstract_zh": "可靠地检测分布外样本对于机器学习模型的安全部署至关重要。神经网络通常对偏离其训练数据的输入产生过度自信的预测，导致性能显著下降。虽然许多分布外检测方法关注最终输出层，但它们忽略了中间网络层中存在的丰富层次信息。本文介绍了一种新颖的方法，利用稀疏自编码器从这些中间激活中学习可解释的特征。我们发现分布内和分布外数据激活了这些稀疏特征的不同集合。我们提出了一种新的分布外得分，该得分基于测试样本的稀疏特征激活与分布内类别平均激活之间的余弦相似度。我们的后验检测方法不仅在标准分布外检测基准上达到了最先进的性能，而且提供了关于分布偏移如何影响学习表示的可解释见解。",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-13T19:13:40Z",
+      "updated": "2026-07-13T19:13:40Z",
+      "announcement_date": "2026-07-14",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.12094v1",
+        "pdf": "https://arxiv.org/pdf/2607.12094v1"
+      },
+      "matched_keywords": [
+        "machine learning"
       ],
       "translation_status": "translated"
     },
@@ -4797,6 +5258,62 @@
       },
       "matched_keywords": [
         "agent"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.12067",
+      "arxiv_id": "2607.12067v1",
+      "version": "v1",
+      "title": "Institutional Equity Holdings Prediction Using Node Affinities of Dynamic Graphs",
+      "title_zh": "基于动态图节点亲和力的机构持股预测",
+      "authors": [
+        "Emad Izadifar",
+        "Zahed Rahmati"
+      ],
+      "abstract": "Institutional equity holdings disclosed in SEC Form 13F filings provide a rich temporal record of portfolio decisions by large investment managers. However, forecasting future allocations and modeling future demand remains challenging due to disclosure lags, reporting noise, and strong persistence in institutional behavior. We introduce the first benchmark for these tasks using temporal graph machine learning, framing holdings prediction as node affinity prediction -- i.e., forecasting portfolio weights -- on a discrete-time temporal bipartite graph of managers and securities extracted from preprocessed filings. On a sampled dataset comprising 99 managers and the S\\&P 500 index (503 securities, 209,351 temporal edges across 48 quarters from 2013--2025), Node Affinity prediction model using Virtual State (NAVIS) achieves a state-of-the-art test Normalized Discounted Cumulative Gain (NDCG) of 0.9127 with features (0.9121 without), outperforming all dynamic graph representation learning competitors by a substantial margin, and outperforming all heuristic methods. Remarkably, a simple Exponential Moving Average baseline achieves 0.8882, surpassing all dynamic graph models except NAVIS and all heuristics except Persistent Forecast (0.8891), highlighting the strong smoothness and persistence of institutional portfolios. Domain-specific node features provide only marginal gains (<1.2\\%), indicating that temporal and structural signals in the 13F ownership graph already capture most of the predictable information. By benchmarking a suite of Temporal Graph Benchmark (TGB) models under the node affinity prediction setting, both with and without features, on real-world 13F data, this work provides a reproducible foundation for temporal graph machine learning in holdings prediction and portfolio allocation.",
+      "abstract_zh": "美国证券交易委员会13F表格中披露的机构持股提供了大型投资经理投资组合决策的丰富时间记录。然而，由于披露滞后、报告噪声以及机构行为的强持续性，预测未来配置和建模未来需求仍然具有挑战性。我们首次引入基于时间图机器学习的基准测试，将持股预测视为节点亲和力预测——即预测投资组合权重——在从预处理文件中提取的管理者和证券的离散时间二分图上进行。在包含99名管理者和标普500指数（503只证券，2013-2025年48个季度共209,351条时间边）的采样数据集上，使用虚拟状态的节点亲和力预测模型（NAVIS）在带特征情况下达到了0.9127的测试归一化折损累计增益（NDCG）（不带特征时为0.9121），大幅优于所有动态图表示学习竞争对手，并优于所有启发式方法。值得注意的是，简单的指数移动平均基线达到了0.8882，超过了除NAVIS外的所有动态图模型和除持久预测（0.8891）外的所有启发式方法，突显了机构投资组合的强平滑性和持续性。特定领域的节点特征仅带来边际提升（<1.2%），表明13F所有权图中的时间和结构信号已经捕获了大部分可预测信息。通过在节点亲和力预测设置下，对一套时间图基准（TGB）模型（带和不带特征）在真实13F数据上进行基准测试，这项工作为持股预测和投资组合分配中的时间图机器学习提供了可复现的基础。",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-13T18:40:05Z",
+      "updated": "2026-07-13T18:40:05Z",
+      "announcement_date": "2026-07-14",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.12067v1",
+        "pdf": "https://arxiv.org/pdf/2607.12067v1"
+      },
+      "matched_keywords": [
+        "machine learning"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.12061",
+      "arxiv_id": "2607.12061v1",
+      "version": "v1",
+      "title": "Models for species evolution with random deaths",
+      "title_zh": "随机死亡物种演化模型",
+      "authors": [
+        "Peter Braunsteins",
+        "Joseph Rolfe"
+      ],
+      "abstract": "We consider three discrete-time models for species evolution. In all three models, at each time step $n$, with probability $p$, a species is born with an independent $\\text{Uniform}[0,1]$ fitness value and, with probability $1-p$, a species is killed. The mechanism for selecting which species to kill when a death occurs distinguishes the three models: in the first model, the least fit species is always killed; in the second model, with probability $r$, the least fit species is killed and, with probability $1-r$, a species chosen uniformly from the population is killed; in the third model, with probability $r$, the least fit species is killed and, with probability $1-r$, the species with the largest fitness less than an independent $\\text{Uniform}[0,1]$ outcome is killed. We establish asymptotic results as $n \\to \\infty$ for the three models. These results demonstrate that small changes to the death mechanism of the model can lead to vastly different asymptotic behaviour. To prove our results we develop a novel approach that relies on coupling arguments and mean-field limits.",
+      "abstract_zh": "我们考虑三个离散时间物种演化模型。在所有三个模型中，每个时间步$n$，以概率$p$诞生一个具有独立$\\text{Uniform}[0,1]$适应度值的物种，以概率$1-p$杀死一个物种。当死亡发生时，选择杀死哪个物种的机制区分了这三个模型：在第一个模型中，总是杀死适应度最低的物种；在第二个模型中，以概率$r$杀死适应度最低的物种，以概率$1-r$从种群中均匀随机选择一个物种杀死；在第三个模型中，以概率$r$杀死适应度最低的物种，以概率$1-r$杀死适应度小于独立$\\text{Uniform}[0,1]$结果的最大物种。我们建立了当$n \\to \\infty$时这三个模型的渐近结果。这些结果表明，模型死亡机制的微小变化可能导致截然不同的渐近行为。为了证明我们的结果，我们开发了一种依赖于耦合论证和平均场极限的新方法。",
+      "categories": [
+        "math.PR"
+      ],
+      "primary_category": "math.PR",
+      "published": "2026-07-13T18:29:39Z",
+      "updated": "2026-07-13T18:29:39Z",
+      "announcement_date": "2026-07-14",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.12061v1",
+        "pdf": "https://arxiv.org/pdf/2607.12061v1"
+      },
+      "matched_keywords": [
+        "probability"
       ],
       "translation_status": "translated"
     },
@@ -4931,6 +5448,41 @@
       "translation_status": "translated"
     },
     {
+      "id": "2607.12026",
+      "arxiv_id": "2607.12026v1",
+      "version": "v1",
+      "title": "Learning the Graphical Nature of Symmetries",
+      "title_zh": "学习对称性的图论本质",
+      "authors": [
+        "Rashid Barket",
+        "Enrico Grimaldi",
+        "Yacoub Hendi",
+        "Edward Hirst",
+        "Adam Onus",
+        "Harmeet Singh"
+      ],
+      "abstract": "Finite groups are rigid algebraic objects, whose Cayley graphs expose a rich network geometry through which group-theoretic structure can be measured, compared, and learned. In this paper, a dataset of $131{,}406$ Cayley graphs is constructed, covering all groups of order at most $767$ except order $512$, recording exact algebraic labels for group properties together with a broad collection of graph, cycle, distance, and spectral statistics. This census aims to provide novel benchmarks for studying how finite-group properties are reflected in Cayley graph observables. It also yields new enumerative contributions: alongside recovering known OEIS sequences for standard group classes, new sequences for monolithic groups and for groups generated by at most three, four, and five elements are contributed to the OEIS. The accompanying network analysis identifies several empirical regularities and formulates testable conjectures, including relationships involving square clustering, Cayley graph diameter, average graph disorder, and spectral eigengaps of nilpotent groups. Finally, a comparison between classical models, an MLP, and graph neural network architectures is performed for predicting algebraic group properties directly from Cayley graph data. The results show that engineered graph statistics are highly informative, while GNNs, especially GIN and in some fixed-order settings GCN, can recover substantial structural signal directly from the graph. Such that graph-aware architectures show phases of optimality on these group-theoretic graph representations.",
+      "abstract_zh": "有限群是刚性代数对象，其凯莱图展现出丰富的网络几何结构，通过该结构可以度量、比较和学习群论性质。本文构建了一个包含131,406个凯莱图的数据集，覆盖了除512阶外所有阶数不超过767的群，记录了群性质的精确代数标签以及图、环、距离和谱统计量的广泛集合。该普查旨在为研究有限群性质如何在凯莱图可观测量中反映提供新的基准。它还产生了新的枚举贡献：除了恢复标准群类的已知OEIS序列外，还为单群以及由最多三、四、五个元素生成的群贡献了新的OEIS序列。伴随的网络分析识别出若干经验规律并提出了可检验的猜想，包括涉及平方聚类、凯莱图直径、平均图无序度以及幂零群谱特征间隙的关系。最后，对经典模型、MLP和图神经网络架构进行了比较，以直接从凯莱图数据预测代数群性质。结果表明，工程化的图统计量信息量丰富，而GNN（尤其是GIN和在某些固定阶设置下的GCN）能够直接从图中恢复大量结构信号。因此，图感知架构在这些群论图表示上显示出最优性阶段。",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "math.CO",
+        "math.GR"
+      ],
+      "primary_category": "stat.ML",
+      "published": "2026-07-13T18:00:02Z",
+      "updated": "2026-07-13T18:00:02Z",
+      "announcement_date": "2026-07-14",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.12026v1",
+        "pdf": "https://arxiv.org/pdf/2607.12026v1"
+      },
+      "matched_keywords": [
+        "statistics"
+      ],
+      "translation_status": "translated"
+    },
+    {
       "id": "2607.11886",
       "arxiv_id": "2607.11886v1",
       "version": "v1",
@@ -4963,6 +5515,66 @@
       "translation_status": "translated"
     },
     {
+      "id": "2607.11878",
+      "arxiv_id": "2607.11878v1",
+      "version": "v1",
+      "title": "Optimal Parameter-Free First-Order Methods for Convex Optimization with Unknown Growth and Smoothness",
+      "title_zh": "面向未知增长与光滑性的凸优化的最优无参数一阶方法",
+      "authors": [
+        "Liwei Jiang",
+        "Ke Tang",
+        "Zhe Zhang"
+      ],
+      "abstract": "We study deterministic first-order minimization of a convex function without prior knowledge of the objective's growth, smoothness regime, or associated parameters. We develop anytime, parameter-free bundle-level methods that adapt simultaneously to these unknown properties and attain best-known oracle complexities. For nonsmooth Lipschitz objectives satisfying quadratic growth, the proposed bundle-level W-certificate method (BLW) achieves the optimal complexity without requiring the growth modulus or target accuracy as input. We then introduce an accelerated variant, A-BLW. Without knowing the Hölder smoothness parameters, the quadratic-growth modulus, or the target accuracy, A-BLW attains the optimal rates in the nonsmooth, weakly smooth, and smooth regimes. Central to both methods is an affine W-certificate, a condition based on the descent-slowness of an affine minorant that converts the geometry of a bundle model into an optimality-gap guarantee under quadratic growth. A stopping-time analysis further shows that the same A-BLW algorithm, without modification, achieves the corresponding best-known rates for general convex objectives and for objectives satisfying Hölder growth of order at least two. Numerical experiments illustrate the practical performance of the proposed methods.",
+      "abstract_zh": "我们研究在未知目标函数增长性、光滑性类型及相关参数的情况下，凸函数的确定性一阶最小化问题。我们开发了随时可用的、无参数的束水平方法，这些方法能同时适应这些未知性质，并达到已知最优的预言复杂度。对于满足二次增长的非光滑Lipschitz目标，所提出的束水平W-证书方法（BLW）无需输入增长模量或目标精度即可实现最优复杂度。随后我们引入加速变体A-BLW。在未知Hölder光滑参数、二次增长模量或目标精度的情况下，A-BLW在非光滑、弱光滑和光滑情形下均达到最优速率。两种方法的核心是仿射W-证书，这是一种基于仿射次小化器下降缓慢性的条件，它将束模型的几何结构转化为二次增长下的最优性间隙保证。停止时间分析进一步表明，相同的A-BLW算法无需修改，即可对一般凸目标以及满足至少二阶Hölder增长的目标达到相应的已知最优速率。数值实验展示了所提方法的实际性能。",
+      "categories": [
+        "math.OC"
+      ],
+      "primary_category": "math.OC",
+      "published": "2026-07-13T17:57:45Z",
+      "updated": "2026-07-13T17:57:45Z",
+      "announcement_date": "2026-07-14",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11878v1",
+        "pdf": "https://arxiv.org/pdf/2607.11878v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.11875",
+      "arxiv_id": "2607.11875v2",
+      "version": "v2",
+      "title": "Invariant Learning Dynamics of Transformers in Inductive Reasoning Tasks",
+      "title_zh": "Transformer在归纳推理任务中的不变学习动力学",
+      "authors": [
+        "Tiberiu Musat",
+        "Tiago Pimentel",
+        "Nicolas Zucchet",
+        "Thomas Hofmann"
+      ],
+      "abstract": "We present a theoretical framework to explain the emergence of inductive reasoning abilities in Transformer language models. While previous works on Transformer learning dynamics have so far been mostly tied to specific tasks, we study a generalized class of inductive tasks that unifies several synthetic tasks known in the literature, including in-context n-grams and multi-hop reasoning. In this class, we theoretically prove that the training dynamics of attention models can be confined to a highly interpretable, low-dimensional invariant manifold. On this manifold, the learning dynamics are captured by a handful of interpretable coordinates rather than millions of parameters, making both theoretical and empirical analysis more tractable. Using this framework, we characterize how data statistics govern the competition between in-context and in-weights learning, we study how random initializations determine the `winning' circuit when multiple solutions are possible, and we demonstrate that the coordinate frame associated with the manifold can be used to automatically detect which circuits have been learned in trained models. By casting circuit formation as a low-dimensional dynamical phenomenon, we take a step toward a predictive theory of how Transformers learn.",
+      "abstract_zh": "我们提出了一个理论框架来解释Transformer语言模型中归纳推理能力的涌现。虽然先前关于Transformer学习动力学的研究大多局限于特定任务，但我们研究了一类广义的归纳任务，它统一了文献中已知的几种合成任务，包括上下文n-gram和多跳推理。在这类任务中，我们从理论上证明了注意力模型的训练动力学可以被限制在一个高度可解释的低维不变流形上。在这个流形上，学习动力学由少数可解释的坐标而非数百万个参数捕获，使得理论和实证分析更加易于处理。利用这一框架，我们刻画了数据统计如何控制上下文学习和权重学习之间的竞争，研究了随机初始化如何在存在多种可能解时决定“获胜”电路，并证明了与该流形相关的坐标框架可用于自动检测训练模型中已学习的电路。通过将电路形成视为低维动力学现象，我们朝着预测Transformer如何学习的理论迈出了一步。",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-13T17:56:11Z",
+      "updated": "2026-07-14T17:06:04Z",
+      "announcement_date": "2026-07-14",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11875v2",
+        "pdf": "https://arxiv.org/pdf/2607.11875v2"
+      },
+      "matched_keywords": [
+        "statistics"
+      ],
+      "translation_status": "translated"
+    },
+    {
       "id": "2607.11873",
       "arxiv_id": "2607.11873v1",
       "version": "v1",
@@ -4989,6 +5601,41 @@
         "large language model"
       ],
       "translation_status": "failed"
+    },
+    {
+      "id": "2607.11871",
+      "arxiv_id": "2607.11871v1",
+      "version": "v1",
+      "title": "Inside the Unfair Judge: A Mechanistic Interpretability Account of LLM-as-Judge Bias",
+      "title_zh": "不公正法官的内部：LLM作为法官偏见的机制可解释性分析",
+      "authors": [
+        "Zixiang Xu",
+        "Sixian Li",
+        "Huaxing Liu",
+        "Xiang Wang",
+        "Shuai Li",
+        "Zirui Song",
+        "Xiuying Chen"
+      ],
+      "abstract": "Existing studies of LLM-as-judge scoring bias work predominantly at the input-output level: they perturb inputs, measure score deltas, and propose prompt-level mitigations. We argue that the same biases admit a representation-level account in the judge's hidden state, complementary to the input-output view and operationally useful in ways it does not afford. We report three findings, across seven judges, seven bias types, and nine benchmarks. Geometry: baseline judging inputs occupy a tight activation manifold while biased inputs are displaced along a low-dimensional, type-specific subspace that sharpens with depth and is recovered consistently by three families of estimators. Causal control: steering hidden states along this subspace drives scoring in both directions, forward shifts reproducing biased scoring on clean inputs and reverse shifts restoring baseline scoring on biased ones, while matched-norm random directions produce shifts an order of magnitude smaller. Operational: a simple linear projection onto the same bias-direction features anticipates judge failures on three entirely unseen benchmarks, substantially outperforming text-based alternatives. Reading bias as activation geometry, rather than as input-output noise, unifies geometric structure, causal control, and operational prediction within a single framework. The project page is available at https://xzx34.github.io/unfair-judge/",
+      "abstract_zh": "现有关于LLM作为法官评分偏见的研究主要停留在输入-输出层面：它们扰动输入，测量分数变化，并提出提示层面的缓解措施。我们认为，同样的偏见在法官的隐藏状态中具有表征层面的解释，这与输入-输出视角互补，并在操作上具有其无法提供的实用性。我们报告了三个发现，涉及七个法官、七种偏见类型和九个基准。几何结构：基线评判输入占据一个紧凑的激活流形，而有偏输入则沿着一个低维、类型特定的子空间位移，该子空间随深度增加而锐化，并由三个估计器家族一致恢复。因果控制：沿此子空间引导隐藏状态可双向驱动评分，正向移动在干净输入上重现有偏评分，反向移动在有偏输入上恢复基线评分，而匹配范数的随机方向产生的移动幅度小一个数量级。操作性：将简单线性投影应用于相同偏见方向特征，可预测法官在三个完全未见基准上的失败，显著优于基于文本的替代方法。将偏见视为激活几何结构，而非输入-输出噪声，将几何结构、因果控制和操作预测统一在一个单一框架内。项目页面见https://xzx34.github.io/unfair-judge/",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-13T17:55:19Z",
+      "updated": "2026-07-13T17:55:19Z",
+      "announcement_date": "2026-07-14",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11871v1",
+        "pdf": "https://arxiv.org/pdf/2607.11871v1"
+      },
+      "matched_keywords": [
+        "causal"
+      ],
+      "translation_status": "translated"
     },
     {
       "id": "2607.11862",
@@ -5097,6 +5744,39 @@
       "translation_status": "translated"
     },
     {
+      "id": "2607.11843",
+      "arxiv_id": "2607.11843v1",
+      "version": "v1",
+      "title": "Input-Aware Dynamic Backdoor Attack Against Quantum Neural Networks",
+      "title_zh": "输入感知的动态后门攻击针对量子神经网络",
+      "authors": [
+        "Junrui Zhang",
+        "Zemin Chen",
+        "Lusi Li",
+        "Mohammad Ghasemigol",
+        "Daniel Takabi",
+        "Rui Ning"
+      ],
+      "abstract": "Quantum Neural Networks (QNNs) are a promising framework for quantum machine learning on near-term quantum devices, but their security risks remain insufficiently understood. Studies have shown that QNNs are vulnerable to backdoor attacks, yet existing quantum backdoors mostly rely on a fixed trigger shared by all poisoned inputs. This fixed-trigger design is a major weakness because many defenses detect or weaken the repeated patterns such triggers leave in data representations. Although input-aware dynamic backdoors have been studied in classical neural networks, transferring them to QNNs is difficult because quantum learning introduces new obstacles. In particular, measurement compresses the post-ansatz quantum state into a limited classical output, weakening supervision for a trigger generator, while individual density matrices fluctuate with the input and make per-sample contrastive learning unstable. To address these challenges, we propose Q-DIBA, the first input-aware dynamic backdoor attack for QNNs. Q-DIBA jointly trains a classical trigger generator and a victim QNN through a three-mode mini-batch strategy that supports clean behavior, attack activation, and trigger specificity. To provide stable quantum-level supervision, Q-DIBA introduces an ensemble density contrastive loss that operates on post-ansatz quantum states before measurement and contrasts mode-averaged density matrices rather than individual samples. Experiments on MNIST and Fashion-MNIST across multiple QNN architectures show that Q-DIBA achieves high clean accuracy, strong attack success, and high cross-trigger accuracy, demonstrating effectiveness, stealthiness, and input specificity. The attack also remains resilient against defenses including visual inspection, spectral-signature detection, and fine-tuning, suggesting that input-aware quantum backdoors are an important threat to secure QNN deployment.",
+      "abstract_zh": "量子神经网络（QNNs）是近期量子设备上量子机器学习的一个有前景的框架，但其安全风险仍未被充分理解。研究表明，QNNs容易受到后门攻击，然而现有的量子后门大多依赖于所有中毒输入共享的固定触发器。这种固定触发器设计是一个主要弱点，因为许多防御措施会检测或削弱此类触发器在数据表示中留下的重复模式。尽管输入感知的动态后门已在经典神经网络中得到研究，但将其迁移到QNNs是困难的，因为量子学习引入了新的障碍。特别是，测量将后变分量子态压缩为有限的经典输出，削弱了对触发器生成器的监督，而单个密度矩阵随输入波动，使得每个样本的对比学习不稳定。为了解决这些挑战，我们提出了Q-DIBA，这是首个针对QNNs的输入感知动态后门攻击。Q-DIBA通过一种三模式小批量策略联合训练一个经典触发器生成器和一个受害者QNN，该策略支持干净行为、攻击激活和触发器特异性。为了提供稳定的量子级监督，Q-DIBA引入了一种集成密度对比损失，该损失作用于测量前的后变分量子态，并对比模式平均的密度矩阵而非单个样本。在MNIST和Fashion-MNIST上跨多种QNN架构的实验表明，Q-DIBA实现了高干净准确率、强攻击成功率和跨触发器准确率，展示了有效性、隐蔽性和输入特异性。该攻击还能抵御包括视觉检查、谱特征检测和微调在内的防御措施，表明输入感知的量子后门是安全部署QNN的一个重要威胁。",
+      "categories": [
+        "quant-ph",
+        "cs.LG"
+      ],
+      "primary_category": "quant-ph",
+      "published": "2026-07-13T17:34:17Z",
+      "updated": "2026-07-13T17:34:17Z",
+      "announcement_date": "2026-07-14",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11843v1",
+        "pdf": "https://arxiv.org/pdf/2607.11843v1"
+      },
+      "matched_keywords": [
+        "machine learning"
+      ],
+      "translation_status": "translated"
+    },
+    {
       "id": "2607.11839",
       "arxiv_id": "2607.11839v1",
       "version": "v1",
@@ -5122,6 +5802,128 @@
       },
       "matched_keywords": [
         "multimodal"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.11832",
+      "arxiv_id": "2607.11832v1",
+      "version": "v1",
+      "title": "Improved Global Ocean Heat Content Estimation by Modeling Vertical Spatio-Temporal Dependence",
+      "title_zh": "通过建模垂直时空依赖性改进全球海洋热含量估算",
+      "authors": [
+        "Thea Sukianto",
+        "Donata Giglio",
+        "Mikael Kuusela"
+      ],
+      "abstract": "Estimating ocean heat content (OHC) with reliable uncertainties is critical for understanding and monitoring the evolution of Earth's climate, as the ocean has stored most of the energy accumulated in the climate system due to Earth Energy Imbalance. Here, we use Argo profiling float data from 2004-2022 to map OHC. As fewer Argo observations are available deeper in the water column, previous studies have partitioned the ocean into at least two pressure layers and mapped each separately, which complicates the estimation of uncertainties when the maps are summed to get the total OHC. In this work, we consider the case of two pressure layers and propose an improved mapping and uncertainty quantification method using bivariate locally stationary Gaussian processes and conditional simulations to map the two sections jointly while accounting for the correlation between them. We find that modeling this correlation results in improved OHC anomaly mapping and up to a 15 percent reduction of global OHC anomaly uncertainties in comparison to mapping the two layers separately without accounting for their dependence. These estimated uncertainties are essential to analyze the statistical significance of OHC anomalies on both regional and global scales, which we demonstrate using several climatological case studies.",
+      "abstract_zh": "以可靠的误差估计来估算海洋热含量（OHC）对于理解和监测地球气候演变至关重要，因为海洋储存了由于地球能量失衡而在气候系统中积累的大部分能量。本文利用2004-2022年的Argo剖面浮标数据绘制OHC图。由于在更深的水柱中Argo观测数据较少，以往的研究将海洋划分为至少两个压力层并分别绘制，这导致在将各层图求和以获取总OHC时，误差估计变得复杂。在本研究中，我们考虑两个压力层的情况，提出了一种改进的绘图和不确定性量化方法，使用双变量局部平稳高斯过程和条件模拟来联合绘制两个部分，同时考虑它们之间的相关性。我们发现，与不考虑依赖关系分别绘制两个层相比，对这种相关性进行建模可以改进OHC异常绘图，并将全球OHC异常不确定性降低高达15%。这些估计的不确定性对于分析区域和全球尺度上OHC异常的统计显著性至关重要，我们通过几个气候学案例研究对此进行了论证。",
+      "categories": [
+        "stat.AP",
+        "physics.ao-ph"
+      ],
+      "primary_category": "stat.AP",
+      "published": "2026-07-13T17:24:28Z",
+      "updated": "2026-07-13T17:24:28Z",
+      "announcement_date": "2026-07-14",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11832v1",
+        "pdf": "https://arxiv.org/pdf/2607.11832v1"
+      },
+      "matched_keywords": [
+        "statistical"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.11827",
+      "arxiv_id": "2607.11827v1",
+      "version": "v1",
+      "title": "Sparse Robust Optimal Control in Continuous-Time: A Computationally Viable Approach",
+      "title_zh": "连续时间中的稀疏鲁棒最优控制：一种计算可行的方案",
+      "authors": [
+        "Siddhartha Ganguly",
+        "Ashwin Aravind",
+        "Souvik Das",
+        "Masaaki Nagahara",
+        "Debasish Chatterjee"
+      ],
+      "abstract": "This article presents a novel, numerically viable algorithm for solving sparse robust optimal control problems in continuous time. We consider a constrained linear noisy system governed by an ordinary differential equation (ODE), with an $L^1$-type objective function in line with the sparse optimal control literature. The resulting optimal control problem is shown to admit a semi-infinite programming (SIP) formulation. Building upon this insight, we develop a new framework that enables the computation of exact solutions -- to our knowledge, the first such achievement in the context of sparse optimal control. We demonstrate that a finite and computationally viable convex optimization problem can be solved to recover, in a lossless manner, both the optimal value and the corresponding optimizers of the original SIP, while also guaranteeing satisfaction of uncountably many constraints. We also show that the parameter-dependent noisy systems and the minimum attention problem fall into our framework and can be solved efficiently via our algorithm. The efficacy of our algorithm is illustrated through a benchmark numerical example.",
+      "abstract_zh": "本文提出了一种新颖的、数值上可行的算法，用于求解连续时间中的稀疏鲁棒最优控制问题。我们考虑一个由常微分方程控制的带约束的线性含噪系统，其目标函数为$L^1$型，与稀疏最优控制文献一致。结果表明，所得到的最优控制问题可转化为半无限规划形式。基于这一见解，我们开发了一个新框架，能够计算精确解——据我们所知，这是在稀疏最优控制领域首次实现这一成就。我们证明，通过求解一个有限且计算上可行的凸优化问题，可以无损地恢复原始半无限规划的最优值及相应的优化器，同时保证满足不可数多个约束。我们还表明，参数依赖的含噪系统和最小注意力问题均属于我们的框架，并可通过我们的算法高效求解。通过一个基准数值示例说明了我们算法的有效性。",
+      "categories": [
+        "math.OC",
+        "eess.SY"
+      ],
+      "primary_category": "math.OC",
+      "published": "2026-07-13T17:18:41Z",
+      "updated": "2026-07-13T17:18:41Z",
+      "announcement_date": "2026-07-14",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11827v1",
+        "pdf": "https://arxiv.org/pdf/2607.11827v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.11821",
+      "arxiv_id": "2607.11821v1",
+      "version": "v1",
+      "title": "Representing the Non-dominated Set of Multi-objective Network Problems by Supported Non-dominated Points",
+      "title_zh": "通过支撑非支配点表示多目标网络问题的非支配集",
+      "authors": [
+        "David Könen",
+        "Lara Löhken",
+        "Michael Stiglmayr"
+      ],
+      "abstract": "In multi-objective combinatorial optimization, unsupported non-dominated points typically outnumber supported points and are often significantly more challenging to compute. Recent studies show that extreme supported non-dominated points provide high-quality representations of the non-dominated set for certain binary problems. We demonstrate that this observation does not generalize to capacitated network optimization problems: representation quality decreases with increasing arc capacities, whereas supported non-dominated points consistently provide high-quality representations with respect to several quality indicators. However, supported point sets may still be too large in practical applications, where only a small, fixed number of alternatives is typically desired. Selecting fixed-size representations from the non-dominated set requires its computationally expensive generation and thus diminishes the computational advantages that representations are intended to provide. We therefore suggest the (extreme) supported points as alternative candidate sets in subset selection problems. Our numerical results show that restricting the candidate set to supported non-dominated points yields fixed-size representations of nearly the same quality as those selected from the complete non-dominated set. Overall, supported non-dominated points serve both as high-quality representations and as reasonable candidate sets for subset selection.",
+      "abstract_zh": "在多目标组合优化中，非支撑非支配点通常数量多于支撑点，且计算难度显著更大。近期研究表明，对于某些二元问题，极端支撑非支配点能提供非支配集的高质量表示。我们证明这一观察结果并不适用于带容量约束的网络优化问题：表示质量随弧容量增加而下降，而支撑非支配点在多个质量指标上始终提供高质量表示。然而，在实际应用中，支撑点集可能仍然过大，因为通常只需要少量固定数量的备选方案。从非支配集中选择固定大小的表示需要生成整个非支配集，计算成本高昂，从而削弱了表示方法本应提供的计算优势。因此，我们建议将（极端）支撑点作为子集选择问题中的备选候选集。数值结果表明，将候选集限制为支撑非支配点所得到的固定大小表示，其质量与从完整非支配集中选择的表示几乎相同。总体而言，支撑非支配点既可作为高质量表示，也可作为子集选择的合理候选集。",
+      "categories": [
+        "cs.DM",
+        "cs.NE",
+        "math.OC"
+      ],
+      "primary_category": "cs.DM",
+      "published": "2026-07-13T17:15:27Z",
+      "updated": "2026-07-13T17:15:27Z",
+      "announcement_date": "2026-07-14",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11821v1",
+        "pdf": "https://arxiv.org/pdf/2607.11821v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.11819",
+      "arxiv_id": "2607.11819v1",
+      "version": "v1",
+      "title": "Tutorial for Bayesian Factor Models",
+      "title_zh": "贝叶斯因子模型教程",
+      "authors": [
+        "Peter Dunson",
+        "Ciprian M. Crainiceanu"
+      ],
+      "abstract": "Bayesian Factor Models (BFM) are well-established models that decompose the observed variability in a set of mean-zero, independent, and uncorrelated factors (random effects). While Factor Analysis (FA) was introduced in 1904 by Spearman, there has been renewed interest in inferential and computational methods that can adapt to large and complex modern data sets that are now routinely collected in a variety of applications. We provide reproducible, harmonized, and fast software for a variety of recent BFMs that allows the direct comparison of methods and provides a one-stop tutorial for the BFMs and their implementation. We neither endorse nor recommend any of the methods for a particular application; we simply provide a previously unavailable harmonized and reproducible common platform for BFMs. The accompanying factorverse R package is available at https://github.com/peterdunson/factorverse.",
+      "abstract_zh": "贝叶斯因子模型（BFM）是成熟的模型，它将一组均值为零、独立且不相关的因子（随机效应）中的观测变异性分解。虽然因子分析（FA）由斯皮尔曼于1904年提出，但近年来，随着各种应用中常规收集的大规模和复杂现代数据集的涌现，人们对能够适应这些数据的推断和计算方法重新产生了兴趣。我们为多种最新的BFM提供了可重复、协调且快速的软件，允许直接比较方法，并为BFM及其实现提供一站式教程。我们不认可也不推荐任何特定应用的方法；我们只是为BFM提供了一个以前无法获得的协调且可重复的通用平台。随附的factorverse R包可在https://github.com/peterdunson/factorverse获取。",
+      "categories": [
+        "stat.CO",
+        "stat.ME"
+      ],
+      "primary_category": "stat.CO",
+      "published": "2026-07-13T17:13:27Z",
+      "updated": "2026-07-13T17:13:27Z",
+      "announcement_date": "2026-07-14",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11819v1",
+        "pdf": "https://arxiv.org/pdf/2607.11819v1"
+      },
+      "matched_keywords": [
+        "bayesian"
       ],
       "translation_status": "translated"
     },
@@ -5155,6 +5957,103 @@
       },
       "matched_keywords": [
         "agent"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.11816",
+      "arxiv_id": "2607.11816v1",
+      "version": "v1",
+      "title": "Relaxing Faithfulness with Intervention-Only Causal Discovery",
+      "title_zh": "仅通过干预放松因果发现中的忠实性假设",
+      "authors": [
+        "Bijan Mazaheri",
+        "Jiaqi Zhang",
+        "Caroline Uhler"
+      ],
+      "abstract": "Causal discovery algorithms learn a network that describes the causal dependencies among random variables. A common workflow involves first utilizing conditional independence properties on observational data to determine partially directed causal relationships, then applying interventions to orient the unknown causal directions. A critical assumption for the first step is faithfulness: a requirement that causally linked variables exhibit statistical dependence. Many natural systems include buffering and stabilizing pathways that cancel out to achieve systemic robustness. This cancellation of pathways violates faithfulness, leading causal discovery algorithms to incorrectly remove causal dependencies. In this paper, we argue that hard interventions contain information about the presence/absence of causal linkage that is overlooked in the first stage of structure discovery. We show that a mild assumption -- called intervention-immediacy faithfulness -- that allows cancellations, is sufficient to nonparametrically identify causal structures with hard interventions. These results position interventions as the primary carriers of information about causal structure, which should take precedence over conditional independence testing. To flip the paradigm, we also specify equivalence classes when the identification criteria are not met due to limitations in the scope of interventions.",
+      "abstract_zh": "因果发现算法学习描述随机变量间因果依赖关系的网络。常见工作流程首先利用观测数据上的条件独立性性质确定部分有向的因果关系，然后应用干预来定向未知的因果方向。第一步的一个关键假设是忠实性：要求因果关联的变量表现出统计依赖性。许多自然系统包含缓冲和稳定路径，这些路径相互抵消以实现系统稳健性。这种路径抵消违反了忠实性，导致因果发现算法错误地移除因果依赖关系。在本文中，我们论证硬干预包含关于因果关联存在/缺失的信息，这些信息在结构发现的第一阶段被忽视。我们展示了一个温和的假设——称为干预即时忠实性——允许抵消，足以通过硬干预非参数地识别因果结构。这些结果将干预定位为因果结构信息的主要载体，应优先于条件独立性检验。为了翻转这一范式，我们还指定了当由于干预范围限制而无法满足识别标准时的等价类。",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-13T17:12:12Z",
+      "updated": "2026-07-13T17:12:12Z",
+      "announcement_date": "2026-07-14",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11816v1",
+        "pdf": "https://arxiv.org/pdf/2607.11816v1"
+      },
+      "matched_keywords": [
+        "statistical",
+        "causal"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.11998",
+      "arxiv_id": "2607.11998v1",
+      "version": "v1",
+      "title": "HPC-Enabled Video-based Coastal Wave Parameter Estimation Using V-JEPA and Deep Spatiotemporal Learning",
+      "title_zh": "基于HPC的视频海岸波浪参数估计：使用V-JEPA和深度时空学习",
+      "authors": [
+        "Abubakar Hamisu Kamagata",
+        "Dharm Singh Jat",
+        "Attlee Munyaradzi Gamundani",
+        "Saravanakumar Paramasivam",
+        "Babangida Sani",
+        "Aliyu Zakariyya"
+      ],
+      "abstract": "High deployment cost, poor spatial coverage and susceptibility to storm conditions are all challenges faced by traditional in-situ methods. This paper presents a video-based and high performance computing (HPC) enabled deep learning framework for joint sensor free estimation of five coastal wave parameters, namely significant wave height (Hs), maximum wave height (Hmax), peak period (Tp), zero upcrossing period (Tz) and wave direction (theta) from monocular coastal video. The proposed architecture comprises of a V-JEPA (self supervised) ViT Small backbone for robust spatiotemporal feature extraction in visually challenging scenarios, a dual-stream SlowFast temporal encoder for broad bandwidth representation of wave motion in both hydrodynamic breaking and swell regimes, an optical flow stream based on Farneback optical flow algorithm for adding saliency information to the structure with emphasis on hydrodynamically active wavelength bands of waves, and a multi-task regression layer with dispersion constraints (Airy wave dispersion lambda_p = 0.1). The model was trained on an NVIDIA DGX A100 cluster and was early stopped at epoch 31 and achieved Pearson correlation coefficients of 0.451, 0.578, 0.643, 0.680 and 0.832 for Hs, Hmax, Tp, Tz and wave direction respectively, with generalization ability to geographically diverse held out test data sites. While operating in a data-limited regime (6 annotated training scenes), the framework demonstrates statistically significant temporal correlations (PCC of 0.451 to 0.832), confirming proof of concept feasibility; R2 values (max 0.246) indicate that variance capture will improve with larger annotated datasets.",
+      "abstract_zh": "高部署成本、空间覆盖差以及易受风暴条件影响是传统原位方法面临的挑战。本文提出了一种基于视频和高性能计算（HPC）的深度学习框架，用于从单目海岸视频中联合无传感器估计五个海岸波浪参数，即有效波高（Hs）、最大波高（Hmax）、峰值周期（Tp）、零上跨周期（Tz）和波向（theta）。所提出的架构包括：一个V-JEPA（自监督）ViT Small骨干网络，用于在视觉挑战场景中进行鲁棒的时空特征提取；一个双流SlowFast时间编码器，用于在流体力学破碎和涌浪状态下对波浪运动进行宽带宽表示；一个基于Farneback光流算法的光流流，用于向结构添加显著性信息，重点强调流体动力学活跃的波长波段；以及一个带有色散约束（Airy波色散lambda_p = 0.1）的多任务回归层。该模型在NVIDIA DGX A100集群上训练，并在第31个epoch提前停止，对Hs、Hmax、Tp、Tz和波向分别达到了0.451、0.578、0.643、0.680和0.832的皮尔逊相关系数，并具有对地理多样性的保留测试数据站点的泛化能力。在数据受限的情况下（6个标注训练场景），该框架展示了统计上显著的时间相关性（PCC为0.451至0.832），证实了概念验证的可行性；R2值（最大0.246）表明，随着标注数据集的增大，方差捕获将得到改善。",
+      "categories": [
+        "eess.IV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "primary_category": "eess.IV",
+      "published": "2026-07-13T16:57:46Z",
+      "updated": "2026-07-13T16:57:46Z",
+      "announcement_date": "2026-07-14",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11998v1",
+        "pdf": "https://arxiv.org/pdf/2607.11998v1"
+      },
+      "matched_keywords": [
+        "statistical",
+        "regression"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.13088",
+      "arxiv_id": "2607.13088v1",
+      "version": "v1",
+      "title": "Securing LLMs in the Wild: Privacy and Security Challenges at the Edge",
+      "title_zh": "保护野外的大语言模型：边缘环境中的隐私与安全挑战",
+      "authors": [
+        "Ren-Yi Huang",
+        "Mingchen Li",
+        "Dumindu Samaraweera",
+        "Morris Chang"
+      ],
+      "abstract": "Large Language Models (LLMs) are rapidly moving from research settings into the wild, deployed on enterprise infrastructure, personal devices, and edge platforms. While cloud deployments offer scalable compute, concerns over data sovereignty, compliance, latency, and third-party dependence are driving organizations toward edge and on-premise LLMs. This shift introduces new security and privacy challenges: limited compute and memory force aggressive optimizations, including quantization, pruning, model partitioning, and parameter-efficient adaptation, each of which can introduce vulnerabilities and reshape the threat landscape. We describe this tension as the Security-Efficiency Paradox, mechanisms that improve efficiency may weaken robustness, expose new attack surfaces, or increase privacy risks. We examine how compression can degrade safety alignment, how partitioned inference enables reconstruction attacks, and how continuous local adaptation may cause privacy leakage and model drift. To analyze these risks, we introduce a deployment-centric taxonomy organized around three architectural constraints: the Memory Wall, the Quadratic Wall, and the Compute Wall. We derive a unified constraint model that quantifies when unsafe optimizations become unavoidable, linking each wall to specific attack surfaces. Building on this model, we propose the Secure Operational Efficiency Score (SOES), a holistic metric balancing task accuracy, jailbreak resistance, and privacy against energy, memory, and latency, enabling practitioners to configure edge LLMs under real-world hardware limits. We further present a practical decision procedure and targeted mitigations for each optimization-induced vulnerability. Together, these contributions provide a co-designed framework for jointly evaluating security, privacy, and efficiency, laying a foundation for securing edge-native intelligent systems.",
+      "abstract_zh": "大语言模型正迅速从研究环境走向实际应用，部署在企业基础设施、个人设备和边缘平台上。虽然云部署提供了可扩展的计算能力，但对数据主权、合规性、延迟和第三方依赖的担忧正促使组织转向边缘和本地部署的大语言模型。这种转变带来了新的安全与隐私挑战：有限的计算和内存迫使进行激进的优化，包括量化、剪枝、模型分区和参数高效适配，每种优化都可能引入漏洞并重塑威胁格局。我们将这种张力描述为安全-效率悖论：提高效率的机制可能削弱鲁棒性、暴露新的攻击面或增加隐私风险。我们研究了压缩如何降低安全对齐、分区推理如何实现重构攻击，以及持续本地适配如何导致隐私泄露和模型漂移。为分析这些风险，我们引入了一个以部署为中心的分类法，围绕三个架构约束组织：内存墙、二次方墙和计算墙。我们推导出一个统一的约束模型，量化不安全优化何时变得不可避免，将每堵墙与特定攻击面联系起来。基于该模型，我们提出安全运营效率评分，一个综合指标，平衡任务准确性、越狱抵抗和隐私与能量、内存和延迟，使从业者能够在实际硬件限制下配置边缘大语言模型。我们进一步提出一个实用的决策程序和针对每种优化诱导漏洞的针对性缓解措施。这些贡献共同提供了一个协同设计的框架，用于联合评估安全性、隐私和效率，为保护边缘原生智能系统奠定基础。",
+      "categories": [
+        "cs.CR",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CR",
+      "published": "2026-07-13T16:45:04Z",
+      "updated": "2026-07-13T16:45:04Z",
+      "announcement_date": "2026-07-14",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.13088v1",
+        "pdf": "https://arxiv.org/pdf/2607.13088v1"
+      },
+      "matched_keywords": [
+        "optimization"
       ],
       "translation_status": "translated"
     },
@@ -5221,6 +6120,97 @@
         "large language model"
       ],
       "translation_status": "failed"
+    },
+    {
+      "id": "2607.11778",
+      "arxiv_id": "2607.11778v1",
+      "version": "v1",
+      "title": "The Evolution and Interpretation of \"Statistical Purposes\"",
+      "title_zh": "“统计目的”的演变与解读",
+      "authors": [
+        "Michael B. Hawes",
+        "John L. Eltinge",
+        "Paul S. Marck",
+        "Danielle C. Neiman",
+        "Sallie Ann Keller"
+      ],
+      "abstract": "National Statistical Organizations (NSOs) and other groups often use the term \"for statistical purposes only\" in communication with prospective respondents, data users and other stakeholders. This term also provides an important anchor for many NSO decisions on operations and ethics. Although public communication often omits a clear operational definition of this term, this paper will show that reviews of underlying laws and policies identify two predominant criteria: (1) production of statistical information about relatively large population aggregates, with the intention of creating a general public benefit; and (2) protection of the confidentiality of data collected about data subjects and a related prohibition against the use of information provided by or about data subjects for legal or regulatory action against those individuals or organizations. We then explore how this term exists, and is often interpreted, within a much broader landscape of legal requirements and of scientific and professional codes of practice, and provide a broader definition for consideration based on these and other ethical frameworks. This paper closes by highlighting several areas that warrant further discussion to better position NSOs to navigate these challenges in the future.",
+      "abstract_zh": "国家统计机构（NSOs）和其他组织在与潜在受访者、数据用户及其他利益相关者沟通时，常使用“仅用于统计目的”这一术语。该术语也为许多国家统计机构在操作和伦理决策上提供了重要依据。尽管公开沟通中常缺乏对该术语的明确操作定义，但本文表明，对相关法律和政策的审查揭示了两个主要标准：（1）生产关于相对较大人口总体的统计信息，旨在创造普遍的公共利益；（2）保护所收集数据主体的机密性，并禁止将数据主体提供的信息用于针对这些个人或组织的法律或监管行动。然后，我们探讨了这一术语如何在更广泛的法律要求、科学和专业实践规范中存在并常被解读，并基于这些及其他伦理框架提出了一个更广泛的定义供考虑。本文最后强调了几个需要进一步讨论的领域，以更好地使国家统计机构在未来应对这些挑战。",
+      "categories": [
+        "stat.OT",
+        "stat.AP"
+      ],
+      "primary_category": "stat.OT",
+      "published": "2026-07-13T16:35:11Z",
+      "updated": "2026-07-13T16:35:11Z",
+      "announcement_date": "2026-07-14",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11778v1",
+        "pdf": "https://arxiv.org/pdf/2607.11778v1"
+      },
+      "matched_keywords": [
+        "statistical"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.11776",
+      "arxiv_id": "2607.11776v1",
+      "version": "v1",
+      "title": "Multiple Instrument Methods Comparison by Precision weighted Deming Regression",
+      "title_zh": "基于精度加权Deming回归的多仪器方法比较",
+      "authors": [
+        "Douglas M Hawkins",
+        "Jessica J Kraker"
+      ],
+      "abstract": "In methods comparison (MC) studies, specimens are tested using two or more instruments with the objective of establishing the statistical relationship between the different instruments readings. Unlike regular regression, this is an errors in variables problem. Relationships may be fitted parametrically (Deming regression) or non-parametrically (Passing Bablok or PB regression.) In clinical chemistry settings, the measurement variability is rarely constant, but generally increases with increasing analyte values. Precision weighted Deming regression models this variability and incorporates it into the fitting. The simplest setting of comparing two instruments is discussed in (1) and implemented in an R package (2). PB makes minimal distributional assumptions. Its classical two-instrument implementation has recently been extended to multiple instruments (3). This work extends the two-instrument Deming model of (1) to multiple instruments, developing algorithms for fitting, for formal inference, for residual analysis, and for outlier detection and diagnosis.",
+      "abstract_zh": "在方法比较（MC）研究中，使用两台或多台仪器对样本进行测试，目的是建立不同仪器读数之间的统计关系。与常规回归不同，这是一个变量误差问题。关系可以通过参数方法（Deming回归）或非参数方法（Passing-Bablok或PB回归）进行拟合。在临床化学环境中，测量变异性很少是恒定的，但通常随着分析物浓度的增加而增加。精度加权Deming回归对这种变异性进行建模并将其纳入拟合过程。文献（1）讨论了比较两台仪器的最简单设置，并在R包（2）中实现。PB回归对分布假设要求最低。其经典的两仪器实现最近已扩展到多仪器（3）。本研究将（1）中的两仪器Deming模型扩展到多仪器，开发了用于拟合、正式推断、残差分析以及异常值检测和诊断的算法。",
+      "categories": [
+        "stat.AP"
+      ],
+      "primary_category": "stat.AP",
+      "published": "2026-07-13T16:32:46Z",
+      "updated": "2026-07-13T16:32:46Z",
+      "announcement_date": "2026-07-14",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11776v1",
+        "pdf": "https://arxiv.org/pdf/2607.11776v1"
+      },
+      "matched_keywords": [
+        "statistical",
+        "regression"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.11773",
+      "arxiv_id": "2607.11773v1",
+      "version": "v1",
+      "title": "Existence and vanishing noise limit of measure attractors for McKean-Vlasov $p$-Laplacian lattice systems with delay driven by Lévy noise",
+      "title_zh": "McKean-Vlasov p-Laplace延迟格点系统在Lévy噪声驱动下的测度吸引子存在性与噪声消失极限",
+      "authors": [
+        "Zhang Chen",
+        "Xiaoxiao Sun",
+        "Bixiang Wang"
+      ],
+      "abstract": "This paper is concerned with the existence and the limiting behavior of measure attractors of distribution laws of the solution segment process for the McKean-Vlasov stochastic $p$-Laplace lattice system with time delay driven by Lévy noise. The nonlinear drift and diffusion terms are allowed to have superlinear growth. Due to time delay, the Skorohod metric space is employed to describe the trajectories of the solutions with jumps. We first prove the existence and uniqueness of càdlàg solutions for the lattice system, and then define a non-autonomous cocycle acting on the Borel probability measures in the Skorohod space. This cocycle is continuous in bounded subsets of the space of probability measures only when time is sufficiently large. We then prove the existence of pullback absorbing sets and the asymptotic compactness of the cocycle as well as the existence and uniqueness of pullback measure attractors. We finally investigate the limiting behavior of measure attractors of the lattice system as the noise intensity approaches zero, and establish the optimal convergence rate of singleton measure attractors in the Wasserstein distance of order $θ$.",
+      "abstract_zh": "本文研究由Lévy噪声驱动的具有时滞的McKean-Vlasov随机p-Laplace格点系统的解分布律的测度吸引子的存在性与极限行为。非线性漂移和扩散项允许超线性增长。由于时滞，采用Skorohod度量空间描述带跳跃的解的轨迹。我们首先证明格点系统càdlàg解的存在唯一性，然后在Skorohod空间上定义作用于Borel概率测度的非自治余圈。该余圈仅在时间足够大时在概率测度空间的有界子集上连续。接着证明拉回吸收集的存在性、余圈的渐近紧性以及拉回测度吸引子的存在唯一性。最后研究噪声强度趋于零时格点系统测度吸引子的极限行为，并建立Wasserstein距离下阶为θ的单点测度吸引子的最优收敛速率。",
+      "categories": [
+        "math.PR"
+      ],
+      "primary_category": "math.PR",
+      "published": "2026-07-13T16:31:25Z",
+      "updated": "2026-07-13T16:31:25Z",
+      "announcement_date": "2026-07-14",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11773v1",
+        "pdf": "https://arxiv.org/pdf/2607.11773v1"
+      },
+      "matched_keywords": [
+        "stochastic",
+        "probability"
+      ],
+      "translation_status": "translated"
     },
     {
       "id": "2607.11760",
@@ -5343,6 +6333,43 @@
       },
       "matched_keywords": [
         "large language model"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.11746",
+      "arxiv_id": "2607.11746v1",
+      "version": "v1",
+      "title": "HiFi-LLP: High-Fidelity, Low-Cost Latency Predictors with Confidence for Robust HW-NAS",
+      "title_zh": "HiFi-LLP：用于鲁棒硬件感知神经架构搜索的高保真、低成本延迟预测器与置信度度量",
+      "authors": [
+        "Shambhavi Balamuthu Sampath",
+        "Behzad Shomali",
+        "Nael Fasfous",
+        "Moritz Thoma",
+        "Judeson Anthony Fernando",
+        "Lukas Frickenstein",
+        "Pierpaolo Mori",
+        "Manoj Rohit Vemparala",
+        "Alexander Frickenstein",
+        "Walter Stechele"
+      ],
+      "abstract": "With deep neural networks (DNNs) increasingly deployed on edge devices, hardware (HW)-aware optimization techniques--such as HW-aware compression and HW-aware neural architecture search (HW-NAS)--have become essential. These methods rely on real feedback from the target hardware to tailor DNN architectures for efficient deployment. While the search can be parallelized, latency measurements via hardware-in-the-loop (HIL) remain a bottleneck due to their sequential nature. Recent approaches use latency predictors to replace costly HIL feedback, but challenges persist: (1) platform-specific predictors often require tens of thousands of samples, and (2) inaccurate predictions can mislead the NAS process. To address this, we introduce HiFi-LLP, a high-fidelity, low-cost latency predictor based on graph attention networks, augmented with a confidence metric. HiFi-LLP outperforms prior platform-specific predictors by up to 9 percentage points (p.p.) in the 10% accuracy bound and achieves a Spearman's rank correlation of up to 0.996 across six devices in the LatBench dataset. We further propose a hybrid NAS framework that routes low-confidence predictions to HIL, achieving up to 8.6$\\times$ speedup compared to typical NAS while maintaining a competitive Pareto front.",
+      "abstract_zh": "随着深度神经网络（DNN）越来越多地部署在边缘设备上，硬件感知优化技术（如硬件感知压缩和硬件感知神经架构搜索（HW-NAS））变得至关重要。这些方法依赖目标硬件的真实反馈来定制DNN架构以实现高效部署。虽然搜索可以并行化，但通过硬件在环（HIL）进行延迟测量由于其顺序性而成为瓶颈。近期方法使用延迟预测器替代昂贵的HIL反馈，但仍存在挑战：（1）特定平台的预测器通常需要数万个样本；（2）不准确的预测可能误导NAS过程。为解决此问题，我们提出HiFi-LLP，一种基于图注意力网络的高保真、低成本延迟预测器，并辅以置信度度量。在LatBench数据集的六个设备上，HiFi-LLP在10%精度边界内比先前的特定平台预测器性能提升高达9个百分点，Spearman秩相关系数高达0.996。我们进一步提出一种混合NAS框架，将低置信度预测路由至HIL，与典型NAS相比实现高达8.6倍加速，同时保持有竞争力的帕累托前沿。",
+      "categories": [
+        "cs.LG",
+        "cs.AR"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-13T16:05:16Z",
+      "updated": "2026-07-13T16:05:16Z",
+      "announcement_date": "2026-07-14",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11746v1",
+        "pdf": "https://arxiv.org/pdf/2607.11746v1"
+      },
+      "matched_keywords": [
+        "optimization"
       ],
       "translation_status": "translated"
     }

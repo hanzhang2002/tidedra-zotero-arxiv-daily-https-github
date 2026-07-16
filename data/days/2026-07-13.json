@@ -1,7 +1,80 @@
 {
   "date": "2026-07-13",
-  "updated_at": "2026-07-15T12:01:35Z",
+  "updated_at": "2026-07-16T12:02:25Z",
   "papers": [
+    {
+      "id": "2607.11734",
+      "arxiv_id": "2607.11734v1",
+      "version": "v1",
+      "title": "NeuralActuator: Neural Actuation Modeling for Robot Dynamics and External Force Perception",
+      "title_zh": "NeuralActuator：用于机器人动力学和外部力感知的神经驱动建模",
+      "authors": [
+        "Zhiyang Dou",
+        "John U. Onyemelukwe",
+        "Hangxing Zhang",
+        "Heng Zhang",
+        "Minghao Guo",
+        "Yunsheng Tian",
+        "Michal Piotr Lipiec",
+        "Joshua Jacob",
+        "Chao Liu",
+        "Peter Yichen Chen",
+        "Yuri Ivanov",
+        "Wojciech Matusik"
+      ],
+      "abstract": "Differentiable simulators have advanced policy learning and model-based control, yet actuator dynamics remain an important source of sim-to-real error. This is particularly acute on low-cost platforms, where the linear current-to-torque relation $τ= K_tI$ becomes unreliable during commanded-target tracking because of friction, hysteresis, backlash, and thermal effects. We present NeuralActuator, a neural actuator model that jointly predicts (i) a simulator-equivalent generalized-effort surrogate for trajectory propagation on low-cost servo platforms, (ii) external force with a contact-probability gate for sensorless force perception, and (iii) a motor-condition score for the supervised joint. We also introduce the Neural Actuation Dataset (NAD), collected with a twin-arm teleoperation system that records robot states and actuator telemetry together with external-force labels. The torque-surrogate head is trained through differentiable simulation from pose trajectories without direct generalized-effort labels, while the force, gate, and motor-condition heads receive direct supervision. A Transformer captures temporal dependencies while supporting real-time inference. We evaluate NeuralActuator on a 5-DoF OpenManipulator-X, a 6-DoF SO-101, and a 7-DoF Franka Emika Panda, spanning three actuator families and platforms costing approximately USD 500 to over USD 30,000. The low-cost platforms support dynamics and force evaluation, while the offline Franka experiment provides an additional payload-force-estimation benchmark. Experiments further demonstrate its application for motor condition estimation on OpenManipulator-X and improved behavior-cloning performance when NeuralActuator is used as a pretrained module.",
+      "abstract_zh": "可微分模拟器推动了策略学习和基于模型的控制的发展，然而驱动器动力学仍然是模拟到现实误差的重要来源。这在低成本平台上尤为严重，由于摩擦、迟滞、齿隙和热效应，在指令目标跟踪过程中，线性电流-扭矩关系 $τ= K_tI$ 变得不可靠。我们提出了 NeuralActuator，一种神经驱动器模型，它联合预测：(i) 用于低成本伺服平台轨迹传播的模拟器等效广义力代理，(ii) 带有接触概率门控的外部力，用于无传感器力感知，以及 (iii) 用于监督关节的电机状态评分。我们还引入了神经驱动数据集 (NAD)，该数据集通过双臂遥操作系统收集，记录机器人状态和驱动器遥测数据以及外部力标签。扭矩代理头通过可微分模拟从位姿轨迹训练，无需直接的广义力标签，而力、门控和电机状态头则接受直接监督。Transformer 捕获时间依赖性，同时支持实时推理。我们在 5 自由度 OpenManipulator-X、6 自由度 SO-101 和 7 自由度 Franka Emika Panda 上评估 NeuralActuator，涵盖三个驱动器系列和成本从约 500 美元到超过 30,000 美元的平台。低成本平台支持动力学和力评估，而离线 Franka 实验提供了额外的负载力估计基准。实验进一步展示了其在 OpenManipulator-X 上的电机状态估计应用，以及当 NeuralActuator 用作预训练模块时改进的行为克隆性能。",
+      "categories": [
+        "cs.RO",
+        "cs.CV",
+        "cs.GR",
+        "cs.LG"
+      ],
+      "primary_category": "cs.RO",
+      "published": "2026-07-13T15:58:34Z",
+      "updated": "2026-07-13T15:58:34Z",
+      "announcement_date": "2026-07-13",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11734v1",
+        "pdf": "https://arxiv.org/pdf/2607.11734v1"
+      },
+      "matched_keywords": [
+        "probability"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.11994",
+      "arxiv_id": "2607.11994v1",
+      "version": "v1",
+      "title": "Mitigating The Effect of Class Imbalance in Data with Hierarchical and Dependable Structure",
+      "title_zh": "缓解具有层次和依赖结构数据中的类别不平衡问题",
+      "authors": [
+        "Bipin Chhetri",
+        "Deepika Giri",
+        "Avishek Kadel",
+        "Rabin Kumar Karki",
+        "Akbar Siami Namin"
+      ],
+      "abstract": "Classifying cybersecurity vulnerabilities using the Common Weakness Enumeration (CWE) taxonomy is challenging due to extreme class imbalance and strong hierarchical dependencies among weakness categories. Although oversampling techniques such as Synthetic Minority Oversampling Technique (SMOTE) and Adaptive Synthetic Sampling (ADASYN) are widely adopted to mitigate class imbalance, their effectiveness for hierarchical CWE text classification remains largely unexplored. This paper proposes a Hierarchy-Aware RoBERTa framework that explicitly incorporates CWE structural information through learnable parent-class embeddings, preserving taxonomic consistency. Our experiments demonstrate that synthetic interpolation in high-dimensional embedding spaces violates the inherent parent-child constraints of the CWE hierarchy, offering only marginal benefits for classical ML models while consistently degrading deep learning architectures. Evaluated on a CWE Research Concept dataset, the proposed model achieves a weighted F1-score of 0.76 without data augmentation, outperforming all baselines with notable gains on minority classes, including the Class category whose F1-score improved from 0.40 to 0.60 over the BERT baseline. Our results suggest that hierarchy-aware representation learning is a more principled alternative to oversampling for structured vulnerability classification.",
+      "abstract_zh": "使用通用弱点枚举（CWE）分类法对网络安全漏洞进行分类具有挑战性，原因是极端类别不平衡以及弱点类别之间存在强烈的层次依赖关系。尽管过采样技术如合成少数类过采样技术（SMOTE）和自适应合成采样（ADASYN）被广泛用于缓解类别不平衡，但它们对层次化CWE文本分类的有效性仍未得到充分探索。本文提出了一种层次感知的RoBERTa框架，通过可学习的父类嵌入显式地融入CWE结构信息，从而保持分类学一致性。我们的实验表明，高维嵌入空间中的合成插值违反了CWE层次结构固有的父子约束，对经典机器学习模型仅带来边际收益，而持续降低深度学习架构的性能。在CWE研究概念数据集上评估，所提模型在无数据增强的情况下实现了0.76的加权F1分数，优于所有基线，并在少数类上取得了显著提升，其中Class类别的F1分数从BERT基线的0.40提高到0.60。我们的结果表明，对于结构化漏洞分类，层次感知表示学习是比过采样更原则性的替代方案。",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-13T15:58:11Z",
+      "updated": "2026-07-13T15:58:11Z",
+      "announcement_date": "2026-07-13",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11994v1",
+        "pdf": "https://arxiv.org/pdf/2607.11994v1"
+      },
+      "matched_keywords": [
+        "high-dimensional"
+      ],
+      "translation_status": "translated"
+    },
     {
       "id": "2607.11722",
       "arxiv_id": "2607.11722v1",
@@ -33,6 +106,65 @@
       "translation_status": "translated"
     },
     {
+      "id": "2607.11719",
+      "arxiv_id": "2607.11719v1",
+      "version": "v1",
+      "title": "A uniform relative deviation inequality for VC-subgraph classes",
+      "title_zh": "VC-子图类的一致相对偏差不等式",
+      "authors": [
+        "François Portier"
+      ],
+      "abstract": "We establish a new Bernstein-type deviation inequality for classes of functions whose complexity is characterized through subgraphs. The inequality is non-asymptotic, involves explicit constants, and features a relative normalization by the probability level. Applied to kernel density estimation, it produces a location and bandwidth-adaptive error bound between the estimator and the smoothed density, holding simultaneously over all points on the real line and all positive bandwidths. The proof is elementary, combining a new symmetrization principle, which incorporates the relative normalization, with the maximal sub-Gaussian inequality, and requires neither concentration nor entropy-integral arguments. When specialized to classes of sets, our technique improves the constants in the classical Vapnik-Chervonenkis inequality with relative deviation of Anthony and Shawe-Taylor (1993), reducing the factor 4 S A (2n) to S A (2n) in the right-tail inequality and to 3 S A (2n) in the left-tail inequality.",
+      "abstract_zh": "我们建立了一个新的Bernstein型偏差不等式，适用于复杂度通过子图刻画的函数类。该不等式是非渐近的，包含显式常数，并以概率水平进行相对归一化。应用于核密度估计时，它产生了估计量与平滑密度之间的位置和带宽自适应误差界，同时在实直线上的所有点和所有正带宽上成立。证明是初等的，结合了包含相对归一化的新对称化原理与最大次高斯不等式，既不需要集中性也不需要熵积分论证。当专门应用于集合类时，我们的技术改进了Anthony和Shawe-Taylor（1993）的经典Vapnik-Chervonenkis相对偏差不等式中的常数，将右尾不等式中的因子4 S_A(2n)减少为S_A(2n)，左尾不等式中的因子减少为3 S_A(2n)。",
+      "categories": [
+        "math.ST",
+        "math.PR"
+      ],
+      "primary_category": "math.ST",
+      "published": "2026-07-13T15:45:48Z",
+      "updated": "2026-07-13T15:45:48Z",
+      "announcement_date": "2026-07-13",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11719v1",
+        "pdf": "https://arxiv.org/pdf/2607.11719v1"
+      },
+      "matched_keywords": [
+        "probability"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.11718",
+      "arxiv_id": "2607.11718v1",
+      "version": "v1",
+      "title": "Inf-Sup Neural Networks for High Dimensional PDEs",
+      "title_zh": "高维偏微分方程的Inf-Sup神经网络方法",
+      "authors": [
+        "Ziren Chen",
+        "Hailiang Liu"
+      ],
+      "abstract": "Solving partial differential equations (PDEs) in high dimensions remains challenging due to the curse of dimensionality. We propose a neural-network-based framework that reformulates PDEs as inf--sup optimization problems through the introduction of a Lagrange multiplier. The primal solution and the associated Lagrange multiplier are parameterized by two networks and are computed via an iterative saddle-point optimization procedure. We prove the theoretical equivalence between the proposed optimization formulation and the original PDE problem, and we derive rigorous error estimates that quantify the total approximation error in terms of the network approximation error, statistical (sampling) error, and optimization error. Numerical experiments demonstrate the accuracy, stability, and efficiency of the proposed method for solving high-dimensional PDEs.",
+      "abstract_zh": "由于维数灾难，高维偏微分方程的求解仍然具有挑战性。我们提出了一种基于神经网络的框架，通过引入拉格朗日乘子将偏微分方程重新表述为inf-sup优化问题。原始解和相关的拉格朗日乘子由两个网络参数化，并通过迭代鞍点优化过程计算。我们证明了所提出的优化公式与原始偏微分方程问题之间的理论等价性，并推导了严格的误差估计，将总逼近误差量化为网络逼近误差、统计（采样）误差和优化误差。数值实验证明了该方法在求解高维偏微分方程时的准确性、稳定性和效率。",
+      "categories": [
+        "math.NA",
+        "math.AP"
+      ],
+      "primary_category": "math.NA",
+      "published": "2026-07-13T15:44:08Z",
+      "updated": "2026-07-13T15:44:08Z",
+      "announcement_date": "2026-07-13",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11718v1",
+        "pdf": "https://arxiv.org/pdf/2607.11718v1"
+      },
+      "matched_keywords": [
+        "statistical",
+        "high-dimensional",
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
       "id": "2607.11715",
       "arxiv_id": "2607.11715v1",
       "version": "v1",
@@ -59,6 +191,37 @@
       },
       "matched_keywords": [
         "large language model"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.11714",
+      "arxiv_id": "2607.11714v1",
+      "version": "v1",
+      "title": "Contextual Stochastic Optimization with Decision-Dependent Uncertainty via Nonparametric Learning",
+      "title_zh": "基于非参数学习的决策依赖不确定性下的情境随机优化",
+      "authors": [
+        "Huangrong Sun",
+        "Xian Yu"
+      ],
+      "abstract": "We study a general decision-dependent contextual stochastic program (DD-CSP) in which uncertainty depends on both exogenous contextual information and endogenous decisions. To learn the potentially complex dependence of uncertainty on decisions and contextual information, we employ several nonparametric regression models, including k nearest neighbors (kNN), classification and regression trees (CART), and ReLU neural networks. To account for estimation errors in predicting the uncertainty, we adopt an empirical residuals-based decision-dependent sample average approximation (ER-DD-SAA) framework, which adds empirical residuals to the point predictions from the learned regression models. For each nonparametric regression model, we develop exact mixed-integer programming (MIP) representations that can be seamlessly embedded within the ER-DD-SAA framework. For two-stage ER-DD-SAA problems with kNN, we further propose a tailored decomposition algorithm, named BD-CG, that combines Bender's decomposition with constraint generation. Under suitable assumptions, we prove that the proposed BD-CG converges to a global optimum within a finite number of iterations. From a statistical perspective, we establish the consistency and asymptotic optimality of ER-DD-SAA with all three nonparametric regression models under mild regularity conditions. Numerical experiments on a newsvendor problem with pricing and a two-stage facility location problem demonstrate that the ER-DD-SAA model with nonparametric learning consistently outperforms a parametric benchmark in out-of-sample performance and the proposed reformulations and algorithm substantially improve computational tractability.",
+      "abstract_zh": "我们研究了一类通用的决策依赖情境随机规划问题，其中不确定性同时依赖于外生情境信息和内生决策。为了学习不确定性对决策和情境信息的潜在复杂依赖关系，我们采用了多种非参数回归模型，包括k近邻、分类回归树和ReLU神经网络。为了考虑预测不确定性时的估计误差，我们采用了一种基于经验残差的决策依赖样本平均近似框架，该框架将经验残差添加到从学习到的回归模型得到的点预测中。对于每种非参数回归模型，我们开发了精确的混合整数规划表示，可以无缝嵌入到ER-DD-SAA框架中。对于具有kNN的两阶段ER-DD-SAA问题，我们进一步提出了一种定制的分解算法，名为BD-CG，该算法将Benders分解与约束生成相结合。在适当假设下，我们证明了所提出的BD-CG算法在有限次迭代内收敛到全局最优解。从统计角度来看，我们在温和的正则条件下建立了所有三种非参数回归模型下ER-DD-SAA的一致性和渐近最优性。在带有定价的报童问题和两阶段设施选址问题上的数值实验表明，具有非参数学习的ER-DD-SAA模型在样本外性能上始终优于参数基准，并且所提出的重构和算法显著提高了计算可处理性。",
+      "categories": [
+        "math.OC"
+      ],
+      "primary_category": "math.OC",
+      "published": "2026-07-13T15:41:04Z",
+      "updated": "2026-07-13T15:41:04Z",
+      "announcement_date": "2026-07-13",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11714v1",
+        "pdf": "https://arxiv.org/pdf/2607.11714v1"
+      },
+      "matched_keywords": [
+        "statistical",
+        "stochastic",
+        "regression",
+        "optimization"
       ],
       "translation_status": "translated"
     },
@@ -121,6 +284,37 @@
       },
       "matched_keywords": [
         "large language model"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.11701",
+      "arxiv_id": "2607.11701v1",
+      "version": "v1",
+      "title": "$\\mathtt{Q^2SAR}$: overcoming classical bottlenecks in drug discovery via quantum multiple kernel learning",
+      "title_zh": "$\\mathtt{Q^2SAR}$：通过量子多核学习克服药物发现中的经典瓶颈",
+      "authors": [
+        "Mariano Caruso",
+        "Daniel Ruiz",
+        "Alejandro Giraldo",
+        "Guido Bellomo"
+      ],
+      "abstract": "Quantitative Structure-Activity Relationship ($\\mathtt{QSAR}$) modeling is a foundational computational methodology in early-stage drug discovery, heavily relied upon for predicting compound toxicity, bioavailability, and therapeutic potential. However, classical methods often struggle to effectively map the highly complex, non-linear, and high-dimensional interactions inherent in molecular data, leading to reduced predictive accuracy and costly late-stage clinical failures. In this paper, we present a Quantum Multiple Kernel Learning ($\\mathtt{QMKL}$) framework, dubbed Next-Gen $\\mathtt{Q^2SAR}$, that leverages Quantum Support Vector Machines ($\\mathtt{QSVMs}$) to overcome these classical limitations. By encoding molecular descriptors into exponentially large quantum Hilbert spaces, our approach substantially enhances the expressiveness of non-linear modeling. Benchmarking our quantum-enhanced framework on a dataset targeting the $\\mathtt{DYRK1A}$ kinase (a critical target for Alzheimer's disease), the $\\mathtt{QMKL}$-$\\mathtt{SVM}$ achieves an impressive Area Under the Curve ($\\mathtt{AUC}$) score of $0.8750$, significantly outperforming classical state-of-the-art Gradient Boosting models ($\\mathtt{AUC} = 0.8037$). Furthermore, we establish a theoretical and empirical pathway toward resolving classical data bottlenecks through projected quantum kernels ($\\mathtt{PQK}$) and measurement accelerators. As quantum computing architecture matures, this framework paves the way for autonomous cognitive architectures and self-improving drug discovery pipelines, promising to unlock deeper insights across vast chemical spaces and to accelerate the development of life-saving therapeutics.",
+      "abstract_zh": "定量构效关系（$\\mathtt{QSAR}$）建模是早期药物发现中的基础计算方法，广泛应用于预测化合物毒性、生物利用度和治疗潜力。然而，经典方法通常难以有效映射分子数据中高度复杂、非线性和高维的相互作用，导致预测准确性降低和代价高昂的后期临床失败。在本文中，我们提出了一种量子多核学习（$\\mathtt{QMKL}$）框架，称为下一代$\\mathtt{Q^2SAR}$，它利用量子支持向量机（$\\mathtt{QSVMs}$）来克服这些经典限制。通过将分子描述符编码到指数级大的量子希尔伯特空间中，我们的方法显著增强了非线性建模的表达能力。在针对$\\mathtt{DYRK1A}$激酶（阿尔茨海默病的关键靶点）的数据集上对我们的量子增强框架进行基准测试，$\\mathtt{QMKL}$-$\\mathtt{SVM}$实现了令人印象深刻的曲线下面积（$\\mathtt{AUC}$）得分0.8750，显著优于经典的最先进梯度提升模型（$\\mathtt{AUC} = 0.8037$）。此外，我们通过投影量子核（$\\mathtt{PQK}$）和测量加速器，建立了一条解决经典数据瓶颈的理论和实证路径。随着量子计算架构的成熟，该框架为自主认知架构和自我改进的药物发现管道铺平了道路，有望在广阔的化学空间中解锁更深入的见解，并加速拯救生命的治疗方法的开发。",
+      "categories": [
+        "quant-ph",
+        "cs.LG"
+      ],
+      "primary_category": "quant-ph",
+      "published": "2026-07-13T15:33:05Z",
+      "updated": "2026-07-13T15:33:05Z",
+      "announcement_date": "2026-07-13",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11701v1",
+        "pdf": "https://arxiv.org/pdf/2607.11701v1"
+      },
+      "matched_keywords": [
+        "high-dimensional"
       ],
       "translation_status": "translated"
     },
@@ -211,6 +405,68 @@
       "matched_keywords": [
         "agent",
         "multimodal"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.11685",
+      "arxiv_id": "2607.11685v1",
+      "version": "v1",
+      "title": "A stochastic Fokker--Planck equation for the mean-field limit of a population of noisy integrate-and-fire neurons",
+      "title_zh": "群体噪声性积分-放电神经元平均场极限的随机福克-普朗克方程",
+      "authors": [
+        "Ben Hambly",
+        "Aldaïr Petronilia",
+        "Christoph Reisinger",
+        "Andreas Søjmark"
+      ],
+      "abstract": "We study a densely connected system of excitatory integrate-and-fire neurons which are subject to common noise. The system incorporates a gradual transmission of action potentials and captures the re- and hyperpolarization phases through a random refractory period followed by a reset to a randomized level below the rest potential. As the number of neurons tends to infinity, we show that there is weak convergence to a unique membrane potential density governed by a stochastic Fokker--Planck equation with a well-defined spike transmission rate. The latter is driven by the mean cumulative spike count, which is non-differentiable but shown to satisfy a generalized flux condition. We obtain the uniqueness of the Fokker--Planck equation from energy estimates in the dual of the first Sobolev space. Finally, we give a conditional McKean--Vlasov representation of the membrane potential density as the law of a representative neuron given the common noise.",
+      "abstract_zh": "我们研究了一个密集连接的兴奋性积分-放电神经元系统，该系统受到共同噪声的影响。该系统包含了动作电位的逐渐传递，并通过随机不应期后重置到静息电位以下的随机水平来捕捉复极化和超极化阶段。当神经元数量趋于无穷时，我们证明膜电位密度弱收敛到一个由随机福克-普朗克方程控制的唯一分布，该方程具有明确定义的尖峰传递率。后者由平均累积尖峰计数驱动，该计数不可微，但满足广义通量条件。我们通过第一索博列夫空间对偶中的能量估计得到了福克-普朗克方程的唯一性。最后，我们给出了膜电位密度的条件性麦基恩-弗拉索夫表示，即给定共同噪声时代表性神经元的分布律。",
+      "categories": [
+        "math.AP",
+        "math.PR"
+      ],
+      "primary_category": "math.AP",
+      "published": "2026-07-13T15:22:04Z",
+      "updated": "2026-07-13T15:22:04Z",
+      "announcement_date": "2026-07-13",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11685v1",
+        "pdf": "https://arxiv.org/pdf/2607.11685v1"
+      },
+      "matched_keywords": [
+        "stochastic"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.11684",
+      "arxiv_id": "2607.11684v1",
+      "version": "v1",
+      "title": "Diversified Multinomial Logit Contextual Bandits",
+      "title_zh": "多样化多项Logit情境赌博机",
+      "authors": [
+        "Heesang Ann",
+        "Taehyun Hwang",
+        "Min-hwan Oh"
+      ],
+      "abstract": "Existing contextual multinomial logit (MNL) bandits model relevance-driven choice but ignore the potential benefits of within-assortment diversity, while submodular/combinatorial bandits encode diversity in rewards but lack structured choice probabilities. We bridge this gap with the $\\textit{diversified multinomial logit}$ (DMNL) contextual bandit, which augments MNL choice probabilities with a generally submodular diversity function, thereby formalizing the relevance--diversity trade-off within a single model. Incorporating diversity renders exact MNL assortment optimization intractable. We propose a $\\textit{white-box}$ UCB-based algorithm, $\\texttt{OFU-DMNL}$, that constructs assortments item-wise by maximizing optimistic marginal gains, avoids black-box optimization oracles. We show that $\\texttt{OFU-DMNL}$ achieves at least a $(1-\\frac{1}{e+1})$-$\\textit{approximate}$ regret bound $\\tilde{O}\\left(d \\sqrt{T/K}\\right)$, where $d$ is the context dimension, $K$ the maximum assortment size, and $T$ the horizon, and attains an improved approximation factor over standard submodular baselines. Experiments demonstrate consistent gains and, relative to exhaustive enumeration, comparable regret with substantially lower runtime. Overall, DMNL bandits provide a practical foundation for diversity-aware assortment optimization under uncertainty, and $\\texttt{OFU-DMNL}$ offers a statistically and computationally efficient solution.",
+      "abstract_zh": "现有的情境多项Logit（MNL）赌博机模型模拟了相关性驱动的选择，但忽略了品类内多样性的潜在益处，而子模/组合赌博机在奖励中编码了多样性，但缺乏结构化的选择概率。我们通过$\\textit{多样化多项Logit}$（DMNL）情境赌博机弥合了这一差距，该模型用一般子模多样性函数增强了MNL选择概率，从而在单一模型中形式化了相关性与多样性的权衡。纳入多样性使得精确的MNL品类优化变得棘手。我们提出了一种基于UCB的$\\textit{白盒}$算法$\\texttt{OFU-DMNL}$，该算法通过最大化乐观边际增益逐项构建品类，避免了黑盒优化预言机。我们证明$\\texttt{OFU-DMNL}$至少实现了$(1-\\frac{1}{e+1})$-$\\textit{近似}$遗憾界$\\tilde{O}\\left(d \\sqrt{T/K}\\right)$，其中$d$是情境维度，$K$是最大品类大小，$T$是时间范围，并且相对于标准子模基线获得了改进的近似因子。实验表明，与穷举枚举相比，该算法具有一致的增益和相当的遗憾，同时运行时间显著降低。总体而言，DMNL赌博机为不确定性下的多样性感知品类优化提供了实用基础，而$\\texttt{OFU-DMNL}$提供了一种统计和计算上高效的解决方案。",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ],
+      "primary_category": "stat.ML",
+      "published": "2026-07-13T15:21:30Z",
+      "updated": "2026-07-13T15:21:30Z",
+      "announcement_date": "2026-07-13",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11684v1",
+        "pdf": "https://arxiv.org/pdf/2607.11684v1"
+      },
+      "matched_keywords": [
+        "statistical",
+        "optimization"
       ],
       "translation_status": "translated"
     },
@@ -313,6 +569,60 @@
       "translation_status": "translated"
     },
     {
+      "id": "2607.11666",
+      "arxiv_id": "2607.11666v1",
+      "version": "v1",
+      "title": "How to Tame Grokking: Representation Geometry as a Control Signal",
+      "title_zh": "如何驯服Grokking：表示几何作为控制信号",
+      "authors": [
+        "Maksim A Kazanskii"
+      ],
+      "abstract": "Grokking is a phenomenon in which neural networks initially memorize training data and only later exhibit strong generalization after prolonged optimization. Despite extensive recent study, the factors influencing the emergence and timing of grokking remain incompletely understood. We investigate the relationship between representation geometry and delayed generalization. We find that dimensionality collapse consistently precedes the onset of grokking in all evaluated settings. Motivated by these observations, we introduce Geometric Dimensionality Regularization (GeomDR), a simple spectral regularizer that modifies the effective dimensionality of hidden representations during training. Across modular addition, modular division, and permutation composition tasks, GeomDR consistently alters grokking dynamics and can substantially accelerate the onset of generalization depending on the intervention schedule and target dimensionality. In several settings, grokking is accelerated by up to 52 times relative to standard AdamW training. Similar qualitative effects are observed in both multilayer perceptrons and transformers. Together, these results suggest that representation geometry can serve as an effective control signal for grokking and provide evidence that geometric interventions offer a practical approach for studying and influencing delayed generalization in neural networks.",
+      "abstract_zh": "Grokking是一种现象，其中神经网络最初记忆训练数据，仅在长时间优化后才表现出强大的泛化能力。尽管近期有广泛研究，但影响grokking出现和时机的因素仍不完全清楚。我们研究了表示几何与延迟泛化之间的关系。我们发现，在所有评估的设置中，维度坍塌始终先于grokking的开始。受这些观察启发，我们引入了几何维度正则化（GeomDR），这是一种简单的谱正则化器，可在训练期间修改隐藏表示的有效维度。在模加法、模除法和排列组合任务中，GeomDR一致地改变了grokking动态，并且根据干预计划和目标维度，可以显著加速泛化的开始。在几种设置中，grokking相对于标准AdamW训练加速了多达52倍。在多层感知机和Transformer中观察到类似的定性效果。这些结果共同表明，表示几何可以作为grokking的有效控制信号，并提供证据表明几何干预为研究和影响神经网络中的延迟泛化提供了一种实用方法。",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-13T15:09:42Z",
+      "updated": "2026-07-13T15:09:42Z",
+      "announcement_date": "2026-07-13",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11666v1",
+        "pdf": "https://arxiv.org/pdf/2607.11666v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.11664",
+      "arxiv_id": "2607.11664v1",
+      "version": "v1",
+      "title": "Lecture Notes: Convex Optimization",
+      "title_zh": "讲义：凸优化",
+      "authors": [
+        "Andreas Habring"
+      ],
+      "abstract": "Lecture notes for a course on convex optimization taught by Andreas Habring at Graz University of Technology in 2026. The notes cover mathematical preliminaries, fundamental results about existence and of solutions for minimization problems, projected subgradient descent, proximal-gradient methods, heavy ball gradient descent, Nesterov accelerated gradient descent and FISTA, primal-dual methods, and a short intro to optimal transport.",
+      "abstract_zh": "2026年安德烈亚斯·哈布林在格拉茨工业大学讲授的凸优化课程讲义。内容包括数学预备知识、极小化问题解的存在性与基本结果、投影次梯度下降法、近端梯度法、重球梯度下降法、涅斯捷罗夫加速梯度下降法与FISTA、原始-对偶方法，以及最优传输简介。",
+      "categories": [
+        "math.OC"
+      ],
+      "primary_category": "math.OC",
+      "published": "2026-07-13T15:08:35Z",
+      "updated": "2026-07-13T15:08:35Z",
+      "announcement_date": "2026-07-13",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11664v1",
+        "pdf": "https://arxiv.org/pdf/2607.11664v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
       "id": "2607.11656",
       "arxiv_id": "2607.11656v2",
       "version": "v2",
@@ -343,6 +653,37 @@
       },
       "matched_keywords": [
         "multimodal"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.11653",
+      "arxiv_id": "2607.11653v1",
+      "version": "v1",
+      "title": "Bet on Features: Anytime-Valid and Feature-Aware Auditing of Conditional Quantile Forecasters",
+      "title_zh": "押注特征：条件分位数预测器的任意有效且特征感知审计",
+      "authors": [
+        "Ivane Antonov",
+        "Sohom Mukherjee",
+        "Richard Pibernik",
+        "Yo Joong Choe"
+      ],
+      "abstract": "Black-box conditional quantile forecasts are widely used for sequential decisions under asymmetric costs, such as inventory planning in supply chain management. Once deployed, such forecasters must be monitored continuously as data streams drift and regimes change; this invalidates standard, fixed-horizon backtests for calibration. Further, existing backtests do not take into account that the notion of calibration is, in fact, information-dependent: forecasts can look calibrated to an auditor with coarse information while being miscalibrated to an auditor with richer information. We develop a distribution-free and game-theoretic testing framework for continuously auditing black-box conditional quantile forecasters with non-i.i.d. losses, such that the resulting evidence process is powerful against predictably chosen alternatives specified by the features available to the auditor. We first formalize notions of conditional quantile calibration when different sets of features are available to the auditor, establishing that the coarseness of the auditor's information set determines the hardness of the testing problem. We then identify the sets of alternatives for which the auditor can achieve power, and focusing on contextual bets linear in the features, we derive finite-time detection guarantees for such alternatives, all without an i.i.d. assumption. The resulting evidence processes are interpretable at the feature level, as they quantify fine-grained, \"feature-aware\" evidence for miscalibration. We empirically validate these methods on simulated and real data, finding that a popular time series forecaster (Chronos-2) is highly miscalibrated w.r.t. multiple relevant features.",
+      "abstract_zh": "黑箱条件分位数预测被广泛用于非对称成本下的序贯决策，例如供应链管理中的库存规划。一旦部署，由于数据流漂移和机制变化，必须持续监控此类预测器；这使标准的固定期限校准回测失效。此外，现有回测未考虑校准概念实际上依赖于信息：预测在信息粗糙的审计者看来可能校准，而在信息丰富的审计者看来则可能失准。我们开发了一个无分布且基于博弈论的测试框架，用于持续审计具有非独立同分布损失的黑箱条件分位数预测器，使得生成的证据过程对审计者可用特征指定的可预测备择假设具有统计功效。我们首先形式化当审计者拥有不同特征集时的条件分位数校准概念，确立审计者信息集的粗糙程度决定了测试问题的难度。然后，我们识别出审计者能够获得功效的备择假设集，并聚焦于特征线性上下文赌注，推导出这些备择假设的有限时间检测保证，所有结果均无需独立同分布假设。生成的证据过程在特征层面可解释，因为它们量化了细粒度的、'特征感知'的失准证据。我们在模拟和真实数据上实证验证了这些方法，发现一个流行的时间序列预测器（Chronos-2）在多个相关特征上高度失准。",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-13T15:04:24Z",
+      "updated": "2026-07-13T15:04:24Z",
+      "announcement_date": "2026-07-13",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11653v1",
+        "pdf": "https://arxiv.org/pdf/2607.11653v1"
+      },
+      "matched_keywords": [
+        "time series"
       ],
       "translation_status": "translated"
     },
@@ -398,6 +739,34 @@
       "translation_status": "translated"
     },
     {
+      "id": "2607.11635",
+      "arxiv_id": "2607.11635v1",
+      "version": "v1",
+      "title": "Fundamental Limitations of Fixed-Budget Best-Arm Identification",
+      "title_zh": "固定预算最佳臂识别的基本局限性",
+      "authors": [
+        "Motti Goldberger"
+      ],
+      "abstract": "In fixed-budget best-arm identification, also known as ranking and selection, an algorithm has a sampling budget to distribute across $K$ arms. Each sample provides noisy feedback about that arm's mean, and the goal is to identify the arm with the largest mean. A common performance benchmark is the static oracle: a non-adaptive strategy that knows the means in advance and chooses fixed sampling proportions to maximize the exponential decay rate of the probability of incorrect identification. Several adaptive algorithms have been constructed such that their sampling proportions converge to the static oracle proportions. However, it has remained open whether any algorithm could match the static oracle's error decay rate uniformly across all problem instances. We answer this in the negative. For any $K\\ge 3$ and for rewards drawn from any one-parameter natural exponential family, we show that for any algorithm, there is at least one instance where the error decay rate is at most $\\left(1 + \\frac{\\log(K)}{8}\\right)^{-1}$ times that of the static oracle. This also answers the open question posed by Qin (2022), showing that fixed-budget best-arm identification does not admit a complexity.",
+      "abstract_zh": "在固定预算最佳臂识别（也称为排序与选择）中，算法有一个采样预算需分配给 $K$ 个臂。每个样本提供关于该臂均值的带噪声反馈，目标是识别具有最大均值的臂。一个常见的性能基准是静态预言机：一种非自适应策略，预先知道均值并选择固定的采样比例，以最大化错误识别概率的指数衰减率。已有几种自适应算法被构造出来，使得它们的采样比例收敛到静态预言机比例。然而，是否存在任何算法能在所有问题实例上一致地匹配静态预言机的错误衰减率，这一问题仍未解决。我们对此给出否定答案。对于任意 $K\\ge 3$ 且奖励来自任意单参数自然指数族的情况，我们证明：对于任何算法，至少存在一个实例，其错误衰减率至多为静态预言机的 $\\left(1 + \\frac{\\log(K)}{8}\\right)^{-1}$ 倍。这也回答了 Qin (2022) 提出的开放问题，表明固定预算最佳臂识别不具有复杂性度量。",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-13T14:50:32Z",
+      "updated": "2026-07-13T14:50:32Z",
+      "announcement_date": "2026-07-13",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11635v1",
+        "pdf": "https://arxiv.org/pdf/2607.11635v1"
+      },
+      "matched_keywords": [
+        "probability"
+      ],
+      "translation_status": "translated"
+    },
+    {
       "id": "2607.11632",
       "arxiv_id": "2607.11632v1",
       "version": "v1",
@@ -436,6 +805,67 @@
       "translation_status": "translated"
     },
     {
+      "id": "2607.11631",
+      "arxiv_id": "2607.11631v1",
+      "version": "v1",
+      "title": "Markov Chain Monte Carlo with Diffusion Paths",
+      "title_zh": "基于扩散路径的马尔可夫链蒙特卡洛方法",
+      "authors": [
+        "Han Chen",
+        "Sifan Liu",
+        "Jun Yang"
+      ],
+      "abstract": "Sampling from multimodal distributions is a longstanding challenge for classical local Markov chain Monte Carlo (MCMC) methods. A popular remedy is to introduce a sequence of intermediate distributions that interpolate between the target and a simpler reference. The classical choice, tempering, raises the density to a power, but distorts the relative weights of asymmetric modes and can lead to poor mixing. We instead propose interpolating along the diffusion path, the marginals of a noising diffusion process that carries the target toward a Gaussian. This path preserves the relative weights of the modes and enjoys favorable mixing properties, which we make precise through a spectral-gap analysis of the corresponding ideal transition kernel. Sampling along the path requires its intermediate scores, which can be estimated from the unnormalized target through variational approaches, yielding only an approximate sampler. To remove the resulting bias, we introduce the Metropolis-adjusted diffusion path (MAD-Path) sampler, which corrects the diffusion-path proposal in an augmented path space and leaves the target invariant regardless of the accuracy of the learned score or the discretization error. We further quantify how these two errors affect the acceptance probability, providing guidance for practical tuning. Experiments on a range of Bayesian posteriors show that MAD-Path improves global exploration and mode-weight estimation relative to tempering-based MCMC methods and unadjusted diffusion samplers.",
+      "abstract_zh": "从多模态分布中采样是经典局部马尔可夫链蒙特卡洛（MCMC）方法长期面临的挑战。一种流行的补救措施是引入一系列中间分布，在目标分布和更简单的参考分布之间进行插值。经典的变温方法将密度提升到某个幂次，但会扭曲非对称模态的相对权重，并可能导致混合不良。我们转而提出沿扩散路径进行插值，即一个将目标分布向高斯分布演化的加噪扩散过程的边际分布。该路径保留了模态的相对权重，并具有良好的混合性质，我们通过对相应理想转移核的谱间隙分析来精确说明这一点。沿路径采样需要其中间得分，这可以通过变分方法从未归一化的目标分布中估计得到，但只能得到近似采样器。为了消除由此产生的偏差，我们引入了Metropolis调整扩散路径（MAD-Path）采样器，该采样器在增广路径空间中校正扩散路径提议，并且无论学习得分的准确性或离散化误差如何，都能保持目标分布不变。我们进一步量化了这两种误差如何影响接受概率，为实际调参提供了指导。在一系列贝叶斯后验上的实验表明，与基于变温的MCMC方法和未调整的扩散采样器相比，MAD-Path改善了全局探索和模态权重估计。",
+      "categories": [
+        "stat.CO",
+        "stat.ML"
+      ],
+      "primary_category": "stat.CO",
+      "published": "2026-07-13T14:48:19Z",
+      "updated": "2026-07-13T14:48:19Z",
+      "announcement_date": "2026-07-13",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11631v1",
+        "pdf": "https://arxiv.org/pdf/2607.11631v1"
+      },
+      "matched_keywords": [
+        "bayesian",
+        "probability"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.11628",
+      "arxiv_id": "2607.11628v1",
+      "version": "v1",
+      "title": "Any Proof of Polynomial Hirsch Must be Completely Incoherent",
+      "title_zh": "任何多项式赫希猜想的证明都必须是完全不连贯的",
+      "authors": [
+        "Alexander E. Black",
+        "Lei Xue"
+      ],
+      "abstract": "In 1992, Billera and Sturmfels introduced coherent monotone paths on polytopes as part of their description of the fiber polytope construction, and later in 1994 showed with Kapranov that these coherent monotone paths capture the topology of the space of all monotone paths, paths from a minimum to a maximum, in the directed graph of a polytope with orientation induced by a linear function. Those results motivate the following analog of the polynomial Hirsch conjecture: Does there always exist a coherent monotone path of polynomial length on a polytope for any choice of orientation induced by a linear function? We show this is not the case by exhibiting a family of polytopes and corresponding linear functions for which every coherent monotone path is exponentially long. As applications, we strengthen longstanding results pertaining to lower bounds for the shadow simplex method, geometric transversals in discrete geometry, and parametric linear optimization.",
+      "abstract_zh": "1992年，Billera和Sturmfels在多面体上引入了相干单调路径，作为他们对纤维多面体构造描述的一部分，后来在1994年与Kapranov一起证明了这些相干单调路径捕捉了所有单调路径（从最小值到最大值的路径）的拓扑结构，这些路径位于由线性函数诱导定向的多面体有向图中。这些结果激发了多项式赫希猜想的以下类比：对于由线性函数诱导的任何定向选择，多面体上是否总是存在一条多项式长度的相干单调路径？我们通过展示一族多面体和相应的线性函数，使得每条相干单调路径都是指数长度的，从而证明情况并非如此。作为应用，我们加强了关于阴影单纯形法下界、离散几何中的几何横截以及参数线性优化的长期存在的结果。",
+      "categories": [
+        "math.CO",
+        "cs.DS",
+        "math.OC"
+      ],
+      "primary_category": "math.CO",
+      "published": "2026-07-13T14:46:42Z",
+      "updated": "2026-07-13T14:46:42Z",
+      "announcement_date": "2026-07-13",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11628v1",
+        "pdf": "https://arxiv.org/pdf/2607.11628v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
       "id": "2607.11624",
       "arxiv_id": "2607.11624v2",
       "version": "v2",
@@ -466,7 +896,7 @@
         "pdf": "https://arxiv.org/pdf/2607.11624v2"
       },
       "matched_keywords": [
-        "agent"
+        "high-dimensional"
       ],
       "translation_status": "translated"
     },
@@ -571,7 +1001,74 @@
         "pdf": "https://arxiv.org/pdf/2607.11607v1"
       },
       "matched_keywords": [
-        "agent"
+        "statistical",
+        "stochastic"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.11603",
+      "arxiv_id": "2607.11603v1",
+      "version": "v1",
+      "title": "WarpMPC: Large-Batch MPC on GPU via ADMM with Unrolled $LDL^\\top$ Factorization",
+      "title_zh": "WarpMPC：通过带有展开$LDL^\\top$分解的ADMM在GPU上进行大批量MPC",
+      "authors": [
+        "Henrik Hose",
+        "Se Hwan Jeon",
+        "Charles Khazoom",
+        "Sangbae Kim",
+        "Sebastian Trimpe"
+      ],
+      "abstract": "This paper introduces numerical optimizations for maximizing throughput on GPU when solving large batches (10,000 to over 100,000) of sequential quadratic programming (SQP) iterations, where all problems have the same structure. The optimizations are implemented in a toolbox WarpMPC for model-predictive control (MPC) in JAX and Warp. Based on the insight that all MPC problem instances in a batch share the same sparsity in time, cost, and constraints, we propose unrolling sparse linear factorizations and solves, which dominate alternating direction method of multipliers (ADMM) solver runtime. We avoid memory access bottlenecks and wasting computations via optimized memory layout, padding-reducing segmentation of the unrolled factorization, and dependency level scheduled backsolves, additionally accelerating sensitivity computation. We achieve throughputs of 8,000 to 250,000 SQP iterations per second on nonlinear cartpole, quadrotor, and humanoid robot benchmarks, outperforming baselines by 3$\\times$ to 25$\\times$. We illustrate practical usefulness by synthesizing a dataset and training a neural network approximation of an MPC in under 4 minutes that stabilizes a nano quadrotor in hardware experiments.",
+      "abstract_zh": "本文介绍了在GPU上求解大批量（10,000到超过100,000个）具有相同结构的序列二次规划（SQP）迭代时，最大化吞吐量的数值优化方法。这些优化在基于JAX和Warp的模型预测控制（MPC）工具箱WarpMPC中实现。基于所有MPC问题实例在时间、成本和约束上共享相同稀疏性的洞察，我们提出了展开稀疏线性分解和求解的方法，这些操作主导了交替方向乘子法（ADMM）求解器的运行时间。通过优化内存布局、减少填充的展开分解分段以及依赖级别调度的回代，我们避免了内存访问瓶颈和计算浪费，并进一步加速了灵敏度计算。在非线性倒立摆、四旋翼飞行器和人形机器人基准测试中，我们实现了每秒8,000到250,000次SQP迭代的吞吐量，比基线方法快3倍到25倍。我们通过合成数据集并在不到4分钟内训练一个MPC的神经网络近似来展示其实用性，该近似在硬件实验中稳定了一个纳米四旋翼飞行器。",
+      "categories": [
+        "cs.RO",
+        "eess.SY",
+        "math.OC"
+      ],
+      "primary_category": "cs.RO",
+      "published": "2026-07-13T14:27:47Z",
+      "updated": "2026-07-13T14:27:47Z",
+      "announcement_date": "2026-07-13",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11603v1",
+        "pdf": "https://arxiv.org/pdf/2607.11603v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.11600",
+      "arxiv_id": "2607.11600v1",
+      "version": "v1",
+      "title": "Privacy-Aware Collaborative and Distributed Bayesian Optimization",
+      "title_zh": "隐私感知的协作式分布式贝叶斯优化",
+      "authors": [
+        "Aditya Rane",
+        "Sathwik Yamana",
+        "Paritosh Ramanan",
+        "Srikanthan Ramesh",
+        "Akash Deep"
+      ],
+      "abstract": "We propose a collaborative meta-learning framework for distributed Bayesian optimization matching centralized performance without raw-data exchange. We show gradient sharing leaks client observations, with leakage worsening as the search converges and queries concentrate near the optimum. We evaluate a differentially private defense and characterize its privacy-utility trade-off.",
+      "abstract_zh": "我们提出了一种协作式元学习框架，用于分布式贝叶斯优化，在不交换原始数据的情况下达到集中式性能。我们证明梯度共享会泄露客户端观测值，且随着搜索收敛和查询集中在最优值附近，泄露程度加剧。我们评估了一种差分隐私防御机制，并刻画了其隐私-效用权衡。",
+      "categories": [
+        "cs.LG",
+        "stat.ME"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-13T14:25:04Z",
+      "updated": "2026-07-13T14:25:04Z",
+      "announcement_date": "2026-07-13",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11600v1",
+        "pdf": "https://arxiv.org/pdf/2607.11600v1"
+      },
+      "matched_keywords": [
+        "bayesian",
+        "optimization"
       ],
       "translation_status": "translated"
     },
@@ -610,6 +1107,38 @@
       "translation_status": "translated"
     },
     {
+      "id": "2607.11593",
+      "arxiv_id": "2607.11593v1",
+      "version": "v1",
+      "title": "Scenario Reduction for Two-Stage Stochastic Mixed-Integer Programs",
+      "title_zh": "两阶段随机混合整数规划的场景缩减",
+      "authors": [
+        "Yannick Werner",
+        "Juan Miguel Morales",
+        "Salvador Pineda",
+        "Line Roald",
+        "Sonja Wogrin"
+      ],
+      "abstract": "Two-stage stochastic mixed-integer programs (MIPs) are important tools for decision-making under uncertainty, but representing uncertainty with a large number of scenarios -- while ensuring accurate results -- can make them challenging to solve. Scenario reduction addresses this by finding a distribution supported on fewer scenarios that still yields similar optimal first-stage decisions. In this paper, we revisit the classical scenario reduction theory based on distances between probability distributions and the optimal mass transportation problem. We then review and compare various transportation cost functions from the literature and propose a new one. Using the Forward Selection Algorithm, we prove that our proposed cost function selects the best possible scenario from a given sample on the first draw with respect to the relative approximation error. To reduce the computational cost of evaluating this cost function, we further propose a hybrid algorithm that includes a scenario pre-selection phase. We assess solution quality and computational complexity on the two-stage stochastic unit commitment problem for small 24-bus and large 300-bus case studies. With only around five scenarios, the proposed cost function approximates the full-distribution optimum to within roughly 2.1% and 0.4% error for the small and large cases, respectively. The hybrid algorithm achieves similar solution quality while reducing wall-clock time by a factor of 18 and work (as measured by the Gurobi solver) by a factor of 66 on the large case study.",
+      "abstract_zh": "两阶段随机混合整数规划（MIP）是不确定性下决策的重要工具，但用大量场景表示不确定性——同时确保结果准确——可能使其难以求解。场景缩减通过寻找一个由较少场景支撑的分布来解决这一问题，该分布仍能产生相似的最优第一阶段决策。在本文中，我们重新审视了基于概率分布间距离和最优质量运输问题的经典场景缩减理论。然后，我们回顾并比较了文献中的各种运输成本函数，并提出了一种新的成本函数。利用前向选择算法，我们证明了所提出的成本函数在第一次抽取时能从给定样本中选择出相对于相对逼近误差最优的场景。为了降低评估该成本函数的计算成本，我们进一步提出了一种包含场景预选阶段的混合算法。我们在小型24节点和大型300节点的两阶段随机机组组合问题案例研究中评估了解决方案质量和计算复杂度。仅用大约五个场景，所提出的成本函数在小规模和大规模案例中分别将全分布最优解的近似误差控制在约2.1%和0.4%以内。混合算法在大型案例研究中实现了类似的解决方案质量，同时将挂钟时间减少了18倍，将工作量（由Gurobi求解器衡量）减少了66倍。",
+      "categories": [
+        "math.OC"
+      ],
+      "primary_category": "math.OC",
+      "published": "2026-07-13T14:15:20Z",
+      "updated": "2026-07-13T14:15:20Z",
+      "announcement_date": "2026-07-13",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11593v1",
+        "pdf": "https://arxiv.org/pdf/2607.11593v1"
+      },
+      "matched_keywords": [
+        "stochastic",
+        "probability"
+      ],
+      "translation_status": "translated"
+    },
+    {
       "id": "2607.11586",
       "arxiv_id": "2607.11586v1",
       "version": "v1",
@@ -633,6 +1162,50 @@
       },
       "matched_keywords": [
         "large language model"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.11585",
+      "arxiv_id": "2607.11585v1",
+      "version": "v1",
+      "title": "Machine Learning-Based Reconstruction for Resistive Silicon Sensors",
+      "title_zh": "基于机器学习的电阻型硅传感器重建",
+      "authors": [
+        "Alexander Aoki",
+        "Gaetano Barone",
+        "Leena Diehl",
+        "Gabriele Giacomini",
+        "Vagelis Gkougkousis",
+        "Hanshal Goyal",
+        "Rohan Kher",
+        "Daniel Li",
+        "Anna Macchiolo",
+        "Yevhenii Padnuik",
+        "Daria Senina",
+        "Samantha Sunnarborg",
+        "Jessica Tang",
+        "Alessandro Tricoli",
+        "Lixing Wang",
+        "Don C. Wong"
+      ],
+      "abstract": "Low-Gain Avalanche Diodes (LGADs) and AC-coupled Low-Gain Avalanche Diodes (AC-LGADs) are promising technologies for precision timing and four-dimensional tracking. In AC-LGADs, the AC pad is coupled to the resistive n$^{+}$ layer through a dielectric layer, while the gain layer remains unsegmented. This structure provides a 100\\% fill factor and enables good spatial resolution with a relaxed readout pitch. The same signal-sharing mechanism that makes interpolation possible complicates the readout: charge spreads across multiple pads, the useful information can approach the electronic-noise threshold, and matrix-inversion approaches can become computationally challenging and sensitive to off-diagonal noise. In this work, we study machine-learning-based reconstruction and compression for resistive silicon sensors. We use full-waveform information from correlated pads to regularise the reconstruction and extract spatial information beyond what is available from binary readouts or reduced-amplitude summaries. We first introduce recurrent neural network models based on LSTM layers, which provide a proof-of-concept implementation for full-waveform reconstruction and have been tested for FPGA deployment using \\hls. We also study routes towards bandwidth reduction with waveform rasterisation and window-selection methods, and extend the approach beyond the first model to topology-agnostic transformer-based architectures that use pad coordinates as part of the input. These models are designed to support arbitrary pad counts and geometries, mitigate edge distortions, preserve approximately $10~μ\\mathrm{m}$ position resolution for $500~μ\\mathrm{m}\\times500~μ\\mathrm{m}$ pitched sensors, and guide future resistive-silicon sensor designs",
+      "abstract_zh": "低增益雪崩二极管（LGAD）和AC耦合低增益雪崩二极管（AC-LGAD）是用于精确计时和四维跟踪的有前景技术。在AC-LGAD中，AC焊盘通过介电层耦合到电阻性n+层，而增益层保持未分割。这种结构提供了100%的填充因子，并通过宽松的读出间距实现了良好的空间分辨率。使插值成为可能的相同信号共享机制使读出复杂化：电荷扩散到多个焊盘，有用信息可能接近电子噪声阈值，而矩阵求逆方法可能变得计算困难且对非对角噪声敏感。在这项工作中，我们研究了基于机器学习的电阻型硅传感器重建和压缩。我们使用相关焊盘的全波形信息来正则化重建，并提取超出二进制读出或简化幅度摘要所能提供的空间信息。我们首先介绍了基于LSTM层的循环神经网络模型，该模型为全波形重建提供了概念验证实现，并已使用HLS测试了FPGA部署。我们还研究了通过波形光栅化和窗口选择方法实现带宽减少的途径，并将方法扩展到第一个模型之外，采用基于拓扑无关的Transformer架构，将焊盘坐标作为输入的一部分。这些模型旨在支持任意焊盘数量和几何形状，减轻边缘畸变，为间距为500μm×500μm的传感器保持约10μm的位置分辨率，并指导未来的电阻型硅传感器设计。",
+      "categories": [
+        "hep-ex",
+        "cs.LG",
+        "nucl-ex"
+      ],
+      "primary_category": "hep-ex",
+      "published": "2026-07-13T14:03:26Z",
+      "updated": "2026-07-13T14:03:26Z",
+      "announcement_date": "2026-07-13",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11585v1",
+        "pdf": "https://arxiv.org/pdf/2607.11585v1"
+      },
+      "matched_keywords": [
+        "machine learning"
       ],
       "translation_status": "translated"
     },
@@ -665,6 +1238,99 @@
       "matched_keywords": [
         "large language model",
         "multimodal"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.11578",
+      "arxiv_id": "2607.11578v1",
+      "version": "v1",
+      "title": "DiffEEG: A Self-Supervised Denoising Diffusion Model for Learning EEG Generic Representations",
+      "title_zh": "DiffEEG：一种用于学习脑电图通用表征的自监督去噪扩散模型",
+      "authors": [
+        "Abdulkader Helwan",
+        "Lina Abou-Abbas",
+        "Hussein El Amouri",
+        "Belkacem Chikhaoui",
+        "Khadidja Henni"
+      ],
+      "abstract": "Deep learning for EEG-based seizure detection faces critical challenges: severe annotation scarcity and extreme class imbalance, where ictal events comprise less than 10\\% of clinical recordings. We present DiffEEG, a 9.6M-parameter self-supervised foundation model that addresses both limitations through denoising diffusion pre-training and reinforcement learning (RL)-based fine-tuning. Pre-trained on 1.3M unlabeled segments from the Temple University Hospital Seizure Corpus (TUHSZ), DiffEEG learns generic neural representations via a 1D U-Net with multi-head self-attention. For downstream adaptation, a reinforced decision layer employs policy gradient optimization to directly maximize F1-score, prioritizing sensitivity to rare seizure events over overall accuracy. Under strict patient-wise evaluation (279 patients, Leave-One-Fold-Out), DiffEEG achieves 61\\% accuracy and 59\\% F1 for 4-class seizure subtyping, and 81\\% accuracy with 85\\% weighted F1 for binary detection, maintaining clinically viable seizure recall (59\\%) despite extreme imbalance (6.7\\% prevalence). Segment-level evaluation establishes an upper bound of 97.6\\% accuracy, confirming strong architectural capacity. DiffEEG demonstrates that diffusion-based pre-training combined with metric-aware reinforcement learning enables clinically deployable seizure monitoring with minimal labeled data requirements.",
+      "abstract_zh": "基于脑电图的癫痫发作检测深度学习面临关键挑战：严重的标注稀缺性和极端类别不平衡，其中发作事件占临床记录的不到10%。我们提出DiffEEG，一个960万参数的自监督基础模型，通过去噪扩散预训练和基于强化学习的微调来解决这两个限制。在坦普尔大学医院癫痫发作语料库（TUHSZ）的130万未标记片段上预训练，DiffEEG通过带有多头自注意力的1D U-Net学习通用神经表征。对于下游适应，强化决策层采用策略梯度优化直接最大化F1分数，优先考虑对罕见发作事件的敏感性而非整体准确性。在严格的逐患者评估（279名患者，留一折交叉验证）下，DiffEEG在四类发作亚型分类中达到61%的准确率和59%的F1，在二分类检测中达到81%的准确率和85%的加权F1，尽管存在极端不平衡（6.7%的患病率），仍保持临床可行的发作召回率（59%）。片段级评估确立了97.6%准确率的上限，证实了强大的架构能力。DiffEEG证明，基于扩散的预训练结合度量感知的强化学习能够在最小标注数据需求下实现临床可部署的癫痫发作监测。",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CV",
+        "eess.SP"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-13T13:59:45Z",
+      "updated": "2026-07-13T13:59:45Z",
+      "announcement_date": "2026-07-13",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11578v1",
+        "pdf": "https://arxiv.org/pdf/2607.11578v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.11577",
+      "arxiv_id": "2607.11577v1",
+      "version": "v1",
+      "title": "Structure-Feature Aligned Graph Learning via Alternating Constrained Optimization",
+      "title_zh": "基于交替约束优化的结构-特征对齐图学习",
+      "authors": [
+        "Chengcheng Yan",
+        "Qingsong Wang"
+      ],
+      "abstract": "We introduce a constrained two-view framework for node prediction that aligns structure-conditioned GNN embeddings with a structure-free feature prior learned by an anchor model. Conventional Graph Neural Networks (GNNs) couple feature transformation and neighborhood aggregation, which renders them vulnerable to topology noise and heterophilous connections. To decouple this dependency, our framework utilizes an independent anchor network to capture intrinsic attribute features via a self-supervised reconstruction objective. Furthermore, we propose a Channel-Split Adaptive Gated GNN (CSAG-GNN) that dynamically routes representations between global spectral smoothing and local spatial discrimination through a node-wise gating mechanism. We propose a stable cyclic alternating optimization strategy to solve the resulting coupled bi-level objective, preventing mutual representation drift during training. Empirical results on both homophilous and heterophilous benchmarks show balanced performance gains and structural robustness over competitive baselines.",
+      "abstract_zh": "我们提出了一种用于节点预测的约束双视图框架，该框架将结构条件化的GNN嵌入与由锚模型学习的无结构特征先验对齐。传统的图神经网络（GNN）耦合了特征变换和邻域聚合，这使得它们容易受到拓扑噪声和异质连接的影响。为了解耦这种依赖性，我们的框架利用独立的锚网络通过自监督重构目标捕获内在属性特征。此外，我们提出了一种通道分割自适应门控GNN（CSAG-GNN），通过节点级门控机制动态地在全局光谱平滑和局部空间判别之间路由表示。我们提出了一种稳定的循环交替优化策略来求解由此产生的耦合双层目标，防止训练过程中的相互表示漂移。在同质和异质基准上的实验结果表明，与竞争基线相比，该方法实现了平衡的性能提升和结构鲁棒性。",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-13T13:58:52Z",
+      "updated": "2026-07-13T13:58:52Z",
+      "announcement_date": "2026-07-13",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11577v1",
+        "pdf": "https://arxiv.org/pdf/2607.11577v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.11575",
+      "arxiv_id": "2607.11575v1",
+      "version": "v1",
+      "title": "A Twin gradient method for unconstrained optimization",
+      "title_zh": "无约束优化的双梯度方法",
+      "authors": [
+        "Anna De Magistris",
+        "Michiel E. Hochstenbach",
+        "Gerardo Toraldo"
+      ],
+      "abstract": "We propose a new strategy for gradient-based unconstrained optimization, involving two parallel sequences of iterates that cooperate to determine their stepsizes via a \\textit{Twin-Step} principle. Rather than minimizing the objective function individually, the algorithm selects steplengths that minimize the Euclidean distance between the two gradient based processes occurring simultaneously at each iteration. The theoretical analysis shows that the convergence of the mutual distance is governed by the angle between the search directions. In particular the effectiveness of the overall process degrades as the directions approach parallelism. To ensure robustness against collinearity, we introduce a hybrid framework, Twin-ABB$_{\\min}$, which switches to the Adaptive Barzilai--Borwein method when the geometric cooperation becomes ineffective. Extensive and very promising numerical results evidence that the Twin phase creates favorable initial conditions for subsequent BB-type iterations.",
+      "abstract_zh": "我们提出了一种新的基于梯度的无约束优化策略，涉及两个并行的迭代序列，它们通过双步原理协作确定步长。该算法不是单独最小化目标函数，而是选择步长以最小化每次迭代中同时发生的两个基于梯度的过程之间的欧几里得距离。理论分析表明，相互距离的收敛性由搜索方向之间的角度控制。特别地，随着方向接近平行，整体过程的有效性下降。为确保对共线性的鲁棒性，我们引入了一个混合框架Twin-ABB$_{\\min}$，当几何协作失效时切换到自适应Barzilai-Borwein方法。广泛且非常有前景的数值结果表明，双阶段为后续BB型迭代创造了有利的初始条件。",
+      "categories": [
+        "math.NA",
+        "math.OC"
+      ],
+      "primary_category": "math.NA",
+      "published": "2026-07-13T13:55:34Z",
+      "updated": "2026-07-13T13:55:34Z",
+      "announcement_date": "2026-07-13",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11575v1",
+        "pdf": "https://arxiv.org/pdf/2607.11575v1"
+      },
+      "matched_keywords": [
+        "optimization"
       ],
       "translation_status": "translated"
     },
@@ -853,6 +1519,135 @@
       "translation_status": "translated"
     },
     {
+      "id": "2607.11985",
+      "arxiv_id": "2607.11985v2",
+      "version": "v2",
+      "title": "VQCSim: When Does Compile-Once Statevector Simulation Beat Generic Quantum Frameworks?",
+      "title_zh": "VQCSim：编译一次的状态向量模拟何时优于通用量子框架？",
+      "authors": [
+        "Anton Firc",
+        "Martin Perešíni",
+        "Vojtěch Mrázek",
+        "Kamil Malinka",
+        "Vojtěch Staněk",
+        "Zbyněk Lička",
+        "Nouhaila Innan",
+        "Walid El Maouaki",
+        "Alberto Marchisio",
+        "Muhammad Shafique"
+      ],
+      "abstract": "Hybrid quantum-classical machine learning workflows repeatedly evaluate many small parametrized circuits during training and model exploration. In this regime, framework dispatch and orchestration overhead often dominate runtime. Prior simulators accelerate execution but leave open the question of when compile-once specialization is the right choice for static variational circuits. We answer this question with VQCSim, a compile-once, PyTorch-native statevector execution path with native autograd. In a systematic MQT Bench study, VQCSim compiles all tested static circuits and provides 87.7% end-to-end semantic validation. Across a five-GPU evaluation set, VQCSim delivers pooled median speedups of 4.49x for native inference and 26.78x for native training, while retaining a 3.31x advantage under matched finite-difference training. Ablation identifies native autograd as the dominant source of acceleration (27.6x), with compile-once caching and batch vectorization contributing additional gains. The speedup trades higher GPU memory (VQCSim is memory-limited at the high end) for lower runtime. We derive a hardware-aware regime map and release vqcsim-oracle, an open-source backend selector with 91.1%-97.7% top-1 agreement (including cross-GPU transfers), enabling automatic simulator selection in QML design loops.",
+      "abstract_zh": "混合量子-经典机器学习工作流在训练和模型探索期间重复评估许多小型参数化电路。在这种模式下，框架调度和编排开销通常主导运行时间。先前的模拟器加速了执行，但留下了何时编译一次特化是静态变分电路的正确选择的问题。我们通过VQCSim回答了这个问题，这是一个编译一次、PyTorch原生的状态向量执行路径，具有原生自动微分。在系统的MQT基准研究中，VQCSim编译了所有测试的静态电路，并提供了87.7%的端到端语义验证。在五个GPU的评估集上，VQCSim在原生推理中实现了4.49倍的合并中位数加速，在原生训练中实现了26.78倍的加速，同时在匹配的有限差分训练下保持了3.31倍的优势。消融实验表明，原生自动微分是加速的主要来源（27.6倍），编译一次缓存和批量向量化贡献了额外的增益。这种加速以更高的GPU内存为代价（VQCSim在高内存端受限于内存），以换取更低的运行时间。我们推导了一个硬件感知的机制图，并发布了vqcsim-oracle，一个开源的后端选择器，具有91.1%-97.7%的top-1一致性（包括跨GPU传输），从而在QML设计循环中实现自动模拟器选择。",
+      "categories": [
+        "quant-ph",
+        "cs.ET",
+        "cs.LG"
+      ],
+      "primary_category": "quant-ph",
+      "published": "2026-07-13T13:42:29Z",
+      "updated": "2026-07-15T10:42:17Z",
+      "announcement_date": "2026-07-13",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11985v2",
+        "pdf": "https://arxiv.org/pdf/2607.11985v2"
+      },
+      "matched_keywords": [
+        "machine learning"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.11558",
+      "arxiv_id": "2607.11558v1",
+      "version": "v1",
+      "title": "Modeling Time-course Gene Expression Data through Bayesian Partition Functional Principal Component Analysis",
+      "title_zh": "通过贝叶斯分区函数主成分分析建模时间序列基因表达数据",
+      "authors": [
+        "Marion Kerioui",
+        "Daniel Temko",
+        "Shahin Tavakoli",
+        "Hélène Ruffieux"
+      ],
+      "abstract": "High-dimensional biomarkers such as gene expression levels are now routinely measured over time, allowing biological processes to be studied dynamically rather than through cross-sectional snapshots. However, existing methods do not adequately address the central applied challenges posed by such data: simultaneously reducing dimensionality, quantifying inter-individual variability and uncovering temporal structure shared across biomarkers. We introduce Partition Functional Principal Component Analysis (PFPCA), a Bayesian model that jointly learns shared temporal patterns and clusters variables according to their latent dynamics. PFPCA combines a mixture model with multivariate functional principal component analysis performed within each group. We develop a scalable mean-field variational algorithm for joint inference of functional principal component loadings, individual-level scores, group assignments and partition sizes. Simulations show clear gains from joint inference: PFPCA recovers both the partition and the latent functional structure more accurately than a two-step baseline. In the most challenging settings, PFPCA retrieves the true partition in 27% of replicates compared with 1% for the two-step baseline. Applied to longitudinal gene-expression data from individuals experimentally infected with H3N2 influenza virus, PFPCA identifies groups of genes with coordinated activation patterns and reveals temporal signatures associated with immune-response dynamics and symptom status.",
+      "abstract_zh": "高维生物标志物（如基因表达水平）现在常规地随时间测量，使得生物过程能够动态研究，而非通过横截面快照。然而，现有方法未能充分解决此类数据带来的核心应用挑战：同时降低维度、量化个体间变异以及揭示跨生物标志物共享的时间结构。我们引入了分区函数主成分分析（PFPCA），这是一种贝叶斯模型，能够联合学习共享的时间模式并根据潜在动态对变量进行聚类。PFPCA结合了混合模型与在每个组内进行的多元函数主成分分析。我们开发了一种可扩展的均值场变分算法，用于函数主成分载荷、个体水平得分、组分配和分区大小的联合推断。模拟显示联合推断具有明显优势：PFPCA比两步基线方法更准确地恢复分区和潜在函数结构。在最具挑战性的设置中，PFPCA在27%的重复中检索到真实分区，而两步基线方法仅为1%。将PFPCA应用于实验性感染H3N2流感病毒的个体的纵向基因表达数据，PFPCA识别出具有协调激活模式的基因群，并揭示了与免疫反应动态和症状状态相关的时间特征。",
+      "categories": [
+        "stat.ME",
+        "stat.AP"
+      ],
+      "primary_category": "stat.ME",
+      "published": "2026-07-13T13:40:09Z",
+      "updated": "2026-07-13T13:40:09Z",
+      "announcement_date": "2026-07-13",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11558v1",
+        "pdf": "https://arxiv.org/pdf/2607.11558v1"
+      },
+      "matched_keywords": [
+        "bayesian",
+        "high-dimensional"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.11555",
+      "arxiv_id": "2607.11555v1",
+      "version": "v1",
+      "title": "Advancing Optimal Subset Oracle via Learning Relaxation of Neural Set Functions",
+      "title_zh": "通过神经集函数的松弛学习推进最优子集预言机",
+      "authors": [
+        "Yongquan Shi",
+        "Zijing Ou",
+        "Shiping Wang",
+        "Yatao Bian"
+      ],
+      "abstract": "Learning neural set functions is pivotal to a wide range of important applications, including compound selection in AI-driven drug discovery and product recommendation. Recent work has introduced optimal subset oracles to implicitly learn set functions under practical weakly supervised settings, where model parameters are optimized through mean-field variational inference. However, these frameworks rely on Monte Carlo sampling to estimate gradients of the evidence lower bound when updating the variational distribution. Repeated sampling across iterations incurs substantial computational overhead, while the resulting stochasticity can destabilize the optimization trajectory. In this work, we reinterpret the evidence lower bound as a continuous relaxation of the set function and learn a surrogate objective that replaces sampling-based ELBO gradient estimation during variational optimization. The learned surrogate provides stable and efficient gradients throughout the continuous domain, thereby reducing computational overhead and accelerating inference. Furthermore, we establish an approximation guarantee for the proposed framework under submodular maximization and characterize its connection to variational free energy. Experiments on a variety of real-world tasks demonstrate consistent improvements over existing baselines.",
+      "abstract_zh": "学习神经集函数对于一系列重要应用至关重要，包括人工智能驱动的药物发现中的化合物选择和产品推荐。最近的研究引入了最优子集预言机，以在实际弱监督设置下隐式学习集函数，其中模型参数通过平均场变分推断进行优化。然而，这些框架在更新变分分布时依赖蒙特卡洛采样来估计证据下界的梯度。跨迭代的重复采样会带来大量计算开销，而由此产生的随机性可能破坏优化轨迹的稳定性。在这项工作中，我们将证据下界重新解释为集函数的连续松弛，并学习一个替代目标，在变分优化期间取代基于采样的ELBO梯度估计。学习到的替代目标在整个连续域中提供稳定且高效的梯度，从而减少计算开销并加速推断。此外，我们在子模最大化下为所提出的框架建立了近似保证，并刻画了其与变分自由能的联系。在多种实际任务上的实验表明，该方法相较于现有基线具有一致的改进。",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-13T13:37:47Z",
+      "updated": "2026-07-13T13:37:47Z",
+      "announcement_date": "2026-07-13",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11555v1",
+        "pdf": "https://arxiv.org/pdf/2607.11555v1"
+      },
+      "matched_keywords": [
+        "stochastic",
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.11542",
+      "arxiv_id": "2607.11542v1",
+      "version": "v1",
+      "title": "Condition-Stratified Robustness Analysis of Post-Hoc Calibration Methods for Probabilistic Classifiers",
+      "title_zh": "概率分类器事后校准方法的条件分层鲁棒性分析",
+      "authors": [
+        "Gurdeep Singh Virdee"
+      ],
+      "abstract": "Post-hoc calibration is widely adopted to correct probability estimates from trained classifiers, yet most evaluations report aggregate performance without testing whether that performance holds across distinct operating conditions within a single dataset. We present a pre-registered, condition-stratified robustness analysis comparing temperature scaling (TEMP) and isotonic regression (ISO) across four controlled conditions (C1--C4). Four hypothesis groups are evaluated: discrimination deltas with Holm-corrected multiplicity control (H1), Brier score differences (H2), calibration slope outcomes (H3), and AUROC differences under best-condition setups (H4). TEMP-minus-ISO discrimination deltas remain small across all conditions (-0.0155 to 0.0139), with Holm-adjusted p-values of 0.9895 everywhere. TEMP Brier differences are consistently negative (C1: -0.0002 through C4: -0.0074), while ISO shows sign reversals. TEMP calibration slopes stay closer to unity in every condition (range 0.7597--0.9493) than ISO slopes (0.1364--0.2726). AUROC differences shift from near zero in C1 (-0.0004) to positive in C4 (0.0264). These results establish that in-dataset robustness is condition-dependent and metric-specific. No claim of external transportability is made.",
+      "abstract_zh": "事后校准被广泛用于修正训练后分类器的概率估计，但大多数评估报告的是聚合性能，而未测试该性能在单个数据集内不同操作条件下是否保持一致。我们提出了一项预先注册的条件分层鲁棒性分析，比较了温度缩放（TEMP）和等渗回归（ISO）在四种受控条件（C1--C4）下的表现。评估了四个假设组：经Holm校正多重性控制的判别差异（H1）、Brier分数差异（H2）、校准斜率结果（H3）以及最佳条件设置下的AUROC差异（H4）。TEMP减去ISO的判别差异在所有条件下均较小（-0.0155至0.0139），Holm校正p值均为0.9895。TEMP的Brier差异始终为负（C1：-0.0002至C4：-0.0074），而ISO则出现符号反转。TEMP的校准斜率在所有条件下更接近1（范围0.7597--0.9493），而ISO斜率（0.1364--0.2726）。AUROC差异从C1的接近零（-0.0004）变为C4的正值（0.0264）。这些结果表明，数据集内的鲁棒性依赖于条件且具有度量特异性。未声称外部可迁移性。",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-13T13:28:31Z",
+      "updated": "2026-07-13T13:28:31Z",
+      "announcement_date": "2026-07-13",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11542v1",
+        "pdf": "https://arxiv.org/pdf/2607.11542v1"
+      },
+      "matched_keywords": [
+        "probability",
+        "regression"
+      ],
+      "translation_status": "translated"
+    },
+    {
       "id": "2607.11530",
       "arxiv_id": "2607.11530v1",
       "version": "v1",
@@ -889,6 +1684,37 @@
       "translation_status": "translated"
     },
     {
+      "id": "2607.11526",
+      "arxiv_id": "2607.11526v1",
+      "version": "v1",
+      "title": "AutoMatBench: An Automatic Optimization Toolkit for the Acceleration of Material Properties Prediction Benchmarking",
+      "title_zh": "AutoMatBench：用于加速材料属性预测基准测试的自动优化工具包",
+      "authors": [
+        "Hongxiao Li",
+        "Wanling Gao"
+      ],
+      "abstract": "Material property prediction (MPP) infers key properties from chemical composition and structure, accelerating the discovery and optimization of novel materials. In the realm of MPP, MatBench is a widely accepted benchmarking tool that defines over ten significant problems and provides the paradigm of performance evaluation for AI prediction models. Even though MatBench works well in benchmarking the performances of prediction models on in-distribution (ID) tasks and datasets, it lacks the ability to reflect their performances on out-of-distribution (OOD) material data, resulting failure in new material discovery. By combining the pipelines of MatBench and the existing researches on OOD performance evaluation, this study enables a huge space of benchmarking configurations, comprehensively reflecting the performances, abilities, and disadvantages of various AI prediction models. This work reports that the discrepancy of performances at different configuration values is huge and can be illustrated with prior knowledge and novel insights, therefore consideration of causal effect of configurations on performance results is necessary. In case of the impossibility of enumerative benchmarking at every configuration, this work further proposes AutoMatBench, an automatic toolkit with Bayesian optimization. Experiments with AutoMatBench reports that, within twelve steps of optimization, the similar results with MatBench and former OOD research can be accessed while more than half of the cost are saved. Besides, this tool also yields more essential findings on MPP benchmarking, positively contributing to the cost and efficiency of new material discovery.",
+      "abstract_zh": "材料属性预测（MPP）从化学成分和结构中推断关键属性，加速新材料的发现和优化。在MPP领域，MatBench是一个广泛接受的基准测试工具，它定义了十多个重要问题，并为AI预测模型提供了性能评估的范式。尽管MatBench在分布内（ID）任务和数据集上对预测模型的性能进行基准测试效果良好，但它缺乏反映模型在分布外（OOD）材料数据上性能的能力，导致在新材料发现中失败。通过结合MatBench的流程和现有关于OOD性能评估的研究，本研究实现了巨大的基准测试配置空间，全面反映了各种AI预测模型的性能、能力和缺点。本工作报告了不同配置值下性能的巨大差异，并可以通过先验知识和新见解进行说明，因此考虑配置对性能结果的因果效应是必要的。鉴于无法在每个配置下进行枚举基准测试，本研究进一步提出了AutoMatBench，一个带有贝叶斯优化的自动工具包。使用AutoMatBench的实验报告显示，在十二步优化内，可以获得与MatBench和先前OOD研究相似的结果，同时节省超过一半的成本。此外，该工具还在MPP基准测试中产生了更重要的发现，对新材料发现的成本和效率做出了积极贡献。",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-13T13:11:40Z",
+      "updated": "2026-07-13T13:11:40Z",
+      "announcement_date": "2026-07-13",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11526v1",
+        "pdf": "https://arxiv.org/pdf/2607.11526v1"
+      },
+      "matched_keywords": [
+        "bayesian",
+        "causal",
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
       "id": "2607.11523",
       "arxiv_id": "2607.11523v1",
       "version": "v1",
@@ -921,6 +1747,144 @@
       },
       "matched_keywords": [
         "agent"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.11520",
+      "arxiv_id": "2607.11520v1",
+      "version": "v1",
+      "title": "Stochastic individual-bases models",
+      "title_zh": "随机个体基础模型",
+      "authors": [
+        "Anton Bovier",
+        "Anna Kraut"
+      ],
+      "abstract": "These are lecture notes for an advanced topics course in the master's programme at Bonn University. It aims to give a concise review of some of the work that has been done around the topic of adaptive dynamics from a rigorous stochastic point of view over the last 25 years and to make this area accessible to students with a good knowledge of probability in general, and the theory of Markov processes in particular. Our emphasis is on the issue of emerging scaling limits, where scaling parameters are time, population size, mutation rates, and mutation step size. These allow to exhibit within a fairly simple class of models a variety of biologically relevant phenomena. These notes are organised in three parts. Part 1 presents some historical background as well as the mathematical setting and main tools. Part 2 is the core of the notes and discusses the various scaling regimes and scaling limits. Part 3 looks at some extensions on the basic model, notably diploid models, phenotypic plasticity, and effects of environmental changes over time.",
+      "abstract_zh": "这些是波恩大学硕士课程高级专题的讲义。旨在简要回顾过去25年间围绕适应动力学主题从严格随机角度所做的一些工作，并使这一领域对具备良好概率论知识（特别是马尔可夫过程理论）的学生易于理解。我们重点探讨涌现的尺度极限问题，其中尺度参数包括时间、种群规模、突变率和突变步长。这些参数使得在一个相当简单的模型类别中能够展现多种生物学相关现象。这些讲义分为三部分。第一部分介绍一些历史背景以及数学框架和主要工具。第二部分是讲义的核心，讨论各种尺度区域和尺度极限。第三部分探讨基本模型的一些扩展，特别是二倍体模型、表型可塑性以及环境随时间变化的影响。",
+      "categories": [
+        "q-bio.PE",
+        "math.PR"
+      ],
+      "primary_category": "q-bio.PE",
+      "published": "2026-07-13T13:07:32Z",
+      "updated": "2026-07-13T13:07:32Z",
+      "announcement_date": "2026-07-13",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11520v1",
+        "pdf": "https://arxiv.org/pdf/2607.11520v1"
+      },
+      "matched_keywords": [
+        "stochastic",
+        "probability"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.11510",
+      "arxiv_id": "2607.11510v1",
+      "version": "v1",
+      "title": "DAG-FM: A Foundation Model for Causal Discovery under Heterogeneous Causal Mechanisms",
+      "title_zh": "DAG-FM：一种面向异质因果机制下的因果发现基础模型",
+      "authors": [
+        "Yikang Chen",
+        "Zhengkang Guan",
+        "Haoyuan Qian",
+        "Peng Cui",
+        "Yi Yang",
+        "Kun Kuang"
+      ],
+      "abstract": "Causal discovery from observational tabular data remains fundamentally challenging, primarily due to the heterogeneity of underlying causal mechanisms and the high-dimensional combinatorial search space of Directed Acyclic Graphs (DAGs). In this paper, we propose \\textbf{DAG-FM}, a novel foundation model architecture that amortizes causal discovery. Unlike direct matrix prediction, DAG-FM decomposes the causal discovery process into two auto-regressive stages using two specialized Transformer-based sub-modules: a leaf-node predictor and a parent-node predictor. To effectively model complex row-column interactions, we adopt a robust tabular interaction block to output feature-wise representations. Crucially, to handle diverse and unknown Functional Causal Model (FCM) assumptions in real-world scenarios, we introduce Mixture-of-Leaf-Experts (MoLE), allowing the model to dynamically route and adapt to identifiable mechanism families. Through an iterative inference algorithm, DAG-FM seamlessly extracts causal orderings and constructs valid DAGs. Extensive experiments demonstrate that DAG-FM achieves state-of-the-art performance on both synthetic benchmarks and complex real-world datasets, significantly outperforming traditional classical algorithms and recent foundation models in both accuracy and scalability.",
+      "abstract_zh": "从观测表格数据进行因果发现仍然具有根本性的挑战，主要源于潜在因果机制的异质性以及有向无环图（DAG）的高维组合搜索空间。在本文中，我们提出了一种新颖的基础模型架构DAG-FM，用于摊销因果发现。与直接矩阵预测不同，DAG-FM通过两个专门的基于Transformer的子模块将因果发现过程分解为两个自回归阶段：叶节点预测器和父节点预测器。为了有效建模复杂的行列交互，我们采用了一个稳健的表格交互块来输出特征级别的表示。关键的是，为了处理现实场景中多样且未知的函数因果模型（FCM）假设，我们引入了混合叶专家（MoLE），使模型能够动态路由并适应可识别的机制族。通过迭代推理算法，DAG-FM无缝地提取因果顺序并构建有效的DAG。大量实验表明，DAG-FM在合成基准和复杂真实世界数据集上均达到了最先进的性能，在准确性和可扩展性上显著优于传统经典算法和近期的基础模型。",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-13T13:00:06Z",
+      "updated": "2026-07-13T13:00:06Z",
+      "announcement_date": "2026-07-13",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11510v1",
+        "pdf": "https://arxiv.org/pdf/2607.11510v1"
+      },
+      "matched_keywords": [
+        "causal",
+        "high-dimensional"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.11508",
+      "arxiv_id": "2607.11508v1",
+      "version": "v1",
+      "title": "CDFM: Towards a General-Purpose Causal Discovery Foundation Model",
+      "title_zh": "CDFM：迈向通用因果发现基础模型",
+      "authors": [
+        "Jie Qiao",
+        "Ruichu Cai",
+        "Zijian Li",
+        "Weilin Chen",
+        "Pengfei Hua",
+        "Boyan Xu",
+        "Zhengming Chen",
+        "Zhifeng Hao",
+        "Peng Cui"
+      ],
+      "abstract": "Causal discovery, the process of recovering underlying causal structures from observational data, is a fundamental pursuit across scientific disciplines. Over the past decades, numerous algorithms have been developed to tackle this challenge through workflows tailored to the specific causal mechanisms underlying each type of dataset, demonstrating effectiveness across a wide range of applications. However, as the volume and heterogeneity of real-world data continue to grow, this dataset-specific approach inevitably leads to a fragmented, test-driven paradigm that struggles to scale to the demands of modern scientific discovery. To address this, we formulate the Causal Discovery Foundation Model (CDFM) as a unified, general-purpose framework for zero-shot structural inference. To ensure reliable generalization across unknown domains, we first investigate the theoretical boundaries of causal identifiability, revealing the indispensable role of causal prior mechanisms in this process. Building on these insights, we formulate a principled variational framework that treats unknown causal mechanisms as latent variables and mathematically decomposes the intractable marginal likelihood into distinct, tractable learning modules. The variational decomposition provides a conceptual design principle for the architecture design of CDFM, while comprehensive causal knowledge guides the large-scale synthesis of our pretraining data. By pretraining on a massive, highly diverse space of synthetic structural causal models, CDFM successfully internalizes complex statistical asymmetries. Extensive experiments demonstrate that CDFM consistently outperforms traditional algorithms, driving a paradigm shift toward a general-purpose causal discovery foundation model.",
+      "abstract_zh": "因果发现是从观测数据中恢复潜在因果结构的过程，是各科学领域的一项基本追求。过去几十年中，人们开发了大量算法，通过针对每种数据集类型下特定因果机制定制的工作流程来应对这一挑战，并在广泛的应用中展现出有效性。然而，随着真实世界数据的数量和异质性不断增长，这种数据集特定的方法不可避免地导致了一种碎片化的、测试驱动的范式，难以扩展到现代科学发现的需求。为了解决这一问题，我们将因果发现基础模型（CDFM）构建为一个统一的、通用的零样本结构推理框架。为了确保在未知领域上的可靠泛化，我们首先研究了因果可识别性的理论边界，揭示了因果先验机制在此过程中不可或缺的作用。基于这些见解，我们构建了一个原则性的变分框架，将未知因果机制视为潜在变量，并从数学上将难以处理的边际似然分解为不同的、可处理的学习模块。变分分解为CDFM的架构设计提供了概念性设计原则，而全面的因果知识则指导了我们预训练数据的大规模合成。通过在大量高度多样化的合成结构因果模型空间上进行预训练，CDFM成功内化了复杂的统计不对称性。大量实验表明，CDFM持续优于传统算法，推动了向通用因果发现基础模型的范式转变。",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ML"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-13T12:58:28Z",
+      "updated": "2026-07-13T12:58:28Z",
+      "announcement_date": "2026-07-13",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11508v1",
+        "pdf": "https://arxiv.org/pdf/2607.11508v1"
+      },
+      "matched_keywords": [
+        "statistical",
+        "causal"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.11506",
+      "arxiv_id": "2607.11506v2",
+      "version": "v2",
+      "title": "SCOPE-RL: Optimizing Reasoning Paths Before and After Success",
+      "title_zh": "SCOPE-RL：在成功前后优化推理路径",
+      "authors": [
+        "Xiaojian Liu",
+        "Han Xu",
+        "Jianqiang Xia",
+        "Zhixuan Li",
+        "Ke Xu",
+        "Yiwei Dai",
+        "Xinran Chen",
+        "Changwo Wu",
+        "Yuchen Li"
+      ],
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) optimizes LLMs using sparse verifiable final-answer rewards. This sparse anchor reliably verifies whether a trajectory succeeds but provides no direct feedback on the reasoning path that produced it. Before success, prerequisite progress on hard problems receives no reward signal; after success, outcome rewards cannot distinguish well-organized correct trajectories from redundant or locally flawed ones. We introduce SCOPE-RL (Scaffolded Chain Optimization with Process Efficiency), a two-stage framework that densifies this anchor while retaining the GRPO update: Adaptive Scaffolded RL adds prefix-decomposed verifiable rewards on answer-hidden sub-question chains before success, and Quality-Aware Process RL applies correctness-gated process-shape rewards to refine correct trajectories after success. An expert-validated Step-Quality Evaluation Protocol evaluates useful-step density, error localization, and token efficiency beyond final-answer accuracy. On Qwen3-8B-Instruct trained on DAPO-Math and Big-Math, SCOPE-RL improves average accuracy by up to 11.2 pp and reduces reasoning tokens by up to 27.1% over outcome-only GRPO; the gains hold under GSPO and on Qwen3-0.6B-Instruct, indicating that reward-signal densification is complementary to policy-update-level RLVR advances. Code and data are available at https://github.com/tokencraft-lab/SCOPE-RL.",
+      "abstract_zh": "基于可验证奖励的强化学习（RLVR）使用稀疏的可验证最终答案奖励来优化大语言模型。这种稀疏锚点能可靠地验证轨迹是否成功，但无法对产生该轨迹的推理路径提供直接反馈。在成功之前，解决难题所需的先决进展无法获得奖励信号；在成功之后，结果奖励无法区分组织良好的正确轨迹与冗余或局部有缺陷的轨迹。我们提出SCOPE-RL（带过程效率的支架式链优化），这是一个两阶段框架，在保留GRPO更新的同时使该锚点密集化：自适应支架式RL在成功之前，在隐藏答案的子问题链上添加前缀分解的可验证奖励；成功之后，质量感知过程RL应用正确性门控的过程形状奖励来细化正确轨迹。一个经过专家验证的步骤质量评估协议评估有用步骤密度、错误定位和令牌效率，超越最终答案准确性。在基于DAPO-Math和Big-Math训练的Qwen3-8B-Instruct上，与仅使用结果奖励的GRPO相比，SCOPE-RL将平均准确率提升高达11.2个百分点，并将推理令牌减少高达27.1%；这些优势在GSPO和Qwen3-0.6B-Instruct上依然保持，表明奖励信号密集化与策略更新层面的RLVR进展互补。代码和数据可在https://github.com/tokencraft-lab/SCOPE-RL获取。",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-13T12:56:28Z",
+      "updated": "2026-07-15T03:53:52Z",
+      "announcement_date": "2026-07-13",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.11506v2",
+        "pdf": "https://arxiv.org/pdf/2607.11506v2"
+      },
+      "matched_keywords": [
+        "optimization"
       ],
       "translation_status": "translated"
     },

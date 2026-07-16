@@ -1,0 +1,289 @@
+{
+  "date": "2026-07-16",
+  "updated_at": "2026-07-16T12:02:25Z",
+  "papers": [
+    {
+      "id": "2607.14087",
+      "arxiv_id": "2607.14087v1",
+      "version": "v1",
+      "title": "Stochastic Domination of Gaussian Maxima: A Resolution to the Weak Simplex Conjecture",
+      "title_zh": "高斯最大值的随机占优：弱单纯形猜想的解决",
+      "authors": [
+        "Abhijeet Mulgund"
+      ],
+      "abstract": "We prove a stochastic comparison for Gaussian maxima. Let $R$ be an $m\\times m$ correlation matrix satisfying $R-\\mathbf{1} \\mathbf{1}^{\\mathsf T}/m\\succeq0$, let $X\\sim\\mathcal{N}(0,R)$, and let $Z_1,\\ldots,Z_m$ be independent standard Gaussian random variables. Then $\\max_{1\\leq i\\leq m}X_i \\leq_{\\mathrm{st}} \\max_{1\\leq i\\leq m}Z_i$, or equivalently, $\\mathbb{P}\\{X_i\\leq c\\text{ for every }i\\}\\geqΦ(c)^m$ for every $c\\in\\mathbb{R}$. This comparison resolves the Weak Simplex Conjecture: among $d+1$ equiprobable equal-energy signals in $\\mathbb{R}^d$ transmitted over an additive white Gaussian noise channel, the regular simplex maximizes the probability of correct maximum-likelihood decoding at every signal-to-noise ratio. It also proves the inequality asserted by the Simplex Mean Width Conjecture and gives an exact formula for the largest number of equiprobable messages that can be sent at prescribed energy and error probability by a deterministic no-feedback AWGN code under a per-codeword energy constraint. The proof combines a Gaussian product inequality for log-concave functions with an adaptive tilting argument that makes the inequality applicable to the one-sided threshold events defining the maximum.",
+      "abstract_zh": "我们证明了高斯最大值的随机比较。设 $R$ 是一个 $m\\times m$ 相关矩阵，满足 $R-\\mathbf{1} \\mathbf{1}^{\\mathsf T}/m\\succeq0$，令 $X\\sim\\mathcal{N}(0,R)$，且 $Z_1,\\ldots,Z_m$ 是独立的标准高斯随机变量。那么 $\\max_{1\\leq i\\leq m}X_i \\leq_{\\mathrm{st}} \\max_{1\\leq i\\leq m}Z_i$，等价地，对于每个 $c\\in\\mathbb{R}$，有 $\\mathbb{P}\\{X_i\\leq c\\text{ 对所有 }i\\}\\geqΦ(c)^m$。这一比较解决了弱单纯形猜想：在加性白高斯噪声信道上传输 $d+1$ 个等概率等能量信号（在 $\\mathbb{R}^d$ 中）时，正则单纯形在每个信噪比下最大化正确最大似然解码的概率。它还证明了单纯形平均宽度猜想所断言的不等式，并给出了在每码字能量约束下，确定性无反馈AWGN码在指定能量和错误概率下可发送的最大等概率消息数的精确公式。证明结合了对数凹函数的高斯乘积不等式与自适应倾斜论证，使得该不等式适用于定义最大值的单侧阈值事件。",
+      "categories": [
+        "math.PR",
+        "cs.IT",
+        "math.MG"
+      ],
+      "primary_category": "math.PR",
+      "published": "2026-07-15T17:58:48Z",
+      "updated": "2026-07-15T17:58:48Z",
+      "announcement_date": "2026-07-16",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.14087v1",
+        "pdf": "https://arxiv.org/pdf/2607.14087v1"
+      },
+      "matched_keywords": [
+        "stochastic",
+        "probability"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.14086",
+      "arxiv_id": "2607.14086v1",
+      "version": "v1",
+      "title": "Leveraging unlabelled data for generalizable neural population decoding",
+      "title_zh": "利用无标签数据实现可泛化的神经群体解码",
+      "authors": [
+        "Ximeng Mao",
+        "Nanda H. Krishna",
+        "Avery Hee-Woon Ryoo",
+        "Matthew G. Perich",
+        "Guillaume Lajoie"
+      ],
+      "abstract": "Robust and accurate neural decoders are integral to neurotechnologies such as brain-computer interfaces and closed-loop experiments. Recent work has shown that tokenizing neural data at the spike level facilitates multi-session pretraining and delivers state-of-the-art decoding performance. However, current spike-based models are restricted to supervised learning (SL), limiting training to datasets with paired behavioural labels. To address this limitation, we introduce MOJO (Masked autOencoder-based JOint training), a training framework for spike-tokenizing models that jointly leverages self-supervised learning (SSL) via masked autoencoding and SL objectives. We evaluate MOJO on three spiking datasets spanning monkey motor cortex during reaching tasks and multi-regional mouse recordings during vision and decision making tasks, demonstrating superior performance over purely SL-trained models. This improvement is especially pronounced when training with limited labelled data, particularly in few-shot finetuning, where only a small amount of labelled data from a new session is available. Incorporating SSL also yields more interpretable neuronal representations, improving performance on brain region classification and spike-statistics prediction without explicit optimization for these tasks. We further show that MOJO generalizes beyond spiking data to human electrocorticography during speech, where it continues to outperform purely SL-trained models and achieves performance comparable to neuro-foundation models (NFMs) designed specifically for continuous signals. Overall, augmenting spike-tokenizing models with SSL improves performance in label-impoverished settings and enables the use of unlabelled data across various tasks and species, while generalizing to other neural modalities. These results suggest a path towards more flexible and scalable data usage when training NFMs.",
+      "abstract_zh": "稳健且准确的神经解码器是脑机接口和闭环实验等神经技术的关键组成部分。近期研究表明，在尖峰水平对神经数据进行标记化处理有助于多会话预训练，并实现最先进的解码性能。然而，当前的尖峰模型仅限于监督学习，训练过程受限于带有配对行为标签的数据集。为解决这一局限，我们提出了MOJO（基于掩码自编码器的联合训练），这是一种针对尖峰标记化模型的训练框架，通过掩码自编码联合利用自监督学习和监督学习目标。我们在三个尖峰数据集上评估了MOJO，涵盖猴子在执行伸手任务时的运动皮层以及小鼠在视觉和决策任务中的多区域记录，结果表明其性能优于纯监督学习训练的模型。这种提升在标签数据有限的情况下尤为显著，特别是在少样本微调场景中，即仅能获取新会话中的少量标签数据。引入自监督学习还产生了更具可解释性的神经元表征，在无需针对这些任务进行显式优化的情况下，提升了脑区分类和尖峰统计预测的性能。我们进一步证明，MOJO能够从尖峰数据泛化到人类言语期间的皮层电图数据，在此场景中其性能持续优于纯监督学习模型，并达到与专门为连续信号设计的神经基础模型相当的水平。总体而言，用自监督学习增强尖峰标记化模型可提升在标签匮乏环境下的性能，并使得跨任务和物种利用无标签数据成为可能，同时泛化到其他神经模态。这些结果为训练神经基础模型时实现更灵活、可扩展的数据使用指明了方向。",
+      "categories": [
+        "cs.LG",
+        "q-bio.NC"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-15T17:58:00Z",
+      "updated": "2026-07-15T17:58:00Z",
+      "announcement_date": "2026-07-16",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.14086v1",
+        "pdf": "https://arxiv.org/pdf/2607.14086v1"
+      },
+      "matched_keywords": [
+        "statistics",
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.14081",
+      "arxiv_id": "2607.14081v1",
+      "version": "v1",
+      "title": "Linear Independent Component Analysis via Optimal Transport",
+      "title_zh": "基于最优传输的线性独立成分分析",
+      "authors": [
+        "Ashutosh Jha",
+        "Michel Besserve",
+        "Simon Buchholz"
+      ],
+      "abstract": "Linear Independent Component Analysis (ICA) recovers jointly independent source signals from their linear mixtures. To achieve this, classical ICA algorithms attempt to maximize non-Gaussianity, measured by negentropy, which is linked to independence by information theory. Because exact negentropy optimization is intractable, they rely on proxy contrast functions, such as fourth-order cumulants, and parametric log-likelihoods. We propose instead to measure non-Gaussianity using the squared Wasserstein distance $W_2^2$ to a standard Gaussian. We prove that the Wasserstein distance between a standard normal distribution and linear projections of the data is maximized when the projection recovers an independent component. Based on this observation, we propose the OT-ICA algorithm which finds this projection by gradient-based optimization. Empirical evaluation on simulated data shows that OT-ICA outperforms proxy-based methods for different distributions of the latent variables. Application to EEG artifact removal and econometric price discovery confirm OT-ICA can be used for applied ICA tasks without distributional assumptions.",
+      "abstract_zh": "线性独立成分分析（ICA）从线性混合信号中恢复相互独立的源信号。为实现这一目标，经典ICA算法试图最大化非高斯性，通过信息论与独立性相关联的负熵来度量。由于精确的负熵优化难以处理，它们依赖于代理对比函数，如四阶累积量和参数化对数似然。我们提出改用平方Wasserstein距离$W_2^2$到标准高斯分布来度量非高斯性。我们证明了当投影恢复独立成分时，标准正态分布与数据线性投影之间的Wasserstein距离达到最大。基于这一观察，我们提出了OT-ICA算法，通过基于梯度的优化来寻找该投影。在模拟数据上的实证评估表明，对于潜在变量的不同分布，OT-ICA优于基于代理的方法。在脑电图伪影去除和计量经济学价格发现中的应用证实，OT-ICA无需分布假设即可用于实际ICA任务。",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-15T17:56:11Z",
+      "updated": "2026-07-15T17:56:11Z",
+      "announcement_date": "2026-07-16",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.14081v1",
+        "pdf": "https://arxiv.org/pdf/2607.14081v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.14064",
+      "arxiv_id": "2607.14064v1",
+      "version": "v1",
+      "title": "Minimax Theory of Likelihood-Based Deep Learning for Speckle Regression",
+      "title_zh": "基于似然的深度学习散斑回归的极小极大理论",
+      "authors": [
+        "Soham Jana"
+      ],
+      "abstract": "Speckle noise is a multiplicative noise commonly encountered in coherent imaging modalities such as synthetic aperture radar, optical coherence tomography, and digital holography. Although deep learning methods, in practice, have achieved state-of-the-art performance for speckle denoising, their fundamental statistical limits remain largely unexplored. Unlike additive noise models, multiplicative speckle noise makes the regression function unidentifiable from the conditional mean, rendering conventional least-squares-based deep learning approaches inapplicable. We study the minimax estimation of smooth nonparametric regression functions using likelihood-based deep neural network (DNN) estimators under a model with both multiplicative speckle noise and additive Gaussian noise. Our framework accommodates both low-dimensional and sparse high-dimensional features. We establish finite-sample upper bounds on the estimation error of the proposed DNN estimators and derive minimax lower bounds for nonparametric function recovery under our model, showing that they match up to logarithmic factors in the sample size. Moreover, these minimax rates coincide, up to logarithmic factors, with those for nonparametric regression under additive Gaussian noise alone, demonstrating that the intrinsic difficulty of estimation remains essentially unchanged despite the challenges posed by multiplicative speckle noise. Numerical experiments further supports consistency of our DNN-based despeckling methods and demonstrate their effectiveness.",
+      "abstract_zh": "散斑噪声是一种乘性噪声，常见于合成孔径雷达、光学相干断层扫描和数字全息等相干成像模态。尽管深度学习方法在实践中已实现散斑去噪的最先进性能，但其基本统计极限仍 largely 未被探索。与加性噪声模型不同，乘性散斑噪声使得回归函数无法通过条件均值识别，导致传统的基于最小二乘的深度学习方法不适用。我们研究了在同时包含乘性散斑噪声和加性高斯噪声的模型下，使用基于似然的深度神经网络（DNN）估计器对光滑非参数回归函数进行极小极大估计。我们的框架同时适用于低维和稀疏高维特征。我们建立了所提出的DNN估计器估计误差的有限样本上界，并推导了模型下非参数函数恢复的极小极大下界，表明它们与样本量的对数因子相匹配。此外，这些极小极大速率与仅存在加性高斯噪声下的非参数回归速率（至多相差对数因子）一致，表明尽管乘性散斑噪声带来了挑战，但估计的内在难度基本保持不变。数值实验进一步支持了我们基于DNN的去斑方法的一致性，并展示了其有效性。",
+      "categories": [
+        "math.ST",
+        "stat.ML"
+      ],
+      "primary_category": "math.ST",
+      "published": "2026-07-15T17:36:23Z",
+      "updated": "2026-07-15T17:36:23Z",
+      "announcement_date": "2026-07-16",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.14064v1",
+        "pdf": "https://arxiv.org/pdf/2607.14064v1"
+      },
+      "matched_keywords": [
+        "statistical",
+        "regression",
+        "high-dimensional"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.14048",
+      "arxiv_id": "2607.14048v1",
+      "version": "v1",
+      "title": "An Epidemic Threshold Set for Networks",
+      "title_zh": "网络的流行病阈值集合",
+      "authors": [
+        "Hoang Phi Dung",
+        "Nguyen Hong Phuc"
+      ],
+      "abstract": "In this paper, we investigate a discrete-time SIS epidemic model and the epidemic thresholds on complex networks. We focus on proposing a community-level epidemic threshold set and establishing a comparative result between the local epidemic thresholds and the global epidemic threshold. To verify our theoretical findings and structural properties, we conduct numerical experiments on one synthetic network (Network1) and one real-world network (the Haslemere contact network). Our numerical simulations, along with the computation and statistical ranking of the epidemic threshold sets, align accurately with our theoretical results.",
+      "abstract_zh": "本文研究离散时间SIS流行病模型及复杂网络上的流行病阈值。我们重点提出了一个社区层面的流行病阈值集合，并建立了局部流行病阈值与全局流行病阈值之间的比较结果。为验证理论发现和结构性质，我们在一个合成网络（Network1）和一个真实世界网络（Haslemere接触网络）上进行了数值实验。数值模拟结果，连同流行病阈值集合的计算和统计排序，与理论结果精确吻合。",
+      "categories": [
+        "cs.SI",
+        "math.DS",
+        "math.OC"
+      ],
+      "primary_category": "cs.SI",
+      "published": "2026-07-15T17:16:27Z",
+      "updated": "2026-07-15T17:16:27Z",
+      "announcement_date": "2026-07-16",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.14048v1",
+        "pdf": "https://arxiv.org/pdf/2607.14048v1"
+      },
+      "matched_keywords": [
+        "statistical"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.14035",
+      "arxiv_id": "2607.14035v1",
+      "version": "v1",
+      "title": "Optimizing Visibility in Generative Engines: A Critical Survey of Generative Engine Optimization (2023-2026)",
+      "title_zh": "生成式引擎中的可见性优化：生成式引擎优化的批判性综述（2023-2026）",
+      "authors": [
+        "Olivier Martinez"
+      ],
+      "abstract": "Generative Engine Optimization (GEO) seeks to increase content's presence, likelihood of citation, or influence in answers produced by generative engines. Since the foundational GEO paper, the field has expanded rapidly, but terminology, metrics, and evidence standards remain heterogeneous. This critical survey reviews 45 studies selected under a November 2023-July 2026 publication window, including one earlier preprint published at EMNLP after the window opened, plus relevant RAG and evaluation work. We argue that GEO is not a single ranking task but a stochastic, partially observable pipeline spanning search activation, crawling and indexing, retrieval, reranking and context allocation, citation, prominence, factual absorption, fidelity, and user behavior. The foundational paper's widely cited gains are valid within its experimental setting but conditional on a source already being present in a fixed context; they establish neither organic discoverability nor durable traffic effects. Reviewed work indicates that topical relevance and context position are the most reproducible levers, generic heuristics transfer poorly, competition can erode individual gains, and citation-oriented rewrites can impair retrieval. Commercial audits further reveal low source overlap, substantial run-to-run variability, and persistent fidelity gaps. We contribute a multistage formal model, a visibility vector separating discoverability, citation, absorption, and economic outcomes, an evidence hierarchy, and a reproducible protocol based on repeated measurements, paraphrases, controls, human validation, and multi-actor interference. Within this corpus, the evidence is narrow: already-retrieved content can causally alter its citation or use, but no reviewed technique shows a stable, longitudinal, cross-platform causal effect on organic discoverability or downstream behavior.",
+      "abstract_zh": "生成式引擎优化（GEO）旨在提高内容在生成式引擎生成的答案中的存在感、被引用可能性或影响力。自GEO奠基性论文发表以来，该领域迅速扩展，但术语、指标和证据标准仍存在异质性。本批判性综述回顾了45项研究，这些研究选自2023年11月至2026年7月的发表窗口，包括一篇在该窗口开启后发表于EMNLP的早期预印本，以及相关的RAG和评估工作。我们认为GEO并非单一的排序任务，而是一个随机、部分可观测的流水线，涵盖搜索激活、爬取与索引、检索、重排序与上下文分配、引用、显著性、事实吸收、保真度以及用户行为。奠基性论文中广泛引用的增益在其实验设置内是有效的，但前提是源内容已存在于固定上下文中；这些增益既不能证明有机可发现性，也不能证明持久的流量效应。综述的工作表明，主题相关性和上下文位置是最可复现的杠杆，通用启发式方法迁移性差，竞争会削弱个体增益，而面向引用的重写可能损害检索。商业审计进一步揭示了低源重叠、显著的运行间变异性以及持续的保真度差距。我们贡献了一个多阶段形式化模型、一个将可发现性、引用、吸收和经济结果分离的可见性向量、一个证据层级，以及一个基于重复测量、释义、对照、人工验证和多主体干扰的可复现协议。在该语料库中，证据范围狭窄：已检索到的内容可以因果性地改变其引用或使用，但没有任何被综述的技术显示出对有机可发现性或下游行为的稳定、纵向、跨平台因果效应。",
+      "categories": [
+        "cs.IR",
+        "cs.DL"
+      ],
+      "primary_category": "cs.IR",
+      "published": "2026-07-15T17:03:08Z",
+      "updated": "2026-07-15T17:03:08Z",
+      "announcement_date": "2026-07-16",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.14035v1",
+        "pdf": "https://arxiv.org/pdf/2607.14035v1"
+      },
+      "matched_keywords": [
+        "causal",
+        "stochastic",
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.14008",
+      "arxiv_id": "2607.14008v1",
+      "version": "v1",
+      "title": "Lighthouse RL: Sample-Efficient Circuit Optimization via Strategic Reset Points",
+      "title_zh": "Lighthouse RL：通过战略重置点实现样本高效的电路优化",
+      "authors": [
+        "Mustafa Emre Gürsoy",
+        "Stefan Uhlich",
+        "Ryoga Matsuo",
+        "Yağız Gençer",
+        "Arun Venkitaraman",
+        "Chia-Yu Hsieh",
+        "Andrea Bonetti",
+        "Eisaku Ohbuchi",
+        "Lorenzo Servadei"
+      ],
+      "abstract": "In this paper, we introduce Lighthouse RL, a sample-efficient reinforcement learning (RL) approach for analog circuit sizing. Traditional methods lack generalization across different performance targets, while standard RL approaches waste resources exploring unpromising regions. Our method addresses these inefficiencies through a strategic reset strategy that initializes episodes from high-performing configurations discovered during training, called \"lighthouses\". These states, which are closer to the target objectives, guide exploration toward promising regions. When compared to RL and Bayesian optimization methods from the literature, we demonstrate the effectiveness of our approach on a 2D benchmark problem and on two analog circuits, showing significant improvements in sample efficiency (up to 1.72x faster), optimization performance (100% vs. 0-87% success rate), generalization (75% vs. 0-50% extrapolation success), and objective maximization. This efficiency is particularly valuable for computationally expensive black-box optimization problems, and our reset strategy can be used as a plug-and-play enhancement for any RL-based optimization approach.",
+      "abstract_zh": "在本文中，我们介绍了Lighthouse RL，一种用于模拟电路尺寸优化的样本高效强化学习方法。传统方法缺乏对不同性能目标的泛化能力，而标准强化学习方法则浪费资源探索无前景的区域。我们的方法通过一种战略重置策略来解决这些低效问题，该策略从训练过程中发现的高性能配置（称为“灯塔”）初始化回合。这些状态更接近目标目标，引导探索朝向有前景的区域。与文献中的强化学习和贝叶斯优化方法相比，我们在一个二维基准问题和两个模拟电路上展示了我们方法的有效性，显示出样本效率（最高提升1.72倍）、优化性能（成功率100%对比0-87%）、泛化能力（外推成功率75%对比0-50%）以及目标最大化方面的显著改进。这种效率对于计算成本高昂的黑箱优化问题尤其有价值，并且我们的重置策略可以作为即插即用的增强功能用于任何基于强化学习的优化方法。",
+      "categories": [
+        "cs.LG",
+        "cs.AR"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-15T16:37:57Z",
+      "updated": "2026-07-15T16:37:57Z",
+      "announcement_date": "2026-07-16",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.14008v1",
+        "pdf": "https://arxiv.org/pdf/2607.14008v1"
+      },
+      "matched_keywords": [
+        "bayesian",
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.14004",
+      "arxiv_id": "2607.14004v1",
+      "version": "v1",
+      "title": "Do Agent Optimizers Compound? A Continual-Learning Evaluation on Terminal-Bench 2.0",
+      "title_zh": "智能体优化方法能否叠加？基于Terminal-Bench 2.0的持续学习评估",
+      "authors": [
+        "Wenxiao Wang",
+        "Priyatham Kattakinda",
+        "Soheil Feizi"
+      ],
+      "abstract": "Most reported gains from agent-optimization methods are one-shot: an agent is optimized against a fixed benchmark and the resulting improvement is reported as if it were a stable property of the method. This does not test the setting that matters for deployed agents, where optimization is applied recursively as new failures and new tasks appear over time. The central question this raises is whether optimizer-driven gains compound: after an agent has been optimized once, can it be optimized again on newly arrived tasks without eroding the gains the first round produced? We study this question with a two-phase continual-learning evaluation built from hard tasks in Terminal-Bench 2.0, comparing three approaches to agent-harness optimization (GEPA, Meta Harness, and RELAI's Verifiable Continual Learning, RELAI-VCL) under identical optimization budgets. All three methods improve over the baseline agent in the conventional, static, single-phase setting. However, once new tasks are introduced, the methods diverge sharply: GEPA's optimized agent transfers below the unoptimized baseline, Meta Harness transfers well but fails to improve further once given a second optimization budget, and RELAI-VCL is the only method that both transfers positively to unseen tasks and continues improving after those tasks are folded into the optimization objective, reaching the highest pass rate at every evaluated stage and the highest lifelong average pass rate overall (76.4% vs. 66.0% for GEPA, 64.6% for Meta Harness, and 58.7% for the baseline). Our key observation was that optimization gains compounded only when regression control was built into the optimization loop, providing an inductive bias against shortcut solutions that fail to generalize.",
+      "abstract_zh": "大多数关于智能体优化方法所报告的性能提升都是一次性的：针对固定基准优化智能体后，将所得改进视为该方法的稳定属性进行报告。这并未测试对已部署智能体至关重要的场景——即随着时间推移，新失败和新任务出现时，优化被递归应用。由此引发的核心问题是：优化器驱动的增益能否叠加？在智能体经过一次优化后，能否在不侵蚀第一轮优化成果的前提下，针对新到达的任务再次进行优化？我们通过Terminal-Bench 2.0中的困难任务构建了一个两阶段持续学习评估来研究这一问题，在相同优化预算下比较了三种智能体框架优化方法（GEPA、Meta Harness和RELAI的可验证持续学习，RELAI-VCL）。在传统的静态单阶段设置中，所有三种方法均优于基线智能体。然而，一旦引入新任务，各方法表现出现显著分化：GEPA优化后的智能体迁移性能低于未优化基线，Meta Harness迁移良好但在获得第二次优化预算后无法进一步提升，而RELAI-VCL是唯一既能正向迁移至未见任务，又能在这些任务被纳入优化目标后持续改进的方法，在每个评估阶段均达到最高通过率，并取得最高的终身平均通过率（76.4%，对比GEPA的66.0%、Meta Harness的64.6%和基线的58.7%）。我们的关键发现是：仅当优化循环中内置了回归控制时，优化增益才能叠加，这为对抗无法泛化的捷径解提供了归纳偏置。",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-07-15T16:36:04Z",
+      "updated": "2026-07-15T16:36:04Z",
+      "announcement_date": "2026-07-16",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.14004v1",
+        "pdf": "https://arxiv.org/pdf/2607.14004v1"
+      },
+      "matched_keywords": [
+        "regression",
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.13984",
+      "arxiv_id": "2607.13984v1",
+      "version": "v1",
+      "title": "Multimodal Empirical Bayes Variational Autoencoders for Joint Longitudinal and Time-to-Event Modeling",
+      "title_zh": "用于联合纵向和时间-事件建模的多模态经验贝叶斯变分自编码器",
+      "authors": [
+        "Anders Sjöberg",
+        "Nils Olsson",
+        "Marcus Baaz",
+        "Mats Jirstrand"
+      ],
+      "abstract": "Longitudinal tumor measurements, dropout information, and genetic covariates provide complementary information about treatment response, but integrating these data sources within a single population modeling framework remains challenging. We extend the empirical Bayes variational autoencoder (EB-VAE) framework to joint longitudinal and time-to-event modeling and evaluate it on tumor growth data. The framework represents inter-individual variability using latent individual effects regularized by a covariate-conditioned empirical Bayes prior, while a decoder maps these latent effects to tumor-volume trajectories. To account for informative dropout, the decoder was augmented with a hazard model, yielding joint predictions of tumor growth and time to dropout. We further compared fully neural and hybrid semi-mechanistic decoder formulations and incorporated genomic covariates through a genetics-conditioned prior adaptation. The hybrid decoder recovered treatment-effect parameters broadly consistent with previously reported nonlinear mixed-effects estimates, while achieving prior predictive performance comparable to the neural decoder. The joint model reproduced both tumor-volume distributions and dropout patterns in held-out individuals, and genetic conditioning improved individual-level prior predictions in both cutaneous melanoma and breast cancer experiments. Stability selection identified several biologically plausible genetic indicators, including alterations in BRAF, NRAS, NF1, and MDM2. These results demonstrate that EB-VAE provides a flexible probabilistic framework for combining neural dynamics, mechanistic structure, time-to-event modeling, and high-dimensional covariates in pharmacometric applications.",
+      "abstract_zh": "纵向肿瘤测量、脱落信息和遗传协变量提供了关于治疗反应的互补信息，但在单一群体建模框架内整合这些数据源仍然具有挑战性。我们将经验贝叶斯变分自编码器（EB-VAE）框架扩展到联合纵向和时间-事件建模，并在肿瘤生长数据上进行了评估。该框架使用由协变量条件经验贝叶斯先验正则化的潜在个体效应来表示个体间变异性，而解码器将这些潜在效应映射到肿瘤体积轨迹。为了解释信息性脱落，解码器增加了风险模型，从而生成肿瘤生长和脱落时间的联合预测。我们进一步比较了全神经和混合半机械解码器公式，并通过遗传条件先验适应纳入了基因组协变量。混合解码器恢复的治疗效应参数与先前报告的非线性混合效应估计值大致一致，同时实现了与神经解码器相当的先验预测性能。联合模型再现了保留个体的肿瘤体积分布和脱落模式，遗传条件改善了个体水平的先验预测，在皮肤黑色素瘤和乳腺癌实验中均如此。稳定性选择识别了几个生物学上合理的遗传指标，包括BRAF、NRAS、NF1和MDM2的改变。这些结果表明，EB-VAE为在药理学应用中结合神经动力学、机械结构、时间-事件建模和高维协变量提供了一个灵活的概率框架。",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ],
+      "primary_category": "stat.ML",
+      "published": "2026-07-15T16:13:14Z",
+      "updated": "2026-07-15T16:13:14Z",
+      "announcement_date": "2026-07-16",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.13984v1",
+        "pdf": "https://arxiv.org/pdf/2607.13984v1"
+      },
+      "matched_keywords": [
+        "high-dimensional"
+      ],
+      "translation_status": "translated"
+    }
+  ]
+}
