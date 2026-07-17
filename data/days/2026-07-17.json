@@ -1,0 +1,348 @@
+{
+  "date": "2026-07-17",
+  "updated_at": "2026-07-17T11:53:20Z",
+  "papers": [
+    {
+      "id": "2607.15273",
+      "arxiv_id": "2607.15273v1",
+      "version": "v1",
+      "title": "MeanFlowNFT: Bringing Forward-Process RL to Average-Velocity Generators",
+      "title_zh": "MeanFlowNFT：将前向过程强化学习引入平均速度生成器",
+      "authors": [
+        "Yushi Huang",
+        "Xiangxin Zhou",
+        "Jun Zhang",
+        "Liefeng Bo",
+        "Tianyu Pang"
+      ],
+      "abstract": "MeanFlow generators achieve fast few-step sampling by predicting average velocities over time intervals, making them attractive for efficient generation. Reinforcement learning (RL) has become a powerful way to align diffusion and flow models with human preferences and task-specific objectives. In particular, DiffusionNFT offers an efficient forward-process RL framework that does not require reverse-process trajectories or likelihood estimation. However, applying such RL methods to MeanFlow remains underexplored. DiffusionNFT optimizes instantaneous velocities, whereas MeanFlow samples with average velocities. To bridge this gap, we introduce MeanFlowNFT. Inspired by the MeanFlow identity, which bridges average and instantaneous velocities, we construct an induced instantaneous-velocity predictor. We apply the DiffusionNFT objective to this predictor, making reward optimization well-defined for MeanFlow. Sampling remains based on the average velocity, preserving MeanFlow's fast few-step generation. We further prove that MeanFlowNFT inherits DiffusionNFT's strict policy-improvement guarantee. Experiments on image and video generation show that MeanFlowNFT consistently improves baselines. Moreover, it outperforms prior state-of-the-art RL-tuned few-step generators on most metrics ($6$ of $8$ on SD3.5-M), and can even surpass multi-step RL-tuned diffusion while using only a few sampling steps. For instance, on Wan 2.1, $4$-step MeanFlowNFT reaches a VBench score of $84.33$, surpassing $50$-step LongCat-Video RL ($82.57$).",
+      "abstract_zh": "MeanFlow生成器通过预测时间区间内的平均速度实现快速少步采样，使其在高效生成方面具有吸引力。强化学习已成为将扩散模型和流模型与人类偏好及任务特定目标对齐的强大方法。特别是，DiffusionNFT提供了一种高效的前向过程强化学习框架，无需反向过程轨迹或似然估计。然而，将此类强化学习方法应用于MeanFlow仍未被充分探索。DiffusionNFT优化瞬时速度，而MeanFlow使用平均速度进行采样。为弥合这一差距，我们引入了MeanFlowNFT。受连接平均速度与瞬时速度的MeanFlow恒等式启发，我们构建了一个诱导的瞬时速度预测器。我们将DiffusionNFT目标应用于该预测器，使得奖励优化对MeanFlow而言是良定义的。采样仍基于平均速度，从而保留了MeanFlow的快速少步生成特性。我们进一步证明，MeanFlowNFT继承了DiffusionNFT的严格策略改进保证。在图像和视频生成上的实验表明，MeanFlowNFT持续改进基线。此外，它在大多数指标上（SD3.5-M上8个中的6个）优于先前最先进的强化学习调优的少步生成器，甚至可以在仅使用少量采样步数的情况下超越多步强化学习调优的扩散模型。例如，在Wan 2.1上，4步MeanFlowNFT达到了84.33的VBench分数，超过了50步LongCat-Video RL（82.57）。",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CV",
+      "published": "2026-07-16T17:59:02Z",
+      "updated": "2026-07-16T17:59:02Z",
+      "announcement_date": "2026-07-17",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.15273v1",
+        "pdf": "https://arxiv.org/pdf/2607.15273v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.15258",
+      "arxiv_id": "2607.15258v1",
+      "version": "v1",
+      "title": "Decoding Market Emotion from Blockchain Activity: A Data-Driven Sentiment Classifier",
+      "title_zh": "从区块链活动解码市场情绪：一种数据驱动的情绪分类器",
+      "authors": [
+        "Arthur G. Bubolz",
+        "Abreu Quevedo",
+        "Giancarlo Lucca",
+        "Rafael A. Berri",
+        "Eduardo Borges",
+        "Bruno L. Dalmazo"
+      ],
+      "abstract": "The growing use of Bitcoin as a decentralized digital asset and investment tool has sparked strong interest in understanding its market behavior. This study presents a new approach to analyze Bitcoin market sentiment by combining on-chain and financial data with social media posts. Unlike models that aim to predict prices, this work focuses on explaining market sentiment using blockchain transactions, historical price data of Bitcoin, and daily Twitter sentiment classifications. The method merges sentiment trends with on-chain and financial metrics, normalized into a dataset for detailed market analysis. Multiple machine learning models were tested using cross-validation, with Gradient Boosting (XGBoost) emerging as the most reliable model for classifying sentiment, achieving an average F1-score of about 0.84. SHAP (SHapley Additive exPlanations), a game theory-based method for model interpretability, was used to quantify the contribution of on-chain features to the model's predictions, improving transparency. The results indicate that this data combination yields meaningful predictive signals and insights, supporting data-driven cryptocurrency analysis and future improvements with deep learning.",
+      "abstract_zh": "比特币作为一种去中心化数字资产和投资工具的日益普及，激发了对其市场行为的浓厚兴趣。本研究提出了一种新方法，通过结合链上数据、金融数据和社交媒体帖子来分析比特币市场情绪。与旨在预测价格的模型不同，本工作侧重于使用区块链交易、比特币历史价格数据和每日推特情绪分类来解释市场情绪。该方法将情绪趋势与链上和金融指标合并，归一化为一个数据集，用于详细的市场分析。使用交叉验证测试了多种机器学习模型，其中梯度提升（XGBoost）成为分类情绪最可靠的模型，平均F1分数约为0.84。SHAP（SHapley Additive exPlanations）是一种基于博弈论的模型可解释性方法，用于量化链上特征对模型预测的贡献，提高了透明度。结果表明，这种数据组合产生了有意义的预测信号和见解，支持数据驱动的加密货币分析以及未来使用深度学习的改进。",
+      "categories": [
+        "cs.LG",
+        "cs.CE"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-16T17:52:26Z",
+      "updated": "2026-07-16T17:52:26Z",
+      "announcement_date": "2026-07-17",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.15258v1",
+        "pdf": "https://arxiv.org/pdf/2607.15258v1"
+      },
+      "matched_keywords": [
+        "machine learning"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.15253",
+      "arxiv_id": "2607.15253v1",
+      "version": "v1",
+      "title": "Bridge Evidence: Static Retrieval Utility Does Not Predict Causal Utility in Multi-Step Agentic Search",
+      "title_zh": "桥接证据：静态检索效用无法预测多步智能体搜索中的因果效用",
+      "authors": [
+        "Debayan Mukhopadhyay",
+        "Utshab Kumar Ghosh",
+        "Shubham Chatterjee"
+      ],
+      "abstract": "Retrieval systems are trained and evaluated on a static idea of usefulness: hand a document and a question to a reader model, see whether the answer improves, and score the document accordingly. The idea holds up when a document is read on its own. It breaks when a language model works as a search agent, issuing several queries and reasoning across turns, because a document can matter for what it lets the agent do next rather than for what it says about the current question. We measure that gap rather than argue it. Using a ReAct style agent over HotpotQA, we replay 1000 development questions and, for every document the agent read, delete it and re-run the rest of the trajectory from that point. Comparing the original run against its counterfactual gives a Counterfactual Trajectory Utility (CTU) score from three deltas: final answer quality, next query retrieval quality, and turn count. Crossing CTU against Static RAG Utility (SRU) over 23,322 document observations, the two are close to statistically independent (Spearman rho = -0.026). Roughly a third of the documents the agent reads are causally load bearing while looking useless to a static reader; we call these bridge documents. The pattern survives when the reader based axis is swapped for a BM25 and cross encoder proxy, giving a bridge cell of 27.2% on an evenly spread axis. A second experiment pins down the mechanism. Using the Observable Entity Relevance (OER) measure from prior work, entities that discriminate relevant from non-relevant candidates appear in the agent's next query 4.02 times more often than entities found only in non-relevant documents (6.1% vs 1.5%, n = 227,139). A bridge document earns its keep by handing the agent a discriminative entity that redirects the search. Static relevance and causal usefulness are different quantities in agentic retrieval, and optimizing the first does not deliver the second.",
+      "abstract_zh": "检索系统是在静态有用性概念上进行训练和评估的：将文档和问题交给阅读器模型，观察答案是否改善，并据此对文档进行评分。当文档被单独阅读时，这一概念成立。但当语言模型作为搜索智能体工作，发出多个查询并在轮次间推理时，这一概念失效，因为文档的重要性可能在于它让智能体下一步能做什么，而不是它针对当前问题说了什么。我们测量了这一差距，而非争论它。使用基于HotpotQA的ReAct风格智能体，我们重放了1000个开发问题，对于智能体读取的每个文档，删除它并从该点重新运行轨迹的其余部分。将原始运行与其反事实比较，从三个差值得到反事实轨迹效用（CTU）分数：最终答案质量、下一个查询检索质量和轮次数量。将CTU与静态RAG效用（SRU）在23,322个文档观察上交叉比较，两者接近统计独立（Spearman rho = -0.026）。智能体读取的文档中大约三分之一是因果关键的，而对静态阅读器来说却看似无用；我们称这些为桥接文档。当阅读器轴替换为BM25和交叉编码器代理时，该模式仍然存在，在均匀分布的轴上给出27.2%的桥接单元。第二个实验确定了机制。使用先前工作中的可观察实体相关性（OER）度量，区分相关与不相关候选的实体出现在智能体下一个查询中的频率比仅出现在不相关文档中的实体高4.02倍（6.1% vs 1.5%，n = 227,139）。桥接文档通过向智能体提供引导搜索的区分性实体来证明其价值。静态相关性和因果有用性在智能体检索中是不同的量，优化前者并不能带来后者。",
+      "categories": [
+        "cs.IR",
+        "cs.CL"
+      ],
+      "primary_category": "cs.IR",
+      "published": "2026-07-16T17:48:29Z",
+      "updated": "2026-07-16T17:48:29Z",
+      "announcement_date": "2026-07-17",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.15253v1",
+        "pdf": "https://arxiv.org/pdf/2607.15253v1"
+      },
+      "matched_keywords": [
+        "statistical",
+        "causal"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.15229",
+      "arxiv_id": "2607.15229v1",
+      "version": "v1",
+      "title": "Data Driven Block Replacement Scheduling",
+      "title_zh": "数据驱动的成批更换调度",
+      "authors": [
+        "Aniruddhan Ganesaraman",
+        "VIdyadhar Kulkarni"
+      ],
+      "abstract": "We develop data-driven algorithms for maintaining $N$ independent identical machines under a \\textit{block replacement policy}, in which each machine is replaced upon failure and all machines are jointly replaced at regular intervals of length $k$. The goal is to learn the cost-minimizing interval $k^*$ from operational data when the lifetime distribution is unknown. At each decision epoch, the operator selects $k \\in \\{1, 2, \\ldots, K\\}$, observes the resulting failure history (a mixture of complete and right-censored lifetimes) and incurs a per-unit-time cost governed by the renewal function. We formulate this as a stochastic multi-armed bandit and propose Hoeffding- and Bernstein-based lower-confidence-bound algorithms achieving $O(K \\log T)$ regret, matching the Lai--Robbins lower bound. Exploiting a nested observation property unique to block replacement, correlated variants attain $O((K-k^*)\\log T)$ regret and require only $O(1)$ direct pulls of suboptimal arms $k < k^*$. A complementary Kaplan--Meier renewal algorithm estimates the lifetime distribution nonparametrically from censored data, achieving almost-sure policy consistency and empirically near-zero incremental regret at long horizons. We additionally analyze two average-cost MDPs: a time-elapsed formulation establishing that block replacement is optimal within its policy class for any lifetime distribution, and an age-vector formulation proving a monotone threshold structure under increasing failure rate distributions and providing a gold-standard cost benchmark. Numerical experiments confirm the theoretical ordering and reveal structural cost gaps between optimal block and age-dependent replacement.",
+      "abstract_zh": "我们开发了用于维护$N$台独立同质机器的数据驱动算法，采用\\textit{成批更换策略}，即每台机器在故障时更换，并且所有机器每隔固定长度$k$的时间间隔进行联合更换。目标是在寿命分布未知的情况下，从运行数据中学习成本最小化的间隔$k^*$。在每个决策时刻，操作员选择$k \\in \\{1, 2, \\ldots, K\\}$，观察由此产生的故障历史（完全寿命和右删失寿命的混合），并承担由更新函数决定的单位时间成本。我们将此问题建模为随机多臂老虎机，并提出了基于Hoeffding和Bernstein的下置信界算法，实现了$O(K \\log T)$的遗憾，匹配了Lai-Robbins下界。利用成批更换特有的嵌套观测性质，相关变体实现了$O((K-k^*)\\log T)$的遗憾，并且只需要对次优臂$k < k^*$进行$O(1)$次直接拉动。一种互补的Kaplan-Meier更新算法从删失数据中非参数地估计寿命分布，实现了几乎必然的策略一致性，并在长时间范围内经验上实现了接近零的增量遗憾。我们还分析了两个平均成本MDP：一个时间流逝公式，证明了在任意寿命分布下，成批更换在其策略类内是最优的；一个年龄向量公式，证明了在递增故障率分布下存在单调阈值结构，并提供了黄金标准的成本基准。数值实验证实了理论排序，并揭示了最优成批更换与年龄相关更换之间的结构性成本差距。",
+      "categories": [
+        "cs.LG",
+        "math.OC",
+        "stat.AP",
+        "stat.ML"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-16T17:31:15Z",
+      "updated": "2026-07-16T17:31:15Z",
+      "announcement_date": "2026-07-17",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.15229v1",
+        "pdf": "https://arxiv.org/pdf/2607.15229v1"
+      },
+      "matched_keywords": [
+        "stochastic"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.15217",
+      "arxiv_id": "2607.15217v1",
+      "version": "v1",
+      "title": "NeuronSoup: Evolving Asynchronous, Shared-Neuron Temporal Graphs without Backpropagation",
+      "title_zh": "NeuronSoup：无需反向传播的异步共享神经元时序图进化",
+      "authors": [
+        "Subodh Kalia"
+      ],
+      "abstract": "We present NeuronSoup, a neural computation architecture that replaces synchronous layer-by-layer processing with asynchronous, delay-mediated signal propagation through a pool of shared neurons. Each path in the network routes a continuous-valued signal from one input neuron to one output neuron through a variable number of intermediate hidden neurons. Hidden neurons are physically shared across paths: when two paths pass through the same neuron, the second arrival encounters the accumulated state left by the first, producing constructive or destructive interference that depends on signal polarity and arrival timing. The entire architecture -- topology, weights, delays, and connectivity -- is co-evolved by a genetic algorithm operating on a flat real-valued genome of 14,602 genes. On 10-class MNIST digit classification using frozen ResNet18 features as input, the system evolves a network of 204 active paths through 266 hidden neurons (156 shared across multiple paths, with one neuron participating in 11 distinct paths) and achieves 85.9\\% test accuracy after 10,000 generations. The trained model occupies 115 KB. We argue that this architecture addresses fundamental limitations of current deep learning: it requires no differentiable computation graph, adapts its computation depth per-sample, and discovers lateral interactions between processing pathways that current architectures must engineer explicitly. We discuss why genetic algorithms are the correct optimization tool for this problem class, why CMA-ES fails at this scale, and how the architecture generalizes to arbitrary domains by substituting the encoder and output structure.",
+      "abstract_zh": "我们提出NeuronSoup，一种神经计算架构，它用异步、延迟介导的信号传播通过共享神经元池，取代了同步的逐层处理。网络中的每条路径通过可变数量的中间隐藏神经元，将连续值信号从一个输入神经元路由到一个输出神经元。隐藏神经元在路径间物理共享：当两条路径经过同一神经元时，第二个到达的信号会遇到第一个留下的累积状态，产生取决于信号极性和到达时间的建设性或破坏性干扰。整个架构——拓扑、权重、延迟和连接性——由遗传算法在包含14,602个基因的平坦实值基因组上协同进化。在10类MNIST数字分类任务中，使用冻结的ResNet18特征作为输入，系统进化出一个包含204条活跃路径、266个隐藏神经元（其中156个被多条路径共享，一个神经元参与11条不同路径）的网络，并在10,000代后达到85.9%的测试准确率。训练后的模型占用115 KB。我们认为该架构解决了当前深度学习的基本局限性：它不需要可微计算图，能根据样本自适应计算深度，并发现了处理路径间的横向交互，而当前架构必须显式设计这些交互。我们讨论了为什么遗传算法是这类问题的正确优化工具，为什么CMA-ES在此规模下失败，以及该架构如何通过替换编码器和输出结构泛化到任意领域。",
+      "categories": [
+        "cs.NE",
+        "cs.LG"
+      ],
+      "primary_category": "cs.NE",
+      "published": "2026-07-16T17:18:59Z",
+      "updated": "2026-07-16T17:18:59Z",
+      "announcement_date": "2026-07-17",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.15217v1",
+        "pdf": "https://arxiv.org/pdf/2607.15217v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.15208",
+      "arxiv_id": "2607.15208v1",
+      "version": "v1",
+      "title": "Delocalization of bias in unadjusted Hamiltonian Monte Carlo and underdamped Langevin",
+      "title_zh": "未调整哈密顿蒙特卡洛和欠阻尼朗之万中偏差的非局域化",
+      "authors": [
+        "Yifan Chen",
+        "Xiaoou Cheng",
+        "Jonathan Niles-Weed",
+        "Jonathan Weare"
+      ],
+      "abstract": "Unadjusted samplers such as unadjusted Hamiltonian Monte Carlo and underdamped Langevin are well-known to be biased. Metropolis--Hastings adjustment has been conventionally incorporated into Hamiltonian Monte Carlo to eliminate the bias. However, this adjustment can significantly increase the iteration complexity due to the small step size required for reasonable Metropolis acceptance rates. In this work, we extend the \\emph{delocalization of bias} phenomenon, previously established for the overdamped Langevin algorithm, to these two unadjusted algorithms. We show that to control the $W_2$ bias of any $K$-dimensional marginal of a high-dimensional distribution, $O(\\sqrt{K})$ integration steps suffice up to $\\log d$ terms, assuming either weak or sparse interactions among variables. The discrete-time integrators here introduce technical difficulties beyond those of the overdamped setting, which we address through a broadly applicable matrix-polynomial framework that characterizes their propagators. Our result for the underdamped Langevin algorithm is valid for all large friction parameters, implying that the Leimkuhler-Matthews integrator for the overdamped Langevin dynamics also exhibits delocalization of bias.",
+      "abstract_zh": "未调整的采样器，如未调整的哈密顿蒙特卡洛和欠阻尼朗之万，已知存在偏差。传统上，Metropolis-Hastings调整被引入哈密顿蒙特卡洛以消除偏差。然而，由于需要较小的步长来获得合理的Metropolis接受率，这种调整可能显著增加迭代复杂度。在这项工作中，我们将先前为过阻尼朗之万算法建立的“偏差非局域化”现象扩展到这两种未调整算法。我们证明，在变量间存在弱相互作用或稀疏相互作用的假设下，为了控制高维分布任意K维边缘分布的W_2偏差，最多需要O(√K)个积分步（忽略log d项）。这里的离散时间积分器引入了超出过阻尼设置的技术困难，我们通过一个广泛适用的矩阵多项式框架来表征其传播子，从而解决了这些困难。我们对欠阻尼朗之万算法的结果对所有大摩擦参数均有效，这意味着用于过阻尼朗之万动力学的Leimkuhler-Matthews积分器也表现出偏差非局域化。",
+      "categories": [
+        "stat.CO",
+        "cs.LG",
+        "math.PR",
+        "stat.ML"
+      ],
+      "primary_category": "stat.CO",
+      "published": "2026-07-16T17:07:42Z",
+      "updated": "2026-07-16T17:07:42Z",
+      "announcement_date": "2026-07-17",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.15208v1",
+        "pdf": "https://arxiv.org/pdf/2607.15208v1"
+      },
+      "matched_keywords": [
+        "high-dimensional"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.15200",
+      "arxiv_id": "2607.15200v1",
+      "version": "v1",
+      "title": "Mask-Aware Policy Gradients for Diffusion Language Models",
+      "title_zh": "面向扩散语言模型的掩码感知策略梯度",
+      "authors": [
+        "Haran Raajesh",
+        "Kulin Shah",
+        "Adam Klivans",
+        "Philipp Krähenbühl"
+      ],
+      "abstract": "Reinforcement learning has proven effective for improving reasoning in large language models, but extending it to Masked Diffusion Language Models (MDLMs) remains challenging due to the intractability of the log-likelihood estimation. Existing approaches approximate this log-likelihood by modeling only the token predictions, ignoring the order in which positions are unmasked during generation. We observe that MDLM generation involves two decisions at each step: what tokens to place at each masked position and which positions to remask. We formalize this as a two-stage action MDP, showing that the policy gradient naturally decomposes into a token term and a masking term. Combining optimization of both terms leads to state-of-the-art outcomes on mathematical reasoning and coding benchmarks, with scores of 87.1% on GSM8K and 53.4% on MBPP.",
+      "abstract_zh": "强化学习已被证明能有效提升大型语言模型的推理能力，但将其扩展到掩码扩散语言模型（MDLMs）仍具挑战性，原因在于对数似然估计的难解性。现有方法通过仅建模token预测来近似该对数似然，忽略了生成过程中位置被解掩的顺序。我们观察到MDLM生成涉及每一步的两个决策：在每个掩码位置放置什么token以及哪些位置被重新掩码。我们将其形式化为一个两阶段动作MDP，表明策略梯度自然分解为token项和掩码项。结合两项的优化在数学推理和编程基准上取得了最先进的结果，在GSM8K上达到87.1%，在MBPP上达到53.4%。",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CL",
+      "published": "2026-07-16T16:57:34Z",
+      "updated": "2026-07-16T16:57:34Z",
+      "announcement_date": "2026-07-17",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.15200v1",
+        "pdf": "https://arxiv.org/pdf/2607.15200v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.15195",
+      "arxiv_id": "2607.15195v1",
+      "version": "v1",
+      "title": "SciPhy Reinforcement Learning for Portfolio Optimization",
+      "title_zh": "基于科学物理信息强化学习的投资组合优化",
+      "authors": [
+        "Igor Halperin",
+        "Andrey Itkin"
+      ],
+      "abstract": "This paper introduces a dynamic portfolio optimization framework for large institutional investors using Scientific Physics-Informed Reinforcement Learning (SciPhyRL). Formulated in continuous time over an extended state space that includes explicit cumulative costs, the approach leverages offline historical data to learn optimal, distribution-aware strategies. A core innovation reduces the optimization challenge to solving an HJB equation by projecting it onto observed trajectories as a pathwise Hamilton-Jacobi equation. This is solved directly from data using PINN in a single offline sweep, eliminating the need for traditional value or policy iteration. To make the method effective at practical short horizons, the control variable is recast from a continuous trading rate to a discrete target holding. This ensures signal-implied positions are reached immediately, while execution costs are evaluated against a microstructure-grounded quadratic price impact model. Evaluated on a $14$-asset ETF universe using an engineered oracle signal, the learned Gibbs policy yields substantial out-of-sample Sharpe ratio improvements over static and myopic baselines. The results demonstrate that the proposed framework successfully translates known signal quality into a robust, multi-period, and cost-aware allocation mechanism with strictly controlled volatility and turnover.",
+      "abstract_zh": "本文针对大型机构投资者提出了一种动态投资组合优化框架，采用科学物理信息强化学习（SciPhyRL）。该方法在包含显式累积成本的扩展状态空间上以连续时间形式构建，利用离线历史数据学习最优的、分布感知策略。核心创新在于将优化问题简化为求解HJB方程，通过将其投影到观测轨迹上作为路径依赖的Hamilton-Jacobi方程，并利用PINN直接从数据中一次性离线求解，从而避免了传统的值迭代或策略迭代。为使该方法在实际短周期内有效，控制变量从连续交易速率重新表述为离散目标持仓，确保信号隐含的持仓立即实现，同时基于微观结构基础的二次价格冲击模型评估执行成本。在包含14只ETF的宇宙中，使用工程化的预言信号进行评估，学习到的Gibbs策略在样本外夏普比率上相比静态和短视基准有显著提升。结果表明，所提框架成功地将已知信号质量转化为稳健、多周期且成本感知的配置机制，并严格控制波动率和换手率。",
+      "categories": [
+        "q-fin.PM",
+        "math.AP",
+        "math.NA",
+        "q-fin.CP",
+        "q-fin.MF"
+      ],
+      "primary_category": "q-fin.PM",
+      "published": "2026-07-16T16:51:24Z",
+      "updated": "2026-07-16T16:51:24Z",
+      "announcement_date": "2026-07-17",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.15195v1",
+        "pdf": "https://arxiv.org/pdf/2607.15195v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.15179",
+      "arxiv_id": "2607.15179v1",
+      "version": "v1",
+      "title": "A Complete-Data Likelihood for Epidemic Processes on Partially Observed Dynamic Networks",
+      "title_zh": "部分观测动态网络上流行病过程的完全数据似然",
+      "authors": [
+        "Md Asaduzzaman"
+      ],
+      "abstract": "Inference for infectious disease transmission on dynamic contact networks is complicated by latent infection times, partially observed network evolution, measurement error in contact data, and infection originating from outside the observed population. Existing likelihood-based approaches typically address these challenges separately and often rely on restrictive assumptions such as fully observed networks, closed populations, or symptom onset as a surrogate for infection time. We develop a unified complete-data likelihood framework for epidemic processes evolving on partially observed dynamic networks. The proposed formulation represents disease progression, network evolution, and observation mechanisms as interacting continuous-time stochastic processes within a common probabilistic framework. Specifically, we couple a susceptible-exposed-infectious-removed (SEIR) epidemic process with a status-dependent dynamic contact network and explicit observation models for symptoms and contacts. The resulting framework accommodates latent incubation periods, intermittent network observation, contact measurement error, and external infection pressure while preserving a coherent likelihood structure. Our principal contribution is the derivation of a complete-data event-history likelihood for the joint epidemic-network process under partial observation. The likelihood provides a rigorous foundation for likelihood-based and Bayesian inference through data augmentation, clarifies how information from disease progression and contact dynamics jointly determines parameter estimability, and reveals a broad class of existing epidemic network models as special cases. More generally, the framework contributes to statistical inference for partially observed interacting stochastic systems on evolving networks and establishes a foundation for uncertainty-aware analysis of complex transmission processes.",
+      "abstract_zh": "动态接触网络上传染病传播的推断受到潜伏感染时间、部分观测的网络演化、接触数据测量误差以及感染源自观测人群外部等因素的复杂化。现有的基于似然的方法通常分别处理这些挑战，并往往依赖于限制性假设，如完全观测的网络、封闭人群或症状出现作为感染时间的替代。我们开发了一个统一的完全数据似然框架，用于在部分观测的动态网络上演化的流行病过程。所提出的公式将疾病进展、网络演化和观测机制表示为在共同概率框架内相互作用的连续时间随机过程。具体而言，我们将易感-暴露-感染-移除（SEIR）流行病过程与状态依赖的动态接触网络以及症状和接触的显式观测模型耦合。由此产生的框架适应了潜伏期、间歇性网络观测、接触测量误差和外部感染压力，同时保持了连贯的似然结构。我们的主要贡献是在部分观测下推导了联合流行病-网络过程的完全数据事件历史似然。该似然为通过数据增强进行基于似然和贝叶斯推断提供了严格基础，阐明了疾病进展和接触动态的信息如何共同决定参数可估计性，并揭示了现有流行病网络模型的一大类作为特例。更一般地，该框架有助于对演化网络上部分观测的相互作用随机系统进行统计推断，并为复杂传播过程的不确定性感知分析奠定了基础。",
+      "categories": [
+        "stat.ME",
+        "math.ST"
+      ],
+      "primary_category": "stat.ME",
+      "published": "2026-07-16T16:34:39Z",
+      "updated": "2026-07-16T16:34:39Z",
+      "announcement_date": "2026-07-17",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.15179v1",
+        "pdf": "https://arxiv.org/pdf/2607.15179v1"
+      },
+      "matched_keywords": [
+        "statistical",
+        "bayesian",
+        "stochastic"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.15173",
+      "arxiv_id": "2607.15173v1",
+      "version": "v1",
+      "title": "Landscape analysis for shallow neural networks: Complete classification of critical points for cubic activation and affine target functions",
+      "title_zh": "浅层神经网络的景观分析：三次激活与仿射目标函数的临界点完全分类",
+      "authors": [
+        "Shokhrukh Ibragimov",
+        "Ilkhom Mukhammadiev",
+        "Diyora Salimova"
+      ],
+      "abstract": "In this paper, we study the optimization landscape induced by the true loss for shallow polynomial neural networks (PNNs) with $\\mathfrak{h} \\in \\mathbb{N}$ neurons on the hidden layer, one-dimensional input and output layers, and a monomial activation of degree $d \\in \\mathbb{N}$, trained against a non-constant affine linear target function. Our first main result provides for arbitrary activation degree $d$ a sharp existence/non-existence criterion for \\emph{global minimizers} with necessary structural conditions. We show that the infimum of the loss is always zero and achievable with at least $d$ active and visible hidden neurons -- that is, hidden neurons with non-zero inner and outer weights -- with pairwise distinct pivots. In contrast, if $\\mathfrak{h} < d$, then the infimum cannot be attained and any minimizing sequence of parameters necessarily diverges to infinity. In the second main result, we provide a complete classification of all critical points of the loss function for the cubic activation. We show that the loss landscape admits no \\emph{local maximizers}, critical points cannot have exactly two distinct pivots, global minimizers require at least three distinct pivots, critical points with no active hidden neurons correspond to \\emph{saddle points} only, and consequently, \\emph{non-global local minimizers} and non-trivial saddle points arise only in networks where all pivots coincide. Moreover, non-global local minimizers require all hidden neurons to be active and visible with exactly one hidden neuron having a slope sign matching that of the target function. Our second main result also guarantees that each hidden neuron of a critical point that is not a global minimizer has either input-dependent or zero contribution, but has no nonzero input-independent contribution, to its corresponding realization function.",
+      "abstract_zh": "本文研究了由真实损失诱导的浅层多项式神经网络（PNN）的优化景观，其中隐藏层有$\\mathfrak{h} \\in \\mathbb{N}$个神经元，输入和输出层为一维，激活函数为次数$d \\in \\mathbb{N}$的单项式，训练目标为非恒定仿射线性函数。我们的第一个主要结果针对任意激活次数$d$，给出了全局极小值存在的尖锐存在/不存在准则及必要的结构条件。我们证明损失的下确界始终为零，并且可以通过至少$d$个活跃且可见的隐藏神经元（即具有非零内权和外权的隐藏神经元）实现，这些神经元具有两两不同的枢轴。相反，如果$\\mathfrak{h} < d$，则下确界无法达到，任何极小化参数序列必然发散至无穷。在第二个主要结果中，我们针对三次激活函数给出了损失函数所有临界点的完全分类。我们证明损失景观不存在局部极大值，临界点不能恰好有两个不同的枢轴，全局极小值需要至少三个不同的枢轴，没有活跃隐藏神经元的临界点仅对应于鞍点，因此，非全局局部极小值和非平凡鞍点仅出现在所有枢轴重合的网络中。此外，非全局局部极小值要求所有隐藏神经元活跃且可见，且恰好有一个隐藏神经元的斜率符号与目标函数匹配。我们的第二个主要结果还保证，非全局极小值的临界点的每个隐藏神经元对其对应的实现函数要么有输入依赖贡献，要么有零贡献，但没有非零的输入无关贡献。",
+      "categories": [
+        "math.OC"
+      ],
+      "primary_category": "math.OC",
+      "published": "2026-07-16T16:22:16Z",
+      "updated": "2026-07-16T16:22:16Z",
+      "announcement_date": "2026-07-17",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.15173v1",
+        "pdf": "https://arxiv.org/pdf/2607.15173v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.15157",
+      "arxiv_id": "2607.15157v1",
+      "version": "v1",
+      "title": "Frequency Selection in Bayesian Spectral Modeling of Time Series Data with Applications to Wearable Device Measurements",
+      "title_zh": "时间序列数据贝叶斯谱建模中的频率选择及其在可穿戴设备测量中的应用",
+      "authors": [
+        "Beniamino Hadj-Amar",
+        "Vaishnav Krishnan",
+        "Marina Vannucci"
+      ],
+      "abstract": "This paper introduces a Bayesian spike-and-slab framework for spectral analysis of time series data. The proposed method combines frequency selection and dimensionality reduction with a refined grid of candidate frequencies, enabling high-resolution recovery of oscillatory components while promoting sparsity through a structured spike-and-slab prior. A stochastic search algorithm efficiently explores the posterior space, yielding posterior inclusion probabilities that quantify the relevance of each frequency. We extend the framework to multivariate signals via a hierarchical prior on frequency inclusion patterns, allowing the model to capture both shared and component-specific rhythms across multiple time series. Extensive simulation studies demonstrate the method's robustness and superior performance in frequency estimation and spectral power reconstruction compared to existing approaches. Applied to actigraphy data from individuals with partial-onset seizures, the univariate model identifies clinically relevant circadian and ultradian rhythms. In a second application, for the joint analysis of physical activity and skin temperature from a healthy individual, the multivariate model reveals partially overlapping rhythmic components consistent with known physiological coupling. This work establishes a powerful and interpretable approach to spectral analysis, with broad applicability to wearable data, chronobiology, and personalized health monitoring.",
+      "abstract_zh": "本文提出了一种用于时间序列数据谱分析的贝叶斯尖峰-板框架。该方法将频率选择与降维相结合，采用精细的候选频率网格，通过结构化的尖峰-板先验促进稀疏性，从而实现对振荡成分的高分辨率恢复。一种随机搜索算法高效地探索后验空间，生成后验包含概率以量化每个频率的相关性。我们通过频率包含模式的层次先验将框架扩展到多变量信号，使模型能够捕捉多个时间序列中共有和特定成分的节律。广泛的模拟研究表明，与现有方法相比，该方法在频率估计和谱功率重建方面具有鲁棒性和优越性能。应用于部分性发作个体的活动记录数据时，单变量模型识别出临床相关的昼夜节律和超日节律。在第二个应用中，针对健康个体的身体活动和皮肤温度联合分析，多变量模型揭示了与已知生理耦合一致的部分重叠节律成分。这项工作建立了一种强大且可解释的谱分析方法，广泛适用于可穿戴数据、时间生物学和个性化健康监测。",
+      "categories": [
+        "stat.ME"
+      ],
+      "primary_category": "stat.ME",
+      "published": "2026-07-16T16:00:44Z",
+      "updated": "2026-07-16T16:00:44Z",
+      "announcement_date": "2026-07-17",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.15157v1",
+        "pdf": "https://arxiv.org/pdf/2607.15157v1"
+      },
+      "matched_keywords": [
+        "bayesian",
+        "time series",
+        "stochastic"
+      ],
+      "translation_status": "translated"
+    }
+  ]
+}

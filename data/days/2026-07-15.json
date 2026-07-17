@@ -1,6 +1,6 @@
 {
   "date": "2026-07-15",
-  "updated_at": "2026-07-16T12:02:25Z",
+  "updated_at": "2026-07-17T11:53:20Z",
   "papers": [
     {
       "id": "2607.13973",
@@ -97,6 +97,38 @@
       "translation_status": "translated"
     },
     {
+      "id": "2607.14185",
+      "arxiv_id": "2607.14185v1",
+      "version": "v1",
+      "title": "Closed-Loop Knowledge Dynamics: An Operational Framework for Saturation and Escape",
+      "title_zh": "闭环知识动力学：饱和与逃逸的操作性框架",
+      "authors": [
+        "Xuening Wu",
+        "Shan Yu",
+        "Shenqin Yin"
+      ],
+      "abstract": "Feedback-driven loops support iterative improvement in large language models, reinforcement learning, and autonomous discovery, yet their gains often diminish under repeated internal feedback. We study why closed-loop knowledge systems saturate and what external information can move them beyond their current attractors. We introduce a three-level operational framework in which knowledge states $x_t$ evolve through transition kernels $K_θ$ indexed by a structural parameter $θ$. The governing structure is defined as the observational equivalence class of $θ$ induced by these kernels, while attractors and basins are properties of the fixed-$θ$ dynamics. A structural intervention changes $θ$ and produces a detectable kernel discrepancy on pre-specified probe states, making structural change falsifiable. Using a Lyapunov drift condition, we show that stable internal dynamics approach bounded stability regions with exponentially attenuated transients and a noise-controlled residual floor. We characterize escape through a metric condition on intervention-induced attractor displacement and a baseline-relative KL lower bound for increasing escape probability. This analysis also explains why conditional mutual information alone cannot certify escape: it measures variation among intervention-conditioned updates rather than departure from the no-intervention law. Case studies in LLM code repair, sparse-reward reinforcement learning, and Bayesian optimization use matched continuation controls to illustrate how feedback strength and alignment affect quality-improving escape. Our contribution is an operational connection among stability tools, measurable intervention effects, and cross-domain diagnostics.",
+      "abstract_zh": "反馈驱动循环支持大型语言模型、强化学习和自主发现中的迭代改进，但其收益在重复的内部反馈下往往会减少。我们研究为什么闭环知识系统会饱和，以及哪些外部信息可以使它们超越当前的吸引子。我们引入了一个三级操作性框架，其中知识状态$x_t$通过由结构参数$θ$索引的转移核$K_θ$演化。治理结构被定义为由这些核诱导的$θ$的观测等价类，而吸引子和盆地是固定$θ$动力学的属性。结构性干预改变$θ$，并在预先指定的探针状态上产生可检测的核差异，使结构性变化可证伪。利用Lyapunov漂移条件，我们表明稳定的内部动力学以指数衰减的瞬态和噪声控制的残余底限接近有界稳定区域。我们通过干预诱导的吸引子位移的度量条件和增加逃逸概率的基线相对KL下界来刻画逃逸。这一分析也解释了为什么条件互信息单独不能证明逃逸：它测量的是干预条件更新之间的变化，而不是偏离无干预定律。在LLM代码修复、稀疏奖励强化学习和贝叶斯优化中的案例研究使用匹配的连续控制来说明反馈强度和一致性如何影响质量改进的逃逸。我们的贡献在于稳定性工具、可测量的干预效应和跨领域诊断之间的操作性联系。",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-15T15:06:15Z",
+      "updated": "2026-07-15T15:06:15Z",
+      "announcement_date": "2026-07-15",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.14185v1",
+        "pdf": "https://arxiv.org/pdf/2607.14185v1"
+      },
+      "matched_keywords": [
+        "bayesian",
+        "probability",
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
       "id": "2607.13916",
       "arxiv_id": "2607.13916v1",
       "version": "v1",
@@ -185,7 +217,8 @@
       "categories": [
         "cs.LG",
         "cs.CV",
-        "eess.SP"
+        "eess.SP",
+        "stat.ML"
       ],
       "primary_category": "cs.LG",
       "published": "2026-07-15T14:35:24Z",
@@ -842,6 +875,37 @@
       },
       "matched_keywords": [
         "probability",
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.14171",
+      "arxiv_id": "2607.14171v1",
+      "version": "v1",
+      "title": "Branching Policy Optimization: Sandbox-Native Language Agent Reinforcement Learning",
+      "title_zh": "分支策略优化：沙盒原生语言智能体强化学习",
+      "authors": [
+        "Bowei He",
+        "Yankai Chen",
+        "Xiaokun Zhang",
+        "Xue Liu"
+      ],
+      "abstract": "Reinforcement learning has emerged as the dominant paradigm for training large language model (LLM) agents that interact with executable sandboxes. State-of-the-art algorithms such as PPO, RLOO, and GRPO inherit their rollout topology from RLHF: for each prompt, N independent trajectories are sampled from the initial state, and an advantage is computed by subtracting a group baseline. This design ignores a defining property of agent sandboxes. They are deterministic, snapshottable, and resumable from any intermediate state. We argue that this property enables a fundamentally different rollout topology: rather than N independent trees of depth T, one can construct a single tree of N leaves whose siblings share prefixes, and therefore share variance. We instantiate this idea as Branching Policy Optimization (BPO), a sandbox-native RL algorithm that (i) adaptively snapshots the sandbox at high-entropy decision points along a backbone trajectory, (ii) forks K alternative actions per branch point and rolls out each to termination, and (iii) computes per-step advantages from sibling returns rather than from independent prompts. We prove this estimator is unbiased and has strictly lower variance than the trajectory-level baseline, with the reduction equal to the prefix-explained portion of return variance. On WebShop, ALFWorld, and SWE-bench Verified with Qwen2.5-7B and Llama-3.1-8B backbones, BPO improves success by 3.6--6.1 absolute points over GRPO and RLOO at matched compute, halves gradient-norm variance, and matches the best baseline using 38% fewer policy updates.",
+      "abstract_zh": "强化学习已成为训练与可执行沙盒交互的大型语言模型智能体的主导范式。PPO、RLOO和GRPO等最先进算法从RLHF继承了其展开拓扑结构：对于每个提示，从初始状态独立采样N条轨迹，并通过减去组基线计算优势。这种设计忽略了智能体沙盒的一个定义性属性：它们是确定性的、可快照的，并且可以从任何中间状态恢复。我们认为这一属性使得一种根本不同的展开拓扑结构成为可能：不是N棵深度为T的独立树，而是可以构建一棵具有N个叶子的单棵树，其兄弟节点共享前缀，从而共享方差。我们将这一思想实例化为分支策略优化（BPO），一种沙盒原生的RL算法，它（i）在主干轨迹的高熵决策点自适应地对沙盒进行快照，（ii）在每个分支点分叉K个替代动作并将每个动作展开至终止，以及（iii）从兄弟节点回报而非独立提示计算每步优势。我们证明该估计量是无偏的，并且其方差严格低于轨迹级基线，方差减少量等于由前缀解释的回报方差部分。在WebShop、ALFWorld和SWE-bench Verified上，使用Qwen2.5-7B和Llama-3.1-8B主干，BPO在相同计算量下比GRPO和RLOO的成功率绝对提高了3.6-6.1个百分点，将梯度范数方差减半，并使用38%更少的策略更新达到了最佳基线的性能。",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-15T09:37:36Z",
+      "updated": "2026-07-15T09:37:36Z",
+      "announcement_date": "2026-07-15",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.14171v1",
+        "pdf": "https://arxiv.org/pdf/2607.14171v1"
+      },
+      "matched_keywords": [
         "optimization"
       ],
       "translation_status": "translated"
@@ -1865,6 +1929,44 @@
       "translation_status": "translated"
     },
     {
+      "id": "2607.14161",
+      "arxiv_id": "2607.14161v1",
+      "version": "v1",
+      "title": "Deep-learning Causal Retrieval Optimization for Efficient e-commerce Distribution in Pinterest",
+      "title_zh": "基于深度学习的因果检索优化：Pinterest高效电商分发",
+      "authors": [
+        "Junpeng Hou",
+        "XianXing Zhang",
+        "Sai Xiao",
+        "Derek Cheng",
+        "Darren Reger",
+        "Olafur Gudmundsson",
+        "Mehdi Ben Ayed",
+        "Zhiqing Rao",
+        "Huizhong Duan"
+      ],
+      "abstract": "Pinterest is where people turn inspiration into action as users browse ideas, then take steps toward realization, often by discovering shoppable content. To support this journey, we must distribute commerce content when it helps, not when it distracts. We frame this as a causal decision of triggering shopping candidate generators in early retrieval and deploy a production system at Pinterest that learns personalized and contextualized triggering policies. A deep multi-task model jointly predicts outcomes and uplift of multiple events, trained with a doubly-robust pseudo-outcome alongside calibrated outcome losses for stable, single-robust uplift learning. A randomized data logging supplies counterfactual coverage, and the model is evaluated by both regular and reverse metrics for full assessment. A linear-time offline replay is designed to select thresholds and forecast policy impact with extremely high consistency with online results. For productionization, the model runs in parallel with remote retrieval calls without end-to-end latency regression. At web scale, we cut shopping triggers by up to 85% while holding key shopping sessions neutral, improving important total sessions (+0.26%) and Pin saves (+1.10%), with significant infrastructure savings. By unifying deep causal learning with reliable offline replay and demonstrating production-grade deployment, this work provides a generally practical recipe for early-retrieval optimizations in modern cascading recommenders beyond shopping, aligning exploration and cost with user intent at scale.",
+      "abstract_zh": "Pinterest是一个将灵感转化为行动的平台，用户浏览创意并逐步实现，通常通过发现可购物内容。为支持这一旅程，我们必须在有帮助时分发商业内容，而非干扰时。我们将此框架化为早期检索中触发购物候选生成器的因果决策，并在Pinterest部署了一个生产系统，学习个性化和情境化的触发策略。一个深度多任务模型联合预测多个事件的结果和提升，使用双重稳健伪结果与校准结果损失进行训练，以实现稳定、单一稳健的提升学习。随机数据日志提供反事实覆盖，模型通过常规和反向指标进行全面评估。设计了一种线性时间离线回放来选择阈值并预测策略影响，与在线结果高度一致。在生产化方面，模型与远程检索调用并行运行，无端到端延迟回归。在网络规模下，我们将购物触发减少高达85%，同时保持关键购物会话中性，改善了重要总会话（+0.26%）和Pin保存（+1.10%），并显著节省基础设施。通过统一深度因果学习与可靠离线回放，并展示生产级部署，这项工作为现代级联推荐系统中超越购物的早期检索优化提供了通用实用方案，在大规模下将探索和成本与用户意图对齐。",
+      "categories": [
+        "cs.IR",
+        "cs.LG"
+      ],
+      "primary_category": "cs.IR",
+      "published": "2026-07-14T23:02:27Z",
+      "updated": "2026-07-14T23:02:27Z",
+      "announcement_date": "2026-07-15",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.14161v1",
+        "pdf": "https://arxiv.org/pdf/2607.14161v1"
+      },
+      "matched_keywords": [
+        "causal",
+        "regression",
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
       "id": "2607.13314",
       "arxiv_id": "2607.13314v1",
       "version": "v1",
@@ -1891,6 +1993,47 @@
       },
       "matched_keywords": [
         "bayesian"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.14160",
+      "arxiv_id": "2607.14160v1",
+      "version": "v1",
+      "title": "QFireNet: A Quantum-Enhanced U-Net for Wildfire Segmentation from Sentinel-2 Imagery",
+      "title_zh": "QFireNet：一种用于从Sentinel-2影像分割野火的量子增强U-Net",
+      "authors": [
+        "Jaiman Munshi",
+        "Tanvi Tewary",
+        "Sawyer Bloom",
+        "Aidan Chu",
+        "Chetan Maviti",
+        "Kyon Winston-Bey",
+        "Harshit Badjatia",
+        "Farhan Kittur",
+        "Vardhan Madhavarapu",
+        "Varun Kota",
+        "Joshua Kwon",
+        "Nazia Rangwala-Vohra",
+        "Franz Klein"
+      ],
+      "abstract": "Wildfire detection from satellite imagery is a semantic image segmentation problem that has proven to be difficult due to challenges such as class imbalance, feature complexity, and atmospheric interference. In this paper, we build on the foundational U-Net image segmentation model to develop a quantum-hybrid solution in hopes of more effectively modeling the high-dimensional spectral feature space of the Sen2Fire dataset. We inject a variational quantum circuit in the bottleneck portion of U-Net, specifically the QuFeX and QB-Net ansatzes. We test a classical Feature Pyramid Network (FPN) for further comparative analysis of the model, and we also explore classical improvements to the U-Net model and its training process, including a compression of parameters, alternative loss functions, and uniform mixing of input data. Our primary finding is that under matched conditions, both QB-Net (with an $F_1$ score of 31.18) and QuFeX ($F_1 = 30.79$) outperformed the classical U-Net baseline results ($F_1 = 28.71$). Additionally, the classical FPN achieved a comparable score of 31.13. A crucial finding was that data mixing removed a significant domain shift between the geographically-separated train and test sets, which boosted the classical FPN $F_1$ score to 39.76. We validate the architecture's robustness and generalizability to the wildfire detection problem via cross-dataset transfer on the California Burned Areas (CaBuAr) dataset. Overall, we find that quantum machine learning has potential to provide an advantage in the problem of wildfire image segmentation, and further experiments will continue to validate and expand upon this finding.",
+      "abstract_zh": "从卫星图像中检测野火是一个语义图像分割问题，由于类别不平衡、特征复杂性和大气干扰等挑战，该问题已被证明是困难的。在本文中，我们基于基础的U-Net图像分割模型开发了一种量子混合解决方案，以期更有效地对Sen2Fire数据集的高维光谱特征空间进行建模。我们在U-Net的瓶颈部分注入了一个变分量子电路，具体是QuFeX和QB-Net ansatzes。我们测试了一个经典的特征金字塔网络（FPN）以进行进一步的模型比较分析，并探索了对U-Net模型及其训练过程的经典改进，包括参数压缩、替代损失函数和输入数据的均匀混合。我们的主要发现是，在匹配条件下，QB-Net（$F_1$得分为31.18）和QuFeX（$F_1=30.79$）均优于经典U-Net基线结果（$F_1=28.71$）。此外，经典FPN达到了31.13的可比分数。一个关键发现是，数据混合消除了地理上分离的训练集和测试集之间的显著域偏移，从而将经典FPN的$F_1$分数提升至39.76。我们通过在加利福尼亚燃烧区域（CaBuAr）数据集上的跨数据集迁移验证了该架构对野火检测问题的鲁棒性和泛化能力。总体而言，我们发现量子机器学习在野火图像分割问题中具有提供优势的潜力，进一步的实验将继续验证并扩展这一发现。",
+      "categories": [
+        "cs.LG",
+        "cs.CV"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-14T22:13:58Z",
+      "updated": "2026-07-14T22:13:58Z",
+      "announcement_date": "2026-07-15",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.14160v1",
+        "pdf": "https://arxiv.org/pdf/2607.14160v1"
+      },
+      "matched_keywords": [
+        "high-dimensional",
+        "machine learning"
       ],
       "translation_status": "translated"
     },
