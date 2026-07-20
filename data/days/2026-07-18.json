@@ -1,0 +1,265 @@
+{
+  "date": "2026-07-18",
+  "updated_at": "2026-07-20T12:32:52Z",
+  "papers": [
+    {
+      "id": "2607.16183",
+      "arxiv_id": "2607.16183v1",
+      "version": "v1",
+      "title": "A Blueprint for Equilibrium-Based Differentiable Continuous-Variable Thermodynamic Computing",
+      "title_zh": "基于均衡的可微连续变量热力学计算蓝图",
+      "authors": [
+        "Owen Lockwood",
+        "Jérémy Béjanin",
+        "Joost Bus",
+        "Christopher Chamberland",
+        "Patrick Huembeli",
+        "Frank Schäfer",
+        "Guillaume Verdon"
+      ],
+      "abstract": "To address the escalating energy and latency demands of machine-learning workloads, we introduce a blueprint for an energy-efficient and fast thermodynamic computing stack that leverages stochastic analog processes in physical hardware. In this work, we focus on energy-based thermodynamic computing where the stochastic process is well described by Langevin dynamics with tunable energy potentials. The implementation of such potentials in physical hardware enables us to generate and sample from basic parameterized energy-based models. We demonstrate how to construct and train popular classes of machine learning models based on these hardware-native energy-based models, using the framework of probabilistic graphical models. We analyze the runtime and energy consumption of different models in this thermodynamic paradigm based on theoretical considerations and numerical studies. As a preliminary experimental realization of such hardware, we present our stochastic analog superconducting circuits driven by thermal noise. Together, these results outline a path toward energy-efficient thermodynamic hardware for probabilistic machine learning.",
+      "abstract_zh": "为了解决机器学习工作负载日益增长的能耗和延迟需求，我们提出了一种节能且快速的热力学计算堆栈蓝图，该堆栈利用物理硬件中的随机模拟过程。在这项工作中，我们专注于基于能量的热力学计算，其中随机过程通过具有可调能量势的朗之万动力学很好地描述。在物理硬件中实现这样的势能，使我们能够生成和采样基本的参数化基于能量的模型。我们展示了如何基于这些硬件原生的基于能量的模型，使用概率图模型框架构建和训练流行的机器学习模型类别。我们基于理论考虑和数值研究，分析了这种热力学范式中不同模型的运行时间和能耗。作为此类硬件的初步实验实现，我们提出了由热噪声驱动的随机模拟超导电路。这些结果共同勾勒出一条通往用于概率机器学习的节能热力学硬件的路径。",
+      "categories": [
+        "cs.LG",
+        "cs.ET",
+        "physics.app-ph"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-17T17:57:49Z",
+      "updated": "2026-07-17T17:57:49Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16183v1",
+        "pdf": "https://arxiv.org/pdf/2607.16183v1"
+      },
+      "matched_keywords": [
+        "stochastic",
+        "machine learning"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16177",
+      "arxiv_id": "2607.16177v1",
+      "version": "v1",
+      "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
+      "title_zh": "物理增强的强化学习用于动力系统的实时最优控制",
+      "authors": [
+        "Matteo Tomasetto",
+        "Nicolò Botteghi",
+        "Gabriele Bruni",
+        "Andrea Manzoni"
+      ],
+      "abstract": "Reinforcement learning (RL) has recently emerged as a promising feedback control strategy for nonlinear and complex dynamical systems. However, RL algorithms are sample inefficient and require a large number of interaction with the environment to synthesize optimal control strategies. Consequently, applications of RL are typically limited to sparse sensors and actuators due to the curse of dimensionality entailed by the exploration-exploitation dilemma in high-dimensional spaces. In this work, we bridge RL and traditional optimal control for dynamical system with a novel Physics-EnhAnced Reinforcement Learning (PEARL) paradigm tailored to the control of high-dimensional and parametric dynamical systems, exploiting the differentibility of their dynamics. Specifically, PEARL employs an actor-adjoint algorithm that leverages automatic differentiation to compute policy gradients over short horizons and adjoint-based sensitivities of future returns approximated via neural networks, significantly reducing the number of environment interactions, while mitigating long-term gradient instabilities. Through two challenging parametric navigation problems in unsteady flows, we show that PEARL (i) effectively exploits differentiable environments to outperform state-of-the-art RL algorithms, (ii) is sample efficient, thanks to the physics-guided policy learning, (iii) generalizes across multiple scenarios, which is crucial when dealing with parametric systems, and (iv) enables scaling RL to high-dimensional state and action spaces, without requiring low-dimensional state representations or multi-agent strategies.",
+      "abstract_zh": "强化学习最近作为一种有前景的非线性和复杂动力系统反馈控制策略而出现。然而，强化学习算法样本效率低，需要与环境进行大量交互才能合成最优控制策略。因此，由于高维空间中探索-利用困境带来的维度灾难，强化学习的应用通常局限于稀疏的传感器和执行器。在这项工作中，我们通过一种新颖的物理增强强化学习范式，将强化学习与传统动力系统最优控制相结合，该范式专门针对高维和参数化动力系统的控制，利用了其动力学的可微性。具体来说，PEARL采用了一种演员-伴随算法，该算法利用自动微分计算短时域上的策略梯度，并通过神经网络近似的伴随敏感性计算未来回报，显著减少了环境交互次数，同时缓解了长期梯度不稳定性。通过非定常流中两个具有挑战性的参数化导航问题，我们展示了PEARL：(i) 有效利用可微环境，优于最先进的强化学习算法；(ii) 由于物理引导的策略学习，样本效率高；(iii) 在多个场景中具有泛化能力，这对于处理参数化系统至关重要；(iv) 能够将强化学习扩展到高维状态和动作空间，而无需低维状态表示或多智能体策略。",
+      "categories": [
+        "cs.LG",
+        "math.OC"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-17T17:56:05Z",
+      "updated": "2026-07-17T17:56:05Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16177v1",
+        "pdf": "https://arxiv.org/pdf/2607.16177v1"
+      },
+      "matched_keywords": [
+        "high-dimensional"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16169",
+      "arxiv_id": "2607.16169v1",
+      "version": "v1",
+      "title": "When Does Muon Help Agentic Reinforcement Learning?",
+      "title_zh": "Muon何时有助于智能体强化学习？",
+      "authors": [
+        "Kai Ruan",
+        "Jinghao Lin",
+        "Zihe Huang",
+        "Ziqi Zhou",
+        "Qianshan Wei",
+        "Xuan Wang",
+        "Hao Sun"
+      ],
+      "abstract": "Muon is competitive with AdamW in large-scale pre-training, but its value for reinforcement-learning (RL) post-training remains unclear. We study vanilla Muon in sparse-reward agentic RL through matched single-seed comparisons with AdamW on ALFWorld using Qwen2.5-0.5B-Instruct. Under Group-in-Group Policy Optimization (GiGPO), applying Muon only to hidden weight matrices raises final-window validation success from 0.290 to 0.546 (+88%); high-rate AdamW controls retain no post-update success. The effect depends on the advantage estimator and learning rate. At 3e-5, Muon improves GRPO from 0.161 to 0.268, whereas GraphGPO's late-window gap narrows near saturation. At 1e-5, GraphGPO Muon reaches 0.901, raises normalized validation AUC from 0.399 to 0.556, and reaches 0.5 and 0.75 success 30 and 60 updates earlier, respectively. These exploratory results show that Muon can benefit agentic RL and motivate studying the policy optimizer, advantage estimator, and learning rate jointly. Multi-seed and cross-task validation remain open.",
+      "abstract_zh": "Muon在大规模预训练中与AdamW竞争，但其在强化学习后训练中的价值尚不明确。我们通过使用Qwen2.5-0.5B-Instruct在ALFWorld上进行匹配单种子比较，研究了vanilla Muon在稀疏奖励智能体RL中的表现。在组内组策略优化（GiGPO）下，仅将Muon应用于隐藏权重矩阵，最终窗口验证成功率从0.290提升至0.546（+88%）；高学习率AdamW对照组在更新后无成功率。该效果依赖于优势估计器和学习率。在3e-5下，Muon将GRPO从0.161提升至0.268，而GraphGPO的后期窗口差距在接近饱和时缩小。在1e-5下，GraphGPO Muon达到0.901，将归一化验证AUC从0.399提升至0.556，并分别提前30和60次更新达到0.5和0.75的成功率。这些探索性结果表明Muon有益于智能体RL，并激励联合研究策略优化器、优势估计器和学习率。多种子和跨任务验证仍有待研究。",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-17T17:49:05Z",
+      "updated": "2026-07-17T17:49:05Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16169v1",
+        "pdf": "https://arxiv.org/pdf/2607.16169v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16133",
+      "arxiv_id": "2607.16133v1",
+      "version": "v1",
+      "title": "When Do Multi-Agent Systems Help? An Information Bottleneck Perspective",
+      "title_zh": "多智能体系统何时有帮助？一种信息瓶颈视角",
+      "authors": [
+        "Wendi Yu",
+        "Lianhao Zhou",
+        "Xiangjue Dong",
+        "Sai Sudarshan Barath",
+        "Declan Staunton",
+        "Byung-Jun Yoon",
+        "Xiaoning Qian",
+        "James Caverlee",
+        "Shuiwang Ji"
+      ],
+      "abstract": "LLM powered multi-agent systems (MAS) have emerged as a promising paradigm for complex tasks. However, their advantages over single-agent systems (SAS) remain unclear, with performance varying inconsistently across settings. Here, we provide an information bottleneck perspective on elucidating the differences between MAS and SAS. Specifically, our key observation is that a SAS accumulates its full reasoning trace in one shared context, while a MAS uses isolated local contexts connected by bounded relay messages. We show that, under infinite relay bandwidth, any SAS can be simulated by a MAS that transmits the full upstream context. Thus, the nontrivial advantage of MAS arises under bounded relays, where compression introduces a fundamental trade-off: reducing redundant context can improve efficiency, but may also incur loss of task-relevant information. We formalize this trade-off as an information bottleneck controlled by an effective parameter $β$, which captures how the balance shifts with model capability, and shows that MAS gains arise when context reduction outweighs relay information loss. We conduct 18 controlled experiments across five benchmarks and three model scales to validate our theoretical studies. We observe that MAS consistently helps when relays are near-sufficient, especially for weaker models. In contrast, MAS gains shrink or reverse when relays incur information loss, especially for stronger models that can already extract useful information from redundant context and thus gain little from compression. Our study shows that multi-agent design is fundamentally an information-bottleneck optimization problem. This perspective explains when bounded inter-agent communication helps or hurts.",
+      "abstract_zh": "基于大语言模型的多智能体系统（MAS）已成为处理复杂任务的一种有前景的范式。然而，与单智能体系统（SAS）相比，其优势仍不明确，性能在不同设置下变化不一致。本文从信息瓶颈视角出发，阐明MAS与SAS之间的差异。具体而言，我们的关键观察是：SAS将其完整的推理轨迹累积在一个共享上下文中，而MAS则使用由有界中继消息连接的隔离局部上下文。我们证明，在无限中继带宽下，任何SAS都可以被一个传输完整上游上下文的MAS模拟。因此，MAS的非平凡优势出现在有界中继条件下，此时压缩引入了一个基本权衡：减少冗余上下文可以提高效率，但也可能导致任务相关信息的丢失。我们将这一权衡形式化为一个由有效参数β控制的信息瓶颈，该参数捕捉了平衡如何随模型能力变化，并表明当上下文减少超过中继信息损失时，MAS优势出现。我们通过五个基准和三个模型规模的18项受控实验验证了我们的理论研究。我们观察到，当中继接近充足时，MAS始终有帮助，尤其是对于较弱的模型。相反，当中继导致信息损失时，MAS优势缩小或逆转，尤其是对于已经能够从冗余上下文中提取有用信息且因此从压缩中获益较少的较强模型。我们的研究表明，多智能体设计本质上是一个信息瓶颈优化问题。这一视角解释了有界智能体间通信何时有帮助或有害。",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-17T17:13:44Z",
+      "updated": "2026-07-17T17:13:44Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16133v1",
+        "pdf": "https://arxiv.org/pdf/2607.16133v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16086",
+      "arxiv_id": "2607.16086v1",
+      "version": "v1",
+      "title": "Improving Mendelian Randomization Analysis by Instrument Borrowing from Auxiliary Outcome Traits",
+      "title_zh": "通过从辅助结局特征借用工具变量改进孟德尔随机化分析",
+      "authors": [
+        "Anagh Chattopadhyay",
+        "Nilanjan Chatterjee"
+      ],
+      "abstract": "Mendelian randomization (MR) is a widely used approach for inferring causal effects of exposures on outcomes using genetic variants as instrumental variables; however, existing methods remain vulnerable to bias and/or loss of power in the presence of invalid instruments. We hypothesize that closely related outcome traits are likely to have a large overlap in underlying valid instruments in relation to a given exposure and that instrument borrowing (IB) across such traits can therefore yield more robust MR inference. To operationalize this idea, we first introduce a novel coheterogeneity statistic and its asymptotic theory under different paradigms which can be used to identify secondary outcome traits that are likely to share valid instruments with the primary trait. We then propose extensions of two popular methods, MR-Mode and MR-PRESSO, that improve MR inference for the primary trait, taking advantage of a secondary trait. Extensive simulation studies demonstrate that the proposed coheterogeneity statistic has expected finite-sample properties and IB-based methods consistently outperform their standard counterparts, with gains increasing as the degree of overlap in valid instruments across outcome traits grows. Applications to established positive and negative control hypotheses suggest that IB-based methods offer improved control of type I error and increased power. We further illustrate the practical utility of these methods by revisiting the long-debated hypothesis on the causal effect of vitamin D on cardiometabolic traits.",
+      "abstract_zh": "孟德尔随机化是一种广泛使用的方法，利用遗传变异作为工具变量来推断暴露对结局的因果效应；然而，在存在无效工具变量的情况下，现有方法仍易受偏倚和/或功效损失的影响。我们假设，密切相关的结局特征在给定暴露下很可能具有大量重叠的有效工具变量，因此跨此类特征的借用工具变量可以产生更稳健的孟德尔随机化推断。为实现这一想法，我们首先引入一种新的共异质性统计量及其在不同范式下的渐近理论，该统计量可用于识别可能与主要特征共享有效工具变量的次要结局特征。然后，我们提出了两种流行方法（MR-Mode和MR-PRESSO）的扩展，这些扩展利用次要特征改进了主要特征的孟德尔随机化推断。广泛的模拟研究表明，所提出的共异质性统计量具有预期的有限样本性质，基于借用工具变量的方法始终优于其标准对应方法，且随着结局特征间有效工具变量重叠程度的增加，增益也随之增大。应用于已建立的正向和负向控制假设表明，基于借用工具变量的方法能更好地控制I类错误并提高功效。我们通过重新审视关于维生素D对心脏代谢特征因果效应的长期争论假设，进一步说明了这些方法的实际效用。",
+      "categories": [
+        "stat.ME"
+      ],
+      "primary_category": "stat.ME",
+      "published": "2026-07-17T16:15:57Z",
+      "updated": "2026-07-17T16:15:57Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16086v1",
+        "pdf": "https://arxiv.org/pdf/2607.16086v1"
+      },
+      "matched_keywords": [
+        "causal"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16084",
+      "arxiv_id": "2607.16084v1",
+      "version": "v1",
+      "title": "Pick-to-Learn Calibration of an MPC Policy for an Origin-to-Destination Flight Problem",
+      "title_zh": "基于挑选学习的MPC策略校准：以起点到终点飞行问题为例",
+      "authors": [
+        "Marco C. Campi",
+        "Simone Garatti"
+      ],
+      "abstract": "This paper illustrates the Pick-to-Learn methodology applied to the calibration of a Model Predictive Control policy. While developed around a specific example, the presentation is meant to highlight a methodology of broad applicability. The example concerns an aircraft traveling from an origin point to a destination point in the presence of uncertain crosswinds and a low-connectivity zone that should be avoided. The MPC policy is parameterized by two hyperparameters, which are selected from data by the P2L procedure. Starting from a dataset of 400 wind realizations, also called scenarios, P2L identifies a final compression set containing only two informative scenarios. The resulting MPC policy avoids the low-connectivity zone on all available scenarios and, according to the P2L theory, satisfies a probabilistic risk bound of $4.8\\%$ at confidence level $1-10^{-5}$, where the risk is the probability of entering the low-connectivity zone in a future flight under a new wind realization not included in the sample.",
+      "abstract_zh": "本文展示了将挑选学习方法应用于模型预测控制策略的校准。虽然围绕一个具体示例展开，但旨在突出一种具有广泛适用性的方法论。该示例涉及一架飞机在存在不确定侧风和应避免的低连通区域的情况下，从起点飞往终点。MPC策略由两个超参数参数化，通过P2L程序从数据中选取。从包含400个风场实现（也称为场景）的数据集开始，P2L识别出一个仅包含两个信息性场景的最终压缩集。由此得到的MPC策略在所有可用场景中均能避开低连通区域，并且根据P2L理论，在置信水平$1-10^{-5}$下满足$4.8\\%$的概率风险界，其中风险是指在新风场实现（未包含在样本中）的未来飞行中进入低连通区域的概率。",
+      "categories": [
+        "eess.SY",
+        "cs.LG",
+        "math.OC"
+      ],
+      "primary_category": "eess.SY",
+      "published": "2026-07-17T16:14:29Z",
+      "updated": "2026-07-17T16:14:29Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16084v1",
+        "pdf": "https://arxiv.org/pdf/2607.16084v1"
+      },
+      "matched_keywords": [
+        "probability"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16081",
+      "arxiv_id": "2607.16081v1",
+      "version": "v1",
+      "title": "Scaling Hawkes Processes",
+      "title_zh": "缩放霍克斯过程",
+      "authors": [
+        "Seyoon Ko",
+        "Jasen Zhang",
+        "Andrew J. Holbrook"
+      ],
+      "abstract": "Hawkes processes (HP) are a large class of stochastic point process models scientists have used to analyze contagion phenomena ranging from earthquakes, infectious diseases and biological neurons to financial trading activity, memes on social media and gun violence. We introduce applications of HP to the latter before reviewing general strategies for fitting HP to data, paying attention to the influence of model structure on computational scalability considerations. We then apply a recently developed high-performance computing powered Bayesian inference strategy for the spatiotemporal HP analysis of 412,376 acts of gun violence in the U.S. between 2014 and 2024. We finish with a discussion of model fit and directions for future research.",
+      "abstract_zh": "霍克斯过程是一大类随机点过程模型，科学家们用它来分析从地震、传染病和生物神经元到金融交易活动、社交媒体上的模因和枪支暴力等传染现象。我们在回顾将霍克斯过程拟合到数据的一般策略之前，介绍了霍克斯过程在后者的应用，并关注模型结构对计算可扩展性考虑的影响。然后，我们应用一种最近开发的高性能计算驱动的贝叶斯推理策略，对2014年至2024年间美国412,376起枪支暴力行为进行时空霍克斯过程分析。最后，我们讨论了模型拟合和未来研究方向。",
+      "categories": [
+        "stat.CO",
+        "stat.AP",
+        "stat.ME"
+      ],
+      "primary_category": "stat.CO",
+      "published": "2026-07-17T16:12:40Z",
+      "updated": "2026-07-17T16:12:40Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16081v1",
+        "pdf": "https://arxiv.org/pdf/2607.16081v1"
+      },
+      "matched_keywords": [
+        "bayesian",
+        "stochastic"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16080",
+      "arxiv_id": "2607.16080v1",
+      "version": "v1",
+      "title": "Physics-Based Deep Spatiotemporal Hyperlocal Radar Nowcasting with a Multi-Variable U-Net for High-Resolution Precipitation Forecasting",
+      "title_zh": "基于物理的深度时空超局部雷达临近预报：用于高分辨率降水预报的多变量U-Net",
+      "authors": [
+        "Akshay Sunil",
+        "Muhammed Rashid",
+        "Raja Sekhar Sivaraju",
+        "Sushma Nair",
+        "Subimal Ghosh"
+      ],
+      "abstract": "Precipitation nowcasting over the immediate 10-90 min period is important for flood management and real-time decision-making in urban regions. Conventional short-range forecasting with high-resolution numerical weather prediction requires frequent data assimilation, model initialization, and spin-up, introducing computational latency. Machine learning provides an alternative by learning storm evolution directly from high-frequency observations and producing forecasts quickly after training. This is particularly relevant for Mumbai, India, where monsoon convection, land-sea interactions, and localized intense rainfall make short-term prediction difficult. Here, we develop a compact radar-only nowcasting framework that combines multi-elevation reflectivity, Doppler radial velocity, and radial-velocity-gradient proxy features within an encoder-decoder U-Net. Using the most recent radar volume scan, the model predicts 12 future composite reflectivity fields at 7.5-min intervals up to 90 min lead time. The derived velocity magnitude, divergence-like, directional-shear, and vorticity-like channels represent kinematic signatures associated with convergence and boundary interactions without requiring full wind-field retrieval. A high-reflectivity attention module improves sensitivity to convective cores, and physics-guided attribution examines whether the learned sensitivities are meteorologically meaningful. The model is trained using Mumbai Doppler radar observations from May to August 2023 and evaluated on temporally independent events. At 90 min lead time, Critical Success Index values are 0.437, 0.332, and 0.193 for $\\geq$10, $\\geq$20, and $\\geq$30 dBZ thresholds, respectively. Compared with persistence, the model gives lower RMSE and higher spatial correlation at longer lead times. Once trained, it runs on a standard computer, generating nowcasts within seconds for real-time use.",
+      "abstract_zh": "未来10-90分钟内的降水临近预报对于城市地区的洪水管理和实时决策至关重要。传统的高分辨率数值天气预报短时预报需要频繁的数据同化、模型初始化和自旋-up，这引入了计算延迟。机器学习通过直接从高频观测中学习风暴演变并在训练后快速生成预报，提供了一种替代方案。这对于印度孟买尤其重要，因为季风对流、海陆相互作用和局地强降雨使得短期预报变得困难。在此，我们开发了一个紧凑的仅雷达临近预报框架，该框架在多变量编码器-解码器U-Net中结合了多仰角反射率、多普勒径向速度和径向速度梯度代理特征。利用最新的雷达体扫描，模型预测了12个未来合成反射率场，时间间隔为7.5分钟，最长预报时效为90分钟。导出的速度幅度、散度类、方向切变和涡度类通道代表了与辐合和边界相互作用相关的运动学特征，无需完整的风场反演。高反射率注意力模块提高了对流核心的敏感性，物理引导归因检查了学习到的敏感性是否具有气象意义。该模型使用2023年5月至8月的孟买多普勒雷达观测数据进行训练，并在时间独立的事件上进行评估。在90分钟预报时效时，对于≥10、≥20和≥30 dBZ阈值，临界成功指数值分别为0.437、0.332和0.193。与持续性预报相比，该模型在较长预报时效下具有更低的均方根误差和更高的空间相关性。一旦训练完成，它可以在标准计算机上运行，在几秒钟内生成临近预报，用于实时应用。",
+      "categories": [
+        "cs.LG",
+        "eess.IV"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-17T16:09:48Z",
+      "updated": "2026-07-17T16:09:48Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16080v1",
+        "pdf": "https://arxiv.org/pdf/2607.16080v1"
+      },
+      "matched_keywords": [
+        "machine learning"
+      ],
+      "translation_status": "translated"
+    }
+  ]
+}

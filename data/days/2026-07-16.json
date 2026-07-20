@@ -1,6 +1,6 @@
 {
   "date": "2026-07-16",
-  "updated_at": "2026-07-17T11:53:20Z",
+  "updated_at": "2026-07-20T12:32:52Z",
   "papers": [
     {
       "id": "2607.15140",
@@ -267,8 +267,8 @@
     },
     {
       "id": "2607.15018",
-      "arxiv_id": "2607.15018v1",
-      "version": "v1",
+      "arxiv_id": "2607.15018v2",
+      "version": "v2",
       "title": "cGAP: Generalized Association Plots with HOMALS-Guided Heatmaps for Visualization of High-Dimensional Categorical Data",
       "title_zh": "cGAP：基于HOMALS引导热图的高维分类数据广义关联图",
       "authors": [
@@ -291,11 +291,11 @@
       ],
       "primary_category": "stat.ML",
       "published": "2026-07-16T14:05:37Z",
-      "updated": "2026-07-16T14:05:37Z",
+      "updated": "2026-07-17T01:59:18Z",
       "announcement_date": "2026-07-16",
       "links": {
-        "abs": "https://arxiv.org/abs/2607.15018v1",
-        "pdf": "https://arxiv.org/pdf/2607.15018v1"
+        "abs": "https://arxiv.org/abs/2607.15018v2",
+        "pdf": "https://arxiv.org/pdf/2607.15018v2"
       },
       "matched_keywords": [
         "high-dimensional",
@@ -364,13 +364,13 @@
     },
     {
       "id": "2607.15000",
-      "arxiv_id": "2607.15000v1",
-      "version": "v1",
+      "arxiv_id": "2607.15000v2",
+      "version": "v2",
       "title": "Flood risk estimation via geometric extremal graphical models",
       "title_zh": "基于几何极值图模型的洪水风险估计",
       "authors": [
         "Kristina Grolmusova",
-        "Jeniffer L. Wadsworth",
+        "Jennifer L. Wadsworth",
         "Thordis L. Thorarinsdottir"
       ],
       "abstract": "We exploit the new framework of multivariate geometric extreme value theory for the statistical analysis of river flow extremes at multiple locations on a river network. Current methodologies within the geometric framework are limited to a relatively low number of dimensions. This is insufficient for the purposes of flood risk estimation, since the number of gauging stations on a river network is often of the order $10-20+$. In order to create a parsimonious model in higher dimensions, we translate recent theoretical work on geometric extremal graphical models into statistical practice. We define the gauge function, a key object in geometric extremes, in a structured way using block graphs, which are a natural way of expressing the river network. We introduce both simple models, and more complex ones that can accommodate both simultaneous and non-simultaneous flows, and apply them to extreme flows at 10 locations on a river network around Preston, in north-west England. The models are shown to fit well and indicate strong extrapolation performance. We also introduce a correction coefficient for the geometric framework to address potential over- or under-estimation of marginal probabilities. The overall utility of our approach is illustrated through calculation of probabilities of simultaneous flooding at four locations on the network.",
@@ -381,11 +381,11 @@
       ],
       "primary_category": "stat.AP",
       "published": "2026-07-16T13:50:23Z",
-      "updated": "2026-07-16T13:50:23Z",
+      "updated": "2026-07-17T09:03:52Z",
       "announcement_date": "2026-07-16",
       "links": {
-        "abs": "https://arxiv.org/abs/2607.15000v1",
-        "pdf": "https://arxiv.org/pdf/2607.15000v1"
+        "abs": "https://arxiv.org/abs/2607.15000v2",
+        "pdf": "https://arxiv.org/pdf/2607.15000v2"
       },
       "matched_keywords": [
         "statistical"
@@ -925,13 +925,13 @@
     },
     {
       "id": "2607.14835",
-      "arxiv_id": "2607.14835v1",
-      "version": "v1",
+      "arxiv_id": "2607.14835v2",
+      "version": "v2",
       "title": "LLM-Based Re-Ranking for Real Estate Search",
       "title_zh": "基于大语言模型的房地产搜索重排序",
       "authors": [
         "Nkateko Ntimane",
-        "Rafel Guedes",
+        "Rafael Guedes",
         "Tiago Cunha",
         "Pedro Nogueira"
       ],
@@ -942,11 +942,11 @@
       ],
       "primary_category": "cs.IR",
       "published": "2026-07-16T10:58:32Z",
-      "updated": "2026-07-16T10:58:32Z",
+      "updated": "2026-07-17T04:42:03Z",
       "announcement_date": "2026-07-16",
       "links": {
-        "abs": "https://arxiv.org/abs/2607.14835v1",
-        "pdf": "https://arxiv.org/pdf/2607.14835v1"
+        "abs": "https://arxiv.org/abs/2607.14835v2",
+        "pdf": "https://arxiv.org/pdf/2607.14835v2"
       },
       "matched_keywords": [
         "statistical"
