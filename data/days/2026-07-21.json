@@ -1,0 +1,569 @@
+{
+  "date": "2026-07-21",
+  "updated_at": "2026-07-21T12:09:18Z",
+  "papers": [
+    {
+      "id": "2607.18236",
+      "arxiv_id": "2607.18236v1",
+      "version": "v1",
+      "title": "Patch Policy: Efficient Embodied Control via Dense Visual Representations",
+      "title_zh": "补丁策略：通过密集视觉表示实现高效具身控制",
+      "authors": [
+        "Gaoyue Zhou",
+        "Zichen Jeff Cui",
+        "Ada Langford",
+        "Bowen Tan",
+        "Yann LeCun",
+        "Lerrel Pinto"
+      ],
+      "abstract": "Pretrained dense visual features from Vision Transformers (ViTs) are powerful yet have been underutilized in robot learning. Modern robot policies either compress each observation into a single global token, or rely on visual backbones trained from scratch, sacrificing both fine-grained spatial detail and the benefits of large-scale visual pre-training. While there exist policies that do operate on dense patch features like large vision-language-action models (VLAs), they tend to be heavy and slow, inheriting the full cost of a billion-parameter vision-language model (VLM) backbone. We close this gap with Patch Policy, a minimal architectural extension that enables transformer-based policies to consume dense pre-trained patch tokens directly without the computational overhead of a full VLM. At its core is a block-causal attention mask that preserves the temporal causality of standard policies while letting the model attend over many patch tokens per observation, alongside other state information. Patch Policy is lightweight, fast, and highly effective. Across four simulated and three real-world environment suites, our method achieves a 40% relative improvement over policies using state-of-the-art global-pooled representations. Furthermore, it surpasses fine-tuned OpenVLA-OFT by 18% while using roughly 0.7% of the parameters. We believe Patch Policy provides a pipeline for the robotics community to readily leverage continuing progress in visual representation learning, without sacrificing the training efficiency or inference speed required for high-frequency, reactive control. Videos can be viewed at https://patch-policy.github.io",
+      "abstract_zh": "来自视觉Transformer（ViT）的预训练密集视觉特征强大但尚未在机器人学习中得到充分利用。现代机器人策略要么将每个观测压缩为单个全局令牌，要么依赖从头训练的视觉骨干，牺牲了细粒度的空间细节和大规模视觉预训练的好处。虽然存在一些在密集补丁特征上操作的策略（如大型视觉-语言-动作模型，VLA），但它们往往笨重且缓慢，继承了十亿参数视觉-语言模型（VLM）骨干的全部成本。我们通过补丁策略（Patch Policy）弥补了这一差距，这是一种最小的架构扩展，使基于Transformer的策略能够直接消耗密集的预训练补丁令牌，而无需完整VLM的计算开销。其核心是一个块因果注意力掩码，它保留了标准策略的时间因果性，同时让模型能够关注每个观测中的多个补丁令牌以及其他状态信息。补丁策略轻量、快速且高效。在四个模拟环境和三个真实世界环境套件中，我们的方法相比使用最先进全局池化表示的策略实现了40%的相对改进。此外，它超越了微调的OpenVLA-OFT 18%，同时仅使用约0.7%的参数。我们相信补丁策略为机器人社区提供了一条管道，使其能够轻松利用视觉表示学习的持续进展，而不会牺牲高频反应控制所需的训练效率或推理速度。视频可在https://patch-policy.github.io查看。",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "primary_category": "cs.RO",
+      "published": "2026-07-20T17:59:41Z",
+      "updated": "2026-07-20T17:59:41Z",
+      "announcement_date": "2026-07-21",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.18236v1",
+        "pdf": "https://arxiv.org/pdf/2607.18236v1"
+      },
+      "matched_keywords": [
+        "causal"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.18226",
+      "arxiv_id": "2607.18226v1",
+      "version": "v1",
+      "title": "Causal Discovery on Irregular Time Series",
+      "title_zh": "不规则时间序列上的因果发现",
+      "authors": [
+        "Martim Penim",
+        "Ricardo Ribeiro Pereira",
+        "Jacopo Bono",
+        "Hugo Ferreira",
+        "Mário A. T. Figueiredo",
+        "Pedro Bizarro"
+      ],
+      "abstract": "Causal discovery methods have shown strong performance in temporal systems, but they typically rely on regular and discrete lag structures, limiting their applicability to regularly sampled data. However, many real-world tasks require dealing with irregularly sampled streams of events, such as sensor streams, healthcare data, and financial transactions. In this work, we propose an extension of PCMCI+, a state-of-the-art method for causal discovery on regular multivariate time series, to allow for handling irregular time series. Instead of modelling causal relations through fixed-lag dependencies, our method aggregates causal influence over predefined temporal windows. We evaluate our method on synthetic irregular event streams with known causal structures under different signal-to-noise ratios, showing that it consistently recovers the underlying causal graph and substantially outperforms the standard PCMCI+ on irregularly sampled data.",
+      "abstract_zh": "因果发现方法在时间系统中表现出色，但它们通常依赖于规则且离散的滞后结构，限制了其对规则采样数据的适用性。然而，许多现实任务需要处理不规则采样的事件流，例如传感器流、医疗数据和金融交易。在这项工作中，我们提出了PCMCI+（一种用于规则多变量时间序列因果发现的先进方法）的扩展，以处理不规则时间序列。我们的方法不是通过固定滞后依赖关系来建模因果关系，而是通过预定义的时间窗口聚合因果影响。我们在具有已知因果结构的合成不规则事件流上，在不同信噪比下评估了我们的方法，结果表明它能够一致地恢复底层因果图，并且在处理不规则采样数据时显著优于标准PCMCI+。",
+      "categories": [
+        "cs.LG",
+        "stat.ME"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-20T17:57:45Z",
+      "updated": "2026-07-20T17:57:45Z",
+      "announcement_date": "2026-07-21",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.18226v1",
+        "pdf": "https://arxiv.org/pdf/2607.18226v1"
+      },
+      "matched_keywords": [
+        "causal",
+        "time series"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.18225",
+      "arxiv_id": "2607.18225v1",
+      "version": "v1",
+      "title": "Vector Search As Nearest Neighbor Matching: RAG-based Policy Learning in Causal Inference",
+      "title_zh": "向量搜索作为最近邻匹配：因果推断中基于RAG的策略学习",
+      "authors": [
+        "Masahiro Kato",
+        "Taka Kato"
+      ],
+      "abstract": "We propose one-step and two-step methods for policy learning with retrieval-augmented generation (RAG). We formulate RAG-based action selection under the potential outcome framework. In the two-step method, vector search retrieves action-specific neighboring evidence in an embedding space, the generator estimates conditional expected outcomes or their contrasts, and a plug-in rule selects an action. This formulation connects action-specific vector search with nearest-neighbor matching in causal inference. We decompose the regret of the two-step method into candidate-generation regret and within-candidate choice regret, and we bound the latter using prediction-error guarantees for nearest-neighbor estimators and transformers. We evaluate the one-step method directly as a policy because its intermediate computation is unobserved.",
+      "abstract_zh": "我们提出了基于检索增强生成（RAG）的策略学习的一步法和两步法。我们在潜在结果框架下形式化了基于RAG的动作选择。在两步法中，向量搜索在嵌入空间中检索特定动作的邻近证据，生成器估计条件期望结果或其对比，然后通过插件规则选择动作。这种形式化将特定动作的向量搜索与因果推断中的最近邻匹配联系起来。我们将两步法的遗憾分解为候选生成遗憾和候选内选择遗憾，并利用最近邻估计器和变换器的预测误差保证来界定后者。由于一步法的中间计算不可观测，我们直接将其作为策略进行评估。",
+      "categories": [
+        "econ.EM",
+        "cs.LG",
+        "math.ST",
+        "stat.ME",
+        "stat.ML"
+      ],
+      "primary_category": "econ.EM",
+      "published": "2026-07-20T17:57:20Z",
+      "updated": "2026-07-20T17:57:20Z",
+      "announcement_date": "2026-07-21",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.18225v1",
+        "pdf": "https://arxiv.org/pdf/2607.18225v1"
+      },
+      "matched_keywords": [
+        "causal"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.18209",
+      "arxiv_id": "2607.18209v1",
+      "version": "v1",
+      "title": "Unveiling Invariant and Transferable Latent Factors Across Heterogeneous Environments via ATLAS",
+      "title_zh": "通过ATLAS揭示异质环境中的不变和可迁移潜在因子",
+      "authors": [
+        "Yihong Gu",
+        "Katherine Liao",
+        "Tianxi Cai"
+      ],
+      "abstract": "This paper considers a multi-environment factor model in which high-dimensional covariates are collected from heterogeneous environments, with auxiliary labels available in a subset of these environments. The joint distribution of the covariates may vary across environments, whereas the latent structure is decomposed into invariant factors with shared loadings and heterogeneous factors with environment-specific loadings. Such a model is motivated by transfer learning and latent factor regression, where one seeks stable low-dimensional representations for both interpretation and robust out-of-sample prediction of the response $Y$. Leveraging the invariance principle, we show that the invariant and heterogeneous factors are disentangled under a minimal structural condition. Based on this, we propose ATLAS, an Auxiliary-label and invariance-guided Transfer via Latent Alignment across heterogeneous environmentS. ATLAS is a unified procedure that leverages the invariance principle to separate aligned invariant and unaligned heterogeneous factors, and further exploits supervision from auxiliary labels to extract prediction-invariant and transferable factors from those unaligned heterogeneous factors. ATLAS yields near-oracle performance for downstream latent factor regression, enables transferable prediction in new environments through the full latent signal when auxiliary labels are available, and reduces to robust invariant-factor-only prediction otherwise. We establish sharp non-asymptotic error bounds for recovering invariant and heterogeneous factors, identifying all the response-invariant factors, and estimating the invariant signal in $Y$.",
+      "abstract_zh": "本文考虑一个多环境因子模型，其中高维协变量从异质环境中收集，并在这些环境的一个子集中有辅助标签可用。协变量的联合分布可能因环境而异，而潜在结构被分解为具有共享载荷的不变因子和具有环境特定载荷的异质因子。这种模型受到迁移学习和潜在因子回归的启发，旨在为解释和响应$Y$的稳健样本外预测寻求稳定的低维表示。利用不变性原理，我们证明了在最小结构条件下，不变因子和异质因子是可分离的。基于此，我们提出了ATLAS，一种通过异质环境间的潜在对齐进行辅助标签和不变性引导的迁移方法。ATLAS是一个统一的过程，利用不变性原理分离对齐的不变因子和未对齐的异质因子，并进一步利用辅助标签的监督从这些未对齐的异质因子中提取预测不变和可迁移的因子。ATLAS在下游潜在因子回归中实现了近乎最优的性能，当辅助标签可用时，通过完整的潜在信号在新环境中实现可迁移预测，否则退化为仅基于不变因子的稳健预测。我们建立了恢复不变和异质因子、识别所有响应不变因子以及估计$Y$中不变信号的尖锐非渐近误差界。",
+      "categories": [
+        "math.ST",
+        "cs.LG",
+        "stat.ME",
+        "stat.ML"
+      ],
+      "primary_category": "math.ST",
+      "published": "2026-07-20T17:44:57Z",
+      "updated": "2026-07-20T17:44:57Z",
+      "announcement_date": "2026-07-21",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.18209v1",
+        "pdf": "https://arxiv.org/pdf/2607.18209v1"
+      },
+      "matched_keywords": [
+        "regression",
+        "high-dimensional"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.18201",
+      "arxiv_id": "2607.18201v1",
+      "version": "v1",
+      "title": "Finding Adam in noisy trees",
+      "title_zh": "在含噪树中寻找亚当",
+      "authors": [
+        "Luc Devroye",
+        "Gábor Lugosi",
+        "Neeladri Maitra"
+      ],
+      "abstract": "We consider the problem of finding the root vertex of a random uniform attachment tree, when the union of the unlabeled tree and an Erdős-Rényi random graph $\\mathbb{G}(n,p)$ is observed. We prove that, as long as $p=o(\\log n /n)$, for any $\\varepsilon>0$, one can construct a confidence set of vertices of size $K(\\varepsilon)$ that depends only on $\\varepsilon$ and not on $n$, such that it contains the root with probability at least $1-\\varepsilon$. This affirms a conjecture of Crane and Xu (2021). Our approach ranks vertices by their Jordan centrality in the largest component of the subgraph spanned by high-degree vertices. We show that the same approach works in other noise models as well.",
+      "abstract_zh": "我们考虑在观察到无标号树与 Erdős-Rényi 随机图 $\\mathbb{G}(n,p)$ 的并集时，寻找随机均匀附着树的根顶点的问题。我们证明，只要 $p=o(\\log n /n)$，对于任意 $\\varepsilon>0$，可以构造一个大小为 $K(\\varepsilon)$ 的顶点置信集，该大小仅依赖于 $\\varepsilon$ 而不依赖于 $n$，使得它以至少 $1-\\varepsilon$ 的概率包含根顶点。这证实了 Crane 和 Xu (2021) 的一个猜想。我们的方法根据顶点在高阶顶点张成的子图的最大连通分量中的 Jordan 中心性对其进行排序。我们表明，同样的方法也适用于其他噪声模型。",
+      "categories": [
+        "math.PR"
+      ],
+      "primary_category": "math.PR",
+      "published": "2026-07-20T17:41:26Z",
+      "updated": "2026-07-20T17:41:26Z",
+      "announcement_date": "2026-07-21",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.18201v1",
+        "pdf": "https://arxiv.org/pdf/2607.18201v1"
+      },
+      "matched_keywords": [
+        "probability"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.18198",
+      "arxiv_id": "2607.18198v1",
+      "version": "v1",
+      "title": "Three-Body Scattering for Generative Modeling",
+      "title_zh": "用于生成建模的三体散射",
+      "authors": [
+        "Peng Sun",
+        "Zhenglin Cheng",
+        "Deyuan Liu",
+        "Jun Xie",
+        "Xinyi Shang",
+        "Tao Lin"
+      ],
+      "abstract": "Modern generative models typically rely on an adversarial critic, a prescribed noise-to-data path, or an autoregressive factorization. Instead, we show that a proper distributional energy can induce sample-level motion and provide direct regression supervision for a one-step generator. Three-Body Scattering Modeling (TBSM) for generation turns the energy distance into a constant-size per-projectile interaction: each projectile is attracted toward one real source and repelled from one independently generated source. Conditioned on the projectile and its condition, its expectation equals the $2$-Wasserstein gradient-flow velocity of $\\frac12D_E^2(P_θ,Q)$. A batch of $B$ frozen-target events yields $O(B)$ sample-level losses, each using one reference for its condition instead of the minibatch-wide all-pairs field used by methods such as Drifting Models. Tracking this conditional expectation online can reduce field noise. Using scattering in frozen image features, TBSM trains one-step generators on ImageNet-256, achieving FID${}=2.23$ with pixel-space PixelDiT-XL and FID${}=1.63$ with latent-space DiT-XL at NFE${}=1$. We provide a design map relating diffusion-related supervision, Drift-like dynamics, and GAN-like objectives. These results establish tracked scattering as a route to high-dimensional one-step generation. Code: https://github.com/sp12138/TBSM.",
+      "abstract_zh": "现代生成模型通常依赖于对抗性判别器、预设的噪声到数据路径或自回归分解。相反，我们证明了一个适当的分布能量可以引发样本级别的运动，并为一步生成器提供直接的回归监督。用于生成的三体散射建模（TBSM）将能量距离转化为恒定大小的每个抛射体相互作用：每个抛射体被吸引向一个真实源，并被一个独立生成的源排斥。以抛射体及其条件为条件，其期望等于$\\frac12D_E^2(P_θ,Q)$的$2$-Wasserstein梯度流速度。一批$B$个冻结目标事件产生$O(B)$个样本级别损失，每个损失使用一个参考作为其条件，而不是像Drifting Models等方法使用的整个小批量全对场。在线跟踪这个条件期望可以减少场噪声。使用冻结图像特征中的散射，TBSM在ImageNet-256上训练一步生成器，在像素空间PixelDiT-XL上实现了FID${}=2.23$，在潜在空间DiT-XL上实现了FID${}=1.63$（NFE${}=1$）。我们提供了一个设计图，将扩散相关监督、Drift-like动力学和GAN-like目标联系起来。这些结果确立了跟踪散射作为高维一步生成的途径。代码：https://github.com/sp12138/TBSM。",
+      "categories": [
+        "cs.LG",
+        "cs.CV"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-20T17:38:12Z",
+      "updated": "2026-07-20T17:38:12Z",
+      "announcement_date": "2026-07-21",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.18198v1",
+        "pdf": "https://arxiv.org/pdf/2607.18198v1"
+      },
+      "matched_keywords": [
+        "regression",
+        "high-dimensional"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.18192",
+      "arxiv_id": "2607.18192v1",
+      "version": "v1",
+      "title": "Risk-sensitive exit-time control for stochastic differential equations with path-dependent coefficients",
+      "title_zh": "路径依赖系数随机微分方程的风险敏感退出时间控制",
+      "authors": [
+        "David Criens",
+        "Fabian Fuchs"
+      ],
+      "abstract": "In this work, we study small-noise asymptotics of risk-sensitive exit-time control problems governed by stochastic differential equations with path-dependent coefficients. Our main result establishes the convergence of the $\\log$-transformed exit-time problem to a deterministic control problem with path-dependent coefficients. For its proof, we first derive a novel variational representation for general $\\log$-transformed stochastic control problems with path-dependent coefficients, combining tools from the theory of path-dependent partial differential equations and convex expectations on path spaces. In a second step, we use probabilistic methods to analyze the convergence of the resulting variational formulas. To illustrate the scope of our analysis, we consider a computable example for a stochastic differential equation with memory and characterize the limiting problem and associated control strategies.",
+      "abstract_zh": "本文研究了由路径依赖系数随机微分方程控制的风险敏感退出时间控制问题的小噪声渐近性。我们的主要结果建立了对数变换后的退出时间问题向具有路径依赖系数的确定性控制问题的收敛性。证明中，我们首先推导了具有路径依赖系数的一般对数变换随机控制问题的新变分表示，结合了路径依赖偏微分方程理论和路径空间上凸期望的工具。第二步，我们使用概率方法分析所得变分公式的收敛性。为说明分析范围，我们考虑了一个具有记忆的随机微分方程的可计算例子，并刻画了极限问题及相关控制策略。",
+      "categories": [
+        "math.OC",
+        "math.PR"
+      ],
+      "primary_category": "math.OC",
+      "published": "2026-07-20T17:31:46Z",
+      "updated": "2026-07-20T17:31:46Z",
+      "announcement_date": "2026-07-21",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.18192v1",
+        "pdf": "https://arxiv.org/pdf/2607.18192v1"
+      },
+      "matched_keywords": [
+        "stochastic"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.18187",
+      "arxiv_id": "2607.18187v1",
+      "version": "v1",
+      "title": "EVOLVE: Efficient Learned Volume Compression with Variable-Rate Encoding on a Cross-Domain Database",
+      "title_zh": "EVOLVE：基于跨域数据库的可变速率编码的高效学习型体数据压缩",
+      "authors": [
+        "Kaiyuan Tang",
+        "Maizhe Yang",
+        "Chaoli Wang"
+      ],
+      "abstract": "Large-scale scientific simulations generate volumetric data at rates that far outpace advances in storage and network bandwidth, making effective lossy compression increasingly critical. However, conventional compressors often struggle to preserve fine structural details at high compression ratios (CRs), and implicit neural representations (INRs) require costly per-volume optimization and produce models with fixed CRs. To respond, we present EVOLVE, an autoencoder (AE)-based volume-compression framework that targets high CRs for offline compression, with three key contributions. First, we construct a large-scale cross-domain database of 6,376 volumes from 21 scientific simulations, curated via perceptual hashing to ensure diversity, enabling the optimized model to extract features that generalize across volumes within the covered scientific simulation domains. Second, we reexamine the design space of AE-based compressors and incorporate several macro- and micro-designs into a vanilla AE to develop EVOLVE, which substantially improves the expressive power and compression capability. Third, we develop a learnable gain mechanism with a three-stage training strategy to enable variable-rate encoding, allowing a single model to support continuous CR adjustment at inference time. Experiments on multiple unseen scientific simulation datasets demonstrate that EVOLVE achieves substantially higher CRs than conventional compressors at comparable reconstruction quality, while delivering compression speeds that are orders of magnitude faster than INR-based methods, highlighting its promise as a strong alternative for compressing scientific data. The code, model weights, and results are available on our project page at https://evolve-vis.github.io.",
+      "abstract_zh": "大规模科学模拟生成的体数据速率远超存储和网络带宽的进步，使得有效的有损压缩日益关键。然而，传统压缩器在高压缩比下往往难以保留精细结构细节，而隐式神经表示需要昂贵的逐体积优化并产生固定压缩比的模型。为此，我们提出EVOLVE，一种基于自编码器的体数据压缩框架，针对离线压缩的高压缩比，包含三项关键贡献。首先，我们构建了一个大规模跨域数据库，包含来自21个科学模拟的6376个体数据，通过感知哈希进行筛选以确保多样性，使优化后的模型能够提取在覆盖的科学模拟领域内跨体积泛化的特征。其次，我们重新审视了基于自编码器的压缩器设计空间，并将多种宏观和微观设计融入基础自编码器以开发EVOLVE，显著提升了表达能力和压缩能力。第三，我们开发了一种可学习的增益机制，配合三阶段训练策略实现可变速率编码，使单个模型在推理时支持连续的压缩比调整。在多个未见过的科学模拟数据集上的实验表明，EVOLVE在可比的重建质量下实现了比传统压缩器高得多的压缩比，同时压缩速度比基于隐式神经表示的方法快数个数量级，凸显其作为科学数据压缩强有力替代方案的潜力。代码、模型权重和结果可在我们的项目页面https://evolve-vis.github.io获取。",
+      "categories": [
+        "cs.GR",
+        "cs.DB",
+        "cs.LG"
+      ],
+      "primary_category": "cs.GR",
+      "published": "2026-07-20T17:26:21Z",
+      "updated": "2026-07-20T17:26:21Z",
+      "announcement_date": "2026-07-21",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.18187v1",
+        "pdf": "https://arxiv.org/pdf/2607.18187v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.18174",
+      "arxiv_id": "2607.18174v1",
+      "version": "v1",
+      "title": "Improved Convergence Rate for Stochastic Multi-Gradient Descent: A Proof Discovered with AI",
+      "title_zh": "改进的随机多梯度下降收敛率：一个由人工智能发现的证明",
+      "authors": [
+        "Lisha Chen"
+      ],
+      "abstract": "For smooth nonconvex stochastic multi-objective problems, stochastic multi-gradient descent (SMG) computes an approximate steepest common descent direction of the objectives from stochastic gradients. With unbiased, variance-bounded stochastic gradients, this note establishes a new convergence rate for SMG in terms of the squared Pareto-stationarity (PS) measure. With a constant stepsize and linearly growing mini-batches, this measure at the algorithm's output is $\\widetilde O(T^{-1})$ after $T$ iterations. This improves on the $\\widetilde O(T^{-1/4})$ bound obtained by Chen et al. (2024) under the same setting, where $\\widetilde O(\\cdot)$ suppresses logarithmic factors. The key to the rate improvement is to exploit the Lipschitz continuity of the PS measure, defined by the norm of the multi-gradient descent algorithm (MGDA) direction, rather than the $(1/2)$-Hölder continuity of the MGDA direction used by Chen et al. (2024). The proof was discovered while the author was preparing homework for a graduate course: ChatGPT 5.4 Thinking Extended generated the initial proof strategy in response to an author-written homework-solution prompt; the author then verified and reorganized the resulting argument. The appendices document the prompt and summarize the student submissions.",
+      "abstract_zh": "对于光滑非凸随机多目标问题，随机多梯度下降（SMG）利用随机梯度计算目标函数的近似最陡公共下降方向。在无偏、方差有界的随机梯度条件下，本文建立了SMG关于平方Pareto平稳性（PS）测度的新收敛率。采用恒定步长和线性增长的迷你批次，该测度在算法输出处经过$T$次迭代后为$\\widetilde O(T^{-1})$。这改进了Chen等人（2024）在相同设置下获得的$\\widetilde O(T^{-1/4})$界，其中$\\widetilde O(\\cdot)$忽略了对数因子。改进率的关键在于利用PS测度的Lipschitz连续性（由多梯度下降算法（MGDA）方向的范数定义），而非Chen等人（2024）使用的MGDA方向的$(1/2)$-Hölder连续性。该证明是在作者为研究生课程准备作业时发现的：ChatGPT 5.4 Thinking Extended根据作者编写的作业解答提示生成了初始证明策略；随后作者验证并重组了所得论证。附录记录了提示并总结了学生提交的内容。",
+      "categories": [
+        "math.OC"
+      ],
+      "primary_category": "math.OC",
+      "published": "2026-07-20T17:13:07Z",
+      "updated": "2026-07-20T17:13:07Z",
+      "announcement_date": "2026-07-21",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.18174v1",
+        "pdf": "https://arxiv.org/pdf/2607.18174v1"
+      },
+      "matched_keywords": [
+        "stochastic"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.18171",
+      "arxiv_id": "2607.18171v1",
+      "version": "v1",
+      "title": "FlashRT: Agent Harness for Guiding Agents to Deploy Real-Time Multimodal Applications",
+      "title_zh": "FlashRT：引导智能体部署实时多模态应用的智能体框架",
+      "authors": [
+        "Krish Agarwal",
+        "Zhuoming Chen",
+        "Yanyuan Qin",
+        "Zhenyu Gu",
+        "Atri Rudra",
+        "Beidi Chen"
+      ],
+      "abstract": "Real-time multimodal applications, including voice agents and interactive video generation, compose heterogeneous models into pipelines whose efficient deployment requires application-specific decisions about placement, streaming, and intra-model parallelism. Existing serving systems and auto-parallelism compilers commit to limited transformations and fixed workload assumptions, so achieving high performance on a new application requires hand-crafting an efficient implementation. We present FlashRT, an agent harness that guides coding agents to lift simple developer-written reference implementations into optimized multi-GPU deployments that flexibly weigh target metrics like latency and throughput. Using a new chain-of-program paradigm, FlashRT directs a generic coding agent through a multi-pass transformation process where an agent transforms the reference into an intermediate representation (IR) to capture data dependencies and persistent-state scopes, validates this IR via a sequential interpreter, and performs static analyses to identify candidate transformations. Then, the agent iteratively implements, verifies, and benchmarks each candidate under a measurement-gated optimization loop to produce effective deployments that span different hardware budgets. Across various applications, including video world models and multimodal LLMs, FlashRT converts reference implementations into highly efficient deployments, delivering up to ~70x latency reduction and 2.8x throughput improvement on NVIDIA B200 GPUs. On AMD MI355X GPUs, FlashRT matches the peak latency reduction while increasing peak throughput improvement to 3.6x, demonstrating that agent-driven optimization can be more scalable on platforms with less mature expert optimization. In fact, for Qwen3-Omni text-to-audio inference, FlashRT reduces response latency by 65% compared to the expert vLLM-Omni implementation on AMD MI355X.",
+      "abstract_zh": "实时多模态应用，包括语音智能体和交互式视频生成，将异构模型组合成流水线，其高效部署需要针对具体应用做出关于放置、流式传输和模型内并行的决策。现有的服务系统和自动并行编译器局限于有限的转换和固定的工作负载假设，因此在新应用上实现高性能需要手工构建高效的实现。我们提出FlashRT，一个智能体框架，引导编码智能体将开发者编写的简单参考实现提升为优化的多GPU部署，灵活权衡延迟和吞吐量等目标指标。利用新的链式程序范式，FlashRT引导通用编码智能体通过多轮转换过程：智能体将参考实现转换为中间表示（IR）以捕获数据依赖和持久状态范围，通过顺序解释器验证该IR，并执行静态分析以识别候选转换。然后，智能体在测量门控优化循环中迭代实现、验证和基准测试每个候选转换，以生成跨越不同硬件预算的有效部署。在各种应用中，包括视频世界模型和多模态LLM，FlashRT将参考实现转换为高效部署，在NVIDIA B200 GPU上实现高达约70倍的延迟降低和2.8倍的吞吐量提升。在AMD MI355X GPU上，FlashRT匹配了峰值延迟降低，同时将峰值吞吐量提升增加到3.6倍，表明在专家优化较不成熟的平台上，智能体驱动的优化更具可扩展性。事实上，对于Qwen3-Omni文本到音频推理，与AMD MI355X上的专家vLLM-Omni实现相比，FlashRT将响应延迟降低了65%。",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-20T17:12:28Z",
+      "updated": "2026-07-20T17:12:28Z",
+      "announcement_date": "2026-07-21",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.18171v1",
+        "pdf": "https://arxiv.org/pdf/2607.18171v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.18164",
+      "arxiv_id": "2607.18164v1",
+      "version": "v1",
+      "title": "A Continual Validation, Updating, and Decision-Making Framework for Self-Adaptive Digital Twins via Robust Model Predictive Control: A Case Study in Additive Manufacturing",
+      "title_zh": "一种基于鲁棒模型预测控制的自适应数字孪生持续验证、更新与决策框架：增材制造案例研究",
+      "authors": [
+        "Yi-Ping Chen",
+        "Ying-Kuan Tsai",
+        "Vispi Karkaria",
+        "Seul Lee",
+        "Daniel Apley",
+        "Wei Chen"
+      ],
+      "abstract": "Digital Twins rely on surrogate models to mirror physical systems in real time, yet these models can degrade as operating conditions evolve, a phenomenon known as concept drift. Maintaining surrogate fidelity under drift, particularly when models must also capture aleatoric uncertainty, remains an open challenge. Existing adaptive frameworks lack principled mechanisms for detecting when updates are needed, for efficiently adapting models from limited streaming data, and for certifying that updates genuinely improve predictive performance. Here we present an adaptive Digital Twin framework that integrates a Fisher score--based multivariate drift detector, Low-Rank Adaptation (LoRA) for parameter-efficient continual learning, and a Mann--Whitney $U$ test for online statistical validation. The framework monitors surrogate-model confidence via Fisher score vectors, triggers targeted fine-tuning of fewer than 1% of model parameters upon drift detection, and statistically certifies predictive improvement before deploying the updated surrogate. Applied to a stochastic linear system and a directed energy deposition additive manufacturing process as case studies, the framework successfully detects distributional shifts with short delays and restores both predictive accuracy and uncertainty quantification under abrupt and incremental drift. These results establish a statistically rigorous and computationally tractable pathway for sustaining the trustworthiness of neural-network--based Digital Twins throughout their operational life cycle.",
+      "abstract_zh": "数字孪生依赖代理模型实时镜像物理系统，然而随着运行条件演变，这些模型可能会退化，这种现象称为概念漂移。在漂移情况下保持代理保真度，特别是当模型还需捕捉偶然不确定性时，仍是一个未解决的挑战。现有的自适应框架缺乏检测何时需要更新的原则性机制、从有限流数据中高效调整模型的方法，以及认证更新确实能提升预测性能的保障。本文提出一种自适应数字孪生框架，集成了基于Fisher分数的多变量漂移检测器、用于参数高效持续学习的低秩适应（LoRA）以及用于在线统计验证的Mann-Whitney U检验。该框架通过Fisher分数向量监控代理模型置信度，在检测到漂移时触发对不到1%模型参数的针对性微调，并在部署更新后的代理之前统计认证预测改进。以随机线性系统和定向能量沉积增材制造过程为案例研究，该框架成功检测到分布变化且延迟短，并在突变和渐进漂移下恢复了预测精度和不确定性量化。这些结果为维持基于神经网络的数字孪生在其运行生命周期中的可信度建立了一条统计严谨且计算可行的路径。",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "math.ST"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-20T17:07:41Z",
+      "updated": "2026-07-20T17:07:41Z",
+      "announcement_date": "2026-07-21",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.18164v1",
+        "pdf": "https://arxiv.org/pdf/2607.18164v1"
+      },
+      "matched_keywords": [
+        "statistical",
+        "stochastic"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.18163",
+      "arxiv_id": "2607.18163v1",
+      "version": "v1",
+      "title": "OR Else: A Differentiable Trust Region for Policy Optimization",
+      "title_zh": "OR Else：一种用于策略优化的可微信任区域",
+      "authors": [
+        "Chinmay Rane",
+        "Kanishka Tyagi",
+        "Michael Manry"
+      ],
+      "abstract": "PPO and the GRPO baseline studied here use clipped surrogate objectives whose favorable-direction saturation introduces an abrupt change in the scalar objective's derivative. We ask whether Output Reset (OR), a smooth one-sided saturation rule, offers a useful alternative for large language model post-training. PPO-OR and GRPO-OR replace the clipped policy term with an OR squared-margin loss in rollout-relative token log-ratio space; the advantage sign determines the update direction, and a token contributes zero direct OR residual after crossing the favorable margin. We compare PPO-clip with PPO-OR under generalized advantage estimation (GAE), and GRPO with GRPO-OR under group-relative advantages, using \\texttt{Llama-3.2-1B-Instruct} on Anthropic \\texttt{hh-rlhf} with one shared reward model and three seeds per method. Under GAE, PPO-OR has a mean final training-time reward-model score $0.305$ higher than PPO-clip, with a larger observed across-seed spread. Under group-relative advantages, GRPO-OR does not have a higher mean score, but shows a smaller observed spread, a near-zero terminal OR residual, and a declining overshoot fraction, while the matched GRPO clipped-objective trace remains variable. Both group-relative methods exhibit substantially larger rollout-to-current log-ratio displacement than the GAE methods, and OR does not consistently reduce it. Thus, OR changes optimization behavior in both matched comparisons, but the observed reward effect differs between them. At $G=2$, the GRPO-OR diagnostics do not translate into a reward-score gain. Whether larger groups change this outcome remains open. The reported scores are training-time reward-model measurements, not held-out human-preference performance.",
+      "abstract_zh": "PPO以及本文研究的GRPO基线使用裁剪的替代目标函数，其有利方向饱和会导致标量目标导数发生突变。我们探究输出重置（OR）——一种平滑的单侧饱和规则——是否为大型语言模型的后训练提供了有用的替代方案。PPO-OR和GRPO-OR将裁剪策略项替换为在轨迹相对token对数比率空间中的OR平方间隔损失；优势符号决定更新方向，且token在越过有利间隔后贡献零直接OR残差。我们在广义优势估计（GAE）下比较PPO-clip与PPO-OR，在组相对优势下比较GRPO与GRPO-OR，使用\\texttt{Llama-3.2-1B-Instruct}在Anthropic \\texttt{hh-rlhf}上，共享一个奖励模型，每种方法三个随机种子。在GAE下，PPO-OR的平均最终训练时奖励模型得分比PPO-clip高$0.305$，且观察到的跨种子方差更大。在组相对优势下，GRPO-OR的平均得分并不更高，但观察到的方差更小，终端OR残差接近零，且过冲比例下降，而匹配的GRPO裁剪目标轨迹仍具变异性。两种组相对方法均表现出比GAE方法大得多的轨迹到当前对数比率位移，而OR并未一致地减少该位移。因此，OR在两种匹配比较中均改变了优化行为，但观察到的奖励效果不同。在$G=2$时，GRPO-OR的诊断指标并未转化为奖励得分的提升。更大的组是否会改变这一结果仍有待研究。报告的得分为训练时奖励模型测量值，而非留出的人类偏好性能。",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-20T17:07:40Z",
+      "updated": "2026-07-20T17:07:40Z",
+      "announcement_date": "2026-07-21",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.18163v1",
+        "pdf": "https://arxiv.org/pdf/2607.18163v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.18162",
+      "arxiv_id": "2607.18162v1",
+      "version": "v1",
+      "title": "The Calibration Channel Determines the Bayes-Error Proxy: An Exact Law for Temperature-Induced Distortion",
+      "title_zh": "校准通道决定贝叶斯误差代理：温度诱导失真的精确定律",
+      "authors": [
+        "Shreyas Pradeepkumar Khandale"
+      ],
+      "abstract": "The soft-label Bayes-error estimator beta(z) = E[min(z, 1-z)] of Ishida et al. estimates the irreducible error of a binary task directly from probability-valued labels. Recent work by Ushio et al. showed that this estimator is fragile when the probabilities are not the true posterior: even perfectly calibrated soft labels can yield a substantially inaccurate estimate, and they propose isotonic calibration as a consistent remedy. We complement that line of work by characterizing exactly how the most widely used post-hoc calibration map -- temperature scaling -- distorts the proxy. We prove an exact, model-free identity reducing the temperature-scaled proxy to the classifier's margin distribution, from which we obtain (i) strict monotonicity in the temperature and (ii) a continuous bijection from the temperature axis onto the open interval (0, 1/2), so that a fixed classifier -- with fixed decisions and fixed 0-1 error -- can be made to report any proxy value whatsoever. Under a Gaussian model of the logits we further derive a two-parameter closed form for the entire proxy-versus-temperature curve. Across CIFAR-10, Fashion-MNIST, and SVHN (eight binary tasks), the proxy varies by 56x to 980x at constant test error, the closed form reproduces the empirical curve to within 0.018, and the calibration temperature that minimizes the expected calibration error does not coincide with any stable proxy value. Our results give a precise, predictive account of the distortion whose existence motivates calibration-based remedies, and they reinforce the practical recommendation that a proxy value is meaningful only together with the mechanism that produced its probabilities.",
+      "abstract_zh": "Ishida等人的软标签贝叶斯误差估计器β(z)=E[min(z, 1-z)]直接从概率值标签估计二分类任务的不可约误差。Ushio等人最近的研究表明，当概率不是真实后验时，该估计器是脆弱的：即使完美校准的软标签也可能产生严重不准确的估计，他们提出等渗校准作为一致的补救措施。我们通过精确刻画最广泛使用的后验校准映射——温度缩放——如何扭曲代理来补充该工作。我们证明了一个精确的、无模型的恒等式，将温度缩放后的代理简化为分类器的边际分布，由此我们得到(i)温度下的严格单调性和(ii)从温度轴到开区间(0, 1/2)的连续双射，因此一个固定的分类器——具有固定的决策和固定的0-1误差——可以被使得报告任何代理值。在高斯logits模型下，我们进一步推导了整个代理-温度曲线的双参数闭式形式。在CIFAR-10、Fashion-MNIST和SVHN（八个二分类任务）上，代理在恒定测试误差下变化56倍到980倍，闭式形式在0.018内重现经验曲线，并且最小化期望校准误差的校准温度不与任何稳定的代理值重合。我们的结果精确、可预测地描述了失真，其存在证明了基于校准的补救措施的合理性，并强化了实际建议：代理值只有与其产生概率的机制一起才有意义。",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-20T17:07:26Z",
+      "updated": "2026-07-20T17:07:26Z",
+      "announcement_date": "2026-07-21",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.18162v1",
+        "pdf": "https://arxiv.org/pdf/2607.18162v1"
+      },
+      "matched_keywords": [
+        "probability"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.18128",
+      "arxiv_id": "2607.18128v1",
+      "version": "v1",
+      "title": "Feedback Cycles in Exploratory Equilibria",
+      "title_zh": "探索性均衡中的反馈循环",
+      "authors": [
+        "Chen-Hung Wu"
+      ],
+      "abstract": "Entropy regularization smooths equilibrium policies in time-inconsistent stochastic control. At low temperature, the same Gibbs response can strongly amplify errors in learned rewards and dynamics. We show that the derivative of an exploratory equilibrium is governed by a backward Volterra-parabolic resolvent. Along an aligned positive mode, a lower bound has the same exponential order. A block decomposition identifies the source of the amplification: causal paths contribute powers of 1/tau, whereas a positive feedback cycle can produce exponential growth. At fixed temperature, a local equilibrium branch is twice differentiable with respect to finite-dimensional model parameters, which yields a function-valued delta method. A bounded uniformly elliptic diffusion realizes this path-cycle distinction in every finite dimension. Closing one positive cycle changes the root-n linear-response boundary from a power law to order 1/log n; along the cyclic Perron mode, right-endpoint discretization is relatively consistent exactly when N tau^2 -> infinity. An affine model also gives an exact nonlinear transition at the Lambert-W temperature beta T / W(beta T sqrt(n)). Numerical calculations illustrate these rates.",
+      "abstract_zh": "熵正则化平滑了时间不一致随机控制中的均衡策略。在低温下，相同的吉布斯响应会强烈放大学习到的奖励和动力学中的误差。我们证明，探索性均衡的导数由一个后向伏尔泰拉-抛物型预解式控制。沿着一个对齐的正模式，下界具有相同的指数阶。一个块分解识别了放大的来源：因果路径贡献了1/tau的幂次，而正反馈循环可以产生指数增长。在固定温度下，局部均衡分支关于有限维模型参数是二次可微的，这产生了一个函数值的delta方法。一个有界一致椭圆扩散在每个有限维度中实现了这种路径-循环区分。关闭一个正循环将根n线性响应边界从幂律变为1/log n阶；沿着循环Perron模式，右端点离散化在且仅在N tau^2趋于无穷时相对一致。一个仿射模型也在Lambert-W温度beta T / W(beta T sqrt(n))处给出了精确的非线性转变。数值计算说明了这些速率。",
+      "categories": [
+        "math.OC",
+        "math.NA",
+        "math.PR"
+      ],
+      "primary_category": "math.OC",
+      "published": "2026-07-20T16:20:55Z",
+      "updated": "2026-07-20T16:20:55Z",
+      "announcement_date": "2026-07-21",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.18128v1",
+        "pdf": "https://arxiv.org/pdf/2607.18128v1"
+      },
+      "matched_keywords": [
+        "causal",
+        "stochastic"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.18127",
+      "arxiv_id": "2607.18127v1",
+      "version": "v1",
+      "title": "ClouDens: Operational Context-Aware Anomaly Detection for Large-scale Cloud System Monitoring",
+      "title_zh": "ClouDens：面向大规模云系统监控的运营上下文感知异常检测",
+      "authors": [
+        "Thu T. H. Doan",
+        "Mohammad Saiful Islam",
+        "Andriy Miranskyy",
+        "Ngoc-Thanh Nguyen",
+        "Rogardt Heldal",
+        "Patrizio Pelliccione"
+      ],
+      "abstract": "With the rapid growth of cloud computing infrastructures in scale and complexity, network monitoring for Large-scale Cloud Systems (LCSs) has become increasingly challenging, requiring automated and reliable anomaly detection to maintain service availability. Modern LCSs continuously generate telemetry logs from distributed cloud services, producing high-dimensional multivariate time series that capture system operations. Detecting anomalies in this context is difficult due to extreme dimensionality, complex dependencies among distributed components, and severe sparsity from intermittently active services. Taking these challenges into account, we first conduct an empirical study on telemetry logs from the IBM Cloud Console platform, and then propose ClouDens, an anomaly detection framework tailored to LCS monitoring that leverages operational-context attributes encoded in the telemetry log schema to improve detection accuracy and early identification of anomalies. ClouDens partitions high-dimensional telemetry logs into domain-guided subsets, constructs a context-aware graph modeling operational service dependencies, and employs Spatio-Temporal Graph Neural Networks for forecasting-based anomaly detection. We evaluate ClouDens on the recently released IBM Cloud Telemetry Dataset and provide practical insights into designing reliable anomaly detection solutions for LCS monitoring. Results show ClouDens achieves higher NAB scores in count-based telemetry features, indicating more accurate, earlier anomaly detection with broader coverage than a GRU-based model. Our study further reveals that telemetry feature subsets, operational-context modeling, scoring strategies, and sparsity imputation all substantially influence detection performance, offering practical guidance for designing and fairly benchmarking anomaly detection approaches for LCS monitoring.",
+      "abstract_zh": "随着云计算基础设施在规模和复杂性上的快速增长，大规模云系统（LCS）的网络监控变得越来越具有挑战性，需要自动化和可靠的异常检测来维持服务可用性。现代LCS持续从分布式云服务生成遥测日志，产生捕获系统操作的高维多元时间序列。在此背景下检测异常是困难的，原因包括极端维度、分布式组件间的复杂依赖关系以及间歇性活跃服务导致的严重稀疏性。针对这些挑战，我们首先对IBM Cloud Console平台的遥测日志进行了实证研究，然后提出了ClouDens，一种专为LCS监控定制的异常检测框架，该框架利用遥测日志模式中编码的运营上下文属性来提高检测准确性和异常早期识别。ClouDens将高维遥测日志划分为领域引导的子集，构建建模运营服务依赖关系的上下文感知图，并采用时空图神经网络进行基于预测的异常检测。我们在最近发布的IBM Cloud Telemetry Dataset上评估了ClouDens，并为设计可靠的LCS监控异常检测解决方案提供了实用见解。结果表明，在基于计数的遥测特征中，ClouDens获得了更高的NAB分数，表明与基于GRU的模型相比，其异常检测更准确、更早且覆盖范围更广。我们的研究进一步揭示，遥测特征子集、运营上下文建模、评分策略和稀疏性插补均显著影响检测性能，为设计和公平基准测试LCS监控的异常检测方法提供了实用指导。",
+      "categories": [
+        "cs.NI",
+        "cs.LG"
+      ],
+      "primary_category": "cs.NI",
+      "published": "2026-07-20T16:20:26Z",
+      "updated": "2026-07-20T16:20:26Z",
+      "announcement_date": "2026-07-21",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.18127v1",
+        "pdf": "https://arxiv.org/pdf/2607.18127v1"
+      },
+      "matched_keywords": [
+        "time series",
+        "high-dimensional"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.18121",
+      "arxiv_id": "2607.18121v1",
+      "version": "v1",
+      "title": "Krasnosel'skii-Mann iterations beyond asymptotics: a combinatorial analysis",
+      "title_zh": "超越渐近性的Krasnosel'skii-Mann迭代：组合分析",
+      "authors": [
+        "Mario Bravo",
+        "Roberto Cominetti"
+      ],
+      "abstract": "We revisit the classical Krasnosel'skii-Mann fixed point iteration for contractions and nonexpansive maps in general normed spaces. This iteration is ubiquitous across a wide range of areas, including convex optimization, monotone inclusions, Markov decision processes, under-relaxed methods for nonlinear PDEs, and more. Drawing on a remarkable connection with a Markov chain on $\\mathbb{Z}^2$, and using counting arguments from enumerative combinatorics of lattice paths, we derive explicit estimates for the distance between iterates, as well as non-asymptotic error bounds for the fixed point residuals. As the contraction parameter approaches one, these bounds smoothly recover the known estimates for nonexpansive maps. Building upon these estimates, we further derive error bounds for inexact Krasnosel'skii-Mann iterations.",
+      "abstract_zh": "我们重新审视了一般赋范空间中收缩映射和非扩张映射的经典Krasnosel'skii-Mann不动点迭代。该迭代广泛应用于凸优化、单调包含、马尔可夫决策过程、非线性偏微分方程的欠松弛方法等多个领域。利用与Z^2上马尔可夫链的显著联系，并借助格路径枚举组合学的计数论证，我们推导了迭代点之间距离的显式估计，以及不动点残差的非渐近误差界。当收缩参数趋近于1时，这些界平滑地恢复为非扩张映射的已知估计。基于这些估计，我们进一步推导了不精确Krasnosel'skii-Mann迭代的误差界。",
+      "categories": [
+        "math.NA"
+      ],
+      "primary_category": "math.NA",
+      "published": "2026-07-20T16:15:39Z",
+      "updated": "2026-07-20T16:15:39Z",
+      "announcement_date": "2026-07-21",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.18121v1",
+        "pdf": "https://arxiv.org/pdf/2607.18121v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.18119",
+      "arxiv_id": "2607.18119v1",
+      "version": "v1",
+      "title": "COVAriance-Induced Fairness Gap Penalty for Subgroup-Fair Clustering",
+      "title_zh": "COVAriance诱导的公平性差距惩罚用于子组公平聚类",
+      "authors": [
+        "Kyungseon Lee",
+        "Hankyo Jeong",
+        "Kunwoong Kim",
+        "Kwanho Lee",
+        "Yongdai Kim"
+      ],
+      "abstract": "Fair clustering aims to make cluster assignments independent of sensitive attributes, but this goal becomes challenging when multiple sensitive attributes jointly define many subgroups. In such settings, directly extending existing fair clustering algorithms is computationally expensive or numerically unstable, especially when the number of subgroups grows exponentially and some subgroups contain only a few instances. To address these challenges, we define a subgroup-fairness gap for clustering and derive a covariance-based surrogate that exactly matches this gap. We then introduce a continuous relaxation of the surrogate, enabling efficient gradient-based optimization and yielding our proposed algorithm, COVA-FC. We also show that subgroup fairness alone does not imply marginal fairness, and extend our framework to capture a subgroup-marginal-fairness gap. Experiments on benchmark datasets show that COVA-FC achieves competitive cost-fairness trade-offs and improves computational efficiency over existing baselines in both subgroup and higher-order marginal settings.",
+      "abstract_zh": "公平聚类旨在使聚类分配独立于敏感属性，但当多个敏感属性共同定义许多子组时，这一目标变得具有挑战性。在这种情况下，直接扩展现有的公平聚类算法在计算上昂贵或数值上不稳定，特别是当子组数量呈指数增长且某些子组仅包含少量实例时。为了解决这些挑战，我们定义了聚类的子组公平性差距，并推导出一个基于协方差的替代项，该替代项精确匹配这一差距。然后，我们引入了该替代项的连续松弛，从而实现高效的基于梯度的优化，并提出了我们的算法COVA-FC。我们还表明，仅子组公平性并不意味着边际公平性，并将我们的框架扩展到捕捉子组-边际公平性差距。在基准数据集上的实验表明，COVA-FC在子组和高阶边际设置中均实现了有竞争力的成本-公平性权衡，并提高了相对于现有基线的计算效率。",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ],
+      "primary_category": "stat.ML",
+      "published": "2026-07-20T16:14:13Z",
+      "updated": "2026-07-20T16:14:13Z",
+      "announcement_date": "2026-07-21",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.18119v1",
+        "pdf": "https://arxiv.org/pdf/2607.18119v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.18114",
+      "arxiv_id": "2607.18114v1",
+      "version": "v1",
+      "title": "How Does Alignment Tuning Shape Representations of Sycophancy and Related Cue-Induced Biases in LLMs?",
+      "title_zh": "对齐微调如何塑造大型语言模型中谄媚及相关线索诱导偏差的表征？",
+      "authors": [
+        "Prakhar Gupta",
+        "Terry Jingchen Zhang",
+        "Florent Draye",
+        "Bernhard Schölkopf",
+        "Zhijing Jin"
+      ],
+      "abstract": "Modern LLMs are alarmingly susceptible to surprisingly simple immaterial changes of input prompts: a casual hint, an incorrectly labeled few-shot example, or a fake prior assistant turn often flips an originally correct answer. We study where this susceptibility, spanning sycophancy and related cue-induced biases, lives inside the model. Across five model families and seven BCT bias types, we extract a per-bias direction from hidden states and triangulate it through three measures: probing, leave-one-dataset-out transfer, and causal intervention. The susceptibility is largely installed by alignment tuning rather than pretraining: pretrained base models barely cave to these biases, and their activations carry no cue-specific signal beyond question content. Within aligned models, each bias becomes a single coherent direction that we can both decode and steer along, recovering the unbiased answer across every family we test. The biases stay representationally distinct, however: cross-bias entanglement is model-specific rather than a property of the bias category, and even behaviorally similar biases occupy different directions. The same intervention also serves as a modest debiasing tool, recovering a meaningful share of bias-induced errors while preserving most correct answers across all instruct families. Cue-induced bias is therefore best understood not as a single flaw in LLMs but as a family of distinct, causally active directions that alignment tuning installs.",
+      "abstract_zh": "现代大型语言模型对输入提示中令人惊讶的简单非实质性变化异常敏感：一个随意的提示、一个错误标记的少样本示例或一个虚假的先前助手轮次，常常会翻转原本正确的答案。我们研究了这种敏感性（涵盖谄媚及相关线索诱导偏差）在模型内部的所在位置。跨越五个模型家族和七种BCT偏差类型，我们从隐藏状态中提取每种偏差的方向，并通过三种测量方法进行三角验证：探针分析、留一数据集迁移和因果干预。这种敏感性主要由对齐微调而非预训练引入：预训练基础模型几乎不屈服于这些偏差，其激活在问题内容之外不携带任何线索特定信号。在对齐模型中，每种偏差成为一个单一连贯的方向，我们可以解码并沿其进行引导，从而在我们测试的每个家族中恢复无偏答案。然而，这些偏差在表征上保持独立：跨偏差纠缠是模型特定的，而非偏差类别的属性，甚至行为相似的偏差也占据不同的方向。相同的干预也作为一种适度的去偏工具，恢复了相当一部分偏差引起的错误，同时在所有指令家族中保留了大多数正确答案。因此，线索诱导偏差最好不被理解为LLM中的单一缺陷，而是对齐微调引入的一组不同且因果活跃的方向。",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CL",
+      "published": "2026-07-20T16:10:06Z",
+      "updated": "2026-07-20T16:10:06Z",
+      "announcement_date": "2026-07-21",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.18114v1",
+        "pdf": "https://arxiv.org/pdf/2607.18114v1"
+      },
+      "matched_keywords": [
+        "causal"
+      ],
+      "translation_status": "translated"
+    }
+  ]
+}

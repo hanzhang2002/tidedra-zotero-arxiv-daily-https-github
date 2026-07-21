@@ -1,6 +1,6 @@
 {
   "date": "2026-07-17",
-  "updated_at": "2026-07-20T12:32:52Z",
+  "updated_at": "2026-07-21T12:09:18Z",
   "papers": [
     {
       "id": "2607.16062",
@@ -184,6 +184,33 @@
       "matched_keywords": [
         "stochastic",
         "probability"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16371",
+      "arxiv_id": "2607.16371v1",
+      "version": "v1",
+      "title": "Which Effect of Race? Causal Inference without Holding All Else Equal",
+      "title_zh": "种族的哪种效应？不保持其他条件不变时的因果推断",
+      "authors": [
+        "Thomas Leavitt"
+      ],
+      "abstract": "Empirical studies of racial discrimination vary race while holding nonracial traits fixed, a design the literature defends as what credible inference requires. This defense bundles two claims: which effect of race a study should target, and whether its design can recover that effect. I separate them. The same randomization that secures credible estimation and inference recovers a family of race estimands, from the all-else-equal effect to a within-race effect that lets associated traits vary with race. Every member of that family is causal rather than descriptive, and the choice among members is a claim about what a racial category is -- a claim extending to ethnicity, religion, and other identity categories that index associated traits. I derive conditions, weaker than the literature's, for credible estimation and inference. Reanalyzing a Spanish-language campaign experiment, I find coethnic preference among Hispanic voters under the within-race effect and none under the all-else-equal effect.",
+      "abstract_zh": "关于种族歧视的实证研究在保持非种族特征不变的情况下改变种族，文献中辩护这种设计是可信推断所必需的。这种辩护包含两个主张：研究应针对种族的哪种效应，以及其设计能否恢复该效应。我将它们分开。确保可信估计和推断的相同随机化恢复了一族种族估计量，从其他条件不变效应到让相关特征随种族变化的种族内效应。该族中的每个成员都是因果性的而非描述性的，成员之间的选择是关于种族类别是什么的主张——这一主张延伸到种族、宗教和其他索引相关特征的身份类别。我推导出比文献更弱的可信估计和推断条件。重新分析一个西班牙语竞选实验，我发现西班牙裔选民在种族内效应下存在同族偏好，而在其他条件不变效应下则没有。",
+      "categories": [
+        "stat.ME"
+      ],
+      "primary_category": "stat.ME",
+      "published": "2026-07-17T14:34:20Z",
+      "updated": "2026-07-17T14:34:20Z",
+      "announcement_date": "2026-07-17",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16371v1",
+        "pdf": "https://arxiv.org/pdf/2607.16371v1"
+      },
+      "matched_keywords": [
+        "causal"
       ],
       "translation_status": "translated"
     },
@@ -405,6 +432,40 @@
       "translation_status": "translated"
     },
     {
+      "id": "2607.16363",
+      "arxiv_id": "2607.16363v1",
+      "version": "v1",
+      "title": "MTSSL: Meta-Thresholding Semi-Supervised Learning",
+      "title_zh": "MTSSL：元阈值半监督学习",
+      "authors": [
+        "Shuyang Liu",
+        "Ziang Zeng",
+        "Ruiqiu Zheng",
+        "Jiazheng Wang",
+        "Zechen Liu",
+        "Wenxi Li",
+        "Zhou Yu"
+      ],
+      "abstract": "A large body of Semi-supervised Learning~(SSL) algorithms encounter the threshold $τ$ to select pseudo-labels. The value of $τ$ across different SSL algorithms can vary depending on the learning perspective, yet they may achieve similar performance. It motivates us to establish a unified theoretical framework to explain the role of $τ$ in SSL. We statistically explained that the unsupervised loss is affected independently by correct and incorrect pseudo-labels, while $τ$ adjusts their numbers to balance the corresponding error term. This inherent trade-off indicates that SSL can reach the same loss with varying $τ$, precise optimal values of $τ$ during training may be unnecessary. With this, we treat $τ$ as an updatable parameter and optimize it via differentiation; the new policy is named \\textbf{Meta-Thresholding Semi-Supervised Learning (MTSSL)}. Extensive experiments demonstrate the superior performance of MTSSL. We observe that the accuracy curves of SSL algorithms can overlap completely even when the values of $τ$ differ significantly, which supports our theoretical framework and indicates that the selection of $τ$ can be relaxed in the future design of SSL algorithms.",
+      "abstract_zh": "大量半监督学习算法使用阈值τ来选择伪标签。不同半监督学习算法中τ的值可能因学习视角而异，但它们可能达到相似的性能。这促使我们建立一个统一的理论框架来解释τ在半监督学习中的作用。我们从统计学角度解释了无监督损失受正确和错误伪标签的独立影响，而τ调整它们的数量以平衡相应的误差项。这种固有的权衡表明，半监督学习可以在不同的τ下达到相同的损失，训练过程中精确的最优τ值可能是不必要的。基于此，我们将τ视为可更新参数并通过微分优化它；新策略称为元阈值半监督学习（MTSSL）。大量实验证明了MTSSL的优越性能。我们观察到，即使τ的值显著不同，半监督学习算法的准确率曲线也可能完全重叠，这支持了我们的理论框架，并表明在半监督学习算法的未来设计中可以放宽τ的选择。",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ],
+      "primary_category": "stat.ML",
+      "published": "2026-07-17T13:01:41Z",
+      "updated": "2026-07-17T13:01:41Z",
+      "announcement_date": "2026-07-17",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16363v1",
+        "pdf": "https://arxiv.org/pdf/2607.16363v1"
+      },
+      "matched_keywords": [
+        "statistical"
+      ],
+      "translation_status": "translated"
+    },
+    {
       "id": "2607.15916",
       "arxiv_id": "2607.15916v1",
       "version": "v1",
@@ -469,8 +530,8 @@
     },
     {
       "id": "2607.15893",
-      "arxiv_id": "2607.15893v1",
-      "version": "v1",
+      "arxiv_id": "2607.15893v2",
+      "version": "v2",
       "title": "Induction in Both Directions: A Mechanistic Analysis of In-Context Learning in Masked Diffusion Language Models",
       "title_zh": "双向归纳：掩码扩散语言模型中上下文学习的机制分析",
       "authors": [
@@ -486,11 +547,11 @@
       ],
       "primary_category": "cs.CL",
       "published": "2026-07-17T12:07:59Z",
-      "updated": "2026-07-17T12:07:59Z",
+      "updated": "2026-07-20T09:15:04Z",
       "announcement_date": "2026-07-17",
       "links": {
-        "abs": "https://arxiv.org/abs/2607.15893v1",
-        "pdf": "https://arxiv.org/pdf/2607.15893v1"
+        "abs": "https://arxiv.org/abs/2607.15893v2",
+        "pdf": "https://arxiv.org/pdf/2607.15893v2"
       },
       "matched_keywords": [
         "causal"

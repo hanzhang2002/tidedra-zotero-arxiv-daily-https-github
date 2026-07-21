@@ -1,7 +1,1541 @@
 {
   "date": "2026-07-18",
-  "updated_at": "2026-07-20T12:32:52Z",
+  "updated_at": "2026-07-21T12:09:18Z",
   "papers": [
+    {
+      "id": "2607.16864",
+      "arxiv_id": "2607.16864v1",
+      "version": "v1",
+      "title": "Bridging battery design and health assessment through virtual sensing and physics-informed learning",
+      "title_zh": "通过虚拟传感和物理信息学习连接电池设计与健康评估",
+      "authors": [
+        "Wendi Guo",
+        "Søren Byg Vilsen",
+        "Daniel Ioan Stroe",
+        "Yaqi Li",
+        "Yicun Huang",
+        "Ashima Verma",
+        "Daniel Brandell"
+      ],
+      "abstract": "Supercharging of lithium-ion batteries (LiBs) requires robust health monitoring to ensure durability, safety, and user confidence, particularly for emerging vehicle-to-grid applications with bidirectional energy flows. Yet battery management remains largely disconnected from the material and structural origins of aging, limiting both interpretable health assessment and informed battery design. Here we propose a physics-informed learning framework with virtual sensing that infers hard-to-measure design parameters, including solid-state diffusion coefficient, electrode thickness, ion concentration, and particle size, directly from standard battery management system (BMS) measurements. Across diverse fast-charging strategies and driving profiles, embedding a digital-twin-derived particle-cracking mechanism as a soft constraint reduces trajectory and lifetime prediction errors by 6-8 times relative to state-of-the-art machine learning baselines using only 2% early-life observations. We further show that accurate degradation extrapolation does not require fully resolved governing equations; validated partial mechanisms, jointly refined with limited data, provide sufficient guidance. Virtual sensing transforms standard charging signals into latent design variables without additional sensors, bridging observable battery behavior and underlying aging processes while reducing capacity loss error by up to 39%, end-of-life (EOL) error by 17%, and prediction variability by up to 54%, enabling real-time exploration of new battery configurations. More broadly, the proposed framework establishes a practical feedback loop between deployment and development, demonstrating how real-world operation can continuously inform upstream design decisions across complex multiphysics systems.",
+      "abstract_zh": "锂离子电池的快速充电需要稳健的健康监测以确保耐久性、安全性和用户信心，特别是对于具有双向能量流的新兴车网互联应用。然而，电池管理在很大程度上仍与老化的材料和结构起源脱节，限制了可解释的健康评估和明智的电池设计。本文提出了一种基于物理信息学习的虚拟传感框架，该框架直接从标准电池管理系统测量值中推断难以测量的设计参数，包括固态扩散系数、电极厚度、离子浓度和颗粒尺寸。在不同的快速充电策略和驾驶工况下，嵌入数字孪生衍生的颗粒开裂机制作为软约束，仅使用2%的早期寿命观测值，即可将轨迹和寿命预测误差相对于最先进的机器学习基线降低6-8倍。我们进一步表明，准确的退化外推不需要完全解析的控制方程；经过验证的部分机制与有限数据共同优化，提供了足够的指导。虚拟传感将标准充电信号转化为潜在的设计变量，无需额外传感器，桥接了可观察的电池行为与潜在的老化过程，同时将容量损失误差降低高达39%，寿命终止误差降低17%，预测变异性降低高达54%，实现了对新电池配置的实时探索。更广泛地说，所提出的框架在部署和开发之间建立了实用的反馈循环，展示了实际运行如何持续为跨复杂多物理系统的上游设计决策提供信息。",
+      "categories": [
+        "cs.LG",
+        "eess.SY"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-18T15:59:29Z",
+      "updated": "2026-07-18T15:59:29Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16864v1",
+        "pdf": "https://arxiv.org/pdf/2607.16864v1"
+      },
+      "matched_keywords": [
+        "machine learning"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16863",
+      "arxiv_id": "2607.16863v1",
+      "version": "v1",
+      "title": "Treasure Search Optimization",
+      "title_zh": "宝藏搜索优化",
+      "authors": [
+        "A. Sharma"
+      ],
+      "abstract": "We introduce Treasure Search Optimization (TSO), an interacting particle method for global optimization. Most swarm methods balance exploration and exploitation within a single population, and typically switch between the two by degenerating the noise, annealing a temperature, or tuning a parameter. TSO instead splits these tasks across two kinds of agents. A swarm of explorers stays in exploration mode and a single treasure hunter performs exploitation. The hunter drifts toward an objective-weighted average of the explorers and may teleport to it when the move lowers the objective. The swarm then re-centers around the hunter, creating a feedback loop between search and capture. We model the dynamics as coupled jump-diffusion stochastic differential equations (SDEs). The hunter's jumps are shared by all explorers and act as a common noise. The mean-field limit is therefore a conditional McKean-Vlasov jump-diffusion SDE, whose well-posedness we prove. We also characterize the steady state and prove, via Laplace approximation techniques, that the hunter settles near the global minimum with error of order $1/α$, where $α$ is the weight parameter. Linking the consensus drift to a smoothed free energy, we explain why the swarm ignores spurious local traps and demonstrate how to quantify uncertainty in inverse problems using post-processing Kalman steps after TSO iterations. Numerical experiments on ODE-constrained problems and a low dimensional Bayesian inverse problem demonstrate the effectiveness of the TSO method.",
+      "abstract_zh": "我们提出宝藏搜索优化（TSO），一种用于全局优化的相互作用粒子方法。大多数群体方法在单一群体中平衡探索与利用，通常通过退化噪声、退火温度或调整参数来在两者之间切换。TSO则将这两项任务分配给两种智能体：一群探索者保持探索模式，单个宝藏猎人进行利用。猎人向探索者的目标加权平均值漂移，并在移动降低目标时瞬移至此位置。然后群体围绕猎人重新居中，形成搜索与捕获之间的反馈循环。我们将动力学建模为耦合跳跃扩散随机微分方程（SDE）。猎人的跳跃由所有探索者共享，并作为共同噪声。因此平均场极限是一个条件McKean-Vlasov跳跃扩散SDE，我们证明了其适定性。我们还刻画了稳态，并通过拉普拉斯近似技术证明猎人定居在全局最小值附近，误差阶为$1/α$，其中$α$是权重参数。将共识漂移与平滑自由能联系起来，我们解释了为何群体忽略虚假局部陷阱，并展示了如何在TSO迭代后通过后处理卡尔曼步骤量化逆问题中的不确定性。在ODE约束问题和低维贝叶斯逆问题上的数值实验证明了TSO方法的有效性。",
+      "categories": [
+        "math.OC",
+        "math.PR"
+      ],
+      "primary_category": "math.OC",
+      "published": "2026-07-18T15:59:19Z",
+      "updated": "2026-07-18T15:59:19Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16863v1",
+        "pdf": "https://arxiv.org/pdf/2607.16863v1"
+      },
+      "matched_keywords": [
+        "bayesian",
+        "stochastic",
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16833",
+      "arxiv_id": "2607.16833v1",
+      "version": "v1",
+      "title": "Dynamical Equations for Poisson Galton--Watson Trees and Component Densities of Sparse Inhomogeneous Random Graphs",
+      "title_zh": "泊松伽尔顿-沃森树的动力学方程与稀疏非均匀随机图的组分密度",
+      "authors": [
+        "Bohan Hu",
+        "Wen Sun"
+      ],
+      "abstract": "We study Poisson Galton--Watson trees on a standard Borel type space when the offspring kernel is multiplied by a scalar parameter. On finite trees, we identify the Radon--Nikodym derivative between two parameter values and show that it remains measurable after projection to the total progeny measure. Under a uniform bound on the offspring intensities, differentiation yields exact differential and integral equations for the projected laws without irreducibility, reversibility, or a positive eigenfunction. With an additional positive eigenfunction bounded above and away from zero, we relate these equations to an infinite spinal tree, uniform pruning, the Doob transform, and the Aldous--Pitman ascension process. For a uniformly bounded offspring kernel, we also prove uniform exponential integrability of the total progeny throughout the spectrally subcritical regime. As an application, under the graphical-kernel assumptions of Bollobas, Janson and Riordan, the number $K_n$ of connected components satisfies $K_n/n \\to {\\mathbb E}_π[1/T_u]$ in probability and in $L^1$, where $T_u$ is the total progeny of the associated branching process and $1/\\infty=0$. If $q_u(x)$ is its extinction probability from type $x$, re-rooting and extinction duality give the explicit limit $$ \\int_S q_u(x)\\,π(dx) - {u\\over 2}\\int_{S\\times S}κ(x,y)q_u(x)q_u(y)\\,π(dx)π(dy). $$ This extends the finite-type and compact-continuous formulas to the full BJR graphical-kernel setting, allowing separable noncompact type spaces and kernels that may be unbounded or reducible.",
+      "abstract_zh": "我们研究了标准博雷尔类型空间上的泊松伽尔顿-沃森树，其中后代核乘以一个标量参数。在有限树上，我们确定了两个参数值之间的拉东-尼科迪姆导数，并证明其在投影到总后代测度后仍保持可测性。在后代强度一致有界的条件下，微分得到投影律的精确微分和积分方程，无需不可约性、可逆性或正特征函数。在存在一个上下有界的正特征函数时，我们将这些方程与无限脊柱树、均匀修剪、Doob变换以及Aldous-Pitman上升过程联系起来。对于一致有界的后代核，我们还证明了在整个谱次临界区域内总后代的均匀指数可积性。作为应用，在Bollobas、Janson和Riordan的图核假设下，连通分量数$K_n$满足$K_n/n \\to {\\mathbb E}_π[1/T_u]$依概率和$L^1$收敛，其中$T_u$是相关分支过程的总后代，且$1/\\infty=0$。若$q_u(x)$是其从类型$x$出发的灭绝概率，重根和灭绝对偶性给出显式极限$$ \\int_S q_u(x)\\,π(dx) - {u\\over 2}\\int_{S\\times S}κ(x,y)q_u(x)q_u(y)\\,π(dx)π(dy). $$ 这将有限类型和紧连续公式推广到完整的BJR图核设定，允许可分离非紧类型空间以及可能无界或可约的核。",
+      "categories": [
+        "math.PR"
+      ],
+      "primary_category": "math.PR",
+      "published": "2026-07-18T14:10:26Z",
+      "updated": "2026-07-18T14:10:26Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16833v1",
+        "pdf": "https://arxiv.org/pdf/2607.16833v1"
+      },
+      "matched_keywords": [
+        "probability"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16823",
+      "arxiv_id": "2607.16823v1",
+      "version": "v1",
+      "title": "Bayesian inference on the exponentiated Kumaraswamy distribution with applications",
+      "title_zh": "指数化库马拉斯瓦米分布的贝叶斯推断及其应用",
+      "authors": [
+        "Ziqian Sun",
+        "Miguel A. Juárez"
+      ],
+      "abstract": "We discuss Bayesian estimation of the exponentiated Kumaraswamy distribution, based on a scale-location parameterisation. The parameterisation facilitates prior elicitation and interpretation of results, but potentially entails identifiability issues that are addressed trough a hierarchical weak informative prior setting. Our HMC implementation enables off-the-shelf utility for practitioners, and is illustrated on synthetic and real data.",
+      "abstract_zh": "我们讨论了基于尺度-位置参数化的指数化库马拉斯瓦米分布的贝叶斯估计。该参数化有助于先验启发和结果解释，但可能带来可识别性问题，通过分层弱信息先验设置加以解决。我们的HMC实现为实践者提供了现成的实用性，并在合成数据和真实数据上进行了说明。",
+      "categories": [
+        "stat.ME"
+      ],
+      "primary_category": "stat.ME",
+      "published": "2026-07-18T13:50:59Z",
+      "updated": "2026-07-18T13:50:59Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16823v1",
+        "pdf": "https://arxiv.org/pdf/2607.16823v1"
+      },
+      "matched_keywords": [
+        "bayesian"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16813",
+      "arxiv_id": "2607.16813v1",
+      "version": "v1",
+      "title": "Honest Physical-Support Inference after Latent Dictionary Learning: Collision Singularities and Minimax Resolution",
+      "title_zh": "潜在字典学习后的诚实物理支撑推断：碰撞奇点与极小极大分辨率",
+      "authors": [
+        "Guan-Ju Peng"
+      ],
+      "abstract": "Sparse-support uncertainty is usually quantified by treating the dictionary as known, an assumption that can produce overconfident, label-dependent conclusions when the dictionary is learned from latent sparse mixtures. Near collisions of coherent atoms, a test signal may identify the active physical group even though the training data cannot distinguish the physical rays within it. We develop inference for active physical rays, unit atoms modulo sign, after latent dictionary learning. In a fixed-dimensional Gaussian train-test experiment, we retain all dictionaries compatible with a robust training-moment region, profile the test representation over them, and project surviving configurations onto a permutation-invariant support space. The resulting confidence correspondence can report cross-sheet inconclusiveness, group resolution with child ambiguity, or fine-support resolution. We characterize both its statistical cost and decision-theoretic benefit. Residual block orientation first affects the latent training density at cubic order, yielding information of order $s^6$, where $s$ is the within-block collision scale. The correspondence provides high-probability-over-training conditional test coverage, with resolution governed separately by parent detectability, test-time support separation, and learned-dictionary orientation. In the resolved fixed-shell regime, its projective Hausdorff diameter contracts at the minimax-optimal rate $s \\wedge (\\sqrt{N}s^2)^{-1}$, up to constants. A restricted-task theorem further determines when coefficient asymmetry allows test replication to supplement training information and when calibration uncertainty remains irreducible. The framework thus yields honest, resolution-adaptive support statements and guides the allocation of training versus test measurements.",
+      "abstract_zh": "稀疏支撑的不确定性通常通过将字典视为已知来量化，这一假设在字典是从潜在稀疏混合中学习时，可能产生过度自信、依赖标签的结论。在相干原子的近碰撞中，测试信号可能识别出活跃的物理组，即使训练数据无法区分其中的物理射线。我们开发了在潜在字典学习后对活跃物理射线（模符号的单位原子）的推断。在固定维数的高斯训练-测试实验中，我们保留所有与鲁棒训练矩区域兼容的字典，在其上对测试表示进行轮廓分析，并将幸存配置投影到置换不变的支撑空间上。由此产生的置信对应可以报告跨片不确定性、带有子歧义的组分辨率或精细支撑分辨率。我们刻画了其统计代价和决策理论收益。残差块方向首先以三次阶影响潜在训练密度，产生阶为$s^6$的信息，其中$s$是块内碰撞尺度。该对应提供了训练上的高概率条件测试覆盖，其分辨率分别由父可检测性、测试时支撑分离和学习字典方向控制。在已解决的固定壳区域中，其投影Hausdorff直径以极小极大最优速率$s \\wedge (\\sqrt{N}s^2)^{-1}$收缩（至常数）。一个受限任务定理进一步确定了系数不对称何时允许测试复制以补充训练信息，以及校准不确定性何时不可约。因此，该框架产生了诚实的、分辨率自适应的支撑陈述，并指导训练与测试测量的分配。",
+      "categories": [
+        "cs.LG",
+        "math.ST"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-18T13:15:32Z",
+      "updated": "2026-07-18T13:15:32Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16813v1",
+        "pdf": "https://arxiv.org/pdf/2607.16813v1"
+      },
+      "matched_keywords": [
+        "statistical",
+        "probability"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16811",
+      "arxiv_id": "2607.16811v1",
+      "version": "v1",
+      "title": "Interpretable Anomaly and Drift Detection with Gaussian Mixture Models",
+      "title_zh": "基于高斯混合模型的可解释异常与漂移检测",
+      "authors": [
+        "Behnam Asadi"
+      ],
+      "abstract": "We revisit Gaussian Mixture Models (GMMs) as a lightweight, interpretable tool for anomaly detection and, in particular, for detecting distributional drift in data streams. We make three practical choices explicit and evaluate them on seven public benchmarks. First, the number of mixture components is selected automatically by the Bayesian Information Criterion, initialised by k-means, removing the need to fix it in advance. Second, individual observations are scored by their negative log-likelihood under a GMM fitted to normal data, with thresholds set at a target false-alarm rate using Extreme Value Theory. Third, the same interpretable model extends to distributional drift: each Gaussian component is a named \"regime,\" and the fraction of a stream window that matches no regime -- its unexplained mass -- is a drift signal that is itself the explanation. We benchmark this against a model-free kernel two-sample test (Maximum Mean Discrepancy, MMD) and against two GMM-to-GMM divergences (a closed-form Cauchy-Schwarz divergence and a matching-based KL surrogate). Across seven benchmarks ranging from 3 to 64 dimensions and five random splits, the GMM point detector is competitive with -- though rarely more accurate than -- Isolation Forest, Local Outlier Factor, one-class SVM, ECOD, COPOD and an autoencoder, while uniquely yielding an interpretable model. For drift, MMD is the strongest pure detector, but the interpretable unexplained-mass statistic matches it when anomalies form novel regimes (and honestly fails, as MMD does not, when drift is a pure re-weighting of existing regimes). Every alarm is explainable: anomalies lie a median of 3-10 sigma outside their nearest regime vs. about 1 sigma for normal points, and a drift alarm reports the fraction of the window matching no known regime. All code and experiments are released.",
+      "abstract_zh": "我们重新审视高斯混合模型（GMMs）作为一种轻量级、可解释的工具，用于异常检测，特别是检测数据流中的分布漂移。我们明确做出了三个实际选择，并在七个公开基准上进行了评估。首先，混合成分的数量通过贝叶斯信息准则自动选择，并由k-means初始化，无需事先固定。其次，单个观测值通过其在拟合于正常数据的GMM下的负对数似然进行评分，并使用极值理论在目标虚警率下设置阈值。第三，相同的可解释模型扩展到分布漂移：每个高斯成分是一个命名的“状态”，而流窗口中不匹配任何状态的部分——其未解释质量——是一个漂移信号，其本身即为解释。我们将其与无核双样本检验（最大均值差异，MMD）以及两种GMM到GMM散度（闭式柯西-施瓦茨散度和基于匹配的KL替代）进行基准比较。在七个维度从3到64的基准和五个随机划分中，GMM点检测器与孤立森林、局部异常因子、一类SVM、ECOD、COPOD和自编码器相比具有竞争力——尽管很少更准确——同时唯一地产生可解释模型。对于漂移，MMD是最强的纯检测器，但当异常形成新状态时，可解释的未解释质量统计量与之匹配（并且当漂移是现有状态的纯重新加权时，它诚实地失败，而MMD不会）。每个警报都是可解释的：异常点距离其最近状态的中位数为3-10个标准差，而正常点约为1个标准差；漂移警报报告窗口中不匹配任何已知状态的比例。所有代码和实验均已发布。",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-18T13:13:56Z",
+      "updated": "2026-07-18T13:13:56Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16811v1",
+        "pdf": "https://arxiv.org/pdf/2607.16811v1"
+      },
+      "matched_keywords": [
+        "bayesian"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16803",
+      "arxiv_id": "2607.16803v1",
+      "version": "v1",
+      "title": "Explainable Lightweight Compact Deep Models for Speech Emotion Recognition",
+      "title_zh": "面向语音情感识别的可解释轻量级紧凑深度模型",
+      "authors": [
+        "Nelly Elsayed"
+      ],
+      "abstract": "Speech Emotion Recognition (SER) is an important component in a wide range of human-centered applications, including healthcare, customer service, and human-omputer interaction. In medical and decision-support settings, there is increasing interest in models that not only achieve accurate emotion recognition but also support transparent predictions and efficient deployment. However, many existing SER approaches rely on complex deep learning architectures that limit interpretability and increase computational cost. This paper presents an explainable and lightweight speech emotion recognition framework based on a compact convolutional neural network architecture. The proposed approach utilizes log-Mel spectrogram representations to capture spectro-temporal speech characteristics and employs attentive statistics pooling to emphasize emotionally salient temporal segments. To improve model transparency, gradient-based class activation mapping (Grad-CAM) is incorporated to visualize the time-frequency regions that influence the model's predictions. Experimental evaluation on the SAVEE emotional speech dataset demonstrates that the proposed framework achieves competitive recognition performance while maintaining a compact architecture with significantly fewer parameters than many existing SER models. The results indicate that efficient convolutional architectures combined with interpretable analysis can provide a practical balance between recognition accuracy, computational efficiency, and model transparency.",
+      "abstract_zh": "语音情感识别（SER）是医疗保健、客户服务和人与计算机交互等广泛以人为中心的应用中的重要组成部分。在医疗和决策支持场景中，人们对不仅能够实现准确情感识别，还能支持透明预测和高效部署的模型越来越感兴趣。然而，许多现有的SER方法依赖于复杂的深度学习架构，这限制了可解释性并增加了计算成本。本文提出了一种基于紧凑卷积神经网络架构的可解释轻量级语音情感识别框架。所提出的方法利用对数梅尔频谱图表示来捕捉语音的时频特征，并采用注意力统计池化来强调情感上显著的时域片段。为了提高模型透明度，引入了基于梯度的类激活映射（Grad-CAM）来可视化影响模型预测的时频区域。在SAVEE情感语音数据集上的实验评估表明，所提出的框架在保持紧凑架构且参数显著少于许多现有SER模型的同时，实现了具有竞争力的识别性能。结果表明，高效的卷积架构结合可解释分析能够在识别准确性、计算效率和模型透明度之间提供实用的平衡。",
+      "categories": [
+        "cs.SD",
+        "cs.AI",
+        "cs.ET",
+        "cs.LG"
+      ],
+      "primary_category": "cs.SD",
+      "published": "2026-07-18T12:50:33Z",
+      "updated": "2026-07-18T12:50:33Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16803v1",
+        "pdf": "https://arxiv.org/pdf/2607.16803v1"
+      },
+      "matched_keywords": [
+        "statistics"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16802",
+      "arxiv_id": "2607.16802v1",
+      "version": "v1",
+      "title": "Value-Monotonicity Matters: A Concordance Loss for Deep Survival Prediction",
+      "title_zh": "值单调性的重要性：用于深度生存预测的一致性损失",
+      "authors": [
+        "Meixu Chen",
+        "Kai Wang",
+        "Jing Wang"
+      ],
+      "abstract": "Deep survival models are evaluated almost exclusively by the concordance index (C-index), yet they are commonly trained using likelihood objectives such as the Cox partial likelihood, discrete-time negative log-likelihood, and DeepHit likelihood. This mismatch is usually considered acceptable because the C-index can be recomputed on validation data during training. However, for end-to-end training of high-capacity encoders on small, heavily censored oncology cohorts, frequent C-index evaluation is computationally expensive, making the loss value itself an important signal for monitoring, early stopping, and model selection. We show that likelihood losses are unreliable for this purpose and propose a value-monotone concordance loss. We prove that every strictly proper survival likelihood admits directions where the loss decreases while the C-index remains unchanged, causing the loss value to decouple from ranking performance. We then study a sigmoid concordance loss (SCL), whose value approximates one minus the C-index up to a temperature term, ensuring that lower loss corresponds to higher C-index during optimization. The loss is architecture agnostic and reduces to a convex survival ranking support vector machine for linear models. Across eighteen datasets from four modalities using a unified five-fold cross-validation protocol, SCL achieves discrimination comparable to standard likelihood losses and is the best or within one standard deviation of the best C-index. Unlike likelihood losses, SCL maintains a strong correlation between loss value and C-index during training, with rank correlations of 0.96 to 0.99 compared with -0.03 to 0.53 for likelihood losses. Calibration measured by the integrated Brier score is comparable. SCL provides a value-monotone optimization objective whose value can serve as a reliable surrogate for the C-index during expensive end-to-end training.",
+      "abstract_zh": "深度生存模型几乎完全通过一致性指数（C-index）进行评估，但它们通常使用似然目标进行训练，例如Cox偏似然、离散时间负对数似然和DeepHit似然。这种不匹配通常被认为是可以接受的，因为C-index可以在训练期间在验证数据上重新计算。然而，对于在小型、高度删失的肿瘤队列上对高容量编码器进行端到端训练，频繁的C-index评估计算成本高昂，使得损失值本身成为监控、早停和模型选择的重要信号。我们表明，似然损失在此目的上不可靠，并提出了一种值单调的一致性损失。我们证明，每个严格适当的生存似然都存在损失减少而C-index保持不变的方向，导致损失值与排序性能脱钩。然后，我们研究了一种sigmoid一致性损失（SCL），其值近似于1减去C-index（考虑温度项），确保优化过程中较低的损失对应较高的C-index。该损失与架构无关，对于线性模型简化为凸生存排序支持向量机。在使用统一五折交叉验证协议的来自四种模态的十八个数据集上，SCL实现了与标准似然损失相当的区分能力，并且是最佳C-index或在其一个标准差之内。与似然损失不同，SCL在训练期间保持损失值与C-index之间的强相关性，秩相关系数为0.96至0.99，而似然损失为-0.03至0.53。通过综合Brier分数测量的校准性相当。SCL提供了一个值单调的优化目标，其值可以在昂贵的端到端训练期间作为C-index的可靠替代指标。",
+      "categories": [
+        "cs.LG",
+        "cs.CV",
+        "stat.ML"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-18T12:49:43Z",
+      "updated": "2026-07-18T12:49:43Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16802v1",
+        "pdf": "https://arxiv.org/pdf/2607.16802v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16801",
+      "arxiv_id": "2607.16801v1",
+      "version": "v1",
+      "title": "A Practical Guide to Simulating Correlated Binary Outcomes",
+      "title_zh": "模拟相关二元结果的实用指南",
+      "authors": [
+        "Chi Heem Wong",
+        "Zied Ben Chaouch"
+      ],
+      "abstract": "Simulating dependent Bernoulli outcomes with prescribed means and pairwise Pearson correlations is a common task in risk modeling. A familiar approach is the Gaussian-threshold workflow for binary outcomes, often viewed as a Bernoulli analogue of the Gaussian copula construction. We show that setting latent Gaussian correlations equal to target Bernoulli correlations is generally incorrect after thresholding, and that pairwise tetrachoric calibration is exact only when the calibrated latent matrix is positive semidefinite. We therefore formulate the problem directly over the joint Bernoulli probability mass function. Given target means and pairwise correlations, we impose normalization, nonnegativity, mean constraints, and pairwise cross-moment constraints as a linear program over the $2^N$ atomic probabilities. The resulting PMF formulation either returns an exact law matching the requested first and second moments or certifies infeasibility. A convex-hull characterization further shows that every feasible target admits a law supported on at most $1+N+\\binom{N}{2}$ states, while every infeasible target admits a separating quadratic certificate. We then develop a truncated-moment completion scheme that fits a reduced cross-moment table and generates samples by sequential conditioning, together with a sparse-support working-set refinement that can reduce memory usage on structured instances, although the worst-case complexity remains exponential. Together, these constructions provide an exact PMF-based framework for feasibility and simulation at moderate dimension and structured alternatives when the full atomic representation is impractical, while clarifying the limits of Gaussian-threshold constructions.",
+      "abstract_zh": "模拟具有指定均值和成对Pearson相关性的依赖伯努利结果是风险建模中的常见任务。一种常见的方法是二元结果的高斯阈值工作流，通常被视为高斯copula构造的伯努利类比。我们表明，设置潜在高斯相关性等于目标伯努利相关性在阈值化后通常是不正确的，并且成对四分相关校准仅在校准后的潜在矩阵是半正定时才是精确的。因此，我们直接在联合伯努利概率质量函数上表述问题。给定目标均值和成对相关性，我们将归一化、非负性、均值约束和成对交叉矩约束作为线性规划施加于$2^N$个原子概率上。得到的PMF公式要么返回一个精确匹配所请求的一阶和二阶矩的分布，要么证明不可行。一个凸包特征进一步表明，每个可行目标都有一个最多支持$1+N+\\binom{N}{2}$个状态的分布，而每个不可行目标都有一个分离的二次证书。然后，我们开发了一个截断矩补全方案，该方案拟合一个简化的交叉矩表并通过顺序条件生成样本，同时还有一个稀疏支持工作集细化方法，可以在结构化实例上减少内存使用，尽管最坏情况复杂度仍然是指数级的。总之，这些构造提供了一个基于PMF的精确框架，用于在中等维度和结构化替代方案下进行可行性和模拟，当完整的原子表示不可行时，同时阐明了高斯阈值构造的局限性。",
+      "categories": [
+        "cs.CE",
+        "q-fin.CP",
+        "q-fin.RM",
+        "stat.CO"
+      ],
+      "primary_category": "cs.CE",
+      "published": "2026-07-18T12:48:31Z",
+      "updated": "2026-07-18T12:48:31Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16801v1",
+        "pdf": "https://arxiv.org/pdf/2607.16801v1"
+      },
+      "matched_keywords": [
+        "probability"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16800",
+      "arxiv_id": "2607.16800v1",
+      "version": "v1",
+      "title": "Identity-Paired Progressive Depth Training: When Trainability Persists Beyond Expressibility",
+      "title_zh": "身份配对渐进深度训练：当可训练性超越可表达性时",
+      "authors": [
+        "Athanasios Hadjidimoulas",
+        "Tirthak Patel",
+        "Anastasios Kyrillidis"
+      ],
+      "abstract": "Variational Quantum Algorithms (VQAs) are a leading paradigm for near-term quantum computing, yet their training suffers from sensitivity to circuit depth, initialization, and landscape pathologies such as barren plateaus. We study \\emph{progressive depth training} (PDT) -- a layerwise curriculum that trains a shallow circuit before appending new layers -- and identify a fundamental obstacle: fixed entangling gates (CNOTs) in hardware-efficient ansätze cause \\emph{initialization shock}, an energy spike when new layers are added. We propose \\emph{identity-paired progressive depth training} (IP-PDT), which appends forward/inverse block pairs -- each consisting of a standard rotation$+$CNOT block followed by its reverse -- that compose to the identity at initialization. Because the adjacent CNOT rings cancel, the effective circuit retains only \\textit{a single entangling layer} surrounded by \\textit{overparameterized local rotations}. We prove a simple \\textit{Reachable Set Saturation Theorem}: under this construction the variational manifold expands exactly once (when post-entangler rotations are first introduced) and then \\emph{saturates}; all subsequent depth increases provide pure overparameterization of single-qubit unitaries. Despite this saturation, progressive addition of rotation parameters can continue to improve optimization outcomes -- a phenomenon we term \\emph{trainability beyond expressibility}. We formalize IP-PDT as a continuation method on nested manifolds, prove monotone energy guarantees under an acceptance rule, and connect energy error to ground-state fidelity through spectral-gap inequalities. A detailed resource analysis shows that IP-PDT achieves lower total gate cost than both baselines by eliminating most CNOT gates.",
+      "abstract_zh": "变分量子算法（VQA）是近期量子计算的主要范式，但其训练受到电路深度、初始化和景观病理（如贫瘠高原）的敏感性影响。我们研究了渐进深度训练（PDT）——一种逐层课程，先训练浅层电路再添加新层——并发现一个根本障碍：硬件高效拟设中的固定纠缠门（CNOT）会导致初始化冲击，即添加新层时能量激增。我们提出身份配对渐进深度训练（IP-PDT），它添加前向/逆块对——每个块由标准旋转+CNOT块及其逆块组成——在初始化时复合为单位操作。由于相邻的CNOT环相互抵消，有效电路仅保留一个被过参数化局部旋转包围的单一纠缠层。我们证明了一个简单的可达集饱和定理：在这种构造下，变分流形恰好扩展一次（当后纠缠器旋转首次引入时），然后饱和；所有后续深度增加仅提供单量子比特酉的过参数化。尽管存在这种饱和，旋转参数的渐进添加可以继续改善优化结果——我们将这种现象称为超越可表达性的可训练性。我们将IP-PDT形式化为嵌套流形上的连续方法，在接受规则下证明单调能量保证，并通过谱隙不等式将能量误差与基态保真度联系起来。详细的资源分析表明，IP-PDT通过消除大多数CNOT门，实现了比基线更低的总门成本。",
+      "categories": [
+        "quant-ph",
+        "cs.LG",
+        "math.OC"
+      ],
+      "primary_category": "quant-ph",
+      "published": "2026-07-18T12:47:50Z",
+      "updated": "2026-07-18T12:47:50Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16800v1",
+        "pdf": "https://arxiv.org/pdf/2607.16800v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16798",
+      "arxiv_id": "2607.16798v1",
+      "version": "v1",
+      "title": "Benchmarking Optimization Algorithms with Quality Profiles and Test Set Profiles",
+      "title_zh": "使用质量剖面和测试集剖面基准测试优化算法",
+      "authors": [
+        "G. Fasano",
+        "C. Piermarini",
+        "M. Roma"
+      ],
+      "abstract": "We propose a couple of novel tools for benchmarking optimization algorithms which possibly converge to different solutions on a test set: the quality profiles and the test set profiles. Their aim is to assess and compare algorithms in terms of quality (i.e. value of the objective function) of the obtained solutions, as well as to assess the consistency of the test set. A key distinguishing feature of the quality profiles we propose is its comparative deterministic procedure that emphasizes the accuracy of the solution, rather than the computational burden of solvers. In this regard, several test set--dependent approaches for both comparing and ranking algorithms have already been proposed in the literature, representing widely used benchmarking procedures. We believe that the joint use of such procedures, along with the novel quality profiles detailed here, should enhance the benchmarking process, in all those cases where the comparison encompasses exact methods as well as heuristics. Moreover, the literature on numerical optimization seems to have paid less attention, in the last decade, to determining how appropriate a test set used for benchmarking the selected solvers may be. This motivates the introduction of test set profiles, which assess the appropriateness of a test set and represent the flip side of evaluating the robustness of the solvers on that test set. This paper also includes extensive numerical experiments, showing the usefulness of quality profiles in both smooth and nonsmooth (derivative--free) optimization, along with the reference to a MATLAB code for plotting quality profiles and test set profiles.",
+      "abstract_zh": "我们提出了一对新颖的工具，用于基准测试可能收敛到测试集上不同解的优化算法：质量剖面和测试集剖面。它们旨在评估和比较算法在所得解的质量（即目标函数值）方面的表现，以及评估测试集的一致性。我们提出的质量剖面的一个关键区别特征是其比较性的确定性过程，强调解的准确性，而非求解器的计算负担。在这方面，文献中已经提出了几种依赖于测试集的比较和排序算法的方法，这些方法代表了广泛使用的基准测试程序。我们相信，这些程序与本文详述的新颖质量剖面的联合使用，应在所有比较涵盖精确方法和启发式方法的情况下增强基准测试过程。此外，在过去的十年中，数值优化文献似乎较少关注确定用于基准测试所选求解器的测试集是否合适。这促使了测试集剖面的引入，该剖面评估测试集的适当性，并代表了评估求解器在该测试集上鲁棒性的另一面。本文还包括广泛的数值实验，展示了质量剖面在光滑和非光滑（无导数）优化中的实用性，并提供了用于绘制质量剖面和测试集剖面的MATLAB代码参考。",
+      "categories": [
+        "math.OC"
+      ],
+      "primary_category": "math.OC",
+      "published": "2026-07-18T12:40:11Z",
+      "updated": "2026-07-18T12:40:11Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16798v1",
+        "pdf": "https://arxiv.org/pdf/2607.16798v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16769",
+      "arxiv_id": "2607.16769v1",
+      "version": "v1",
+      "title": "On the Potential of Graph Neural Networks as Metamodels for Supply Chain Optimization: Dataset, Architectures, and Directions",
+      "title_zh": "图神经网络作为供应链优化元模型的潜力：数据集、架构与方向",
+      "authors": [
+        "Tushar Lone",
+        "Neha Karanjkar"
+      ],
+      "abstract": "Graph Neural Networks (GNNs) have emerged as a powerful, differentiable class of learning models for graph-structured systems. Their ability to generalize across topologies opens the prospect of a surrogate for combined structural and parametric optimization, which classical metamodels cannot offer. Supply chains are a natural target, yet the use of GNN surrogates for supply chain problems is largely unexplored. This paper lays the foundation, presents initial steps, and discusses key research directions. As a foundation, we formulate the problem and create a large public training dataset of programmatically generated supply chain graphs with input parameters and steady-state performance metrics obtained using our SupplyNetPy simulation library. As initial steps, we explore GNN architectures that work well as surrogates for node- and network-level predictions, and analyze their accuracy-compute trade-off against simulation. Most importantly, we outline the exciting directions this opens, namely gradient-based optimization over topology, fast design-space exploration, and sensitivity analysis.",
+      "abstract_zh": "图神经网络（GNN）已成为图结构系统的一种强大且可微的学习模型。它们在不同拓扑结构间泛化的能力为结合结构和参数优化的替代模型开辟了前景，而经典元模型无法提供这一点。供应链是一个自然的目标，但将GNN替代模型用于供应链问题在很大程度上尚未被探索。本文奠定了基础，展示了初步步骤，并讨论了关键研究方向。作为基础，我们定义了问题，并使用我们的SupplyNetPy仿真库创建了一个大型公开训练数据集，该数据集包含程序生成的供应链图及其输入参数和稳态性能指标。作为初步步骤，我们探索了在节点级和网络级预测中表现良好的GNN架构，并分析了它们与仿真相比的精度-计算权衡。最重要的是，我们概述了由此开启的令人兴奋的方向，即基于梯度的拓扑优化、快速设计空间探索和敏感性分析。",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-18T11:06:22Z",
+      "updated": "2026-07-18T11:06:22Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16769v1",
+        "pdf": "https://arxiv.org/pdf/2607.16769v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16764",
+      "arxiv_id": "2607.16764v1",
+      "version": "v1",
+      "title": "When Is Heterogeneous Distance-Decay Facility Location Tractable? A Structural Classification, Exact Methods, and a Real-World Study",
+      "title_zh": "异质距离衰减设施选址何时可解？结构分类、精确方法及真实世界研究",
+      "authors": [
+        "Zhou He",
+        "T. C. E. Cheng",
+        "Jichang Dong"
+      ],
+      "abstract": "We study continuous planar facility location in which a demand point's captured value decays with distance, with the per-point decay scale varying across points. This heterogeneity is ubiquitous yet underexploited, and one nearest-facility objective unifies decay, clustering, and median goals, containing k-means, the Weber/p-median problem, and maximum covering as special cases. We make four contributions. (i) A tractability classification: the discrete objective is always monotone submodular, so the (1-1/e) greedy guarantee holds regardless of decay shape or heterogeneity, and the continuous cooperative objective is concave if and only if the decay is concave in distance; the clip max(0,d) in common coverage specifications is what destroys concavity, and the classification is tight. (ii) An exact discrete method: the candidate-discretized maximum-cover MIP has an empirically tight LP relaxation (~0% gap) and is solved by branch-and-bound in seconds for n <= 500. (iii) A force-as-gradient / large-neighborhood-search heuristic, within 0.5% of the discrete optimum, that outperforms the (1-1/e) greedy, Cooper-style alternating location-allocation, particle swarm optimization, and weighted k-means (30/30 per-instance wins at K=30, p<10^-9) and is competitive with bespoke solvers on k-means, Weber/p-median, and shape-demand instances. (iv) A real-world study: on 592,667 urban-delivery orders, ignoring the calibrated decay variation loses up to 9.7% of captured demand and relocates facilities by up to 37% of the map; a retail dataset calibrates the decay as exponential with scale R ~ 1.4 km.",
+      "abstract_zh": "我们研究连续平面设施选址问题，其中需求点的捕获价值随距离衰减，且每个点的衰减尺度各不相同。这种异质性普遍存在但未被充分利用，一个最近设施目标统一了衰减、聚类和中位数目标，包含k均值、韦伯/p中位数问题和最大覆盖作为特例。我们做出四项贡献。(i) 可解性分类：离散目标总是单调子模的，因此(1-1/e)贪心保证无论衰减形状或异质性如何都成立；连续合作目标当且仅当衰减是距离的凹函数时才是凹的；常见覆盖规范中的截断max(0,d)破坏了凹性，且分类是紧的。(ii) 精确离散方法：候选离散化最大覆盖MIP具有经验上紧的LP松弛（~0%间隙），并在n≤500时通过分支定界在数秒内求解。(iii) 力作为梯度/大邻域搜索启发式算法，与离散最优解差距在0.5%以内，优于(1-1/e)贪心、Cooper式交替位置分配、粒子群优化和加权k均值（K=30时30/30实例胜出，p<10^-9），并在k均值、韦伯/p中位数和形状需求实例上与定制求解器竞争。(iv) 真实世界研究：在592,667个城市配送订单上，忽略校准的衰减变化会损失高达9.7%的捕获需求，并将设施重新定位多达地图的37%；一个零售数据集将衰减校准为指数形式，尺度R~1.4公里。",
+      "categories": [
+        "cs.MA",
+        "cs.CG",
+        "math.OC"
+      ],
+      "primary_category": "cs.MA",
+      "published": "2026-07-18T11:03:18Z",
+      "updated": "2026-07-18T11:03:18Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16764v1",
+        "pdf": "https://arxiv.org/pdf/2607.16764v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16761",
+      "arxiv_id": "2607.16761v1",
+      "version": "v1",
+      "title": "Dropout and Random Gradient Masking Are Asymptotically Equivalent in Large ResNets",
+      "title_zh": "Dropout与随机梯度掩码在大型ResNet中渐近等价",
+      "authors": [
+        "Javier Maass",
+        "Lénaïc Chizat"
+      ],
+      "abstract": "Dropout and Random Gradient Masking (RaM) are two training techniques used to improve performance in deep learning. Both techniques inject randomness into the training dynamics, but in significantly different ways: dropout applies random masks to the activations in the forward pass, whereas RaM leaves the forward pass unchanged and instead masks the gradients. In particular, the noise induced by RaM in the parameter updates is unbiased, so standard explanations for the effectiveness of dropout, such as the penalization effect or the prevention of co-adaptation between neurons, do not apply to RaM. In this work, we show that the difference between the two methods disappears for ResNets in the large depth and width asymptotics: in the complete feature learning regime, they both converge to the same large-scale limiting dynamics. This asymptotic equivalence holds for several variants of dropout and RaM, including layerwise dropout as used in stochastic-depth ResNets, albeit at slower quantitative rates. In fact, we also show that several of these variants collapse to the same limit asymptotically.",
+      "abstract_zh": "Dropout和随机梯度掩码（RaM）是两种用于提升深度学习性能的训练技术。两种技术都在训练动态中注入随机性，但方式显著不同：dropout在前向传播中对激活值应用随机掩码，而RaM保持前向传播不变，仅对梯度进行掩码。特别地，RaM在参数更新中引入的噪声是无偏的，因此dropout有效性的标准解释（如惩罚效应或防止神经元共适应）并不适用于RaM。在这项工作中，我们展示了对于深度和宽度渐近的ResNet，两种方法之间的差异消失：在完全特征学习机制下，它们都收敛到相同的大尺度极限动态。这种渐近等价性适用于dropout和RaM的几种变体，包括随机深度ResNet中使用的逐层dropout，尽管定量速率较慢。事实上，我们还展示了这些变体中的几种在渐近上坍缩到相同的极限。",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "math.PR"
+      ],
+      "primary_category": "stat.ML",
+      "published": "2026-07-18T10:57:27Z",
+      "updated": "2026-07-18T10:57:27Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16761v1",
+        "pdf": "https://arxiv.org/pdf/2607.16761v1"
+      },
+      "matched_keywords": [
+        "stochastic"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16759",
+      "arxiv_id": "2607.16759v1",
+      "version": "v1",
+      "title": "EFSPI CMCSNE SIG position on the 'Expected f2'",
+      "title_zh": "EFSPI CMCSNE SIG关于“预期f2”的立场",
+      "authors": [
+        "Thomas Hoffelder",
+        "Marijn Clement",
+        "Stephen Karanja",
+        "Marta Regis",
+        "Marc Lindenberg",
+        "Filip Vestin",
+        "Eleonore Pablik",
+        "Marion Berger",
+        "Valgeir Einarsson",
+        "Helen Thomas",
+        "Kevin Lief",
+        "Jens Lamerz"
+      ],
+      "abstract": "The method called 'expected $f_2$' ($\\hat{f}_{2,\\exp}$), as proposed by Noce et al. (2020) and Xu et al. (2021), has been adopted in two health authority guidelines for dissolution profile comparison when variability precludes the use of the conventional similarity factor $\\hat{f}_2$. This position paper, developed by a working group of the European Federation of Statisticians in the Pharmaceutical Industry CMC Statistical Network Europe Special Interest Group (EFSPI CMCSNE SIG), presents a critical evaluation of this method. Fundamental concerns are identified. First, the formula for $\\hat{f}_{2,\\exp}$ has no traceable origin in the references cited by its proponents. Noce et al. (2020) and Xu et al. (2021) attribute $\\hat{f}_{2,\\exp}$ to Shah et al. (1998) and Ma et al. (1999, 2000), but neither mentions nor suggests it. Second, no mathematical justification has been provided for the formula. Where Shah et al. (1998) subtract a variance term to reduce the upward bias of $\\hat{f}_2$, the $\\hat{f}_{2,\\exp}$ formula adds this term, thereby increasing rather than correcting the bias. This has also been noted by FDA statisticians Liu et al. (2024). Third, the method exhibits poor statistical properties: for highly variable profiles, the variance term dominates the statistic, resulting in low power even as the true difference between profiles approaches zero. The method can reject equivalence when profiles are identical. Fourth, the formula as published by Noce et al. (2020) contains a notation ambiguity that renders the intended grouping of terms unclear. This ambiguity has propagated into regulatory guidance. A survey of working group members, designed to elicit arguments both for and against the method, found no scientifically meaningful advantage. The EFSPI CMCSNE SIG concludes that $\\hat{f}_{2,\\exp}$ should not be recommended for dissolution profile comparison.",
+      "abstract_zh": "由Noce等人（2020）和Xu等人（2021）提出的称为“预期$f_2$”（$\\hat{f}_{2,\\exp}$）的方法，已被两个卫生当局指南采纳，用于在变异性妨碍使用传统相似因子$\\hat{f}_2$时进行溶出曲线比较。本立场文件由欧洲制药工业统计学家联合会CMC统计网络欧洲特别兴趣小组（EFSPI CMCSNE SIG）的一个工作组制定，对该方法进行了批判性评估。发现了根本性问题。首先，$\\hat{f}_{2,\\exp}$的公式在其支持者引用的参考文献中没有可追溯的起源。Noce等人（2020）和Xu等人（2021）将$\\hat{f}_{2,\\exp}$归因于Shah等人（1998）和Ma等人（1999, 2000），但两者均未提及或暗示该公式。其次，该公式没有提供数学证明。Shah等人（1998）减去方差项以减少$\\hat{f}_2$的正向偏差，而$\\hat{f}_{2,\\exp}$公式则加上该项，从而增加而非纠正偏差。FDA统计学家Liu等人（2024）也指出了这一点。第三，该方法统计性质较差：对于高变异曲线，方差项主导统计量，导致即使曲线间真实差异趋近于零时功效也很低。当曲线相同时，该方法可能拒绝等效性。第四，Noce等人（2020）发表的公式存在符号歧义，使得术语的预期分组不明确。这种歧义已传播到监管指南中。对工作组成员进行的一项旨在引出支持和反对该方法论点的调查发现，该方法没有科学上有意义的优势。EFSPI CMCSNE SIG得出结论，不应推荐$\\hat{f}_{2,\\exp}$用于溶出曲线比较。",
+      "categories": [
+        "stat.ME",
+        "stat.AP"
+      ],
+      "primary_category": "stat.ME",
+      "published": "2026-07-18T10:52:08Z",
+      "updated": "2026-07-18T10:52:08Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16759v1",
+        "pdf": "https://arxiv.org/pdf/2607.16759v1"
+      },
+      "matched_keywords": [
+        "statistical"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16741",
+      "arxiv_id": "2607.16741v1",
+      "version": "v1",
+      "title": "The Anatomy of a Truth Direction: Knowledge-Dependent Dimensionality, a Relational Law, and a Convergent Category Geometry in Small Language Models",
+      "title_zh": "真理方向的剖析：小语言模型中知识依赖的维度、关系法则与收敛的类别几何",
+      "authors": [
+        "Francesco Karim Vicidomini"
+      ],
+      "abstract": "Bürger et al. (2024) demonstrated that truth representations in large language models are universal across statement polarity but reside within a multidimensional subspace. We extend that framework along three questions: how the dimensionality of the subspace depends on the model's knowledge, which architectural component builds the truth direction, and what the direction is a mixture of. In Part I (one model), a training-free directional probe derived from the SVD of hidden-state minimal pairs shows that the dimensionality of truth is knowledge-dependent: the signal is concentrated on a single axis for behaviorally known facts (held-out AUC 0.938) and becomes diffuse as knowledge decreases or material heterogeneity increases; seven falsification experiments sustain the one-dimensional reading, and the same decomposition recovers the supervised polarity direction of Bürger et al. at cosine 0.959 without polarity labels. In Part II (four base models, two families, pre-registered predictions), a relational law emerges: attention propagates truth frames it did not write, the feed-forward network opposes the frame of its current block, and the genuine post-peak decay is causally attributed on all four models to the SwiGLU value stream; per-category truth axes form a semantically signed arrangement that contradicts the lexical surface and converges across families (Mantel p = 0.0009). Stress tests at three scales (33 categories, 888 pairs per relation, six sampling seeds) expose a sign instability of the per-category orientation, repair it with a declared spectral consensus gauge, and sharpen the convergence into a knowledge-gated law, strengthening from +0.42 on dense mixed-knowledge material to +0.74 on knowledge-restricted categories: the geometry of the mixture belongs to the knowledge domain rather than to the architecture.",
+      "abstract_zh": "Bürger等人（2024）证明，大型语言模型中的真理表示在陈述极性上是普遍的，但位于一个多维子空间中。我们沿着三个问题扩展该框架：子空间的维度如何依赖于模型的知识，哪个架构组件构建了真理方向，以及该方向是由什么混合而成的。在第一部分（一个模型）中，一种基于隐藏状态最小对SVD的无训练方向探针表明，真理的维度是知识依赖的：对于行为上已知的事实，信号集中在一个单一轴上（留出AUC 0.938），随着知识减少或材料异质性增加，信号变得分散；七个证伪实验支持一维解读，并且相同的分解在没有极性标签的情况下以余弦0.959恢复了Bürger等人的监督极性方向。在第二部分（四个基础模型，两个家族，预注册预测）中，出现了一个关系法则：注意力传播它未编写的真理框架，前馈网络反对其当前块的框架，并且真正的峰值后衰减在四个模型上均因果归因于SwiGLU值流；每个类别的真理轴形成一个语义上有符号的排列，与词汇表面矛盾，并在家族间收敛（Mantel p = 0.0009）。在三个尺度（33个类别，每个关系888对，六个采样种子）上的压力测试暴露了每个类别方向的符号不稳定性，通过声明的谱共识度量修复它，并将收敛强化为一个知识门控法则，从密集混合知识材料上的+0.42增加到知识受限类别上的+0.74：混合的几何属于知识领域而非架构。",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-18T10:03:21Z",
+      "updated": "2026-07-18T10:03:21Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16741v1",
+        "pdf": "https://arxiv.org/pdf/2607.16741v1"
+      },
+      "matched_keywords": [
+        "causal"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16730",
+      "arxiv_id": "2607.16730v1",
+      "version": "v1",
+      "title": "A Deep Second-Order Stochastic Residual Method for Fully Nonlinear Parabolic PDEs",
+      "title_zh": "全非线性抛物型偏微分方程的深度二阶随机残差方法",
+      "authors": [
+        "Zhenhua Zhao",
+        "Jihao Long"
+      ],
+      "abstract": "We introduce the Deep Second-Order Stochastic Residual Method (D2SRM) for high-dimensional, Hessian-dependent fully nonlinear parabolic PDEs. A single scalar space--time network generates derivative-consistent approximations of the solution, gradient, and Hessian, which are trained jointly through second-order Brownian one-step residuals and terminal value and gradient penalties. For globally Lipschitz equations with identity diffusion and sufficiently weak Hessian coupling, we establish well-posedness in a Brownian occupation space and develop a population-level convergence theory. Under additional regularity, an a posteriori estimate bounds the squared full-jet occupation error of any admissible candidate by the time step and its population objective. For approximate population minimizers, the error bound separates time discretization, neural approximation, and population suboptimality; when the latter two terms are $O(h)$, the full-jet occupation norm is $O(h^{1/2})$. Experiments on a 100-dimensional manufactured benchmark compare terminal treatments, probe Hessian couplings inside and outside the proved small-gain range, and show decreasing errors as the time step decreases. The code is available at https://github.com/ZZHPKU/D2SRM.",
+      "abstract_zh": "我们针对高维、依赖Hessian矩阵的全非线性抛物型偏微分方程，提出了深度二阶随机残差方法（D2SRM）。一个单一的标量时空网络生成解、梯度和Hessian矩阵的导数一致近似，通过二阶布朗单步残差以及终端值和梯度惩罚进行联合训练。对于具有单位扩散和足够弱Hessian耦合的全局Lipschitz方程，我们在布朗占据空间中建立了适定性，并发展了总体水平的收敛理论。在额外正则性下，后验估计将任何可容许候选解的平方全喷流占据误差限制为时间步长及其总体目标。对于近似总体极小化器，误差界分离了时间离散化、神经逼近和总体次优性；当后两项为$O(h)$时，全喷流占据范数为$O(h^{1/2})$。在100维人造基准上的实验比较了终端处理方式，探测了证明的小增益范围内外Hessian耦合，并显示误差随时间步长减小而降低。代码可在https://github.com/ZZHPKU/D2SRM获取。",
+      "categories": [
+        "math.NA",
+        "math.OC",
+        "stat.ML"
+      ],
+      "primary_category": "math.NA",
+      "published": "2026-07-18T09:43:15Z",
+      "updated": "2026-07-18T09:43:15Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16730v1",
+        "pdf": "https://arxiv.org/pdf/2607.16730v1"
+      },
+      "matched_keywords": [
+        "stochastic",
+        "high-dimensional"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16728",
+      "arxiv_id": "2607.16728v1",
+      "version": "v1",
+      "title": "Graph-Embedded Intuitionistic Fuzzy Broad Learning System: A Multi-view Framework",
+      "title_zh": "图嵌入直觉模糊宽度学习系统：一种多视图框架",
+      "authors": [
+        "Yogesh Kumar",
+        "Manju",
+        "Mudasir Ganaie"
+      ],
+      "abstract": "The Broad Learning System (BLS) has been widely used for data classification and is based on a layer-by-layer feed-forward structure. However, it gives the same importance to all data points, which reduces its effectiveness on real-world datasets with noise and outliers. In addition, it does not consider the geometric structure of the data and has limitations in handling data from multiple sources. To address these challenges, we propose a Multi-View Graph-Embedded Intuitionistic Fuzzy Broad Learning System (MVGIFBLS) that integrates multi-view learning, graph embedding, and intuitionistic fuzzy theory into the BLS framework. This design enables the model to combine information from multiple sources and learn more discriminative representations. Graph embedding captures the geometric relationships among samples and improves class separation through intrinsic and penalty subspaces based on local Fisher discriminant analysis. Intuitionistic fuzzy theory enhances robustness to noise, while kernel-based neighborhood analysis captures local data structures. We evaluate the proposed framework on several UCI, KEEL, and AwA benchmark datasets using comparative evaluation, Gaussian feature noise analysis, ablation studies, and statistical analysis. The results demonstrate that each component contributes positively to the overall framework and that the proposed MVGIFBLS consistently achieves higher Area Under the Curve (AUC) scores and maintains robust performance under Gaussian feature noise.",
+      "abstract_zh": "宽度学习系统（BLS）因其逐层前馈结构而被广泛应用于数据分类。然而，它对所有数据点赋予相同的重要性，这降低了其在含有噪声和异常值的真实世界数据集上的有效性。此外，它未考虑数据的几何结构，并且在处理多源数据方面存在局限性。为解决这些挑战，我们提出了一种多视图图嵌入直觉模糊宽度学习系统（MVGIFBLS），将多视图学习、图嵌入和直觉模糊理论集成到BLS框架中。该设计使模型能够结合多源信息并学习更具判别性的表示。图嵌入捕捉样本间的几何关系，并通过基于局部Fisher判别分析的本征子空间和惩罚子空间改善类别分离。直觉模糊理论增强了对噪声的鲁棒性，而基于核的邻域分析则捕捉局部数据结构。我们在多个UCI、KEEL和AwA基准数据集上，通过比较评估、高斯特征噪声分析、消融研究和统计分析来评估所提出的框架。结果表明，每个组件都对整体框架有积极贡献，且所提出的MVGIFBLS在曲线下面积（AUC）得分上持续取得更高值，并在高斯特征噪声下保持稳健性能。",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-18T09:37:46Z",
+      "updated": "2026-07-18T09:37:46Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16728v1",
+        "pdf": "https://arxiv.org/pdf/2607.16728v1"
+      },
+      "matched_keywords": [
+        "statistical"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16725",
+      "arxiv_id": "2607.16725v1",
+      "version": "v1",
+      "title": "Semi-Supervised Conditional Generative Learning through Stochastic Interpolation and Sufficient Representations",
+      "title_zh": "通过随机插值和充分表示实现半监督条件生成学习",
+      "authors": [
+        "Changyu Liu",
+        "Yuling Jiao",
+        "Jian Huang"
+      ],
+      "abstract": "Conditional generative modeling remains a challenging problem in semi-supervised settings where labeled data is scarce but unlabeled samples are abundant. To effectively leverage structural information embedded within the unlabeled dataset and compensate for sparse conditioning signals, we propose a semi-supervised framework combining conditional stochastic interpolation with low-dimensional latent representations. RepG decomposes generation into two stages: label-dependent latent sampling and high-dimensional reconstruction. This isolates the supervised learning of conditional dependencies to a low-dimensional space, requiring few labels while utilizing the abundant unlabeled data purely for reconstruction. Theoretically, we establish an error decomposition showing that the Kullback-Leibler divergence of RepG comprises stage-wise estimation errors and a structural bias quantified by conditional mutual information. For deep neural network estimators, we derive non-asymptotic convergence rates proving that RepG significantly improves sample complexity. By confining the supervised estimation burden to the low intrinsic dimension of the latent representation, RepG achieves a strictly faster convergence rate. Complemented by a minimax lower bound, our theoretical results demonstrate that this method effectively mitigates the curse of dimensionality inherent in direct ambient-space generative modeling.",
+      "abstract_zh": "条件生成建模在半监督设置中仍然是一个具有挑战性的问题，其中标记数据稀缺但未标记样本丰富。为了有效利用未标记数据集中嵌入的结构信息并补偿稀疏的条件信号，我们提出了一种半监督框架，将条件随机插值与低维潜在表示相结合。RepG将生成过程分解为两个阶段：依赖于标签的潜在采样和高维重建。这将条件依赖性的监督学习隔离到低维空间，需要少量标签，同时纯粹利用丰富的未标记数据进行重建。理论上，我们建立了一个误差分解，表明RepG的Kullback-Leibler散度由逐阶段估计误差和以条件互信息量化的结构偏差组成。对于深度神经网络估计器，我们推导出非渐近收敛速率，证明RepG显著提高了样本复杂度。通过将监督估计负担限制在潜在表示的低内在维度上，RepG实现了严格更快的收敛速率。结合极小化下界，我们的理论结果表明，该方法有效缓解了直接环境空间生成建模中固有的维度灾难。",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ],
+      "primary_category": "stat.ML",
+      "published": "2026-07-18T09:21:53Z",
+      "updated": "2026-07-18T09:21:53Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16725v1",
+        "pdf": "https://arxiv.org/pdf/2607.16725v1"
+      },
+      "matched_keywords": [
+        "stochastic",
+        "high-dimensional"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16721",
+      "arxiv_id": "2607.16721v1",
+      "version": "v1",
+      "title": "Half the Experts, All the Code: One-Shot Domain Pruning of Mixture-of-Experts LLMs for Coding",
+      "title_zh": "",
+      "authors": [
+        "Anik Jha"
+      ],
+      "abstract": "The strongest open-weight coding models are mixture-of-experts (MoE) networks: most of their size comes from large pools of \"expert\" subnetworks, of which only a few act on any token. That pool is why these models do not fit on the machines most developers own, yet for a user who only wants coding help, most experts encode abilities that will never be invoked. We ask how many experts can be removed, and which, by pruning two recent open-weight MoE models from different families (Qwen3.6-35B-A3B and Gemma-4-26B-A4B) under five selection strategies, judged the way a user would: by whether the model still writes correct code. Half the experts can be removed from either model with no statistically detectable loss on the primary code benchmark, and the damage lands almost entirely on abilities outside coding, the intended trade. But the winning strategy flips between the two models, so a recipe validated on one family cannot be assumed to work on another. We further show that perplexity, the metric much of the pruning literature leans on, can rate a broken model above an intact one; that a lightweight fine-tune recovers about half of what aggressive pruning loses; and that against quantizing the full model to the same memory, pruning wins only where quantization would have to drop below 3 bits per weight. Five attempts to overturn that crossover, with failure criteria fixed in advance (better calibration, guarded selection, causal expert importance, failure attribution, and an agentic evaluation letting each model repair its failures from execution feedback), all leave it standing; the last shows single-shot benchmarks overstate compression penalties broadly, as one repair turn erases the 2-bit quantization penalty entirely. Expert pruning works, but it demands per-model validation on the task the model will actually serve.",
+      "abstract_zh": "",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-18T09:17:41Z",
+      "updated": "2026-07-18T09:17:41Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16721v1",
+        "pdf": "https://arxiv.org/pdf/2607.16721v1"
+      },
+      "matched_keywords": [
+        "statistical",
+        "causal"
+      ],
+      "translation_status": "failed"
+    },
+    {
+      "id": "2607.16720",
+      "arxiv_id": "2607.16720v1",
+      "version": "v1",
+      "title": "Effects of width-dependent model hyperparameters and $\\ell_2$-regularization on the loss landscape of two-layer ReLU networks",
+      "title_zh": "宽度依赖的模型超参数和$\\ell_2$正则化对两层ReLU网络损失景观的影响",
+      "authors": [
+        "Haruka Eshima",
+        "Makoto Yamada"
+      ],
+      "abstract": "Understanding deep neural networks remains a central challenge in machine learning. In particular, the theoretical properties of even two-layer ReLU networks, especially in the presence of weight decay, remain poorly understood. To this end, we derive a sufficient condition on the hyperparameter settings under which the global minima collapse to the zero solution. Interestingly, our experiments reveal that using AdamW as an optimizer prevents the collapse of the learned parameters, whereas using SGD does not, which may help explain the success of AdamW in deep learning training. In addition, when restricting the input dimension to one, we derive an analytical solution for the globally optimal parameter sets of two-layer ReLU networks and show that $\\ell_2$-regularization has a width-invariant effect on connectivity, but its dimensionality-reducing effect becomes stronger as the network width increases. These results provide insight into how width-dependent hyperparameters influence the geometry of regularized loss landscapes.",
+      "abstract_zh": "理解深度神经网络仍然是机器学习中的一个核心挑战。特别是，即使是两层ReLU网络的理论性质，尤其是在存在权重衰减的情况下，仍然知之甚少。为此，我们推导了一个关于超参数设置的充分条件，在该条件下全局最小值会坍缩到零解。有趣的是，我们的实验表明，使用AdamW作为优化器可以防止学习参数的坍缩，而使用SGD则不能，这可能有助于解释AdamW在深度学习训练中的成功。此外，当输入维度限制为一维时，我们推导了两层ReLU网络全局最优参数集的解析解，并表明$\\ell_2$正则化对连通性具有宽度不变的影响，但其降维效应随着网络宽度的增加而增强。这些结果提供了关于宽度依赖的超参数如何影响正则化损失景观几何形状的见解。",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-18T09:17:23Z",
+      "updated": "2026-07-18T09:17:23Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16720v1",
+        "pdf": "https://arxiv.org/pdf/2607.16720v1"
+      },
+      "matched_keywords": [
+        "machine learning"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16717",
+      "arxiv_id": "2607.16717v1",
+      "version": "v1",
+      "title": "A Causal Markov Condition for Value",
+      "title_zh": "价值的因果马尔可夫条件",
+      "authors": [
+        "Olav Benjamin Vassend"
+      ],
+      "abstract": "This paper proposes a causal independence principle for value -- the value Causal Markov Condition (v-CMC) -- and develops the conceptual and mathematical foundations of a \"causal value theory\" linking causality and utility. After motivating a local formulation of the v-CMC, we introduce a probability-value duality that translates standard causal-inference results into the value setting. In particular, we formulate local, global, and decomposition versions of the v-CMC and prove their equivalence. We also define v-separation and show that it is sound and complete for conditional value independence. Furthermore, we derive a Bellman-type recursion as a special case of the v-CMC, thereby generalizing standard Bellman recursion from linear chains to causal DAGs. Finally, we show how the v-CMC supports modular transfer and updating of utility information across causal contexts and develop algorithms for causally structured utility elicitation and canonical influence-diagram construction.",
+      "abstract_zh": "本文提出了一个价值的因果独立性原则——价值因果马尔可夫条件（v-CMC），并发展了连接因果关系与效用的“因果价值理论”的概念和数学基础。在激励了v-CMC的局部形式之后，我们引入了一种概率-价值对偶性，将标准因果推断结果转化为价值设定。特别地，我们制定了v-CMC的局部、全局和分解版本，并证明了它们的等价性。我们还定义了v-分离，并证明它对条件价值独立性是可靠且完备的。此外，我们推导出贝尔曼型递归作为v-CMC的一个特例，从而将标准贝尔曼递归从线性链推广到因果有向无环图。最后，我们展示了v-CMC如何支持跨因果情境的效用信息的模块化转移和更新，并开发了因果结构化的效用启发和规范影响图构建算法。",
+      "categories": [
+        "stat.ML",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "primary_category": "stat.ML",
+      "published": "2026-07-18T09:13:17Z",
+      "updated": "2026-07-18T09:13:17Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16717v1",
+        "pdf": "https://arxiv.org/pdf/2607.16717v1"
+      },
+      "matched_keywords": [
+        "causal",
+        "probability"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16707",
+      "arxiv_id": "2607.16707v1",
+      "version": "v1",
+      "title": "Vertex reinforced branching random walks and generalized time-dependent Polya urns",
+      "title_zh": "顶点强化分支随机游走与广义时变波利亚瓮",
+      "authors": [
+        "Bruno Schapira"
+      ],
+      "abstract": "We consider a class of infinite critical tree-indexed random walks on $\\mathbb Z$, where the motion of particles is subject to vertex reinforcement. We mainly focus on the strong reinforcement regime, where we expect the process to localize almost surely on two sites. Part of our analysis includes the study of a time-dependent generalized Pólya urn process, where the number of draws at each step is prescribed by a sequence $(σ_n)_{n\\ge 1}$ of arbitrary positive integers, and the probability to pick a ball of a given color is proportional to a function of the {\\it number} of balls of that color. In particular for bounded sequences $(σ_n)_{n\\ge 1}$, we recover Rubin's characterization for the fixation of one color.",
+      "abstract_zh": "我们考虑一类在$\\mathbb Z$上的无穷临界树指标随机游走，其中粒子的运动受到顶点强化。我们主要关注强强化机制，在此机制下我们预期过程几乎必然局域化在两个点上。我们分析的一部分包括对一个时变广义波利亚瓮过程的研究，其中每一步的抽取次数由任意正整数序列$(σ_n)_{n\\ge 1}$规定，而抽取某种颜色球的概率与该颜色球数量的函数成正比。特别地，对于有界序列$(σ_n)_{n\\ge 1}$，我们恢复了Rubin关于一种颜色固定的刻画。",
+      "categories": [
+        "math.PR"
+      ],
+      "primary_category": "math.PR",
+      "published": "2026-07-18T08:45:17Z",
+      "updated": "2026-07-18T08:45:17Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16707v1",
+        "pdf": "https://arxiv.org/pdf/2607.16707v1"
+      },
+      "matched_keywords": [
+        "probability"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16698",
+      "arxiv_id": "2607.16698v1",
+      "version": "v1",
+      "title": "Generalized reparametrized variational Bayes with skew-symmetric normalization",
+      "title_zh": "具有偏斜对称归一化的广义重参数化变分贝叶斯",
+      "authors": [
+        "Aoxiang Chen",
+        "Linda S. L. Tan"
+      ],
+      "abstract": "Bayesian hierarchical models with high-dimensional latent structure require scalable posterior approximations that preserve key dependencies while remaining computationally tractable. Mean-field variational inference (MFVI) is efficient, but can be unreliable when local variables are strongly correlated or tightly coupled to global variables. We propose KNorm-RVB, a generalized reparametrized variational Bayes framework for latent Gaussian and latent non-Gaussian models with sparse local precision matrices. KNorm-RVB maps the conditional posterior of local variables toward a standard Gaussian via normalization followed by skewness reduction, enabled by a novel K-component skew-symmetric density representation. This reparametrization centers the transformed conditional local posterior at an optimized reflection point and decorrelates local and global variables, making MFVI much more effective. Under symmetry conditions, we show that MFVI recovers the local posterior mean and correlation matrix exactly, motivating KNorm-RVB's normalization and symmetrization of the conditional local posterior before applying MFVI. We combine a Gaussian variational family for reparametrized local variables with a flexible closed skew normal family for the remaining variables. Across generalized linear mixed models, mixed multinomial logit models, spatial autoregressive models, and stochastic volatility models, KNorm-RVB improves posterior approximation accuracy over existing methods.",
+      "abstract_zh": "具有高维潜在结构的贝叶斯分层模型需要可扩展的后验近似方法，这些方法在保持计算可行性的同时保留关键依赖关系。均值场变分推断（MFVI）效率高，但当局部变量强相关或与全局变量紧密耦合时可能不可靠。我们提出KNorm-RVB，一种针对具有稀疏局部精度矩阵的潜在高斯和潜在非高斯模型的广义重参数化变分贝叶斯框架。KNorm-RVM通过归一化后跟偏度减少将局部变量的条件后验映射到标准高斯分布，这得益于一种新颖的K分量偏斜对称密度表示。这种重参数化将变换后的条件局部后验中心化在优化的反射点，并去相关局部和全局变量，使MFVI更加有效。在对称条件下，我们证明MFVI精确恢复局部后验均值和相关矩阵，这激发了KNorm-RVB在应用MFVI之前对条件局部后验进行归一化和对称化。我们将用于重参数化局部变量的高斯变分族与用于剩余变量的灵活闭式偏斜正态族相结合。在广义线性混合模型、混合多项logit模型、空间自回归模型和随机波动模型中，KNorm-RVB比现有方法提高了后验近似精度。",
+      "categories": [
+        "stat.ME"
+      ],
+      "primary_category": "stat.ME",
+      "published": "2026-07-18T08:15:46Z",
+      "updated": "2026-07-18T08:15:46Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16698v1",
+        "pdf": "https://arxiv.org/pdf/2607.16698v1"
+      },
+      "matched_keywords": [
+        "bayesian",
+        "stochastic",
+        "high-dimensional"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16685",
+      "arxiv_id": "2607.16685v1",
+      "version": "v1",
+      "title": "Semi-Supervised Conditional Diffusion via Label Augmentation",
+      "title_zh": "基于标签增强的半监督条件扩散",
+      "authors": [
+        "Jin Su",
+        "Yuan Gao",
+        "Yong Zhou",
+        "Jian Huang"
+      ],
+      "abstract": "Conditional diffusion models have become a powerful and flexible framework for learning complex conditional distributions from labeled data. In practice, however, acquiring high-quality labels is costly and time-consuming, leaving large volumes of unlabeled data unused. To address this, we introduce label-augmented conditional diffusion (LACD), a simple and effective approach that incorporates unlabeled examples by assigning them a designated trivial label and performing joint denoising score matching over the augmented dataset. We provide sufficient conditions guaranteeing population-level identifiability of the target conditional distribution under this scheme. Moreover, we establish rigorous statistical guarantees: when sufficiently many unlabeled samples are available, the sampling distribution produced by LACD converges strictly faster than the purely supervised estimator in total variation distance, and at least as fast in Wasserstein-1 distance. Extensive experiments on synthetic, image, and tabular benchmarks corroborate our theory and show substantial gains in sample efficiency and generative performance compared with the purely supervised estimator.",
+      "abstract_zh": "条件扩散模型已成为从标记数据中学习复杂条件分布的强大而灵活的框架。然而，在实践中，获取高质量标签成本高昂且耗时，导致大量未标记数据未被利用。为了解决这一问题，我们引入了标签增强条件扩散（LACD），这是一种简单有效的方法，通过为未标记样本分配一个指定的平凡标签并在增强数据集上执行联合去噪分数匹配来纳入未标记样本。我们提供了充分条件，保证在该方案下目标条件分布在总体水平上的可识别性。此外，我们建立了严格的统计保证：当有足够多的未标记样本可用时，LACD产生的采样分布在总变差距离上严格快于纯监督估计量收敛，并且在Wasserstein-1距离上至少同样快。在合成、图像和表格基准上的大量实验证实了我们的理论，并显示与纯监督估计量相比，在样本效率和生成性能方面有显著提升。",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ],
+      "primary_category": "stat.ML",
+      "published": "2026-07-18T07:38:20Z",
+      "updated": "2026-07-18T07:38:20Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16685v1",
+        "pdf": "https://arxiv.org/pdf/2607.16685v1"
+      },
+      "matched_keywords": [
+        "statistical"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16682",
+      "arxiv_id": "2607.16682v1",
+      "version": "v1",
+      "title": "Building a Neural Network from Scratch: Implementation, Evaluation, and Optimization",
+      "title_zh": "从零构建神经网络：实现、评估与优化",
+      "authors": [
+        "Yuanzhe Jia"
+      ],
+      "abstract": "The widespread adoption of high-level deep learning libraries, while accelerating model development, has increasingly abstracted away the internal mechanics of neural networks, creating a gap between practical usage and fundamental understanding. To address this, the paper presents a self-contained neural network framework implemented entirely from scratch -- without relying on automatic differentiation or pre-built deep learning modules. The implementation encompasses all essential components, including multi-layer architectures, diverse activation functions, regularization techniques, and state-of-the-art optimizers. Beyond serving as a pedagogical instrument that demystifies forward/backward propagation, gradient dynamics, and optimization landscapes, the framework demonstrates robust performance when applied to a multi-class classification task, successfully validating its correctness, numerical stability, and generalization across varied configurations. The extensible design and clean modularity further position it as a reliable baseline for educational purposes and future research exploration.",
+      "abstract_zh": "高级深度学习库的广泛采用在加速模型开发的同时，日益抽象化了神经网络的内部机制，造成了实际使用与基础理解之间的鸿沟。为解决这一问题，本文提出一个完全从零构建的自包含神经网络框架——不依赖自动微分或预构建的深度学习模块。该实现涵盖所有必要组件，包括多层架构、多样化的激活函数、正则化技术以及最先进的优化器。除了作为揭示前向/反向传播、梯度动力学和优化景观的教学工具外，该框架在多类分类任务中展现出稳健性能，成功验证了其正确性、数值稳定性以及在不同配置下的泛化能力。其可扩展的设计和清晰的模块化特性进一步使其成为教育目的和未来研究探索的可靠基线。",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-18T07:31:59Z",
+      "updated": "2026-07-18T07:31:59Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16682v1",
+        "pdf": "https://arxiv.org/pdf/2607.16682v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16677",
+      "arxiv_id": "2607.16677v1",
+      "version": "v1",
+      "title": "Large deviation principles for multiscale stochastic Burgers equations with reflection",
+      "title_zh": "带反射的多尺度随机Burgers方程的大偏差原理",
+      "authors": [
+        "Huijie Qiao"
+      ],
+      "abstract": "This study investigates multiscale stochastic Burgers equations with reflection, wherein the slow component is modeled by a stochastic Burgers equation with reflection and the fast component by a stochastic reaction-diffusion equation with reflection. Using the weak convergence approach, we rigorously establish a large deviation principle for the slow component. Key technical tools include the penalization method, carefully constructed stopping times, and a refined adaptation of Khasminskii's classical time discretization scheme.",
+      "abstract_zh": "本研究探讨了带反射的多尺度随机Burgers方程，其中慢分量由带反射的随机Burgers方程建模，快分量由带反射的随机反应扩散方程建模。利用弱收敛方法，我们严格建立了慢分量的大偏差原理。关键技术工具包括惩罚方法、精心构造的停时以及Khasminskii经典时间离散化方案的精细改编。",
+      "categories": [
+        "math.PR"
+      ],
+      "primary_category": "math.PR",
+      "published": "2026-07-18T07:12:24Z",
+      "updated": "2026-07-18T07:12:24Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16677v1",
+        "pdf": "https://arxiv.org/pdf/2607.16677v1"
+      },
+      "matched_keywords": [
+        "stochastic"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16676",
+      "arxiv_id": "2607.16676v1",
+      "version": "v1",
+      "title": "The Value of Depth in Message Passing on Sparse Graphs: A Kesten-Stigum Dichotomy",
+      "title_zh": "稀疏图上消息传递的深度价值：一个Kesten-Stigum二分法",
+      "authors": [
+        "Aseem Raj Baranwal"
+      ],
+      "abstract": "How deep does a graph neural network need to be on a sparse graph? We study its purest statistical form: node classification on the sparse contextual stochastic block model (CSBM) with average degree $Δ=O(1)$, whose local weak limit is a broadcast-labelled Poisson Galton-Watson tree. Prior work derived a message-passing classifier $h_\\ell$ that aggregates from each vertex at distance $k\\le\\ell$ the attenuated evidence $2\\operatorname{artanh}(γ^k t(X_v))$, with $γ$ the edge signal and $t$ a bounded likelihood-ratio transform of the feature. We prove that the value of depth is governed by a single number, the Kesten-Stigum ratio $κ=γ^2Δ$. Below the threshold ($κ<1$), the error sequence is Cauchy at a geometric rate, $|\\mathcal{E}(\\ell)-\\mathcal{E}(\\ell')|\\le Cκ^{(\\ell+1)/3}$ for all $\\ell'>\\ell$, so all layers beyond depth $O(\\log(1/ε))$ change the error by less than $ε$; conversely, under mild regularity each sufficiently deep layer still flips the decision with probability at least $cκ^{\\ell/2}$, the empirically sharp exponent. Above the threshold ($κ>1$), depth is geometrically productive: $\\mathcal{E}(\\ell)$ is driven to a branching-process floor of order at most $1/(κ-1)$ at any geometric rate $κ^{-s\\ell}$, $s<1$ (this bound has content only for $κ>17$). No local classifier of any depth beats the universal floor $e^{-Δ}Φ(-ζ)$ set by isolated roots ($ζ$ the feature signal-to-noise ratio), while the first layer provably helps by an explicit total-variation amount. Simulations with an exact belief-propagation baseline on the same trees show that the pairwise rule's error curve is mildly non-monotone in $\\ell$, so an optimal finite depth exists (an exact instance is certified in the appendix), while BP saturates strictly faster, at an effective per-layer ratio below $κ$ that we identify.",
+      "abstract_zh": "图神经网络在稀疏图上需要多深？我们研究其最纯粹的统计形式：平均度$Δ=O(1)$的稀疏上下文随机块模型（CSBM）上的节点分类，其局部弱极限是一个广播标记的泊松Galton-Watson树。先前的工作推导了一个消息传递分类器$h_\\ell$，它从每个顶点聚合距离$k\\le\\ell$处的衰减证据$2\\operatorname{artanh}(γ^k t(X_v))$，其中$γ$是边信号，$t$是特征的有界似然比变换。我们证明深度的价值由一个单一数字决定，即Kesten-Stigum比率$κ=γ^2Δ$。在阈值以下（$κ<1$），误差序列以几何速率柯西收敛，对于所有$\\ell'>\\ell$，$|\\mathcal{E}(\\ell)-\\mathcal{E}(\\ell')|\\le Cκ^{(\\ell+1)/3}$，因此深度超过$O(\\log(1/ε))$的所有层改变误差小于$ε$；反之，在温和正则性下，每个足够深的层仍以至少$cκ^{\\ell/2}$的概率翻转决策，这是经验上尖锐的指数。在阈值以上（$κ>1$），深度在几何上富有成效：$\\mathcal{E}(\\ell)$以任意几何速率$κ^{-s\\ell}$，$s<1$被驱动到至多为$1/(κ-1)$的分支过程下限（该界限仅在$κ>17$时有意义）。任何深度的局部分类器都无法超越由孤立根设定的通用下限$e^{-Δ}Φ(-ζ)$（$ζ$是特征信噪比），而第一层通过显式的总变差量被证明有帮助。在相同树上使用精确置信传播基线的模拟显示，成对规则的误差曲线在$\\ell$上轻微非单调，因此存在一个最优有限深度（附录中证明了一个确切实例），而BP以更快的速度饱和，其有效每层比率低于我们识别的$κ$。",
+      "categories": [
+        "math.ST",
+        "cs.LG",
+        "math.PR",
+        "stat.ML"
+      ],
+      "primary_category": "math.ST",
+      "published": "2026-07-18T07:11:45Z",
+      "updated": "2026-07-18T07:11:45Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16676v1",
+        "pdf": "https://arxiv.org/pdf/2607.16676v1"
+      },
+      "matched_keywords": [
+        "statistical",
+        "stochastic",
+        "probability"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16675",
+      "arxiv_id": "2607.16675v1",
+      "version": "v1",
+      "title": "Isotonic Conformal Prediction",
+      "title_zh": "等渗保形预测",
+      "authors": [
+        "Daniel Bensimon",
+        "Sean Xiang Yu",
+        "Eric D. Kolaczyk",
+        "Archer Y. Yang"
+      ],
+      "abstract": "A point prediction that is well calibrated on average can still be systematically biased conditional on its own value, undermining its use in downstream decision-making. We consider two objectives for reliable uncertainty quantification: self-calibration, requiring a point prediction to be unbiased conditional on its own value, and prediction-conditional validity, requiring a prediction interval to attain nominal coverage conditional on the prediction. Self-Calibrating Conformal Prediction (SC-CP) attains both objectives exactly in finite samples, but requires refitting its calibrator for every candidate outcome, which is computationally prohibitive for continuous outcomes. We propose Isotonic Conformal Prediction (ICP), a framework that decouples calibration from prediction-set construction by fitting a single isotonic recalibration map and constructing prediction intervals within strata of similar recalibrated predictions. Within this framework we develop two procedures. Split Isotonic Conformal Prediction (SICP) attains prediction-conditional validity in finite samples and self-calibration asymptotically, at the computational cost of split conformal prediction. Transductive Isotonic Conformal Prediction (TICP) attains both objectives exactly in finite samples through a per-test-point inner loop that avoids refitting the isotonic calibrator. On synthetic heteroscedastic regression problems and a real-world healthcare-utilization dataset, both procedures match the coverage of SC-CP at substantially lower computational cost.",
+      "abstract_zh": "一个平均校准良好的点预测仍然可能在其自身值条件下存在系统性偏差，从而削弱其在下游决策中的应用。我们考虑可靠不确定性量化的两个目标：自校准（要求点预测在其自身值条件下无偏）和预测条件有效性（要求预测区间在预测条件下达到名义覆盖率）。自校准保形预测（SC-CP）在有限样本中精确实现了这两个目标，但需要为每个候选结果重新拟合其校准器，这对于连续结果而言计算成本过高。我们提出等渗保形预测（ICP），这是一个通过拟合单个等渗重校准映射并在相似重校准预测的层内构建预测区间，从而将校准与预测集构建解耦的框架。在该框架内，我们开发了两种程序。分裂等渗保形预测（SICP）在有限样本中实现预测条件有效性，并在渐近意义上实现自校准，其计算成本与分裂保形预测相当。转导等渗保形预测（TICP）通过每个测试点的内循环（避免重新拟合等渗校准器）在有限样本中精确实现这两个目标。在合成异方差回归问题和真实世界医疗保健利用数据集上，两种程序均以显著较低的计算成本达到了与SC-CP相当的覆盖率。",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "stat.ME"
+      ],
+      "primary_category": "stat.ML",
+      "published": "2026-07-18T07:11:05Z",
+      "updated": "2026-07-18T07:11:05Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16675v1",
+        "pdf": "https://arxiv.org/pdf/2607.16675v1"
+      },
+      "matched_keywords": [
+        "regression"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16669",
+      "arxiv_id": "2607.16669v1",
+      "version": "v1",
+      "title": "OpenLanguageModel: Readable and Composable Small-Language-Model Pretraining for Education and Research",
+      "title_zh": "OpenLanguageModel：面向教育与研究的可读、可组合的小型语言模型预训练库",
+      "authors": [
+        "Tavish Mankash",
+        "Vardhaman Kalloli",
+        "Keshava Prasad",
+        "Deepan Muthirayan"
+      ],
+      "abstract": "OpenLanguageModel (OLM) is an open-source PyTorch library for building and pretraining small language models while keeping their machinery visible. In OLM, model code reads like the architecture: components are ordinary modules, while Block, Residual, Repeat, and Parallel describe how they are wired. The resulting model can move unchanged from a teaching notebook to a complete pretraining run or a research ablation. OLM connects this readable model layer to tokenizers, local and streaming datasets, optimization, mixed precision, callbacks, checkpoints, and hardware-aware CPU, single-GPU, and single-node multi-GPU execution. We demonstrate the full path by tracing GPT-2 from diagram to code, launching a FineWeb-Edu training script, replacing one attention component, and letting AutoTrainer configure the available machine. The package includes 27 presets across nine familiar model families and documentation that progresses from LM fundamentals to architecture research. Validation shows close agreement with independent reference implementations, 90.6% four-GPU weak-scaling efficiency for a 348M-parameter workload, compact architecture edits, and positive early usability results. OLM is MIT-licensed and available through PyPI, GitHub, and its documentation site.",
+      "abstract_zh": "OpenLanguageModel (OLM) 是一个开源的 PyTorch 库，用于构建和预训练小型语言模型，同时保持其内部机制可见。在 OLM 中，模型代码的阅读体验如同架构本身：组件是普通模块，而 Block、Residual、Repeat 和 Parallel 描述了它们的连接方式。生成的模型可以原封不动地从教学笔记本迁移到完整的预训练运行或研究消融实验。OLM 将这个可读的模型层与分词器、本地和流式数据集、优化、混合精度、回调、检查点以及硬件感知的 CPU、单 GPU 和单节点多 GPU 执行相连接。我们通过从图表到代码追踪 GPT-2、启动 FineWeb-Edu 训练脚本、替换一个注意力组件以及让 AutoTrainer 配置可用机器，展示了完整的路径。该包包含九个常见模型家族的 27 个预设，以及从 LM 基础到架构研究的文档。验证显示与独立参考实现高度一致，348M 参数工作负载的四 GPU 弱扩展效率为 90.6%，架构编辑紧凑，早期可用性结果积极。OLM 采用 MIT 许可，可通过 PyPI、GitHub 及其文档网站获取。",
+      "categories": [
+        "cs.CL",
+        "cs.LG",
+        "cs.SE"
+      ],
+      "primary_category": "cs.CL",
+      "published": "2026-07-18T06:55:18Z",
+      "updated": "2026-07-18T06:55:18Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16669v1",
+        "pdf": "https://arxiv.org/pdf/2607.16669v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16662",
+      "arxiv_id": "2607.16662v1",
+      "version": "v1",
+      "title": "Multimodal Attention-based Deep Learning for Emergency Triage with Electronic Health Records",
+      "title_zh": "基于多模态注意力的深度学习在电子健康记录急诊分诊中的应用",
+      "authors": [
+        "Hazqeel Afyq Athaillah Kamarul Aryffin",
+        "Kamarul Aryffin Baharuddin",
+        "Mohd Halim Mohd Noor"
+      ],
+      "abstract": "Accurate emergency triage decision is critical to avoid clinical deterioration, morbidity, and mortality. Machine learning-based triage system involves acquiring the main presenting complaint in text form and assessing vital signs in numerical data, enabling an automated and efficient analysis of patient information for timely and accurate prioritization of medical attention. However, modelling the intricacies of both data types requires a comprehensive understanding of the temporal structure and dependencies within the data. Thus, the aim of this study is to propose a multimodal deep learning architecture that can effectively handle both tabular and textual data. Furthermore, the proposed model exploits self-attention to to capture both local and global relationships between the features. A dataset consisting of 11,102 triage data collected from emergency department of Hospital Universiti Sains Malaysia is used for model development and validation. The proposed model demonstrated an increase of 1.95% in accuracy, 2.49% in F1-score, and 1.41% in ROC AUC compared to the baseline model. The experimental results demonstrated the potential of the proposed model in predicting triage decisions.",
+      "abstract_zh": "准确的急诊分诊决策对于避免临床恶化、发病率和死亡率至关重要。基于机器学习的分诊系统涉及以文本形式获取主要主诉，并以数值数据评估生命体征，从而实现对患者信息的自动化和高效分析，以便及时准确地优先安排医疗关注。然而，对这两种数据类型的复杂性进行建模需要全面理解数据中的时间结构和依赖关系。因此，本研究的目的是提出一种能够有效处理表格数据和文本数据的多模态深度学习架构。此外，所提出的模型利用自注意力机制来捕捉特征之间的局部和全局关系。使用从马来西亚理科大学医院急诊科收集的11,102条分诊数据组成的数据集进行模型开发和验证。与基线模型相比，所提出的模型在准确率上提高了1.95%，F1分数提高了2.49%，ROC AUC提高了1.41%。实验结果证明了所提出的模型在预测分诊决策方面的潜力。",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-18T06:35:23Z",
+      "updated": "2026-07-18T06:35:23Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16662v1",
+        "pdf": "https://arxiv.org/pdf/2607.16662v1"
+      },
+      "matched_keywords": [
+        "machine learning"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16638",
+      "arxiv_id": "2607.16638v1",
+      "version": "v1",
+      "title": "De-floored Principal Component Regression: When Rank Selection Alone Is Insufficient for Prediction",
+      "title_zh": "去底主成分回归：当仅靠秩选择不足以进行预测时",
+      "authors": [
+        "Peng Zhao"
+      ],
+      "abstract": "Principal component regression (PCR) regularizes high-dimensional prediction by choosing a spectral cutoff, but rank selection cannot correct systematic inflation of the retained empirical eigenvalues. We study clean Gaussian random designs in which the aggregate covariance tail creates a nearly scalar sample-space floor comparable to the predictive head scale. De-floored principal component regression (dPCR) retains the cutoff and subtracts an estimated floor from the retained denominators. We prove an ordinary-PCR prediction-risk lower bound uniform over all ranks and a high-probability dPCR upper bound. When the floor is sharp and inexpensive to remove in population prediction risk, the conditional risk of dPCR is asymptotically negligible relative to that of the best ordinary PCR rank. An exact risk decomposition explains the separation: denominator inflation is governed by first spectral mass, whereas the clean prediction cost of correction is governed by squared spectral mass. A same-sample trimmed-mean floor estimate attains the oracle dPCR upper-bound rate at a prespecified rank, and the separation persists under approximate predictive alignment when the tail prediction-energy fraction vanishes. Separate pointwise fixed-aspect formulas show that the risk-optimal positive scalar correction improves rank-$1$ PCR, whereas mean-floor subtraction is generally not optimal for a broad Marchenko--Pastur bulk.",
+      "abstract_zh": "主成分回归（PCR）通过选择谱截断来正则化高维预测，但秩选择无法纠正保留的经验特征值的系统性膨胀。我们研究了干净的高斯随机设计，其中聚合协方差尾部产生了一个几乎标量的样本空间底，与预测头尺度相当。去底主成分回归（dPCR）保留截断并从保留的分母中减去估计的底。我们证明了在所有秩上一致的普通PCR预测风险下界和高概率的dPCR上界。当底在总体预测风险中尖锐且易于去除时，dPCR的条件风险相对于最佳普通PCR秩的风险渐近可忽略。精确的风险分解解释了这种分离：分母膨胀由第一谱质量控制，而校正的干净预测成本由平方谱质量控制。同一样本修剪均值底估计在预设秩处达到oracle dPCR上界速率，并且当尾部预测能量分数消失时，这种分离在近似预测对齐下持续存在。单独的点态固定方面公式表明，风险最优的正标量校正改进了秩-1 PCR，而均值底减法对于广泛的Marchenko–Pastur体通常不是最优的。",
+      "categories": [
+        "math.ST",
+        "cs.LG",
+        "stat.ME"
+      ],
+      "primary_category": "math.ST",
+      "published": "2026-07-18T04:50:59Z",
+      "updated": "2026-07-18T04:50:59Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16638v1",
+        "pdf": "https://arxiv.org/pdf/2607.16638v1"
+      },
+      "matched_keywords": [
+        "probability",
+        "regression",
+        "high-dimensional"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16633",
+      "arxiv_id": "2607.16633v1",
+      "version": "v1",
+      "title": "Beyond Fixed Depths and Widths: Optimizing Textual Decoding Tries in LLM-based Generative Recommendation",
+      "title_zh": "超越固定深度与宽度：优化基于LLM的生成式推荐中的文本解码树",
+      "authors": [
+        "Jingzhe Liu",
+        "Hanbing Wang",
+        "Jiliang Tang",
+        "Liam Collins",
+        "Tong Zhao",
+        "Neil Shah",
+        "Mingxuan Ju"
+      ],
+      "abstract": "Generative recommendation (GR) is an increasingly popular paradigm in recommender systems, with a prominent line of work using LLMs as autoregressive backbones to predict the next item's term IDs (e.g., titles or keywords). The success of autoregressive generation hinges on constrained beam search over a decoding trie to ensure that generated outputs correspond to valid items. However, current research predominantly focuses on generating more comprehensive term IDs to describe items, while largely neglecting the structural design of the decoding trie formed by these terms. This can lead to a trie that is poorly suited to beam search, which degrades performance. To address this, we examine the effectiveness of term IDs from the perspective of decoding trie optimization. Through empirical and theoretical analyses, we identify two desirable properties for a highly performant trie: (1) adaptive and variable ID length, enabling items with varying semantic richness to be represented by IDs of appropriate lengths, and (2) constrained branching factors, especially at shallow levels, which drastically improves the success rate of constrained beam search. Motivated by these properties, we introduce BONSAI: Branching-Optimized Node Structure for Adaptive Identifiers, a novel framework that co-designs textual term IDs and their underlying decoding trie. BONSAI extracts recommendation-informative words from item metadata and employs a minimum set cover formulation to recursively build a trie that satisfies the above properties. Experiments reveal that BONSAI achieves up to a 21.6% relative improvement over state-of-the-art baselines. Further analyses confirm the crucial role of our proposed properties, and demonstrate their generalizability to be applied to enhance the performance of other term ID methods.",
+      "abstract_zh": "生成式推荐（GR）是推荐系统中日益流行的范式，其中一项重要工作是利用LLM作为自回归骨干来预测下一个项目的术语ID（例如标题或关键词）。自回归生成的成功依赖于在解码树上进行约束波束搜索，以确保生成的输出对应于有效项目。然而，当前研究主要集中在生成更全面的术语ID来描述项目，而很大程度上忽略了这些术语形成的解码树的结构设计。这可能导致树不适合波束搜索，从而降低性能。为了解决这个问题，我们从解码树优化的角度审视术语ID的有效性。通过经验性和理论性分析，我们确定了高性能树的两个理想属性：（1）自适应和可变ID长度，使具有不同语义丰富度的项目能够由适当长度的ID表示；（2）受限的分支因子，尤其是在浅层，这显著提高了约束波束搜索的成功率。受这些属性的启发，我们提出了BONSAI：分支优化节点结构用于自适应标识符，这是一个新颖的框架，共同设计文本术语ID及其底层解码树。BONSAI从项目元数据中提取推荐信息词，并采用最小集合覆盖公式递归构建满足上述属性的树。实验表明，BONSAI相对于最先进的基线实现了高达21.6%的相对改进。进一步分析证实了我们提出的属性的关键作用，并展示了它们可推广应用于提升其他术语ID方法的性能。",
+      "categories": [
+        "cs.IR"
+      ],
+      "primary_category": "cs.IR",
+      "published": "2026-07-18T04:31:02Z",
+      "updated": "2026-07-18T04:31:02Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16633v1",
+        "pdf": "https://arxiv.org/pdf/2607.16633v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16625",
+      "arxiv_id": "2607.16625v1",
+      "version": "v1",
+      "title": "Dynamic mean-variance portfolio selection with no-shorting constraints and unknown investment opportunity sets",
+      "title_zh": "具有无卖空约束和未知投资机会集的动态均值-方差投资组合选择",
+      "authors": [
+        "Xun Li",
+        "Yutian Wang",
+        "Xun Yu Zhou"
+      ],
+      "abstract": "We study continuous-time mean-variance portfolio selection with no-shorting constraints and unknown investment opportunity sets from a reinforcement learning (RL) perspective. The problem is a constrained stochastic linear -- quadratic control problem for which the entropy-regularized exploratory formulation of Wang et al. (2020) leads to difficulty in theoretical analysis, because enforcing the constraint on the support of randomized policies nullifies the tractable Gaussian exploration. To tackle this challenge, we introduce an auxiliary exploratory problem without entropy in which exploratory policies are still Gaussian whose samples may violate the no-shorting requirement but their means satisfy it. We then prove that, for a suitable choice of exploration variance, the mean of the optimal Gaussian policy of the auxiliary problem coincides with the optimal policy of the original problem. Motivated by this theoretical result, we develop a model-free RL algorithm that learns the optimal policy of the auxiliary (and hence the original) problem directly from trajectory data without estimating the investment opportunity set. A numerical example demonstrates the performance of the proposed algorithm.",
+      "abstract_zh": "我们从强化学习（RL）的角度研究了具有无卖空约束和未知投资机会集的连续时间均值-方差投资组合选择问题。该问题是一个受约束的随机线性二次控制问题，Wang等人（2020）的熵正则化探索公式在理论分析中遇到困难，因为对随机化策略的支持施加约束会抵消可处理的高斯探索。为了应对这一挑战，我们引入了一个无熵的辅助探索问题，其中探索策略仍然是高斯的，其样本可能违反无卖空要求，但它们的均值满足该要求。然后我们证明，对于合适的探索方差选择，辅助问题的最优高斯策略的均值与原问题的最优策略一致。受这一理论结果的启发，我们开发了一种无模型RL算法，该算法直接从轨迹数据中学习辅助问题（因此也是原问题）的最优策略，而无需估计投资机会集。一个数值例子展示了所提出算法的性能。",
+      "categories": [
+        "math.OC"
+      ],
+      "primary_category": "math.OC",
+      "published": "2026-07-18T03:58:34Z",
+      "updated": "2026-07-18T03:58:34Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16625v1",
+        "pdf": "https://arxiv.org/pdf/2607.16625v1"
+      },
+      "matched_keywords": [
+        "stochastic"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16620",
+      "arxiv_id": "2607.16620v1",
+      "version": "v1",
+      "title": "Privacy Cost as Equity Input: A Group Fairness Criterion for Differentially Private Machine Learning",
+      "title_zh": "",
+      "authors": [
+        "Rakshit Naidu"
+      ],
+      "abstract": "Differential privacy (DP) is increasingly deployed to limit membership inference risk in machine-learning systems. Prior work has shown that DP-SGD can widen accuracy disparities across demographic groups, but this framing treats fairness as a purely outcome-side concern. We argue that privacy cost, the information leakage borne by each group, is itself a form of harm, and adopt a compensatory-fairness framework in which a group that involuntarily bears greater privacy exposure is owed proportionally greater benefit from the system. From this principle we derive the \\emph{Privacy-Cost Equity Ratio} (PCER), a group fairness metric defined as a group's positive prediction rate normalized by its per-group overfitting gap. By a standard membership inference bound, this overfitting gap upper-bounds each group's vulnerability to inference attacks, making PCER a conservative measure of benefit relative to exposure. PCER needs only per-group train and test accuracy (no shadow models), making it a practical post-hoc audit tool. We evaluate PCER alongside standard fairness metrics across six benchmark--attribute combinations spanning tabular and NLP domains, under DP-SGD at a range of privacy budgets, and validate the overfitting-gap proxy against a direct threshold membership-inference attack. The results reveal patterns that outcome-based metrics miss. On COMPAS, PCER uncovers a persistent double disadvantage: the protected group bears both greater privacy exposure and worse predictive outcomes, something demographic parity gap masks entirely. Sensitivity analysis shows very strong privacy guarantees collapse both groups' overfitting to a numerical floor, rendering exposure-based audits uninformative in that regime. Together, these findings show that fairness audits of privacy-preserving systems must account for who bears the cost of protection, not only who benefits from its outcomes.",
+      "abstract_zh": "",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CR",
+        "cs.CY"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-18T03:41:01Z",
+      "updated": "2026-07-18T03:41:01Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16620v1",
+        "pdf": "https://arxiv.org/pdf/2607.16620v1"
+      },
+      "matched_keywords": [
+        "machine learning"
+      ],
+      "translation_status": "failed"
+    },
+    {
+      "id": "2607.16591",
+      "arxiv_id": "2607.16591v1",
+      "version": "v1",
+      "title": "Learning from World Feedback: Why Model Uncertainty Fails as a Risk Signal in Model-Based RL",
+      "title_zh": "从世界反馈中学习：为什么模型不确定性在基于模型的强化学习中不能作为风险信号",
+      "authors": [
+        "Zhaohui Wang"
+      ],
+      "abstract": "The RLxF programme argues that learning signals should come from world feedback rather than from internal model proxies. We instantiate this position in safe model-based control and distil it into three concrete design principles. Empirically, across four world-model architectures spanning a 2x MSE range, MPC planning is statistically equivalent (TOST, n=200), and dynamics-based uncertainty penalties increase collision rates from 26% to 34%: the standard MBRL safety proxy is anti-correlated with safety in this regime. Replacing the model-internal proxy with three world-feedback signals (a sensor-derived margin via minimum lidar, a temporal signal via time-to-collision, and an outcome-supervised feedback model g_psi trained on prior collision labels, structurally analogous to outcome-trained reward models in RLHF) reduces collisions to 1-14% without retraining the world model or the planner. The mechanism is structural: model uncertainty has support over state-prediction space, whereas task risk has support over constraint boundaries, with empirical correlation r < 0.15. From this we extract three RLxF principles (ground risk in world outcomes, validate proxies before deployment, and substitute outcome-trained feedback models when direct world signals are unavailable) and argue they apply equally to model-based control and to verifier-based or RLHF approaches in LLM alignment.",
+      "abstract_zh": "RLxF 项目认为学习信号应来自世界反馈而非内部模型代理。我们在安全模型预测控制中实例化这一立场，并将其提炼为三个具体的设计原则。实验上，在跨越 2 倍 MSE 范围的四种世界模型架构中，MPC 规划在统计上等价（TOST，n=200），而基于动力学的惩罚项使碰撞率从 26% 增加到 34%：在此情况下，标准的 MBRL 安全代理与安全性反相关。用三种世界反馈信号（通过最小激光雷达的传感器导出裕度、通过碰撞时间的时间信号、以及基于先前碰撞标签训练的结果监督反馈模型 g_psi，结构上类似于 RLHF 中结果训练的奖励模型）替换模型内部代理，在不重新训练世界模型或规划器的情况下将碰撞率降低到 1-14%。其机制是结构性的：模型不确定性在状态预测空间上有支持，而任务风险在约束边界上有支持，经验相关性 r < 0.15。由此我们提取出三个 RLxF 原则（将风险基于世界结果、在部署前验证代理、以及当直接世界信号不可用时用结果训练的反馈模型替代），并认为它们同样适用于基于模型的控制以及 LLM 对齐中基于验证器或 RLHF 的方法。",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-18T02:17:45Z",
+      "updated": "2026-07-18T02:17:45Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16591v1",
+        "pdf": "https://arxiv.org/pdf/2607.16591v1"
+      },
+      "matched_keywords": [
+        "statistical"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16583",
+      "arxiv_id": "2607.16583v1",
+      "version": "v1",
+      "title": "Harnessing disorder to decouple extension and shear in kirigami metamaterials",
+      "title_zh": "利用无序性解耦剪纸超材料的拉伸与剪切",
+      "authors": [
+        "Haomin Yu",
+        "Hanxun Jin",
+        "Mingxuan Bi",
+        "Mohammad Jafari",
+        "Feng Helen Long",
+        "Michael J Greenberg",
+        "Farid Alisafaei",
+        "Guy Genin"
+      ],
+      "abstract": "Kirigami turns stiff sheets into compliant, shape-morphing structures, but its reliance on periodic cut patterns comes at a cost: correlated panel rotations couple extension to shear, so stretching one axis drives a parasitic shear that cannot be suppressed, and also confine anisotropic stiffness to a narrow, discrete set of responses that cannot be tuned independently. Biological tissues overcome an analogous constraint through controlled disorder, such as graded fiber orientations in skin and hierarchical anisotropy in myocardium, achieving direction-dependent mechanics unavailable to regular architectures. Here, we show that engineered disorder is a design degree of freedom for kirigami, with stochastic kirigami accessing a continuous and far broader region of mechanical response than periodic patterns. This includes programmable anisotropy with near-complete elimination of extension-shear coupling. Because disordered patterns lack a simple parameterization, we navigate this design space with a geometry-aware graph neural network (GNN) that maps cut topology to the full nonlinear, bidirectional stress-strain response, coupled to a genetic algorithm that inverse-designs patterns reproducing target responses along two perpendicular axes. The GNN trains an order of magnitude faster and more accurately than image-based models. Fabricated elastomer samples reproduce the predicted nonlinear, anisotropic responses, closing the loop from design to physical component. By turning disorder into a variable to control directional stiffness, this work develops architected materials that stretch without parasitic shear, from soft actuators to tissue-interfacing devices matched to the anisotropy of living tissue.",
+      "abstract_zh": "剪纸将刚性薄板转变为柔顺、可变形结构，但其对周期性切割图案的依赖带来代价：相关的面板旋转将拉伸与剪切耦合，因此沿一个轴拉伸会引发无法抑制的寄生剪切，同时各向异性刚度被限制在狭窄、离散的响应集合中，无法独立调节。生物组织通过受控的无序性（如皮肤中的梯度纤维取向和心肌中的分层各向异性）克服了类似约束，实现了规则结构无法达到的方向依赖性力学性能。本文表明，工程无序性是剪纸的一个设计自由度，随机剪纸能够获得比周期性图案更连续、更广泛的力学响应区域，包括几乎完全消除拉伸-剪切耦合的可编程各向异性。由于无序图案缺乏简单参数化，我们利用几何感知图神经网络（GNN）将切割拓扑映射到完整的非线性、双向应力-应变响应，并结合遗传算法逆向设计出沿两个垂直轴再现目标响应的图案。GNN的训练速度比基于图像的模型快一个数量级，且精度更高。制备的弹性体样品再现了预测的非线性各向异性响应，实现了从设计到物理组件的闭环。通过将无序性转化为控制方向刚度的变量，本文开发了拉伸时无寄生剪切的超材料，应用范围从软体致动器到与活体组织各向异性匹配的组织界面器件。",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "cs.LG"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "published": "2026-07-18T01:52:52Z",
+      "updated": "2026-07-18T01:52:52Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16583v1",
+        "pdf": "https://arxiv.org/pdf/2607.16583v1"
+      },
+      "matched_keywords": [
+        "stochastic"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16580",
+      "arxiv_id": "2607.16580v1",
+      "version": "v1",
+      "title": "Automating structural reliability analysis with a multi-agent large language model framework",
+      "title_zh": "基于多智能体大语言模型框架的自动化结构可靠性分析",
+      "authors": [
+        "Jaehwan Jeon",
+        "Chang Hee Lee",
+        "Taeyong Kim"
+      ],
+      "abstract": "Structural reliability analysis supports the design and safety assessment of buildings and civil infrastructure but requires specialized expertise throughout the workflow. This study presents a multi-agent large language model framework that automates component-level reliability analysis from a natural-language problem statement to interpreted estimates of the reliability index and failure probability. Specialized agents handle problem formulation, method planning, code generation, execution, and result interpretation, with human confirmation at key decision points. The Method Planner is fine-tuned using QLoRA for a priori reliability-method category selection. Analysis results are not generated directly by an LLM; instead, validated deterministic solvers compute the reliability estimates, improving reproducibility and reducing hallucination risk. The framework uses open-weight models and supports local execution without closed APIs. Results show that it lowers the expertise barrier to structural reliability assessment while preserving computational trustworthiness.",
+      "abstract_zh": "结构可靠性分析支持建筑和土木基础设施的设计与安全评估，但整个工作流程需要专业知识。本研究提出了一种多智能体大语言模型框架，该框架能够从自然语言问题陈述自动进行构件级可靠性分析，直至解释可靠性指标和失效概率的估计值。专门的智能体负责问题表述、方法规划、代码生成、执行和结果解释，并在关键决策点进行人工确认。方法规划器使用QLoRA进行微调，以实现先验的可靠性方法类别选择。分析结果并非由LLM直接生成，而是通过经过验证的确定性求解器计算可靠性估计值，从而提高可重复性并降低幻觉风险。该框架使用开放权重模型，支持本地执行，无需封闭API。结果表明，该框架降低了结构可靠性评估的专业知识门槛，同时保持了计算的可信度。",
+      "categories": [
+        "stat.AP",
+        "cs.CE",
+        "cs.SE"
+      ],
+      "primary_category": "stat.AP",
+      "published": "2026-07-18T01:45:27Z",
+      "updated": "2026-07-18T01:45:27Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16580v1",
+        "pdf": "https://arxiv.org/pdf/2607.16580v1"
+      },
+      "matched_keywords": [
+        "probability"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16570",
+      "arxiv_id": "2607.16570v1",
+      "version": "v1",
+      "title": "Mapping Order in Semicrystalline Polymers using Machine Learning of Nanobeam Electron Diffraction",
+      "title_zh": "利用纳米束电子衍射的机器学习绘制半结晶聚合物中的有序性图谱",
+      "authors": [
+        "Nicholas Marchese",
+        "Arthur R. C. McCray",
+        "Yael Tsarfati",
+        "Karen Bustillo",
+        "Adam Marks",
+        "Alberto Salleo",
+        "Colin Ophus"
+      ],
+      "abstract": "Organic mixed ionic electronic conductors (OMIECs) are a promising class of polymer materials for applications spanning neuromorphic computation to energy efficient electronics and bioelectronics. Despite being highly tunable, the relationship between structural features and key performance properties such as charge carrier mobility is poorly understood. Scanning nanodiffraction in the transmission electron microscope (TEM) is a powerful probe for elucidating this structure-property relationship, but produces large, noisy datasets that are difficult to interpret because polymer reflections exhibit several distinct morphologies. To address the complexity, we trained a machine learning (ML) model to detect these polymer diffraction peaks and their intensities from synthetic data. Compared to correlative peak detection algorithms, the conventional method for analyzing nanobeam 4D scanning transmission electron microscopy (4DSTEM) data, we show that the ML model is significantly faster and outperforms correlative algorithms in almost all cases, opening up the possibility of near-live visualization of 4DSTEM experiments.",
+      "abstract_zh": "有机混合离子电子导体（OMIECs）是一类有前景的聚合物材料，应用范围涵盖神经形态计算、节能电子器件和生物电子学。尽管其高度可调，但结构特征与关键性能（如载流子迁移率）之间的关系尚不明确。透射电子显微镜（TEM）中的扫描纳米衍射是阐明这种结构-性能关系的强大探针，但会产生大量嘈杂的数据集，且由于聚合物反射表现出几种不同的形态，这些数据难以解释。为了解决这一复杂性，我们训练了一个机器学习（ML）模型，用于从合成数据中检测这些聚合物衍射峰及其强度。与相关峰检测算法（分析纳米束4D扫描透射电子显微镜（4DSTEM）数据的传统方法）相比，我们表明ML模型显著更快，并且在几乎所有情况下都优于相关算法，为4DSTEM实验的近实时可视化开辟了可能性。",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "cs.LG"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "published": "2026-07-18T00:54:23Z",
+      "updated": "2026-07-18T00:54:23Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16570v1",
+        "pdf": "https://arxiv.org/pdf/2607.16570v1"
+      },
+      "matched_keywords": [
+        "machine learning"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16558",
+      "arxiv_id": "2607.16558v1",
+      "version": "v1",
+      "title": "Near-Optimal Lower Bounds for Exact Zeroth-Order Convex Optimization",
+      "title_zh": "精确零阶凸优化的近最优下界",
+      "authors": [
+        "Haihan Zhang",
+        "Chenheng Zhang",
+        "Zhiquan Qi",
+        "Zhouchen Lin"
+      ],
+      "abstract": "The fundamental oracle limits of exact function value access remain poorly understood in zeroth-order optimization: even for canonical convex problems, the optimal joint dependence on dimension $d$ and accuracy $ε$ has remained unresolved. We resolve this question for arbitrary adaptive randomized algorithms minimizing nonsmooth $L_0$-Lipschitz convex functions over the $d$-dimensional Euclidean unit ball, where each query returns only the exact scalar value $f(\\mathbf x)$ of a fixed objective. With universal $L_0>0$, let $T_ε$ denote the minimum number of queries required to return an $ε$-suboptimal point with probability at least $1/2$, uniformly over the function class. We prove that $$ T_ε\\ge c\\, \\frac{ d\\min\\{d,ε^{-2}\\} }{ \\log\\!\\bigl(e\\min\\{d,ε^{-2}\\}\\bigr) }, $$ for all $d\\ge d_0$ and $0<ε\\leε_0$, for universal constants $c,ε_0>0$ and $d_0\\in\\mathbb N$. In the low-accuracy regime $ε\\ge d^{-1/2}$, this matches the $O(dε^{-2})$ two-point exact value upper bound up to a logarithmic factor. In the high-accuracy regime $ε\\le d^{-1/2}$, the lower bound saturates at $Ω(d^2/\\log(ed))$, independently of $ε$, matching the $\\widetilde O(d^2)$ evaluation oracle upper bound up to polylogarithmic factors. The proof uses a random support function hard family and develops a posterior mean energy method for adaptive exact max observations, in place of first-order zero chain constructions and noise based transcript inequalities.",
+      "abstract_zh": "在零阶优化中，精确函数值访问的基本oracle极限仍然知之甚少：即使对于典型的凸问题，维度$d$和精度$ε$的最优联合依赖关系仍未解决。我们解决了任意自适应随机算法在$d$维欧几里得单位球上最小化非光滑$L_0$-Lipschitz凸函数的问题，其中每次查询仅返回固定目标的精确标量值$f(\\mathbf x)$。设$L_0>0$为通用常数，$T_ε$表示在函数类上一致地以至少$1/2$的概率返回$ε$-次优点所需的最小查询次数。我们证明，对于所有$d\\ge d_0$和$0<ε\\leε_0$，存在通用常数$c,ε_0>0$和$d_0\\in\\mathbb N$，使得$$ T_ε\\ge c\\, \\frac{ d\\min\\{d,ε^{-2}\\} }{ \\log\\!\\bigl(e\\min\\{d,ε^{-2}\\}\\bigr) }. $$在低精度区域$ε\\ge d^{-1/2}$，这匹配了$O(dε^{-2})$的两点精确值上界，仅差对数因子。在高精度区域$ε\\le d^{-1/2}$，下界饱和于$Ω(d^2/\\log(ed))$，与$ε$无关，匹配了$\\widetilde O(d^2)$的评估oracle上界，仅差多对数因子。证明使用了一个随机支撑函数困难族，并开发了一种用于自适应精确最大值观测的后验均值能量方法，取代了一阶零链构造和基于噪声的转录不等式。",
+      "categories": [
+        "math.OC"
+      ],
+      "primary_category": "math.OC",
+      "published": "2026-07-18T00:04:07Z",
+      "updated": "2026-07-18T00:04:07Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16558v1",
+        "pdf": "https://arxiv.org/pdf/2607.16558v1"
+      },
+      "matched_keywords": [
+        "probability",
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16554",
+      "arxiv_id": "2607.16554v1",
+      "version": "v1",
+      "title": "Capacity and Redundancy Trade-offs in Multi-Task Learning",
+      "title_zh": "多任务学习中的容量与冗余权衡",
+      "authors": [
+        "Asif Khan"
+      ],
+      "abstract": "In multi-task learning (MTL) negative transfer is often considered as an optimization artifact, but it can also be viewed as a consequence of limited shared capacity and weak task redundancy. We investigate this effect through a Capacity--Redundancy (CR) identity that decomposes the sum of per-task predictive informations into joint predictive information that includes label redundancy defined via total correlation (TC), and a residual coupling term that quantifies interference left unresolved by the shared representation. Additionally, we show two key results: (i) a clustering-gap decomposition that gives a necessary and sufficient condition for clustered sharing to outperform global sharing, and (ii) a gradient--TC bridge in a Gaussian multi-task model that formally justifies gradient cosine similarity as a proxy for redundancy ordering. Empirically, we estimate the residual coupling $Δ$ from validation residual correlations, showing that clustered LoRA substantially reduces $\\widehatΔ$, outperforms size-matched random partitions, and results in statistically significant gains with multi-seed confidence intervals.",
+      "abstract_zh": "在多任务学习（MTL）中，负迁移通常被视为优化产物，但也可以看作是有限共享容量和弱任务冗余的结果。我们通过一个容量-冗余（CR）恒等式研究这种效应，该恒等式将每个任务预测信息的总和分解为联合预测信息（包括通过总相关（TC）定义的标签冗余）和一个残差耦合项，该项量化了共享表示未解决的干扰。此外，我们展示了两个关键结果：（i）一个聚类间隙分解，给出了聚类共享优于全局共享的充要条件；（ii）高斯多任务模型中的梯度-TC桥接，正式证明了梯度余弦相似度可作为冗余排序的代理。实验上，我们从验证残差相关性估计残差耦合Δ，表明聚类LoRA显著降低了Δ̂，优于大小匹配的随机分区，并在多种子置信区间内产生统计显著的增益。",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.IT"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-17T23:31:12Z",
+      "updated": "2026-07-17T23:31:12Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16554v1",
+        "pdf": "https://arxiv.org/pdf/2607.16554v1"
+      },
+      "matched_keywords": [
+        "statistical",
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16553",
+      "arxiv_id": "2607.16553v1",
+      "version": "v1",
+      "title": "Discrete Ricci Curvature on Protein Contact Graphs for Lightweight Fold Classification",
+      "title_zh": "蛋白质接触图上的离散里奇曲率用于轻量级折叠分类",
+      "authors": [
+        "Jianru Shen"
+      ],
+      "abstract": "Protein fold classification can be approached via sequence-based representations or structural descriptors, but direct comparisons between lightweight handcrafted descriptors and pretrained protein language model embeddings remain limited. We investigate discrete Ricci curvature on Calpha contact graphs as a lightweight structural descriptor for fold classification. Each protein domain is represented by a 22-dimensional fixed-length feature derived from summary statistics and quantiles of Ollivier-Ricci and Forman-Ricci edge curvature distributions. We evaluate on CATH top-10 Topology classification and on the ASTRAL 40%-identity SCOPe top-10 Fold benchmark, comparing against geometry, contact-graph statistics, persistent homology, and mean-pooled ESM-2 (150M) baselines. On both datasets, lightweight structural descriptors substantially outperform mean-pooled ESM-2 embeddings, with a larger performance gap on the ASTRAL 40% SCOPe benchmark. Ricci alone uses 22 dimensions, or 3.4% of the ESM-2 baseline dimensionality, and already outperforms mean-pooled ESM-2 on both datasets. Combining Ricci with persistent homology yields the strongest performance, achieving macro-F1 of 0.71 on CATH and 0.68 on SCOPe with a 112-dimensional feature vector. These results identify a regime where lightweight interpretable graph descriptors offer a practical alternative to pretrained protein language model embeddings.",
+      "abstract_zh": "蛋白质折叠分类可以通过基于序列的表示或结构描述符来实现，但轻量级手工描述符与预训练蛋白质语言模型嵌入之间的直接比较仍然有限。我们研究了Cα接触图上的离散里奇曲率作为折叠分类的轻量级结构描述符。每个蛋白质结构域由一个22维固定长度特征表示，该特征源自Ollivier-Ricci和Forman-Ricci边曲率分布的汇总统计量和分位数。我们在CATH前10拓扑分类和ASTRAL 40%同一性SCOPe前10折叠基准上进行了评估，并与几何、接触图统计、持续同调和平均池化ESM-2（150M）基线进行了比较。在两个数据集上，轻量级结构描述符显著优于平均池化ESM-2嵌入，在ASTRAL 40% SCOPe基准上性能差距更大。仅使用22维的Ricci特征，即ESM-2基线维度的3.4%，就在两个数据集上优于平均池化ESM-2。将Ricci与持续同调结合可获得最强性能，在CATH上达到0.71的宏F1，在SCOPe上达到0.68，特征向量维度为112。这些结果揭示了一种情况，即轻量级可解释图描述符为预训练蛋白质语言模型嵌入提供了一种实用的替代方案。",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-17T23:24:55Z",
+      "updated": "2026-07-17T23:24:55Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16553v1",
+        "pdf": "https://arxiv.org/pdf/2607.16553v1"
+      },
+      "matched_keywords": [
+        "statistics"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16551",
+      "arxiv_id": "2607.16551v1",
+      "version": "v1",
+      "title": "On high probability of universal approximation in random basis expansions with non-continuous weight sampling",
+      "title_zh": "非连续权重采样随机基展开中高概率通用逼近的研究",
+      "authors": [
+        "John E. Darges"
+      ],
+      "abstract": "Random basis expansion (RBE) search the span of a randomly sampled basis to find the best approximation of a target function. They are equivalent to single layer neural networks where the hidden layer weights are chosen randomly. Universal approximation properties have been established for RBEs using continuous weight sampling distributions and real-valued activation functions. Our results extend the universal approximation property to RBEs that use non-continuous weight distributions with dense support in the weight space and that use complex-valued activation functions. The result shows such random bases have the universal approximation property with arbitrarily high probability.",
+      "abstract_zh": "随机基展开（RBE）通过搜索随机采样基的跨度来寻找目标函数的最佳逼近。它们等价于隐藏层权重随机选择的单层神经网络。使用连续权重采样分布和实值激活函数的RBE已建立了通用逼近性质。我们的结果将通用逼近性质扩展到使用权重空间中具有稠密支撑的非连续权重分布以及使用复值激活函数的RBE。结果表明，此类随机基以任意高的概率具有通用逼近性质。",
+      "categories": [
+        "math.FA",
+        "math.PR"
+      ],
+      "primary_category": "math.FA",
+      "published": "2026-07-17T23:17:12Z",
+      "updated": "2026-07-17T23:17:12Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16551v1",
+        "pdf": "https://arxiv.org/pdf/2607.16551v1"
+      },
+      "matched_keywords": [
+        "probability"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16547",
+      "arxiv_id": "2607.16547v1",
+      "version": "v1",
+      "title": "Projective Maximum Entropy: Universality and Acceptance-Region Calibration",
+      "title_zh": "投影最大熵：普适性与接受域校准",
+      "authors": [
+        "Hideitsu Hino"
+      ],
+      "abstract": "Maximum-entropy reference distributions are usually constructed on the normalized probability simplex. This formulation is less natural for unnormalized statistical models, in which positive multiples represent the same shape, and it does not directly explain how a prescribed admissible region should determine the deformation parameter of a bounded-support reference distribution. We formulate maximum entropy on the projective space of nonnegative measures and establish three results of statistical relevance. First, a universality theorem shows that every admissible monotone transform of the same normalized power functional has exactly the same optimizer under linear moment constraints. The result unifies the maximum-entropy implications of Tsallis and Rényi entropies, Hölder composite scores, pseudo-spherical scores, Bregman--Hölder constructions, and related homogeneous divergences without asserting a new distribution family. Second, the common optimizer is characterized as a $q$-exponential density; under mean and covariance constraints it is a compactly supported $q$-Gaussian for positive deformation and a Student-type density for negative deformation. Third, a prescribed Mahalanobis acceptance region with squared radius $R^2>d+2$ uniquely determines the deformation parameter $γ_R=2/(R^2-d-2)$. The resulting affine-equivariant reference density is the unique projective maximum-entropy solution, and its support coincides with the specified ellipsoid without an additional support constraint. This provides a principled method for constructing bounded-support statistical reference distributions from robust location and scatter estimates or from externally specified admissible regions.",
+      "abstract_zh": "最大熵参考分布通常是在归一化概率单纯形上构建的。这种表述对于非归一化统计模型不太自然，因为正倍数代表相同的形状，并且它不能直接解释规定的可接受域应如何确定有界支持参考分布的变形参数。我们在非负测度的投影空间上构建最大熵，并建立了三个具有统计意义的结果。首先，一个普适性定理表明，在相同的线性矩约束下，同一归一化幂泛函的每个可接受的单调变换都具有完全相同的优化器。该结果统一了Tsallis和Rényi熵、Hölder复合得分、伪球面得分、Bregman-Hölder构造及相关齐次散度的最大熵含义，而无需断言新的分布族。其次，公共优化器被刻画为q-指数密度；在均值和协方差约束下，对于正变形它是紧支撑的q-高斯分布，对于负变形则是Student型密度。第三，一个具有平方半径R^2>d+2的规定的马氏接受域唯一地确定了变形参数γ_R=2/(R^2-d-2)。由此产生的仿射等变参考密度是唯一的投影最大熵解，其支撑与指定的椭球重合，无需额外的支撑约束。这提供了一种从稳健位置和散度估计或从外部指定的可接受域构建有界支撑统计参考分布的原则性方法。",
+      "categories": [
+        "math.ST",
+        "stat.ML"
+      ],
+      "primary_category": "math.ST",
+      "published": "2026-07-17T22:50:47Z",
+      "updated": "2026-07-17T22:50:47Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16547v1",
+        "pdf": "https://arxiv.org/pdf/2607.16547v1"
+      },
+      "matched_keywords": [
+        "statistical",
+        "probability"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16506",
+      "arxiv_id": "2607.16506v1",
+      "version": "v1",
+      "title": "Foresight Residual RL for Long-Horizon Robot Manipulation with Vision-Language-Action Models",
+      "title_zh": "面向长时域机器人操作的远见残差强化学习与视觉-语言-动作模型",
+      "authors": [
+        "Yuhan Liu",
+        "Xinyu Zhang",
+        "Litao Liu",
+        "Abdeslam Boularias"
+      ],
+      "abstract": "Vision-Language-Action (VLA) policies offer strong general-purpose manipulation priors, but often fail on tight-tolerance, contact-rich assembly due to long-horizon credit assignment and subtask coupling: a state that is geometrically successful for the current skill can be brittle for downstream skills. We show this failure mode in residual reinforcement learning (RL) over a frozen VLA base policy: constant sparse success rewards improve each subtask in isolation yet yield little or no gain when skills are chained, because terminal state quality is uncontrolled. We propose Foresight Residual RL, which optimizes handoff quality by augmenting each subtask's sparse success reward with an offline-estimated foresight value -- the probability of future subtask success conditioned on the terminal state of the current subtask. Concretely, we (i) train a visual foresight predictor from images of terminal states of the base policy, labeled using downstream rollout statistics, and (ii) train residual policies via backward foresight induction, using the predictor output as a reward multiplier. On a three-phase wrench-based nut-tightening assembly task in Isaac Gym (grasp, move-insert, rotate), our method achieves 85.6% full-task success, outperforming standard subtask residual RL (54.5%) and VLA baselines, while leaving per-subtask success unchanged. These results highlight that improving long-horizon performance requires shaping which successful states are produced at each sub-task, not only whether success occurs.",
+      "abstract_zh": "视觉-语言-动作（VLA）策略提供了强大的通用操作先验，但在高精度、接触密集的装配任务中常因长时域信用分配和子任务耦合而失败：当前技能在几何上成功的状态可能对后续技能脆弱。我们展示了在冻结的VLA基础策略上进行残差强化学习（RL）时的这种失败模式：恒定的稀疏成功奖励单独改善每个子任务，但当技能链式执行时几乎没有增益，因为终端状态质量不受控制。我们提出远见残差强化学习，通过用离线估计的远见值（即当前子任务终端状态下未来子任务成功的概率）增强每个子任务的稀疏成功奖励来优化交接质量。具体而言，我们（i）从基础策略终端状态的图像训练视觉远见预测器，使用下游 rollout 统计数据进行标注，以及（ii）通过反向远见归纳训练残差策略，将预测器输出作为奖励乘数。在Isaac Gym中的三相扳手式螺母拧紧装配任务（抓取、移动-插入、旋转）上，我们的方法实现了85.6%的全任务成功率，优于标准子任务残差RL（54.5%）和VLA基线，同时保持每个子任务的成功率不变。这些结果强调，提高长时域性能需要塑造每个子任务产生的成功状态，而不仅仅是是否成功。",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "primary_category": "cs.RO",
+      "published": "2026-07-17T21:00:28Z",
+      "updated": "2026-07-17T21:00:28Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16506v1",
+        "pdf": "https://arxiv.org/pdf/2607.16506v1"
+      },
+      "matched_keywords": [
+        "statistics",
+        "probability"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16493",
+      "arxiv_id": "2607.16493v1",
+      "version": "v1",
+      "title": "Leakage-Robust Evaluation and Data-Scale Sensitivity of Attention-Enhanced Multi-Task Learning for Joint Fault Diagnosis and Remaining Useful Life Estimation",
+      "title_zh": "面向联合故障诊断与剩余寿命估计的注意力增强多任务学习的泄漏鲁棒评估与数据规模敏感性",
+      "authors": [
+        "Md Mahamudur Rahaman Shamim",
+        "Md. Nuruzzaman",
+        "Zannatul Ferdus",
+        "Md Rajib Ahmed",
+        "Abieer Nwshad Anward",
+        "Mohammad Tooneer",
+        "Johir Uddin Khan",
+        "Khalid Hossen"
+      ],
+      "abstract": "Multi-task deep learning models that jointly perform fault classification and remaining useful life (RUL) regression are increasingly used in predictive maintenance, yet reported performance can be strongly affected by how sliding-window sequences are split into training and test sets. We investigate this issue using AMTLNet, an attention-enhanced multi-task architecture, on three public benchmarks: NASA C-MAPSS, NASA IMS, and the UCI Hydraulic System dataset. We show that naive splitting can inflate classification accuracy from a genuine 20-60 percent to 99.9 percent, or reduce it to 0 percent through degenerate class representation. To address this, we introduce a chunk-based, leakage-audited splitting protocol and evaluate all models using five seeds, one-way ANOVA, and Tukey HSD tests. On C-MAPSS, with 19,976 leakage-free training windows, AMTLNet matches a single-task CNN-LSTM baseline in classification, achieving 84.12 +/- 0.96 percent accuracy with Tukey p = 1.0, and reaches an R2 of 0.86 +/- 0.01 while significantly outperforming a naive multi-task baseline. On the smaller Bearing and Hydraulic datasets, multi-task training is unstable, but the failure mode differs: classification degrades for Bearing, whereas regression degrades for Hydraulic. We relate this asymmetry to label provenance and propose a practical framework for deciding when joint training is appropriate under data scarcity. Ablation results show that the multi-head attention branch is the main contributor to regression stability. Removing it reduces R2 from 0.861 to 0.766 and more than doubles classification variance, whereas the convolutional branch contributes little to regression despite using about one-third of the parameters. This study contributes a reusable leakage-audit protocol, seed-transparent evaluation, and evidence that task-specific stability depends more on label provenance than on task type.",
+      "abstract_zh": "多任务深度学习模型同时进行故障分类和剩余寿命回归，在预测性维护中应用日益广泛，但其报告的性能可能受到滑动窗口序列划分训练集和测试集方式的强烈影响。我们使用注意力增强的多任务架构AMTLNet，在三个公开基准数据集（NASA C-MAPSS、NASA IMS和UCI液压系统数据集）上研究了这一问题。我们表明，简单的划分方式可能将分类准确率从真实的20-60%膨胀到99.9%，或通过退化类表示将其降至0%。为解决此问题，我们引入了一种基于块、经泄漏审计的划分协议，并使用五个随机种子、单因素方差分析和Tukey HSD检验评估所有模型。在C-MAPSS上，使用19,976个无泄漏训练窗口，AMTLNet在分类任务上与单任务CNN-LSTM基线相当，达到84.12±0.96%的准确率（Tukey p=1.0），R²达到0.86±0.01，显著优于朴素多任务基线。在较小的轴承和液压数据集上，多任务训练不稳定，但失败模式不同：轴承数据集上分类性能下降，而液压数据集上回归性能下降。我们将这种不对称性与标签来源相关联，并提出一个实用框架，用于在数据稀缺时决定何时适合联合训练。消融实验表明，多头注意力分支是回归稳定性的主要贡献者：移除该分支使R²从0.861降至0.766，分类方差增加一倍以上，而卷积分支尽管使用了约三分之一的参数，但对回归贡献甚微。本研究贡献了一个可复用的泄漏审计协议、种子透明的评估方法，以及证据表明任务特定稳定性更多取决于标签来源而非任务类型。",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-17T20:33:36Z",
+      "updated": "2026-07-17T20:33:36Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16493v1",
+        "pdf": "https://arxiv.org/pdf/2607.16493v1"
+      },
+      "matched_keywords": [
+        "regression"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16472",
+      "arxiv_id": "2607.16472v1",
+      "version": "v1",
+      "title": "Spectral-Morphological Attention U-Net: An Efficient Network for Active Wildfire Detection",
+      "title_zh": "光谱形态注意力U-Net：一种高效的活跃野火检测网络",
+      "authors": [
+        "Yugong Zeng",
+        "Jonathan Wu"
+      ],
+      "abstract": "Over the past decades, the frequency of global wildfires has been increasing steadily. Therefore, if the fire can be detected and precisely located at an early stage, the potential hazards caused by it can be minimized to the greatest extent. The machine learning methods based on satellite images, due to their ability to automatically monitor extremely remote and vast areas, have shown great potential for application in the field of wildfire detection. To address this challenge, we proposed a new model named spectral-morphological attention U-Net(SMA-UNet), which includes a spectral attention module, a residual attention UNet backbone, a channel-spatial modulator, and a pair of differentiable morphological gates. We trained and evaluated this model with two datasets. These modules, excluding the backbone, are used to detect active fire events for the first time, especially the pair of differentiable morphological gates, which is innovatively developed. The proposed model achieved the highest scores in both datasets (e.g., intersection over union 75.16% in TS-SatFire, 22.50% in Sen2Fire). By conducting ablation studies of each module, we compared their independent contributions and tested their combinations. Ultimately, the integration of these modules yields a highly robust framework that significantly improves segmentation consistency across diverse and complex environmental conditions. Future work will focus on validating the proposed architecture across large-scale, multi-regional datasets from different satellite sensors to establish its broader generalizability for global wildfire detection.",
+      "abstract_zh": "过去几十年来，全球野火的频率持续增加。因此，如果能在早期阶段检测并精确定位火灾，就可以最大程度地减少其潜在危害。基于卫星图像的机器学习方法，由于其能够自动监测极其偏远和广阔的区域，在野火检测领域显示出巨大的应用潜力。为了应对这一挑战，我们提出了一种名为光谱形态注意力U-Net（SMA-UNet）的新模型，该模型包括一个光谱注意力模块、一个残差注意力UNet骨干网络、一个通道空间调制器以及一对可微形态门。我们使用两个数据集对该模型进行了训练和评估。这些模块（除骨干网络外）首次用于检测活跃火灾事件，尤其是创新开发的可微形态门对。所提出的模型在两个数据集中均取得了最高分数（例如，在TS-SatFire中交并比为75.16%，在Sen2Fire中为22.50%）。通过对每个模块进行消融研究，我们比较了它们的独立贡献并测试了它们的组合。最终，这些模块的集成产生了一个高度鲁棒的框架，显著提高了在多样且复杂环境条件下的分割一致性。未来的工作将专注于在不同卫星传感器的大规模、多区域数据集上验证所提出的架构，以建立其在全球野火检测中的更广泛泛化能力。",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CV",
+      "published": "2026-07-17T19:37:16Z",
+      "updated": "2026-07-17T19:37:16Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16472v1",
+        "pdf": "https://arxiv.org/pdf/2607.16472v1"
+      },
+      "matched_keywords": [
+        "machine learning"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16447",
+      "arxiv_id": "2607.16447v1",
+      "version": "v1",
+      "title": "Surrogate-to-code verification of a non-intrusive POD-GPR machine-learning emulator of peak thermomechanical fields, with application to a carbon-carbon aircraft brake disc",
+      "title_zh": "基于替代模型到代码验证的非侵入式POD-GPR机器学习仿真器峰值热机械场验证——以碳-碳飞机刹车盘为例",
+      "authors": [
+        "Franklin Kamche"
+      ],
+      "abstract": "While non-intrusive reduced-order emulators successfully substitute for costly finite-element simulations, certification-grade applications demand a rigorous error assessment relative to the solver's own discretization uncertainty. This work introduces a verification framework designed to evaluate prediction accuracy directly against this numerical uncertainty floor, rather than physical observation. We demonstrate this approach on a carbon-carbon aircraft brake disc during a rejected take-off scenario, predicting peak temperature and peak von Mises stress fields. Operating over a fixed mesh of 60914 nodes, the emulator relies on a pipeline coupling proper orthogonal decomposition (POD) and Gaussian process regression (GPR) parameterized by 5 inputs. We formulate an algebraically exact, a posteriori error budget that isolates the emulator's signed error into distinct truncation and regression components at the extremum. This error is then evaluated against a discretization floor established via mesh-convergence studies on the peak quantities of interest. On a completely independent test set, our emulator matches the high-fidelity solver's peak values within its own discretization uncertainty for both fields, a benchmark we define as surrogate-to-code fidelity. Notably, the residual error stems primarily from linear reduction limits rather than regression inaccuracies. Beyond the main framework, we present two secondary contributions: the concurrent, non-intrusive prediction of the thermal and mechanical peaks, and a probabilistic approach to spatial zone localization for these extrema. This methodology applies to non-intrusive reduced-order models of parameterized finite-element simulations wherever a discretization-error estimate for the quantity of interest can be obtained.",
+      "abstract_zh": "尽管非侵入式降阶仿真器成功替代了昂贵的有限元模拟，但认证级应用要求相对于求解器自身的离散化不确定性进行严格的误差评估。本文引入了一个验证框架，旨在直接针对这一数值不确定性下限（而非物理观测）评估预测精度。我们以碳-碳飞机刹车盘在中断起飞场景为例，预测峰值温度和峰值von Mises应力场。仿真器在包含60914个节点的固定网格上运行，依赖于结合本征正交分解（POD）和高斯过程回归（GPR）的管道，由5个输入参数化。我们制定了一个代数精确的后验误差预算，将仿真器的符号误差在极值处分解为不同的截断和回归分量。然后，通过网格收敛研究对峰值关注量建立离散化下限，并据此评估该误差。在完全独立的测试集上，我们的仿真器在两个场的峰值上均与高保真求解器在其自身离散化不确定性范围内匹配，我们将此基准定义为替代模型到代码的保真度。值得注意的是，残余误差主要源于线性降维限制而非回归不准确性。除主要框架外，我们提出两个次要贡献：热和机械峰值的并发非侵入式预测，以及这些极值空间区域定位的概率方法。该方法适用于参数化有限元模拟的非侵入式降阶模型，只要能够获得关注量的离散化误差估计。",
+      "categories": [
+        "math.NA",
+        "cs.CE"
+      ],
+      "primary_category": "math.NA",
+      "published": "2026-07-17T18:47:30Z",
+      "updated": "2026-07-17T18:47:30Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16447v1",
+        "pdf": "https://arxiv.org/pdf/2607.16447v1"
+      },
+      "matched_keywords": [
+        "regression"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16443",
+      "arxiv_id": "2607.16443v1",
+      "version": "v1",
+      "title": "Causality and Minimal Supports in Recursive Datalog",
+      "title_zh": "递归Datalog中的因果性与极小支持",
+      "authors": [
+        "Ratan Bahadur Thapa",
+        "Steffen Staab"
+      ],
+      "abstract": "Recursive rule evaluation can make explanation harder than in nonrecursive query answering. For fixed unions of conjunctive queries, each explanation is bounded by the query body. For recursive rules, the same answer may depend on large supports, and the number of minimal supports may be exponential in the input. We study this gap through deletion-based explanation, using inclusion-minimal endogenous input facts that entail the atom together with fixed background facts. We organize these supports as a hypergraph and prove that it determines actual causes, counterfactual causes, responsibility, and deletion robustness. The resulting view separates nonrecursive queries from recursive Datalog at the level of minimal input explanations. For positive-length reachability, minimal supports are exactly simple directed paths, and deletion robustness is the minimum directed edge cut. We also prove invariance under fixed-goal equivalent positive Datalog programs and an NP-hardness calibration for the robustness threshold problem.",
+      "abstract_zh": "递归规则评估可能使解释比非递归查询回答更困难。对于固定的合取查询并集，每个解释受限于查询体。对于递归规则，同一答案可能依赖于大的支持，且极小支持的数量可能随输入呈指数增长。我们通过基于删除的解释研究这一差距，使用包含极小内源输入事实（这些事实与固定背景事实一起蕴含原子）的方法。我们将这些支持组织为超图，并证明它决定了实际原因、反事实原因、责任和删除鲁棒性。所得观点在极小输入解释层面将非递归查询与递归Datalog区分开来。对于正长度可达性，极小支持恰好是简单有向路径，删除鲁棒性是最小有向边割。我们还证明了在固定目标等价的正Datalog程序下的不变性，以及鲁棒性阈值问题的NP-hardness校准。",
+      "categories": [
+        "cs.DB"
+      ],
+      "primary_category": "cs.DB",
+      "published": "2026-07-17T18:45:49Z",
+      "updated": "2026-07-17T18:45:49Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16443v1",
+        "pdf": "https://arxiv.org/pdf/2607.16443v1"
+      },
+      "matched_keywords": [
+        "causal"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16438",
+      "arxiv_id": "2607.16438v1",
+      "version": "v1",
+      "title": "Convergence and stability of truncated Euler-Maruyama algorithm for stochastic proportional delay Mckean-Vlasov models with jump process",
+      "title_zh": "带跳过程的比例延迟随机Mckean-Vlasov模型的截断Euler-Maruyama算法的收敛性与稳定性",
+      "authors": [
+        "Amr Abosenna",
+        "Zhuoqi Liu"
+      ],
+      "abstract": "Stochastic Mckean-Vlasov models have a substantial importance in different fields such as finance, biology and control. This paper puts the light on stochastic proportional delay Mckean-Vlasov model with Lévy jump where the non-jump coefficients are granted the permission to grow beyond linearity. The truncated Euler-Maruyama algorithm is then applied to our addressed model where the convergence rate and almost sure exponential stability of the aforementioned numerical algorithm are being investigated. Finally, numerical examples are presented to foster the theoretical analysis done throughout the paper",
+      "abstract_zh": "随机Mckean-Vlasov模型在金融、生物学和控制等不同领域具有重要重要性。本文聚焦于带Lévy跳的比例延迟随机Mckean-Vlasov模型，其中非跳系数被允许超线性增长。然后将截断Euler-Maruyama算法应用于我们所研究的模型，探讨了上述数值算法的收敛速度和几乎必然指数稳定性。最后，通过数值算例来支持本文所做的理论分析。",
+      "categories": [
+        "math.NA"
+      ],
+      "primary_category": "math.NA",
+      "published": "2026-07-17T18:36:24Z",
+      "updated": "2026-07-17T18:36:24Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16438v1",
+        "pdf": "https://arxiv.org/pdf/2607.16438v1"
+      },
+      "matched_keywords": [
+        "stochastic"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16428",
+      "arxiv_id": "2607.16428v1",
+      "version": "v1",
+      "title": "Back to the museum: Investigation of the acceptance of Android Andrea with and without emotion simulation in a museum",
+      "title_zh": "回到博物馆：调查在博物馆中带与不带情感模拟的安卓机器人Andrea的接受度",
+      "authors": [
+        "Marcel Heisler",
+        "Christian Becker-Asano"
+      ],
+      "abstract": "For a second time, the android robot Andrea was set up at a public museum in Germany for six consecutive days to have conversations with visitors, fully autonomously. Building on previously gathered qualitative results, the robot was now capable of engaging in multi-lingual conversation with the visitors about the museum context. The robot was prepared with context information about the museum in general and its surrounding exhibits this time. The robot featured a slightly artificial sounding voice that was previously evaluated as congruent with its gender-ambiguous but very humanlike design. Three experimental conditions were implemented, in which either (1) the robot simulated no emotions, (2) the robots emotions were determined by ChatGPT 4.1, or (3) the WASABI emotion simulation architecture simulated the robot's emotion dynamics. An extended version of the TAM2 questionnaire was employed to let 73 visitors report on several factors of their opinion about the android robot Andrea after having experienced it. In result, the statistical analysis suggests that these first two approaches to implementing emotions into the chat architecture of our android robot Andrea did not yield any positive effects on the subjective evaluations by the visitors and were not detectable on a conscious level.",
+      "abstract_zh": "第二次，安卓机器人Andrea在德国一家公共博物馆连续六天与游客进行完全自主的对话。基于先前收集的定性结果，机器人现在能够与游客进行关于博物馆背景的多语言对话。这次，机器人准备了关于博物馆及其周围展品的背景信息。机器人使用了一种略带人工感的声音，此前评估认为这种声音与其性别模糊但非常逼真的设计一致。实施了三种实验条件，其中（1）机器人不模拟情感，（2）机器人的情感由ChatGPT 4.1决定，或（3）WASABI情感模拟架构模拟机器人的情感动态。采用扩展版的TAM2问卷，让73名游客在体验后报告他们对安卓机器人Andrea的若干因素看法。结果表明，统计分析显示，将情感融入我们的安卓机器人Andrea聊天架构的前两种方法并未对游客的主观评价产生任何积极影响，并且在意识层面上无法被察觉。",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.HC",
+        "cs.LG"
+      ],
+      "primary_category": "cs.RO",
+      "published": "2026-07-17T18:22:49Z",
+      "updated": "2026-07-17T18:22:49Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16428v1",
+        "pdf": "https://arxiv.org/pdf/2607.16428v1"
+      },
+      "matched_keywords": [
+        "statistical"
+      ],
+      "translation_status": "translated"
+    },
     {
       "id": "2607.16183",
       "arxiv_id": "2607.16183v1",
@@ -71,8 +1605,8 @@
     },
     {
       "id": "2607.16169",
-      "arxiv_id": "2607.16169v1",
-      "version": "v1",
+      "arxiv_id": "2607.16169v2",
+      "version": "v2",
       "title": "When Does Muon Help Agentic Reinforcement Learning?",
       "title_zh": "Muon何时有助于智能体强化学习？",
       "authors": [
@@ -84,7 +1618,7 @@
         "Xuan Wang",
         "Hao Sun"
       ],
-      "abstract": "Muon is competitive with AdamW in large-scale pre-training, but its value for reinforcement-learning (RL) post-training remains unclear. We study vanilla Muon in sparse-reward agentic RL through matched single-seed comparisons with AdamW on ALFWorld using Qwen2.5-0.5B-Instruct. Under Group-in-Group Policy Optimization (GiGPO), applying Muon only to hidden weight matrices raises final-window validation success from 0.290 to 0.546 (+88%); high-rate AdamW controls retain no post-update success. The effect depends on the advantage estimator and learning rate. At 3e-5, Muon improves GRPO from 0.161 to 0.268, whereas GraphGPO's late-window gap narrows near saturation. At 1e-5, GraphGPO Muon reaches 0.901, raises normalized validation AUC from 0.399 to 0.556, and reaches 0.5 and 0.75 success 30 and 60 updates earlier, respectively. These exploratory results show that Muon can benefit agentic RL and motivate studying the policy optimizer, advantage estimator, and learning rate jointly. Multi-seed and cross-task validation remain open.",
+      "abstract": "Muon is competitive with AdamW in large-scale pre-training, but its value for reinforcement-learning (RL) post-training remains unclear. We study vanilla Muon in sparse-reward agentic RL through matched single-seed comparisons with AdamW on ALFWorld using Qwen2.5-0.5B-Instruct. Under Group-in-Group Policy Optimization (GiGPO), applying Muon only to hidden weight matrices raises final-window validation success from 0.290 to 0.546 (+88%); high-rate AdamW controls retain no post-update success. The effect depends on the advantage estimator and learning rate. At 3e-5, Muon improves GRPO from 0.161 to 0.268, whereas GraphGPO's late-window gap narrows near saturation. At 1e-5, GraphGPO Muon reaches 0.901, raises normalized validation AUC from 0.399 to 0.556, and reaches 0.5 and 0.75 success 30 and 60 updates earlier, respectively. These exploratory results show that Muon can benefit agentic RL and motivate studying the policy optimizer, advantage estimator, and learning rate jointly.",
       "abstract_zh": "Muon在大规模预训练中与AdamW竞争，但其在强化学习后训练中的价值尚不明确。我们通过使用Qwen2.5-0.5B-Instruct在ALFWorld上进行匹配单种子比较，研究了vanilla Muon在稀疏奖励智能体RL中的表现。在组内组策略优化（GiGPO）下，仅将Muon应用于隐藏权重矩阵，最终窗口验证成功率从0.290提升至0.546（+88%）；高学习率AdamW对照组在更新后无成功率。该效果依赖于优势估计器和学习率。在3e-5下，Muon将GRPO从0.161提升至0.268，而GraphGPO的后期窗口差距在接近饱和时缩小。在1e-5下，GraphGPO Muon达到0.901，将归一化验证AUC从0.399提升至0.556，并分别提前30和60次更新达到0.5和0.75的成功率。这些探索性结果表明Muon有益于智能体RL，并激励联合研究策略优化器、优势估计器和学习率。多种子和跨任务验证仍有待研究。",
       "categories": [
         "cs.LG",
@@ -92,14 +1626,46 @@
       ],
       "primary_category": "cs.LG",
       "published": "2026-07-17T17:49:05Z",
-      "updated": "2026-07-17T17:49:05Z",
+      "updated": "2026-07-20T17:21:45Z",
       "announcement_date": "2026-07-18",
       "links": {
-        "abs": "https://arxiv.org/abs/2607.16169v1",
-        "pdf": "https://arxiv.org/pdf/2607.16169v1"
+        "abs": "https://arxiv.org/abs/2607.16169v2",
+        "pdf": "https://arxiv.org/pdf/2607.16169v2"
       },
       "matched_keywords": [
         "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16384",
+      "arxiv_id": "2607.16384v1",
+      "version": "v1",
+      "title": "Scaling Limits of Constant-Stepsize SGD at Flat Minima",
+      "title_zh": "平坦极小值处常步长SGD的缩放极限",
+      "authors": [
+        "Jingyi Zhang",
+        "Cheng Mao",
+        "Debankur Mukherjee"
+      ],
+      "abstract": "For stochastic gradient descent (SGD) with a constant stepsize $α$, the invariant law of the iterates, centered at a minimizer, describes the behavior of the algorithm over long time horizons. In the strongly convex case, this invariant law has the familiar $\\sqrtα$ scaling and a Gaussian limit as $α\\downarrow 0$. We show that this behavior changes fundamentally for convex objectives $H$ with flat minima and (sub)quadratic tails. More specifically, we study SGD with Markovian noise generated by a contractive driving chain. For every sufficiently small constant stepsize $α$, we prove existence, uniqueness, and geometric convergence to an augmented invariant law in a Wasserstein distance induced by an $α$-dependent metric. When the minimizer $x_\\star$ has local flatness exponent $m\\ge2$, meaning that $\\nabla^2 H(x)\\asymp \\lVert x-x_\\star\\rVert^{m-2} I_d$ as $x\\to x_\\star$, we obtain a contraction bound with factor $1-cα^{m-1}$, where $c>0$ is a constant. This recovers the factor $1-cα$ in the quadratic case $m=2$. We then analyze the small-stepsize scaling limit. We show that the invariant law concentrates on the scale $α^{1/m}$ and that the rescaled iterates converge weakly to the stationary distribution of the stochastic differential equation $$ dY_t=-h_0(Y_t)\\,dt+Σ^{1/2}\\,dB_t , $$ where $h_0$ is the limiting drift at the minimizer and $Σ$ denotes the asymptotic covariance. This recovers the Gaussian limit when $m=2$ and gives generally non-Gaussian stationary limits in the flat case $m>2$. Finally, we give corresponding results for coordinate-separable objectives with unequal flatness exponents.",
+      "abstract_zh": "对于具有恒定步长$α$的随机梯度下降（SGD），以极小值点为中心的迭代的不变律描述了算法在长时间范围内的行为。在强凸情况下，该不变律具有熟悉的$\\sqrtα$缩放和$α\\downarrow 0$时的高斯极限。我们证明，对于具有平坦极小值和（次）二次尾部的凸目标$H$，这一行为会发生根本性变化。具体而言，我们研究由收缩驱动链生成的马尔可夫噪声下的SGD。对于每个足够小的恒定步长$α$，我们证明了在由$α$依赖度量诱导的Wasserstein距离下，存在唯一且几何收敛到增广不变律。当极小值点$x_\\star$具有局部平坦指数$m\\ge2$，即当$x\\to x_\\star$时$\\nabla^2 H(x)\\asymp \\lVert x-x_\\star\\rVert^{m-2} I_d$，我们得到收缩因子$1-cα^{m-1}$，其中$c>0$为常数。这恢复了二次情况$m=2$下的因子$1-cα$。然后我们分析小步长缩放极限。我们证明不变律集中在尺度$α^{1/m}$上，并且重新缩放的迭代弱收敛到随机微分方程$$ dY_t=-h_0(Y_t)\\,dt+Σ^{1/2}\\,dB_t $$的平稳分布，其中$h_0$是极小值点处的极限漂移，$Σ$表示渐近协方差。这恢复了$m=2$时的高斯极限，并在平坦情况$m>2$下给出一般非高斯的平稳极限。最后，我们给出了具有不等平坦指数的坐标可分离目标的相应结果。",
+      "categories": [
+        "cs.LG",
+        "math.OC",
+        "math.PR",
+        "stat.ML"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-17T17:22:46Z",
+      "updated": "2026-07-17T17:22:46Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16384v1",
+        "pdf": "https://arxiv.org/pdf/2607.16384v1"
+      },
+      "matched_keywords": [
+        "stochastic"
       ],
       "translation_status": "translated"
     },
@@ -164,6 +1730,36 @@
       },
       "matched_keywords": [
         "causal"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.16378",
+      "arxiv_id": "2607.16378v1",
+      "version": "v1",
+      "title": "Disentangling Model and Human Data Uncertainty in Apparent Facial Age Estimation",
+      "title_zh": "解耦表观面部年龄估计中的模型与人类数据不确定性",
+      "authors": [
+        "Andrei Foitos",
+        "Ivo Pascal de Jong",
+        "Matias Valdenegro-Toro"
+      ],
+      "abstract": "Estimating the apparent age of individuals from facial images is challenging due to the subjective nature of perception and the inherent variability of the data. We investigate the role of uncertainty estimation, attributing uncertainty jointly to a lack of knowledge (epistemic) or inherent noise/chance (aleatoric). Leveraging the APPA-REAL dataset, we train Bayesian Neural Networks on datasets of varying sizes using three BNN approximations: MC-DropConnect, Flipout, and Deep Ensembles using supervision on human aleatoric uncertainty available in the APPA-REAL dataset. Each model outputs both the predicted apparent age and the amount of aleatoric and epistemic uncertainty. Our results confirm the hypothesis that the inherent aleatoric uncertainty remains stable across dataset sizes, while epistemic uncertainty increases as training data decreases. These findings demonstrate that different sources of uncertainty can be quantified in face age estimation.",
+      "abstract_zh": "由于感知的主观性和数据固有的变异性，从面部图像估计个体的表观年龄具有挑战性。我们研究了不确定性估计的作用，将不确定性共同归因于知识缺乏（认知不确定性）或固有噪声/随机性（偶然不确定性）。利用APPA-REAL数据集，我们使用三种贝叶斯神经网络近似方法（MC-DropConnect、Flipout和深度集成）在不同大小的数据集上训练贝叶斯神经网络，并利用APPA-REAL数据集中可用的人类偶然不确定性进行监督。每个模型输出预测的表观年龄以及偶然不确定性和认知不确定性的量。我们的结果证实了假设：固有的偶然不确定性在不同数据集大小下保持稳定，而认知不确定性随着训练数据的减少而增加。这些发现表明，在人脸年龄估计中可以量化不同来源的不确定性。",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CV",
+      "published": "2026-07-17T16:14:38Z",
+      "updated": "2026-07-17T16:14:38Z",
+      "announcement_date": "2026-07-18",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.16378v1",
+        "pdf": "https://arxiv.org/pdf/2607.16378v1"
+      },
+      "matched_keywords": [
+        "bayesian"
       ],
       "translation_status": "translated"
     },

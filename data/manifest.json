@@ -1,16 +1,31 @@
 {
-  "updated_at": "2026-07-20T12:32:52Z",
-  "latest_date": "2026-07-18",
+  "updated_at": "2026-07-21T12:09:18Z",
+  "latest_date": "2026-07-21",
   "dates": [
     {
+      "date": "2026-07-21",
+      "count": 18,
+      "translated": 18
+    },
+    {
+      "date": "2026-07-20",
+      "count": 87,
+      "translated": 87
+    },
+    {
+      "date": "2026-07-19",
+      "count": 64,
+      "translated": 64
+    },
+    {
       "date": "2026-07-18",
-      "count": 8,
-      "translated": 8
+      "count": 61,
+      "translated": 59
     },
     {
       "date": "2026-07-17",
-      "count": 92,
-      "translated": 91
+      "count": 94,
+      "translated": 93
     },
     {
       "date": "2026-07-16",
@@ -37,8 +52,8 @@
     "2026-07"
   ],
   "stats": {
-    "total": 588,
-    "translated": 581
+    "total": 812,
+    "translated": 803
   },
   "demo": false
 }
