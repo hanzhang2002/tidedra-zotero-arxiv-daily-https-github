@@ -1,6 +1,6 @@
 {
   "date": "2026-07-20",
-  "updated_at": "2026-07-21T12:09:18Z",
+  "updated_at": "2026-07-22T12:12:25Z",
   "papers": [
     {
       "id": "2607.18091",
@@ -100,8 +100,8 @@
     },
     {
       "id": "2607.18082",
-      "arxiv_id": "2607.18082v1",
-      "version": "v1",
+      "arxiv_id": "2607.18082v2",
+      "version": "v2",
       "title": "Enhancing Rubric-based RL via Self-Distillation",
       "title_zh": "通过自蒸馏增强基于评分标准的强化学习",
       "authors": [
@@ -124,11 +124,11 @@
       ],
       "primary_category": "cs.LG",
       "published": "2026-07-20T15:50:02Z",
-      "updated": "2026-07-20T15:50:02Z",
+      "updated": "2026-07-21T03:34:34Z",
       "announcement_date": "2026-07-20",
       "links": {
-        "abs": "https://arxiv.org/abs/2607.18082v1",
-        "pdf": "https://arxiv.org/pdf/2607.18082v1"
+        "abs": "https://arxiv.org/abs/2607.18082v2",
+        "pdf": "https://arxiv.org/pdf/2607.18082v2"
       },
       "matched_keywords": [
         "optimization"
@@ -523,7 +523,8 @@
       "abstract": "Highly nonlinear chaotic dynamical systems remain difficult to model due to fundamental trade-offs between complexity, expressivity, and data efficiency. Modern machine learning methods achieve strong predictive performance but often rely on a-priori system knowledge or curated data with limited interpretability. Koopman operator theory offers a promising direction via linear representation in an infinite-dimensional observable space. However, many data-driven Koopman methods seek globally valid operators for which useful finite-dimensional spectral embeddings remain difficult to identify under these constraints. To overcome associated limitations, we introduce Fuzzy Spectral Region Decomposition (fSRD), a fully automated learning framework for estimating finite Koopman representation via multiple operators. The proposed method realizes a data-adaptive framework for assembling locally invariant embeddings, termed Invariant Decomposition. fSRD achieves highly accurate linear reconstructions of nonlinear systems while learning finite-dimensional representations of their induced evolution operators, bridging interpretable operator-theoretic models with expressive data-driven sequence learning. These embeddings are adaptively constructed via a global fuzzy tree model, drawing inspiration from fuzzy neural architectures to learn the induced dynamics while prioritizing parsimonious solutions. Empirical results across canonical chaotic systems (e.g., Lorenz and Duffing) and high-dimensional real-world data demonstrate strong predictive accuracy, interpretability, and robust expressivity across data-rich and data-limited regimes, highlighting the method's generality.",
       "abstract_zh": "高度非线性的混沌动力系统由于复杂性、表达能力和数据效率之间的基本权衡，仍然难以建模。现代机器学习方法实现了强大的预测性能，但通常依赖于先验系统知识或经过筛选的数据，且可解释性有限。Koopman算子理论通过无限维可观测空间中的线性表示提供了一条有前景的路径。然而，许多数据驱动的Koopman方法寻求全局有效的算子，在这些约束下，有用的有限维谱嵌入仍然难以识别。为了克服相关限制，我们引入了模糊谱区域分解（fSRD），一种通过多个算子估计有限Koopman表示的完全自动化学习框架。所提出的方法实现了一个数据自适应的框架，用于组装局部不变嵌入，称为不变分解。fSRD在非线性系统中实现了高度精确的线性重构，同时学习了其诱导演化算子的有限维表示，桥接了可解释的算子理论模型与表达性强的数据驱动序列学习。这些嵌入通过全局模糊树模型自适应构建，从模糊神经架构中汲取灵感，以学习诱导动力学，同时优先考虑简约解。在典型混沌系统（如Lorenz和Duffing）和高维真实世界数据上的实证结果表明，该方法在数据丰富和数据有限的情况下均具有强大的预测准确性、可解释性和鲁棒表达能力，突显了该方法的通用性。",
       "categories": [
-        "cs.LG"
+        "cs.LG",
+        "math.DS"
       ],
       "primary_category": "cs.LG",
       "published": "2026-07-20T14:21:06Z",
@@ -852,8 +853,8 @@
     },
     {
       "id": "2607.17904",
-      "arxiv_id": "2607.17904v1",
-      "version": "v1",
+      "arxiv_id": "2607.17904v2",
+      "version": "v2",
       "title": "Reflected Schrodinger Bridge Problem over Sub-Riemannian Manifold",
       "title_zh": "子黎曼流形上的反射薛定谔桥问题",
       "authors": [
@@ -866,11 +867,11 @@
       ],
       "primary_category": "math.OC",
       "published": "2026-07-20T12:49:17Z",
-      "updated": "2026-07-20T12:49:17Z",
+      "updated": "2026-07-21T02:56:50Z",
       "announcement_date": "2026-07-20",
       "links": {
-        "abs": "https://arxiv.org/abs/2607.17904v1",
-        "pdf": "https://arxiv.org/pdf/2607.17904v1"
+        "abs": "https://arxiv.org/abs/2607.17904v2",
+        "pdf": "https://arxiv.org/pdf/2607.17904v2"
       },
       "matched_keywords": [
         "probability"
@@ -909,6 +910,35 @@
       "translation_status": "translated"
     },
     {
+      "id": "2607.18359",
+      "arxiv_id": "2607.18359v1",
+      "version": "v1",
+      "title": "Decentralized Multi-agent Reinforcement Learning for Resilient Critical Infrastructures",
+      "title_zh": "面向韧性关键基础设施的分散式多智能体强化学习",
+      "authors": [
+        "Minghui Ding",
+        "Evangelos Pournaras"
+      ],
+      "abstract": "Critical infrastructures are increasingly distributed, interdependent, and exposed to evolving disruptions, making resilience a central requirement for their operation and control. This paper argues that decentralized multi-agent reinforcement learning (MARL) should be understood not merely as a distributed alternative to centralized training with decentralized execution but as a paradigm structurally aligned with the requirements of resilient critical infrastructures. This perspective is grounded in an analysis of the properties of decentralized MARL and the requirements of critical infrastructures, including scalability to large numbers of agents, support for privacy and local autonomy, robustness to failures, and interaction-driven adaptation among interdependent components. However, structural alignment alone is insufficient for practical deployment. This paper identifies credit assignment and communication as two central conditions for its practical feasibility. Credit assignment determines whether local learning remains aligned with system-level objectives, while communication determines whether coordination can be learned and maintained under realistic operational constraints. Building on these challenges, this paper proposes a research agenda focused on structure-aware, causality-aware, and resilience-aware credit assignment; communication for both coordination and credit assignment; and safe, timely, and recoverable decentralized learning under deployment constraints. Overall, this paper reframes decentralized MARL as a promising but conditional foundation for resilient critical infrastructures.",
+      "abstract_zh": "关键基础设施日益分布化、相互依赖，并面临不断演变的干扰，这使得韧性成为其运行和控制的核心要求。本文认为，分散式多智能体强化学习不应仅仅被理解为集中式训练与分散式执行的一种分布式替代方案，而应被视为一种在结构上与韧性关键基础设施要求相一致的范式。这一观点基于对分散式多智能体强化学习特性及关键基础设施需求的分析，包括对大量智能体的可扩展性、对隐私和本地自治的支持、对故障的鲁棒性以及相互依赖组件间基于交互的适应性。然而，仅凭结构一致性不足以实现实际部署。本文指出，信用分配和通信是实现其实际可行性的两个核心条件。信用分配决定了局部学习是否与系统级目标保持一致，而通信则决定了在现实运行约束下能否学习并维持协调。基于这些挑战，本文提出了一项研究议程，重点关注结构感知、因果感知和韧性感知的信用分配；用于协调和信用分配的通信；以及在部署约束下的安全、及时和可恢复的分散式学习。总体而言，本文将分散式多智能体强化学习重新定义为韧性关键基础设施的一个有前景但需满足条件的基石。",
+      "categories": [
+        "cs.MA",
+        "cs.LG"
+      ],
+      "primary_category": "cs.MA",
+      "published": "2026-07-20T12:43:54Z",
+      "updated": "2026-07-20T12:43:54Z",
+      "announcement_date": "2026-07-20",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.18359v1",
+        "pdf": "https://arxiv.org/pdf/2607.18359v1"
+      },
+      "matched_keywords": [
+        "causal"
+      ],
+      "translation_status": "translated"
+    },
+    {
       "id": "2607.17892",
       "arxiv_id": "2607.17892v1",
       "version": "v1",
@@ -935,6 +965,37 @@
       },
       "matched_keywords": [
         "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.18358",
+      "arxiv_id": "2607.18358v1",
+      "version": "v1",
+      "title": "A Classifier That Teaches Itself: Self-Improving, Frozen-gate Training (SIFT) for Dynamic Document Classification",
+      "title_zh": "自我教学的分类器：用于动态文档分类的自我改进冻结门训练（SIFT）",
+      "authors": [
+        "Bogdan Raduta",
+        "Horia Velicu",
+        "Alexandru Preda",
+        "Serban Chiricescu"
+      ],
+      "abstract": "Document classification is a solved problem in the laboratory and an unsolved one in the enterprise. The blocker is rarely model architecture; it is the labeling project that must precede a model and the institutional fear of letting a model retrain itself once one exists. We present SIFT (Self-Improving, Frozen-gate Training), a dynamic classifier service, which attacks both. SIFT serves classification from a deliberately cheap, CPU-bound pipeline, a SPLADE sparse encoder feeding a LightGBM head, and escalates only the low-confidence minority of pages to an LLM judge. The judge's verdicts are written back into a labeled corpus, so the expensive model continuously teaches the cheap one: the escalation rate falls, the corpus grows from production traffic rather than from an up-front annotation effort, and accuracy compounds with use. Onboarding a new document family requires only a declarative bundle, label space, anchor phrases, and a judge glossary, not a labeling project. The harder problem is safety: an autonomously retraining classifier can silently regress. SIFT resolves this with a two-part promote gate, a critical-label F1 regression check plus a frozen golden regression set the model is never trained on, either of which vetoes promotion. This turns \"retrain monthly without a human\" from reckless into routine. We describe the architecture, the self-feeding corpus loop, the frozen-gate promotion mechanism, and an illustrative multi-domain deployment, and we discuss the economics of a classifier whose marginal labeling cost trends toward zero.",
+      "abstract_zh": "文档分类在实验室中是一个已解决的问题，但在企业中却尚未解决。阻碍因素很少是模型架构，而是模型之前必须进行的标注项目，以及机构对让模型在存在后自我重新训练的恐惧。我们提出了SIFT（自我改进冻结门训练），一种动态分类器服务，它同时解决了这两个问题。SIFT通过一个故意轻量级、CPU受限的管道提供分类服务，即一个SPLADE稀疏编码器馈送到LightGBM头部，并且仅将低置信度的少数页面升级到LLM判断器。判断器的裁决被写回标注语料库，因此昂贵的模型不断教导廉价的模型：升级率下降，语料库从生产流量中增长，而不是来自前期的标注工作，并且准确性随着使用而提高。接入一个新的文档系列只需要一个声明式包、标签空间、锚定短语和判断器词汇表，而不是一个标注项目。更难的问题是安全性：一个自主重新训练的分类器可能会无声地退化。SIFT通过一个两部分提升门解决了这个问题：一个关键标签F1回归检查加上一个冻结的黄金回归集（模型从未在其上训练），两者中的任何一个都可以否决提升。这将“每月无人类重新训练”从鲁莽变为常规。我们描述了架构、自我喂养的语料库循环、冻结门提升机制以及一个说明性的多领域部署，并讨论了一个边际标注成本趋近于零的分类器的经济学。",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CL",
+      "published": "2026-07-20T12:38:50Z",
+      "updated": "2026-07-20T12:38:50Z",
+      "announcement_date": "2026-07-20",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.18358v1",
+        "pdf": "https://arxiv.org/pdf/2607.18358v1"
+      },
+      "matched_keywords": [
+        "regression"
       ],
       "translation_status": "translated"
     },
@@ -1594,6 +1655,35 @@
       "links": {
         "abs": "https://arxiv.org/abs/2607.17696v1",
         "pdf": "https://arxiv.org/pdf/2607.17696v1"
+      },
+      "matched_keywords": [
+        "causal"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.18348",
+      "arxiv_id": "2607.18348v1",
+      "version": "v1",
+      "title": "An Analysis of Residual-Stream Geometry Across Transformer Depth",
+      "title_zh": "Transformer深度中残差流几何结构的分析",
+      "authors": [
+        "Sunit Bhattacharya",
+        "Ravi Shankar Kolli"
+      ],
+      "abstract": "We propose a transition-centred geometric analysis of transformer residual streams. Relative displacement measures how \\emph{far} representations move between consecutive layers, and orthogonal Procrustes analysis separates each transition into a rigid rotation and a non-rigid residual. Across six instruction-tuned models, on code generation and cross-lingual translation, these measurements reveal reproducible depth regularities. Relative displacement is strongly layer-dependent; typically larger early and late, with a quieter middle third; and nearly invariant across conditions within each model. Rotation magnitude is nearly constant across depth, while Procrustes residual and angle concentration remain depth-modulated, with residual peaking at the final transition. During generation, non-English targets show larger final-layer displacement and residual than English targets. We present these as descriptive geometric regularities, not as measures of computational effort or causal explanations. The contribution is a measurement framework for residual-stream transitions and evidence that, in the settings studied here, depth curves are model-dependent and largely condition-stable.",
+      "abstract_zh": "我们提出了一种以过渡为中心的Transformer残差流几何分析方法。相对位移衡量了连续层之间表示移动的“距离”，而正交Procrustes分析将每个过渡分解为刚性旋转和非刚性残差。在六个经过指令微调的模型上，针对代码生成和跨语言翻译任务，这些测量揭示了可重复的深度规律。相对位移强烈依赖于层深度；通常在早期和后期较大，中间三分之一较为平缓；并且在每个模型内，不同条件下几乎保持不变。旋转幅度在深度上几乎恒定，而Procrustes残差和角度集中度仍受深度调制，残差在最终过渡处达到峰值。在生成过程中，非英语目标比英语目标表现出更大的最终层位移和残差。我们将这些视为描述性的几何规律，而非计算量度或因果解释。贡献在于提供了一个残差流过渡的测量框架，并证明了在所研究的设置中，深度曲线是模型依赖的，并且在很大程度上条件稳定。",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-20T08:43:22Z",
+      "updated": "2026-07-20T08:43:22Z",
+      "announcement_date": "2026-07-20",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.18348v1",
+        "pdf": "https://arxiv.org/pdf/2607.18348v1"
       },
       "matched_keywords": [
         "causal"
@@ -2426,8 +2516,8 @@
     },
     {
       "id": "2607.17390",
-      "arxiv_id": "2607.17390v1",
-      "version": "v1",
+      "arxiv_id": "2607.17390v2",
+      "version": "v2",
       "title": "Kernel Regression with Tensor Trains and Hadamard Overparameterization",
       "title_zh": "基于张量列与哈达玛过参数化的核回归",
       "authors": [
@@ -2445,11 +2535,11 @@
       ],
       "primary_category": "stat.ML",
       "published": "2026-07-19T19:43:31Z",
-      "updated": "2026-07-19T19:43:31Z",
+      "updated": "2026-07-21T12:57:11Z",
       "announcement_date": "2026-07-20",
       "links": {
-        "abs": "https://arxiv.org/abs/2607.17390v1",
-        "pdf": "https://arxiv.org/pdf/2607.17390v1"
+        "abs": "https://arxiv.org/abs/2607.17390v2",
+        "pdf": "https://arxiv.org/pdf/2607.17390v2"
       },
       "matched_keywords": [
         "bayesian",
@@ -2518,8 +2608,8 @@
     },
     {
       "id": "2607.17377",
-      "arxiv_id": "2607.17377v1",
-      "version": "v1",
+      "arxiv_id": "2607.17377v2",
+      "version": "v2",
       "title": "Chebyshev Manifold Adaptation",
       "title_zh": "切比雪夫流形适配",
       "authors": [
@@ -2532,11 +2622,11 @@
       ],
       "primary_category": "cs.LG",
       "published": "2026-07-19T18:36:10Z",
-      "updated": "2026-07-19T18:36:10Z",
+      "updated": "2026-07-21T08:00:12Z",
       "announcement_date": "2026-07-20",
       "links": {
-        "abs": "https://arxiv.org/abs/2607.17377v1",
-        "pdf": "https://arxiv.org/pdf/2607.17377v1"
+        "abs": "https://arxiv.org/abs/2607.17377v2",
+        "pdf": "https://arxiv.org/pdf/2607.17377v2"
       },
       "matched_keywords": [
         "high-dimensional"

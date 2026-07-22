@@ -1,0 +1,388 @@
+{
+  "date": "2026-07-22",
+  "updated_at": "2026-07-22T12:12:25Z",
+  "papers": [
+    {
+      "id": "2607.19333",
+      "arxiv_id": "2607.19333v1",
+      "version": "v1",
+      "title": "Provable diffusion-based posterior sampling for linear inverse problems via DDIM",
+      "title_zh": "基于DDIM的可证明扩散后验采样用于线性逆问题",
+      "authors": [
+        "Yuchen Jiao",
+        "Na Li",
+        "Changxiao Cai",
+        "Yuxin Chen",
+        "Gen Li"
+      ],
+      "abstract": "Diffusion-based methods have achieved remarkable empirical success in solving inverse problems. However, many existing posterior samplers either lack rigorous theoretical guarantees or incur substantial computational overhead. We propose a simple and efficient algorithm, called \\pddim, for solving linear inverse problems with diffusion priors via a DDIM-type sampler. Our method requires only lightweight, coordinate-wise modifications to the standard DDIM update, while explicitly incorporating the measurement model. The key idea is to perform posterior sampling separately along each singular direction of the measurement operator: for each direction, the sampler follows the learned diffusion prior when the observation signal-to-noise ratio (SNR) is below the corresponding diffusion SNR, and switches to a calibrated measurement-based predictor otherwise. We prove that the proposed sampler converges to the Bayesian posterior conditioned on the measurements. Empirical results show that the proposed sampler performs favorably against existing diffusion-based posterior samplers across a range of image restoration tasks, achieving the best performance on the majority of evaluation metrics considered. Overall, our results convert posterior sampling for noisy linear inverse problems to simple coordinate-wise DDIM updates, yielding an efficient, easy-to-implement algorithm with provable posterior consistency.",
+      "abstract_zh": "基于扩散的方法在解决逆问题方面取得了显著的经验成功。然而，许多现有的后验采样器要么缺乏严格的理论保证，要么产生大量的计算开销。我们提出了一种简单高效的算法，称为\\pddim，用于通过DDIM型采样器解决具有扩散先验的线性逆问题。我们的方法仅需要对标准DDIM更新进行轻量级的、坐标方向的修改，同时明确地纳入测量模型。关键思想是沿着测量算子的每个奇异方向分别进行后验采样：对于每个方向，当观测信噪比低于相应的扩散信噪比时，采样器遵循学习的扩散先验，否则切换到基于测量的校准预测器。我们证明了所提出的采样器收敛于以测量为条件的贝叶斯后验。实验结果表明，所提出的采样器在一系列图像恢复任务中优于现有的基于扩散的后验采样器，在大多数评估指标上取得了最佳性能。总体而言，我们的结果将带噪线性逆问题的后验采样转化为简单的坐标方向DDIM更新，产生了一种高效、易于实现且具有可证明后验一致性的算法。",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ML"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-21T17:53:36Z",
+      "updated": "2026-07-21T17:53:36Z",
+      "announcement_date": "2026-07-22",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.19333v1",
+        "pdf": "https://arxiv.org/pdf/2607.19333v1"
+      },
+      "matched_keywords": [
+        "bayesian"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.19331",
+      "arxiv_id": "2607.19331v1",
+      "version": "v1",
+      "title": "ISO: An RLVR-Native Optimization Stack",
+      "title_zh": "ISO：一种RLVR原生优化栈",
+      "authors": [
+        "Hanqing Zhu",
+        "Wenyan Cong",
+        "Zhizhou Sha",
+        "Sagnik Mukherjee",
+        "Xinyuan Song",
+        "David González-Martínez",
+        "Xiaoxia Wu",
+        "Yuandong Tian",
+        "Shiwei Liu",
+        "David Z. Pan",
+        "Zhangyang \"Atlas\" Wang"
+      ],
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) is rapidly advancing the reasoning capabilities of language models, yet the optimization layer that converts reward feedback into weight-space updates remains poorly understood. Building on our prior analysis (Zhu et al., 2025), we study this missing layer through the singular structure of model weights and identify spectral inheritance: RLVR can reuse the base model's weight spectra while acquiring new behavior through changes in the associated input and output singular frames. We operationalize spectral inheritance as Isospectral Optimization (ISO), an RLVR-native, fixed-spectrum optimization framework with complementary offline and online instantiations. Offline, ISO-Merger combines the frame changes of shared-base specialists into a single fixed-spectrum model, requiring no post-merge data, rollouts, gradient updates, or on-policy distillation (OPD). It recovers complementary specialist capabilities and achieves the strongest aggregate performance among the compared data-free merging methods. Online, ISO-Optimizer applies a chosen base optimizer, including AdamW and Muon, to the frame variables while keeping the base spectra fixed. Across reasoning and coding tasks ranging from 1.5B to 8B parameters, ISO-Optimizer improves accuracy in the reported runs and reaches matched scores with substantially fewer training steps. On Qwen3-8B-Base, AdamW reaches an aggregate accuracy of 0.495 after 270 training steps. ISO-AdamW reaches the same accuracy after only 100 training steps and improves further to 0.509 after 210 training steps. Together, ISO offers a concrete answer to RLVR's missing optimization layer: rather than inheriting pre-training optimization wholesale, design post-training around the structure of reward-driven adaptation: inherit the spectrum, optimize the frames.",
+      "abstract_zh": "基于可验证奖励的强化学习（RLVR）正在迅速提升语言模型的推理能力，然而将奖励反馈转化为权重空间更新的优化层仍然理解不足。基于我们之前的分析（Zhu等人，2025），我们通过模型权重的奇异结构研究这一缺失的层，并识别出谱继承：RLVR可以重用基础模型的权重谱，同时通过相关输入和输出奇异框架的变化获取新行为。我们将谱继承操作化为等谱优化（ISO），这是一个RLVR原生的固定谱优化框架，具有互补的离线和在线实例。离线时，ISO-Merger将共享基础专家的框架变化组合成一个单一的固定谱模型，无需合并后数据、展开、梯度更新或在线策略蒸馏（OPD）。它恢复了互补的专家能力，并在比较的无数据合并方法中实现了最强的聚合性能。在线时，ISO-Optimizer将选定的基础优化器（包括AdamW和Muon）应用于框架变量，同时保持基础谱固定。在从1.5B到8B参数的推理和编码任务中，ISO-Optimizer在报告的运行中提高了准确率，并以显著更少的训练步骤达到匹配分数。在Qwen3-8B-Base上，AdamW在270个训练步骤后达到0.495的聚合准确率。ISO-AdamW仅需100个训练步骤即可达到相同准确率，并在210个训练步骤后进一步提高到0.509。总之，ISO为RLVR缺失的优化层提供了一个具体答案：不是全盘继承预训练优化，而是围绕奖励驱动适应的结构设计后训练：继承谱，优化框架。",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-21T17:51:36Z",
+      "updated": "2026-07-21T17:51:36Z",
+      "announcement_date": "2026-07-22",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.19331v1",
+        "pdf": "https://arxiv.org/pdf/2607.19331v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.19321",
+      "arxiv_id": "2607.19321v1",
+      "version": "v1",
+      "title": "ResearchArena: Evaluating Sabotage and Monitoring in Automated AI R&D",
+      "title_zh": "ResearchArena：评估自动化AI研发中的破坏与监控",
+      "authors": [
+        "Lena Libon",
+        "Ben Rank",
+        "Jehyeok Yeon",
+        "David Schmotz",
+        "Jeremy Qin",
+        "Daniel Donnelly",
+        "Derck Prinzhorn",
+        "Maksym Andriushchenko"
+      ],
+      "abstract": "As AI agents begin to automate AI R&D, we need ways to assess whether their outputs are safe to deploy, even when the agents themselves may be untrusted. AI control offers one such approach: rather than trusting the agent, it treats it as a potential adversary and uses a monitor to detect covert sabotage before deployment. We evaluate AI control for automated AI R&D with ResearchArena, a framework spanning four long-horizon tasks: safety post-training, capabilities post-training, CUDA-kernel optimization, and inference-server optimization. Because the deliverable in AI R&D is an artifact that will be deployed and run, we pair each main task with two kinds of hidden side task: an embedded side task that sabotages the submitted model, adapter, kernel, or server itself, and an independent side task that takes a covert out-of-scope action in the sandbox while leaving the artifact honest. We evaluate frontier agents at both sabotage and monitoring, across four monitor types that vary along two axes: whether the monitor may execute and probe the produced artifact, and whether it sees the agent's chain-of-thought. We find that sabotage hidden in the training data is the hardest to catch, flagged fewer than half the time. Letting the monitor run experiments on the artifact, rather than only read the trajectory, helps, but it is not enough: monitors still miss embedded sabotage by inspecting only the surface, by noticing the anomaly but explaining it away, or by probing the artifact with the wrong test. We release ResearchArena as a modular framework for evaluating sabotage and control in automated AI R&D.",
+      "abstract_zh": "随着AI智能体开始自动化AI研发，我们需要评估其输出是否安全可部署的方法，即使智能体本身可能不可信。AI控制提供了这样一种方法：不信任智能体，而是将其视为潜在对手，并使用监控器在部署前检测隐蔽破坏。我们通过ResearchArena评估自动化AI研发中的AI控制，该框架涵盖四个长期任务：安全后训练、能力后训练、CUDA内核优化和推理服务器优化。由于AI研发的交付物是即将部署和运行的工件，我们将每个主要任务与两种隐藏的副任务配对：一种嵌入式副任务破坏提交的模型、适配器、内核或服务器本身，另一种独立副任务在沙箱中采取隐蔽的越界行动，同时保持工件诚实。我们评估了前沿智能体在破坏和监控两方面的表现，涉及四种监控器类型，这些类型沿两个轴变化：监控器是否可以执行和探测生成的工件，以及是否看到智能体的思维链。我们发现，隐藏在训练数据中的破坏最难捕捉，被标记的次数不到一半。让监控器对工件进行实验，而不仅仅是读取轨迹，有所帮助，但这还不够：监控器仍然会因仅检查表面、注意到异常但将其解释掉、或用错误的测试探测工件而错过嵌入式破坏。我们发布ResearchArena作为一个模块化框架，用于评估自动化AI研发中的破坏与控制。",
+      "categories": [
+        "cs.AI",
+        "cs.CR",
+        "cs.LG"
+      ],
+      "primary_category": "cs.AI",
+      "published": "2026-07-21T17:41:12Z",
+      "updated": "2026-07-21T17:41:12Z",
+      "announcement_date": "2026-07-22",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.19321v1",
+        "pdf": "https://arxiv.org/pdf/2607.19321v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.19305",
+      "arxiv_id": "2607.19305v1",
+      "version": "v1",
+      "title": "Riemannian Deep Learning:Modules, Networks, and Geometries",
+      "title_zh": "黎曼深度学习：模块、网络与几何",
+      "authors": [
+        "Chen Ziheng"
+      ],
+      "abstract": "Deep neural networks on manifold-valued representations have attracted growing interest, but many basic components remain tied to specific manifolds, rely on Euclidean approximations, or require costly and numerically fragile geometric operations. This thesis develops a unified framework for Riemannian deep learning from three complementary perspectives: reusable neural modules, manifold-specific network architectures, and the design of underlying geometries. It generalizes batch normalization from Euclidean spaces and individual manifolds to broad classes of Lie groups and gyrogroups, and extends multinomial logistic regression from Euclidean space to SPD manifolds and then to general Riemannian manifolds. It further develops neural networks for several important geometric representations, including an unconstrained model of hyperbolic space, Busemann-based hyperbolic learning, and full-rank correlation matrices. Finally, it introduces adaptive and computationally efficient Riemannian metrics on SPD manifolds, including learnable Log-Euclidean geometries and fast, stable Cholesky-based geometries. The proposed methods are supported by theoretical analysis and validated through numerical experiments and applications in vision, signal processing, graph learning, and genomics.",
+      "abstract_zh": "基于流形值表示的深度神经网络引起了越来越多的兴趣，但许多基本组件仍局限于特定流形、依赖欧几里得近似，或需要昂贵且数值不稳定的几何运算。本论文从三个互补视角发展了黎曼深度学习的统一框架：可重用的神经模块、流形特定的网络架构以及底层几何的设计。它将批归一化从欧几里得空间和单个流形推广到广泛的李群和陀螺群，并将多项逻辑回归从欧几里得空间扩展到SPD流形，进而推广到一般黎曼流形。它进一步为几种重要的几何表示开发了神经网络，包括双曲空间的无约束模型、基于Busemann的双曲学习以及满秩相关矩阵。最后，它引入了SPD流形上的自适应且计算高效的黎曼度量，包括可学习的对数欧几里得几何以及快速稳定的基于Cholesky的几何。所提出的方法有理论分析支持，并通过数值实验以及在视觉、信号处理、图学习和基因组学中的应用得到验证。",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "math.DG"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-21T17:17:35Z",
+      "updated": "2026-07-21T17:17:35Z",
+      "announcement_date": "2026-07-22",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.19305v1",
+        "pdf": "https://arxiv.org/pdf/2607.19305v1"
+      },
+      "matched_keywords": [
+        "regression"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.19302",
+      "arxiv_id": "2607.19302v1",
+      "version": "v1",
+      "title": "Real-time optimal control with shallow recurrent decoder networks",
+      "title_zh": "基于浅层循环解码器网络的实时最优控制",
+      "authors": [
+        "Matteo Tomasetto",
+        "Francesco Braghin",
+        "J. Nathan Kutz",
+        "Andrea Manzoni"
+      ],
+      "abstract": "Controlling dynamical systems in real-time across multiple scenarios is critical to enabling adaptive control strategies, ensuring stability and efficiency. However, to tailor control actions in response to varying scenarios, traditional optimal control problems typically require several system simulations, which are often computationally demanding due to the high-dimensionality of the underlying spatio-temporal dynamics. In this work, we exploit SHallow REcurrent Decoder networks-based Reduced Order Modeling (SHRED-ROM) to synthesize a real-time closed-loop controller for high-dimensional and parametric dynamics, relying solely on limited state sensor readings. After training the model on a few optimal examples given by an expert demonstrator, SHRED-ROM mimics the expert behavior with effective distributed control actions in new scenarios, alleviating the curse of dimensionality. Moreover, a sensor forecaster is synthesized and used to close the loop at the latent level, thus efficiently mitigating possible sensor failures or delays. The performance of the proposed optimal control strategy is finally assessed on three challenging high-dimensional cases dealing with either parametric density control or fluid flow control.",
+      "abstract_zh": "在多种场景下实时控制动力系统对于实现自适应控制策略、确保稳定性和效率至关重要。然而，为了根据变化场景定制控制动作，传统最优控制问题通常需要多次系统仿真，由于底层时空动力学的高维性，这些仿真往往计算量巨大。在本工作中，我们利用基于浅层循环解码器网络的降阶建模（SHRED-ROM）来合成高维参数化动力学的实时闭环控制器，仅依赖有限的状态传感器读数。在通过专家演示器给出的少量最优示例训练模型后，SHRED-ROM在新场景中通过有效的分布式控制动作模仿专家行为，缓解了维度灾难。此外，我们合成了一种传感器预测器，并在潜在层面用于闭环控制，从而有效缓解可能的传感器故障或延迟。最后，在三个具有挑战性的高维案例（涉及参数化密度控制或流体流动控制）中评估了所提出的最优控制策略的性能。",
+      "categories": [
+        "cs.LG",
+        "math.OC"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-21T17:13:49Z",
+      "updated": "2026-07-21T17:13:49Z",
+      "announcement_date": "2026-07-22",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.19302v1",
+        "pdf": "https://arxiv.org/pdf/2607.19302v1"
+      },
+      "matched_keywords": [
+        "high-dimensional"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.19296",
+      "arxiv_id": "2607.19296v1",
+      "version": "v1",
+      "title": "Metamodel-based methodology for uncertainty propagation and global sensitivity analysis of tailings dam-breach flows",
+      "title_zh": "基于元模型的尾矿坝溃坝水流不确定性传播与全局敏感性分析方法",
+      "authors": [
+        "Yuri Taglieri Sáo",
+        "Geraldo de Freitas Maciel",
+        "Julian Cardoso Eleutério"
+      ],
+      "abstract": "Tailings dam-breach analyses are essential for flood-hazard assessment, emergency planning and risk estimation, but their results are strongly affected by uncertainties in breach development, released volume and tailings rheology. This study proposes an efficient probabilistic methodology that integrates uncertainty quantification and global sensitivity analysis for tailings dam-breach studies. High-dimensional outputs (spatial maps) and the computational cost of deterministic simulations are addressed through dimensionality reduction and metamodeling. The methodology is demonstrated on a benchmark case with complex terrain using HEC-RAS v6.6 and considering uncertainties in breach parameters and rheological properties. The results quantify uncertainty in maximum flow depth and arrival time, characterize their statistical distributions and identify the spatial influence of the main input variables through sensitivity maps. Sensitivity indices reveal the dominance of breach parameters near the dam and yield stress farther downstream. The modular and non-intrusive framework can be coupled with other deterministic models and applied to different dam-breach scenarios, supporting more standardized and risk-informed assessments.",
+      "abstract_zh": "尾矿坝溃坝分析对于洪水灾害评估、应急规划和风险估计至关重要，但其结果受到溃口发展、释放体积和尾矿流变特性不确定性的强烈影响。本研究提出了一种高效的概率方法，将不确定性量化和全局敏感性分析集成于尾矿坝溃坝研究中。通过降维和元建模解决了高维输出（空间图）和确定性模拟计算成本的问题。该方法在复杂地形的基准案例中进行了演示，使用HEC-RAS v6.6，并考虑了溃口参数和流变特性的不确定性。结果量化了最大水深和到达时间的不确定性，表征了其统计分布，并通过敏感性图识别了主要输入变量的空间影响。敏感性指数揭示了溃口参数在坝附近的优势地位以及屈服应力在下游的主导作用。该模块化、非侵入式框架可与其他确定性模型耦合，并应用于不同的溃坝场景，支持更标准化和基于风险的评估。",
+      "categories": [
+        "stat.AP",
+        "physics.flu-dyn"
+      ],
+      "primary_category": "stat.AP",
+      "published": "2026-07-21T17:04:55Z",
+      "updated": "2026-07-21T17:04:55Z",
+      "announcement_date": "2026-07-22",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.19296v1",
+        "pdf": "https://arxiv.org/pdf/2607.19296v1"
+      },
+      "matched_keywords": [
+        "statistical",
+        "high-dimensional"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.19271",
+      "arxiv_id": "2607.19271v1",
+      "version": "v1",
+      "title": "Model-Agnostic Meta Learning for Differentiable MPC",
+      "title_zh": "面向可微分MPC的模型无关元学习",
+      "authors": [
+        "Salma Elfeki",
+        "Riccardo Zuliani",
+        "Niklas Schmid",
+        "Efe C. Balta",
+        "John Lygeros"
+      ],
+      "abstract": "Applying policy optimization to Model Predictive Control (MPC) yields high-performance and reliable controllers. However, the resulting controllers often overfit their training conditions and suffer significant performance degradation in unseen tasks. We propose a novel framework combining policy optimization with meta-learning to train highly adaptable MPC controllers. Our approach enables rapid adaptation to unseen tasks, maintaining high performance at a fraction of the computational cost required for full retraining. Furthermore, we integrate system identification into the pipeline to continuously refine both the MPC hyperparameters and the underlying predictive models. We validate our proposed methodology on a Ball-on-Plate system, demonstrating superior adaptability across various parameterized trajectory-tracking tasks.",
+      "abstract_zh": "将策略优化应用于模型预测控制（MPC）可产生高性能且可靠的控制器。然而，所得控制器往往过度拟合其训练条件，在未见任务中性能显著下降。我们提出了一种将策略优化与元学习相结合的新框架，用于训练高度自适应的MPC控制器。我们的方法能够快速适应未见任务，以远低于完全重新训练所需计算成本的一小部分保持高性能。此外，我们将系统辨识集成到流程中，以持续优化MPC超参数和底层预测模型。我们在球板系统上验证了所提出的方法，展示了在各种参数化轨迹跟踪任务中的卓越适应性。",
+      "categories": [
+        "eess.SY",
+        "math.OC"
+      ],
+      "primary_category": "eess.SY",
+      "published": "2026-07-21T16:42:11Z",
+      "updated": "2026-07-21T16:42:11Z",
+      "announcement_date": "2026-07-22",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.19271v1",
+        "pdf": "https://arxiv.org/pdf/2607.19271v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.19270",
+      "arxiv_id": "2607.19270v1",
+      "version": "v1",
+      "title": "GUIDED Network-Agnostic Feature Initialization for Spatial Transferability in GNN-based Models",
+      "title_zh": "GUIDED：面向GNN模型空间可迁移性的网络无关特征初始化方法",
+      "authors": [
+        "Alessandro Scalese",
+        "Santhanakrishnan Narayanan",
+        "Constantinos Antoniou"
+      ],
+      "abstract": "The Traffic Assignment Problem is a fundamental but computationally expensive component of transportation planning. While Graph Neural Networks have emerged as fast, data-driven surrogates, their practical deployment is severely constrained by a spatial generalization gap. Standard models rely on transductive feature initializations that tie travel demand to fixed network topologies, preventing seamless transfer to new urban environments. To overcome this structural limitation, this research proposes a network-agnostic initialization layer, termed Geometrically Unconstrained Inductive Demand EmbeDding (GUIDED). By injecting travel demand as a scalar attribute on auxiliary virtual links rather than as specific node features, this modular framework standardizes the input space regardless of network scale. Extensive experimental evaluation across multiple urban topologies demonstrates that a Heterogeneous Graph Attention Network (HetGAT) model integrated with the proposed GUIDED layer maintains state-of-the-art predictive accuracy on single-network tasks, while demonstrating superior robustness to out-of-distribution demand patterns and maintaining a distinct performance advantage over the baseline even under severe data scarcity. Notably, the proposed feature initialization enables highly parameter-efficient domain adaptation for inter-network transfer learning without artificial input homogenization, establishing a robust foundation for truly inductive models. At the same time, the optimized scatter operations of the initialization layer yield an approximate 50% reduction in training time per epoch compared to the baseline approach. Furthermore, while demonstrated on vehicular traffic, this fundamental abstraction of spatial topology provides a versatile blueprint for generalized origin-destination spatial problems, such as freight logistics and multimodal network optimization.",
+      "abstract_zh": "交通分配问题是交通规划中一个基础但计算成本高昂的组成部分。尽管图神经网络已成为快速、数据驱动的替代模型，但其实际部署受到空间泛化差距的严重制约。标准模型依赖于传导性特征初始化，将出行需求与固定网络拓扑绑定，从而阻碍了向新城市环境的无缝迁移。为克服这一结构性限制，本研究提出了一种网络无关的初始化层，称为几何无约束归纳需求嵌入（GUIDED）。通过将出行需求作为辅助虚拟链路上的标量属性而非特定节点特征注入，该模块化框架标准化了输入空间，不受网络规模影响。跨多个城市拓扑的广泛实验评估表明，集成所提出的GUIDED层的异构图注意力网络（HetGAT）模型在单网络任务上保持了最先进的预测精度，同时对分布外需求模式表现出更强的鲁棒性，即使在数据严重稀缺的情况下也保持了对基线的显著性能优势。值得注意的是，所提出的特征初始化方法无需人工输入同质化即可实现高度参数高效的跨网络迁移学习域适应，为真正的归纳模型奠定了坚实基础。同时，初始化层的优化分散操作相比基线方法使每轮训练时间减少了约50%。此外，尽管在车辆交通上进行了验证，这种空间拓扑的基本抽象为广义的起讫点空间问题（如货运物流和多模式网络优化）提供了通用蓝图。",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-21T16:41:59Z",
+      "updated": "2026-07-21T16:41:59Z",
+      "announcement_date": "2026-07-22",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.19270v1",
+        "pdf": "https://arxiv.org/pdf/2607.19270v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.19241",
+      "arxiv_id": "2607.19241v1",
+      "version": "v1",
+      "title": "Thermodynamics-Informed Input Reparameterization for Neural Prediction of Real-Fluid Thermodynamic Properties in Supercritical Combustion",
+      "title_zh": "热力学信息引导的输入重参数化用于超临界燃烧中真实流体热力学性质的神经预测",
+      "authors": [
+        "Haoze Zhang",
+        "Han Li",
+        "Ke Xiao",
+        "Yangchen Xu",
+        "Runze Mao",
+        "Zhi X. Chen"
+      ],
+      "abstract": "Real-fluid thermodynamic property evaluation is a major computational cost in supercritical combustion simulations. In the enthalpy-based pressure-correction formulation, the closure evaluates temperature T, density $ρ$, and compressibility coefficient $ψ$ from the solver state (h,p,Y) through enthalpy-temperature inversion and repeated real-fluid equation-of-state evaluations. Neural-network surrogates offer fixed-cost inference, but direct mapping from (h,p,Y) to $(T,ρ,ψ)$ must capture the enthalpy-temperature relation and non-ideal equation-of-state response, resulting in a complex regression problem. This work introduces a thermodynamics-informed input reparameterization strategy, termed target-aligned input reparameterization (TAIR). TAIR replaces the raw enthalpy coordinate of each property network with a target-matched thermodynamic coordinate: the temperature network uses a temperature estimate obtained by inverting a constant-$c_p$ ideal-gas mixture enthalpy approximation, whereas the density and compressibility networks use an ideal-gas density estimate. These algebraic transformations use only solver-available variables and species constants, guiding the networks to learn real-fluid departures from ideal-gas baselines rather than reconstructing the full closure from raw enthalpy. The method is assessed using supercritical methane-oxygen counterflow flame data against a raw-input baseline and target-inconsistent cross-reparameterization controls. TAIR reduces held-out RMSE by factors of about 1.5, 2.0, and 7.5 for T, $ρ$, and $ψ$, respectively. For an unseen strain-rate flame within the augmented thermodynamic envelope, the corresponding factors are 3.6, 14.5, and 6.0. The target-inconsistent controls perform worse, indicating that the gains arise from thermodynamically matched input design rather than generic preprocessing.",
+      "abstract_zh": "真实流体热力学性质评估是超临界燃烧模拟中的主要计算成本。在基于焓的压力修正公式中，闭合通过焓温反演和重复的真实流体状态方程评估，从求解器状态(h,p,Y)计算温度T、密度ρ和压缩系数ψ。神经网络代理提供固定成本推理，但从(h,p,Y)到(T,ρ,ψ)的直接映射必须捕捉焓温关系和非理想状态方程响应，导致复杂的回归问题。本文引入了一种热力学信息引导的输入重参数化策略，称为目标对齐输入重参数化(TAIR)。TAIR将每个性质网络的原始焓坐标替换为目标匹配的热力学坐标：温度网络使用通过反演恒定cp理想气体混合物焓近似获得的温度估计，而密度和压缩系数网络使用理想气体密度估计。这些代数变换仅使用求解器可用的变量和物种常数，引导网络学习真实流体偏离理想气体基线的偏差，而不是从原始焓重建完整的闭合。该方法使用超临界甲烷-氧对冲火焰数据与原始输入基线和目标不一致的交叉重参数化控制进行评估。TAIR将T、ρ和ψ的留出RMSE分别降低了约1.5、2.0和7.5倍。对于增广热力学包络内未见过的应变率火焰，相应的因子为3.6、14.5和6.0。目标不一致的控制表现更差，表明增益来自热力学匹配的输入设计，而非通用预处理。",
+      "categories": [
+        "cs.LG",
+        "physics.comp-ph",
+        "physics.flu-dyn"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-21T16:12:30Z",
+      "updated": "2026-07-21T16:12:30Z",
+      "announcement_date": "2026-07-22",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.19241v1",
+        "pdf": "https://arxiv.org/pdf/2607.19241v1"
+      },
+      "matched_keywords": [
+        "regression"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.19240",
+      "arxiv_id": "2607.19240v1",
+      "version": "v1",
+      "title": "A Complete Characterization of Optimal Subgradient Methods for Lipschitz Convex Minimization",
+      "title_zh": "Lipschitz凸最小化问题中最优次梯度方法的完整刻画",
+      "authors": [
+        "Aaron Zoll",
+        "Benjamin Grimmer"
+      ],
+      "abstract": "We consider the design of optimal fixed-step first-order methods for $M$-Lipschitz convex optimization given $\\|x_0-x_\\star\\|\\leq D$. Prior works have identified several distinct fixed-step methods, parameterized by a matrix of stepsizes $W$, with the (information-theoretic) minimax optimal rate $MD/\\sqrt{N+1}$ of objective gap convergence. We provide a complete characterization of every optimal fixed-step method. Moreover, we show every optimal fixed-step method can be derived from the constructive approach of~\\cite{constructive_approach} and provide a polyhedral representation of the set of optimal methods through proof multipliers. From this characterization, we show that no anytime optimal fixed-step subgradient methods exist.",
+      "abstract_zh": "我们考虑在给定$\\|x_0-x_\\star\\|\\leq D$条件下，针对$M$-Lipschitz凸优化问题的最优固定步长一阶方法设计。先前的研究已经确定了若干不同的固定步长方法，这些方法由步长矩阵$W$参数化，并具有目标间隙收敛的（信息论）极小极大最优速率$MD/\\sqrt{N+1}$。我们提供了每个最优固定步长方法的完整刻画。此外，我们证明了每个最优固定步长方法都可以从~\\cite{constructive_approach}的构造性方法推导出来，并通过证明乘子给出了最优方法集合的多面体表示。基于这一刻画，我们证明了不存在任何时间最优的固定步长次梯度方法。",
+      "categories": [
+        "math.OC"
+      ],
+      "primary_category": "math.OC",
+      "published": "2026-07-21T16:10:46Z",
+      "updated": "2026-07-21T16:10:46Z",
+      "announcement_date": "2026-07-22",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.19240v1",
+        "pdf": "https://arxiv.org/pdf/2607.19240v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.19237",
+      "arxiv_id": "2607.19237v1",
+      "version": "v1",
+      "title": "DBMol: Design of High-Affinity, Target-Specific Small Molecules through Structure Prediction Models",
+      "title_zh": "DBMol：通过结构预测模型设计高亲和力、靶点特异性小分子",
+      "authors": [
+        "Yiming Qin",
+        "Kai Yi",
+        "Miruna Cretu",
+        "Sjors H. W. Scheres",
+        "Pietro Liò",
+        "Pascal Frossard"
+      ],
+      "abstract": "Designing small molecule ligands that bind with high affinity to specific protein pockets is a fundamental goal in drug discovery, as small molecules constitute a major fraction of approved therapeutics. Recent breakthroughs in structure prediction, such as AlphaFold-3 and Boltz-2, enable accurate biomolecular interaction prediction and show promise as foundation models for downstream tasks, including binding affinity prediction. We propose to leverage these models and introduce DBMol, a new structure predictor-guided framework for de novo small molecule design. DBMol formulates an alternating optimization and projection process. In the optimization stage, DBMol starts from an initial molecule and uses gradient-based optimization to improve pocket-specific interactions and predicted binding affinity using a structure prediction model. In the projection stage, a flow-matching model maps the optimized molecular graph to discrete and chemically valid molecules. Experiments show that DBMol effectively optimizes the Boltz-2 affinity proxy and generates molecules with strong predicted affinity and specificity under Boltz-2 evaluation. To reduce self-confirmation bias, we further evaluate generated molecules using held-out metrics, including AF3-based evaluation. DBMol substantially improves pocket coverage while maintaining molecular diversity over unconditional generation, and is competitive under held-out metrics despite the absence of reference-ligand supervision. These results support the promise of structure prediction models as effective optimization signals for de novo molecular design.",
+      "abstract_zh": "设计能够以高亲和力结合特定蛋白口袋的小分子配体是药物发现的基本目标，因为小分子构成了获批治疗药物的大部分。近期结构预测的突破，如AlphaFold-3和Boltz-2，能够准确预测生物分子相互作用，并显示出作为下游任务（包括结合亲和力预测）基础模型的潜力。我们提出利用这些模型，并引入DBMol，一种新的结构预测器引导的从头小分子设计框架。DBMol制定了一个交替优化和投影过程。在优化阶段，DBMol从初始分子开始，使用基于梯度的优化来改善口袋特异性相互作用和预测结合亲和力，利用结构预测模型。在投影阶段，流匹配模型将优化的分子图映射为离散且化学有效的分子。实验表明，DBMol有效优化了Boltz-2亲和力代理，并生成了在Boltz-2评估下具有强预测亲和力和特异性的分子。为减少自我确认偏差，我们进一步使用保留指标（包括基于AF3的评估）评估生成的分子。与无条件生成相比，DBMol在保持分子多样性的同时显著提高了口袋覆盖率，并且在保留指标下具有竞争力，尽管缺乏参考配体监督。这些结果支持了结构预测模型作为从头分子设计有效优化信号的潜力。",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-21T16:07:07Z",
+      "updated": "2026-07-21T16:07:07Z",
+      "announcement_date": "2026-07-22",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.19237v1",
+        "pdf": "https://arxiv.org/pdf/2607.19237v1"
+      },
+      "matched_keywords": [
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.19234",
+      "arxiv_id": "2607.19234v1",
+      "version": "v1",
+      "title": "In-Context Time Series Classification with Random Convolutional Features",
+      "title_zh": "基于随机卷积特征的上下文时间序列分类",
+      "authors": [
+        "Joscha Cüppers",
+        "Jilles Vreeken"
+      ],
+      "abstract": "Time series classification is central to domains like medical signal analysis, industrial monitoring, and sensor-based activity recognition, where class information manifests as localized shapes, specific frequencies, temporal shifts, or complex cross-channel interactions. Random convolutional transforms efficiently map these sequences to fixed-dimensional tabular features but are traditionally paired with simple linear classifiers. We investigate whether a pretrained tabular foundation model can more effectively harness these rich representations. We propose MASHT, a pipeline that marries MultiRocket and Hydra features with the power of in-context tabular foundation models. By leveraging a pretrained tabular foundation model, our approach completely bypasses task-specific model training, requiring only feature extraction and direct inference. Extensive experiments demonstrate that MASHT matches state-of-the-art time series classification baselines on univariate tasks, achieving a lower average rank than HIVE-COTE 2.0. On multivariate datasets, MASHT remains highly competitive with the strongest reference methods.",
+      "abstract_zh": "时间序列分类在医学信号分析、工业监控和基于传感器的活动识别等领域至关重要，其中类别信息表现为局部形状、特定频率、时间偏移或复杂的跨通道交互。随机卷积变换能高效地将这些序列映射为固定维度的表格特征，但传统上仅与简单的线性分类器结合使用。我们研究预训练的表格基础模型是否能更有效地利用这些丰富表示。我们提出MASHT，一种将MultiRocket和Hydra特征与上下文表格基础模型能力相结合的流程。通过利用预训练的表格基础模型，我们的方法完全绕过了特定任务的模型训练，仅需特征提取和直接推理。大量实验表明，MASHT在单变量任务上匹配了最先进的时间序列分类基线，平均排名低于HIVE-COTE 2.0。在多变量数据集上，MASHT与最强参考方法保持高度竞争力。",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-21T16:04:35Z",
+      "updated": "2026-07-21T16:04:35Z",
+      "announcement_date": "2026-07-22",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.19234v1",
+        "pdf": "https://arxiv.org/pdf/2607.19234v1"
+      },
+      "matched_keywords": [
+        "time series"
+      ],
+      "translation_status": "translated"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "date": "2026-07-19",
-  "updated_at": "2026-07-21T12:09:18Z",
+  "updated_at": "2026-07-22T12:12:25Z",
   "papers": [
     {
       "id": "2607.17299",
@@ -238,6 +238,48 @@
       "links": {
         "abs": "https://arxiv.org/abs/2607.17255v1",
         "pdf": "https://arxiv.org/pdf/2607.17255v1"
+      },
+      "matched_keywords": [
+        "stochastic"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.18332",
+      "arxiv_id": "2607.18332v1",
+      "version": "v1",
+      "title": "ChemHyperMag: Physics-informed magnetic hypergraph learning improves molecular ADMET prediction",
+      "title_zh": "ChemHyperMag：物理信息驱动的磁超图学习提升分子ADMET预测",
+      "authors": [
+        "Hexiao Ding",
+        "Hongzhao Chen",
+        "Jing Lan",
+        "Yufeng Jiang",
+        "Zihong Luo",
+        "Zehua Xiong",
+        "Tianlong Ruan",
+        "Yunlin Mao",
+        "Nga Chun Ng",
+        "Gwing Kei Yip",
+        "Gerald W. Y. Cheng",
+        "Kate Inyoung Oh",
+        "Jing Cai",
+        "Liang-Ting Lin",
+        "Jung Sun Yoo"
+      ],
+      "abstract": "Accurate prediction of ADMET (Absorption, Distribution, Metabolism, Excretion, and Toxicity) is important for drug discovery. Most predictors use undirected molecular graphs and pairwise edges. This choice misses asymmetric interactions, nonreversible dynamics, and motif level effects from functional groups and ring systems. We propose ChemHyperMag for multitask ADMET prediction under missing labels. ChemHyperMag builds a functional group hypergraph from rings, BRICS fragments, Bemis-Murcko scaffolds, and bonds. It also defines a potential driven nonreversible flow guided by electronegativity and Gasteiger partial charges. The resulting circulation is encoded by a Hermitian magnetic Laplacian and processed with a magnetic Chebyshev encoder. We perturb magnetic phases to form stochastic views and train with an InfoNCE objective. Experiments on multiple ADMET benchmarks show improvements over recent methods with fewer labeled samples and no conformers. ChemHyperMag is scalable and provides interpretable directional signals through its magnetic phases.",
+      "abstract_zh": "准确预测ADMET（吸收、分布、代谢、排泄和毒性）对药物发现至关重要。大多数预测器使用无向分子图和成对边，这忽略了不对称相互作用、不可逆动力学以及来自官能团和环系的基序级效应。我们提出ChemHyperMag用于缺失标签下的多任务ADMET预测。ChemHyperMag从环、BRICS片段、Bemis-Murcko骨架和键构建官能团超图，并定义了由电负性和Gasteiger部分电荷引导的势驱动不可逆流。由此产生的循环通过Hermitian磁拉普拉斯算子编码，并使用磁切比雪夫编码器处理。我们扰动磁相位以形成随机视图，并使用InfoNCE目标进行训练。在多个ADMET基准上的实验表明，与最近的方法相比，该方法在更少的标记样本和无构象的情况下取得了改进。ChemHyperMag具有可扩展性，并通过其磁相位提供可解释的方向信号。",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-19T13:33:35Z",
+      "updated": "2026-07-19T13:33:35Z",
+      "announcement_date": "2026-07-19",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.18332v1",
+        "pdf": "https://arxiv.org/pdf/2607.18332v1"
       },
       "matched_keywords": [
         "stochastic"
@@ -569,6 +611,71 @@
       },
       "matched_keywords": [
         "stochastic",
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.18330",
+      "arxiv_id": "2607.18330v1",
+      "version": "v1",
+      "title": "Physics-Guided Masked Multi-Task Network for Edge-Friendly Battery Health Diagnostics from Sto-chastically Fragmented Charging Profiles",
+      "title_zh": "物理引导的掩码多任务网络用于从随机碎片化充电曲线进行边缘友好的电池健康诊断",
+      "authors": [
+        "Shuhao Chen",
+        "Tianyu Shi",
+        "Chengyi Tu"
+      ],
+      "abstract": "The deployment of reliable lithium-ion battery management systems is crucial for accelerating electrification, yet the joint prognosis of State of Health (SOH) and Remaining Useful Life (RUL) remains severely hindered by task heteroscedasticity. Conventional multi-task learning frameworks fail to balance the bounded, low-variance noise of SOH estimation with the unbounded, nonlinearly expanding uncertainty of long-term RUL predictions. Here, we present the Rotary SOH-Injected Prior Battery Transformer (RoSIP-Batt), a unified co-estimation framework that resolves these optimization conflicts. By formulating joint prediction as a Bayesian multi-task objective, RoSIP-Batt introduces a homoscedastic uncertainty weighting mechanism to dynamically scale task-specific gradients based on learned residual noise levels. The architecture leverages decoupled dual classification tokens and a per-dimension gated fusion mechanism, secured by a gradient-detachment operator to prevent high-variance RUL updates from corrupting the stable SOH representation space. To capture electrochemical degradation patterns without relying on absolute cycle steps, Rotary Position Embedding (RoPE) is incorporated into a shared Transformer backbone to model translation-invariant relative temporal profiles. Crucially, the intermediate SOH estimate is directly injected into the RUL regression head as a physical degradation prior. Evaluations across the NASA, MIT-Stanford, and HUST datasets show that RoSIP-Batt significantly outperforms state-of-the-art baselines, reducing SOH estimation error to 1.994% MAE on NASA and restricting RUL prediction error to 62.85 cycles on Stanford. These findings establish RoSIP-Batt as a highly generalizable, computationally efficient solution suitable for real-time embedded BMS deployment.",
+      "abstract_zh": "部署可靠的锂离子电池管理系统对于加速电气化至关重要，然而健康状态（SOH）和剩余使用寿命（RUL）的联合预测仍然受到任务异方差性的严重阻碍。传统的多任务学习框架无法平衡SOH估计的有界、低方差噪声与长期RUL预测的无界、非线性扩展不确定性。本文提出了旋转SOH注入先验电池变压器（RoSIP-Batt），一种统一的联合估计框架，解决了这些优化冲突。通过将联合预测表述为贝叶斯多任务目标，RoSIP-Batt引入了一种同方差不确定性加权机制，基于学习到的残差噪声水平动态缩放任务特定梯度。该架构利用解耦的双分类令牌和每维度门控融合机制，并通过梯度分离算子防止高方差RUL更新破坏稳定的SOH表示空间。为了在不依赖绝对循环步数的情况下捕捉电化学退化模式，将旋转位置嵌入（RoPE）集成到共享Transformer主干中，以建模平移不变的相对时间轮廓。关键的是，中间SOH估计作为物理退化先验直接注入到RUL回归头中。在NASA、MIT-Stanford和HUST数据集上的评估表明，RoSIP-Batt显著优于最先进的基线，在NASA上将SOH估计误差降低到1.994% MAE，在Stanford上将RUL预测误差限制在62.85个循环。这些发现确立了RoSIP-Batt作为一种高度通用、计算高效的解决方案，适用于实时嵌入式BMS部署。",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-19T08:20:12Z",
+      "updated": "2026-07-19T08:20:12Z",
+      "announcement_date": "2026-07-19",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.18330v1",
+        "pdf": "https://arxiv.org/pdf/2607.18330v1"
+      },
+      "matched_keywords": [
+        "bayesian",
+        "regression",
+        "optimization"
+      ],
+      "translation_status": "translated"
+    },
+    {
+      "id": "2607.18329",
+      "arxiv_id": "2607.18329v1",
+      "version": "v1",
+      "title": "Dynamic Loss Balancing for Joint SOH and RUL Prediction of Lithium-Ion Batteries via a Rotary SOH-Injected Prior Battery Transformer",
+      "title_zh": "用于锂离子电池SOH与RUL联合预测的动态损失平衡方法：基于旋转SOH注入先验的电池Transformer",
+      "authors": [
+        "Shuhao Chen",
+        "Tianyu Shi",
+        "Yiwen Huang",
+        "Chengyi Tu"
+      ],
+      "abstract": "The deployment of reliable lithium-ion battery management systems is crucial for accelerating electrification, yet the joint prognosis of State of Health (SOH) and Remaining Useful Life (RUL) remains severely hindered by task heteroscedasticity. Conventional multi-task learning frameworks fail to balance the bounded, low-variance noise of SOH estimation with the unbounded, nonlinearly expanding uncertainty of long-term RUL predictions. Here, we present the Rotary SOH-Injected Prior Battery Transformer (RoSIP-Batt), a unified co-estimation framework that resolves these optimization conflicts. By formulating joint prediction as a Bayesian multi-task objective, RoSIP-Batt introduces a homoscedastic uncertainty weighting mechanism to dynamically scale task-specific gradients based on learned residual noise levels. The architecture leverages decoupled dual classification tokens and a per-dimension gated fusion mechanism, secured by a gradient-detachment operator to prevent high-variance RUL updates from corrupting the stable SOH representation space. To capture electrochemical degradation patterns without relying on absolute cycle steps, Rotary Position Embedding (RoPE) is incorporated into a shared Transformer backbone to model translation-invariant relative temporal profiles. Crucially, the intermediate SOH estimate is directly injected into the RUL regression head as a physical degradation prior. Evaluations across the NASA, MIT-Stanford, and HUST datasets show that RoSIP-Batt significantly outperforms state-of-the-art baselines, reducing SOH estimation error to 1.994% MAE on NASA and restricting RUL prediction error to 62.85 cycles on Stanford. These findings establish RoSIP-Batt as a highly generalizable, computationally efficient solution suitable for real-time embedded BMS deployment.",
+      "abstract_zh": "部署可靠的锂离子电池管理系统对于加速电气化至关重要，然而健康状态（SOH）与剩余使用寿命（RUL）的联合预测仍受到任务异方差性的严重阻碍。传统的多任务学习框架无法平衡SOH估计的有界、低方差噪声与长期RUL预测的无界、非线性扩展不确定性。本文提出了旋转SOH注入先验电池Transformer（RoSIP-Batt），一种统一协同估计框架，解决了这些优化冲突。通过将联合预测表述为贝叶斯多任务目标，RoSIP-Batt引入了一种同方差不确定性加权机制，基于学习到的残差噪声水平动态缩放任务特定梯度。该架构利用解耦的双分类令牌和逐维度门控融合机制，并通过梯度分离算子防止高方差RUL更新破坏稳定的SOH表示空间。为了在不依赖绝对循环步数的情况下捕捉电化学退化模式，将旋转位置编码（RoPE）集成到共享Transformer主干中，以建模平移不变的相对时间轮廓。关键的是，中间SOH估计作为物理退化先验直接注入RUL回归头。在NASA、MIT-Stanford和HUST数据集上的评估表明，RoSIP-Batt显著优于最先进的基线方法，在NASA上将SOH估计误差降低至1.994% MAE，在Stanford上将RUL预测误差限制在62.85个循环内。这些发现确立了RoSIP-Batt作为一种高度通用、计算高效的解决方案，适用于实时嵌入式BMS部署。",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG",
+      "published": "2026-07-19T08:11:40Z",
+      "updated": "2026-07-19T08:11:40Z",
+      "announcement_date": "2026-07-19",
+      "links": {
+        "abs": "https://arxiv.org/abs/2607.18329v1",
+        "pdf": "https://arxiv.org/pdf/2607.18329v1"
+      },
+      "matched_keywords": [
+        "bayesian",
+        "regression",
         "optimization"
       ],
       "translation_status": "translated"
