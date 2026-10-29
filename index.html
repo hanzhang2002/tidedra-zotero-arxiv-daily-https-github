@@ -6,8 +6,27 @@
     <meta name="description" content="每日抓取、翻译并检索 arXiv 论文的个人中文阅读站。">
     <title>ArXiv 中文日报</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>α</text></svg>">
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("personal-arxiv-daily-theme");
+          var theme =
+            saved === "dark" || saved === "light"
+              ? saved
+              : window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="https://unpkg.com/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/styles.css">
     <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+    <script src="https://unpkg.com/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://unpkg.com/katex@0.16.9/dist/contrib/auto-render.min.js" crossorigin="anonymous" defer></script>
     <script src="assets/app.js" defer></script>
   </head>
   <body>
@@ -35,6 +54,10 @@
         </div>
         <button class="icon-button mobile-filter-button" id="mobileFilterButton" type="button" title="筛选" aria-label="打开筛选">
           <i data-lucide="list-filter"></i>
+        </button>
+        <button class="icon-button theme-toggle" id="themeToggleButton" type="button" title="切换深浅色主题" aria-label="切换深浅色主题">
+          <i data-lucide="sun" class="theme-icon-sun"></i>
+          <i data-lucide="moon" class="theme-icon-moon"></i>
         </button>
         <button class="icon-button" id="settingsButton" type="button" title="设置" aria-label="打开设置">
           <i data-lucide="settings-2"></i>
@@ -119,6 +142,7 @@
         <div class="empty-state" id="emptyState" hidden>
           <i data-lucide="search-x"></i>
           <h2>没有找到符合条件的论文</h2>
+          <p>试试更换日期、清除领域筛选，或改用更宽泛的关键词</p>
           <button class="secondary-button" id="resetFiltersButton" type="button">
             <i data-lucide="rotate-ccw"></i>
             重置筛选
