@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ArXiv 中文日报 · 沉浸极简阅读版。单栏衬线排版，专注阅读每日论文的中文摘要。">
+    <title>ArXiv 中文日报 · 阅读版</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>α</text></svg>">
+    <script>
+      // anti-FOUC：在 CSS 之前确定深浅色，阅读版用独立存储键，与经典版互不干扰
+      (function () {
+        try {
+          var saved = localStorage.getItem("personal-arxiv-daily-reader-theme");
+          var theme =
+            saved === "dark" || saved === "light"
+              ? saved
+              : window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="https://unpkg.com/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="reader.css">
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+    <script src="https://unpkg.com/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://unpkg.com/katex@0.16.9/dist/contrib/auto-render.min.js" crossorigin="anonymous" defer></script>
+    <script src="reader.js" defer></script>
+  </head>
+  <body>
+    <div class="reading-progress" id="readingProgress" aria-hidden="true"></div>
+
+    <header class="reader-topbar">
+      <a class="reader-brand" href="./" aria-label="ArXiv 中文日报 阅读版首页">
+        <span class="reader-brand-mark" aria-hidden="true"><i data-lucide="feather"></i></span>
+        <span class="reader-brand-text">
+          <strong>ArXiv 中文日报</strong>
+          <small>阅读版 · READER</small>
+        </span>
+      </a>
+
+      <form class="reader-search" id="searchForm" role="search">
+        <i data-lucide="search" aria-hidden="true"></i>
+        <input id="searchInput" type="search" autocomplete="off"
+               placeholder="搜索标题、摘要或作者（按 / 聚焦）" aria-label="搜索论文">
+      </form>
+
+      <div class="reader-actions">
+        <a class="reader-switch" href="../../" title="切换到经典版">
+          <i data-lucide="layout-grid" aria-hidden="true"></i>
+          <span>经典版</span>
+        </a>
+        <button class="reader-icon-button" id="themeToggleButton" type="button"
+                title="切换深浅色主题" aria-label="切换深浅色主题">
+          <i data-lucide="sun" class="reader-icon-sun"></i>
+          <i data-lucide="moon" class="reader-icon-moon"></i>
+        </button>
+      </div>
+    </header>
+
+    <main class="reader-main">
+      <div class="reader-datenav">
+        <button class="reader-icon-button compact" id="olderDateButton" type="button"
+                title="前一日" aria-label="前一日">
+          <i data-lucide="chevron-left"></i>
+        </button>
+
+        <div class="reader-datetext">
+          <h1 id="pageTitle">今日论文</h1>
+          <p id="resultSummary">正在加载论文数据</p>
+        </div>
+
+        <label class="reader-datepick">
+          <i data-lucide="calendar-days" aria-hidden="true"></i>
+          <input id="datePicker" type="date" aria-label="选择论文日期">
+        </label>
+
+        <button class="reader-icon-button compact" id="newerDateButton" type="button"
+                title="后一日" aria-label="后一日">
+          <i data-lucide="chevron-right"></i>
+        </button>
+      </div>
+
+      <div class="reader-catbar" id="categoryChips" aria-label="按领域筛选"></div>
+
+      <section class="reader-feed" id="feed" aria-live="polite"></section>
+
+      <div class="reader-empty" id="emptyState" hidden>
+        <i data-lucide="search-x" aria-hidden="true"></i>
+        <h2>没有找到符合条件的论文</h2>
+        <p>试试更换日期、清除领域筛选，或改用更宽泛的关键词。</p>
+        <button class="reader-text-button" id="resetFiltersButton" type="button">
+          <i data-lucide="rotate-ccw"></i> 重置筛选
+        </button>
+      </div>
+
+      <div class="reader-more" id="loadMoreWrap" hidden>
+        <button class="reader-more-button" id="loadMoreButton" type="button">
+          加载更多 <i data-lucide="chevron-down" aria-hidden="true"></i>
+        </button>
+      </div>
+    </main>
+
+    <footer class="reader-footer">
+      <span>数据来源 <a href="https://arxiv.org/" target="_blank" rel="noreferrer">arXiv</a> · 摘要翻译由 DeepSeek 完成</span>
+      <a class="reader-footer-link" href="../../"><i data-lucide="layout-grid" aria-hidden="true"></i> 返回经典版</a>
+    </footer>
+  </body>
+</html>

@@ -90,3 +90,7 @@ data/
 ```powershell
 python -m unittest discover -s tests -v
 ```
+
+## 界面设计实验
+
+`designs/` 目录存放主站之外的备选前端设计，当前含一套「沉浸极简阅读版」（`designs/reader/`），与经典版共享同一份 `data/`，属实验性、尚未定稿。架构决策、本地预览、已知差距与定稿后的收尾路径见 [`designs/README.md`](designs/README.md)。
