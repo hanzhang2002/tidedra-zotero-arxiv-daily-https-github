@@ -2,21 +2,26 @@ import io
 import json
 import os
 import tempfile
+import threading
 import unittest
 from contextlib import redirect_stdout
-from datetime import date
+from datetime import date, datetime, timezone
 from pathlib import Path
 from urllib.error import URLError
 from unittest.mock import MagicMock, patch
 
 from scripts.update_papers import (
     OpenAICompatibleTranslator,
+    TruncatedTranslationError,
     apply_keyword_rules,
     build_search_query,
     fetch_arxiv,
+    load_existing_translations,
     merge_papers,
     parse_arxiv_feed,
     parse_json_object,
+    prune_history,
+    split_abstract_chunks,
     translate_papers,
     update_data,
 )
@@ -177,6 +182,7 @@ class UpdatePapersTests(unittest.TestCase):
             "api_base": "https://api.deepseek.com",
             "model": "deepseek-v4-flash",
             "max_consecutive_failures": 3,
+            "max_concurrent": 1,
         }
 
         output = io.StringIO()
@@ -220,6 +226,284 @@ class UpdatePapersTests(unittest.TestCase):
             self.assertTrue((data_dir / "months" / "2026-07.json").exists())
             written = json.loads((data_dir / "manifest.json").read_text(encoding="utf-8"))
             self.assertEqual(written["stats"]["total"], 1)
+
+    def test_load_existing_translations_scans_days_and_months(self):
+        with tempfile.TemporaryDirectory() as directory:
+            data_dir = Path(directory)
+            (data_dir / "months").mkdir(parents=True)
+            (data_dir / "days").mkdir(parents=True)
+            (data_dir / "months" / "2026-07.json").write_text(
+                json.dumps(
+                    {
+                        "papers": [
+                            {"id": "A", "title_zh": "旧标题", "abstract_zh": "旧摘要", "translation_status": "translated"},
+                            {"id": "B", "title_zh": "月标题", "abstract_zh": "月摘要", "translation_status": "translated"},
+                        ]
+                    }
+                ),
+                encoding="utf-8",
+            )
+            (data_dir / "days" / "2026-07-15.json").write_text(
+                json.dumps(
+                    {
+                        "papers": [
+                            {"id": "A", "title_zh": "新标题", "abstract_zh": "新摘要", "translation_status": "translated"},
+                            {"id": "C", "title_zh": "日标题", "abstract_zh": "日摘要", "translation_status": "translated"},
+                        ]
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            translations = load_existing_translations(data_dir)
+
+        self.assertEqual(translations["A"]["abstract_zh"], "新摘要")
+        self.assertEqual(translations["B"]["abstract_zh"], "月摘要")
+        self.assertEqual(translations["C"]["abstract_zh"], "日摘要")
+
+    def test_prune_history_moves_expired_files_to_trash(self):
+        with tempfile.TemporaryDirectory() as directory:
+            data_dir = Path(directory)
+            (data_dir / "days").mkdir(parents=True)
+            (data_dir / "months").mkdir(parents=True)
+            old_day = data_dir / "days" / "2024-01-15.json"
+            old_month = data_dir / "months" / "2024-01.json"
+            fresh_day = data_dir / "days" / "2026-07-15.json"
+            fresh_month = data_dir / "months" / "2026-07.json"
+            for path in (old_day, old_month, fresh_day, fresh_month):
+                path.write_text("{}", encoding="utf-8")
+
+            now = datetime(2026, 7, 15, tzinfo=timezone.utc)
+            trashed = prune_history(data_dir, retention_months=12, reference_date=date(2026, 7, 15), now=now)
+
+            self.assertFalse(old_day.exists())
+            self.assertFalse(old_month.exists())
+            self.assertTrue(fresh_day.exists())
+            self.assertTrue(fresh_month.exists())
+            self.assertEqual(sorted(trashed), ["days/2024-01-15.json", "months/2024-01.json"])
+            stamp = "20260715T000000Z"
+            self.assertTrue((data_dir / ".trash" / stamp / "days" / "2024-01-15.json").exists())
+            self.assertTrue((data_dir / ".trash" / stamp / "months" / "2024-01.json").exists())
+
+    def test_split_abstract_chunks_respects_sentence_boundaries(self):
+        text = "First sentence about statistics. Second sentence about bayesian methods. Third sentence about causal inference."
+        pieces = split_abstract_chunks(text, chunk_size=60, max_pieces=8)
+        self.assertGreaterEqual(len(pieces), 2)
+        for piece in pieces:
+            self.assertLessEqual(len(piece), 60)
+        self.assertEqual(" ".join(pieces), text)
+
+    def test_split_abstract_chunks_returns_single_piece_for_short_text(self):
+        self.assertEqual(split_abstract_chunks("short abstract", chunk_size=200), ["short abstract"])
+
+    def test_split_abstract_chunks_merges_tail_when_over_max_pieces(self):
+        text = ". ".join(f"sentence number {index}" for index in range(20))
+        pieces = split_abstract_chunks(text, chunk_size=25, max_pieces=3)
+        self.assertEqual(len(pieces), 3)
+
+    def test_translator_uses_chunked_path_for_long_abstract(self):
+        config = {
+            "api_base": "https://api.deepseek.com",
+            "model": "deepseek-v4-flash",
+            "max_retries": 1,
+            "chunk_threshold_chars": 100,
+            "chunk_size_chars": 70,
+            "chunk_max_pieces": 4,
+        }
+        long_abstract = (
+            "First sentence about statistical inference methods. "
+            "Second sentence about bayesian posterior computation. "
+            "Third sentence about causal identification strategies."
+        )
+        self.assertGreater(len(long_abstract), 60)
+
+        first_response = MagicMock()
+        first_response.__enter__.return_value.read.return_value = json.dumps(
+            {
+                "choices": [
+                    {
+                        "message": {"content": '{"title_zh":"标题","abstract_zh":"第一段。"}'},
+                        "finish_reason": "stop",
+                    }
+                ]
+            }
+        ).encode("utf-8")
+        second_response = MagicMock()
+        second_response.__enter__.return_value.read.return_value = json.dumps(
+            {
+                "choices": [
+                    {
+                        "message": {"content": '{"title_zh":"","abstract_zh":"第二段。"}'},
+                        "finish_reason": "stop",
+                    }
+                ]
+            }
+        ).encode("utf-8")
+        third_response = MagicMock()
+        third_response.__enter__.return_value.read.return_value = json.dumps(
+            {
+                "choices": [
+                    {
+                        "message": {"content": '{"title_zh":"","abstract_zh":"第三段。"}'},
+                        "finish_reason": "stop",
+                    }
+                ]
+            }
+        ).encode("utf-8")
+
+        with patch(
+            "scripts.update_papers.urllib.request.urlopen",
+            side_effect=[first_response, second_response, third_response],
+        ) as urlopen:
+            translator = OpenAICompatibleTranslator(config, "test-key")
+            title_zh, abstract_zh = translator.translate(
+                {"id": "1", "title": "Title", "abstract": long_abstract}
+            )
+
+        self.assertEqual(urlopen.call_count, 3)
+        self.assertEqual(title_zh, "标题")
+        self.assertEqual(abstract_zh, "第一段。 第二段。 第三段。")
+        first_payload = json.loads(urlopen.call_args_list[0].args[0].data.decode("utf-8"))
+        self.assertIn("piece_index", first_payload["messages"][1]["content"])
+        self.assertIn("piece_total", first_payload["messages"][1]["content"])
+
+    def test_translator_falls_back_to_chunked_on_truncation(self):
+        config = {
+            "api_base": "https://api.deepseek.com",
+            "model": "deepseek-v4-flash",
+            "max_retries": 1,
+            "chunk_threshold_chars": 5000,
+            "chunk_size_chars": 60,
+            "chunk_max_pieces": 4,
+        }
+        abstract = (
+            "First sentence about statistical inference methods. "
+            "Second sentence about bayesian posterior computation."
+        )
+        self.assertGreater(len(abstract), 40)
+
+        truncated = MagicMock()
+        truncated.__enter__.return_value.read.return_value = json.dumps(
+            {
+                "choices": [
+                    {"message": {"content": '{"title_zh":"标题","abstract_zh":"未结束'}, "finish_reason": "length"}
+                ]
+            }
+        ).encode("utf-8")
+        chunk_first = MagicMock()
+        chunk_first.__enter__.return_value.read.return_value = json.dumps(
+            {
+                "choices": [
+                    {
+                        "message": {"content": '{"title_zh":"标题","abstract_zh":"第一段。"}'},
+                        "finish_reason": "stop",
+                    }
+                ]
+            }
+        ).encode("utf-8")
+        chunk_second = MagicMock()
+        chunk_second.__enter__.return_value.read.return_value = json.dumps(
+            {
+                "choices": [
+                    {
+                        "message": {"content": '{"title_zh":"","abstract_zh":"第二段。"}'},
+                        "finish_reason": "stop",
+                    }
+                ]
+            }
+        ).encode("utf-8")
+
+        with patch(
+            "scripts.update_papers.urllib.request.urlopen",
+            side_effect=[truncated, chunk_first, chunk_second],
+        ) as urlopen:
+            translator = OpenAICompatibleTranslator(config, "test-key")
+            title_zh, abstract_zh = translator.translate(
+                {"id": "1", "title": "Title", "abstract": abstract}
+            )
+
+        self.assertEqual(urlopen.call_count, 3)
+        self.assertEqual(title_zh, "标题")
+        self.assertEqual(abstract_zh, "第一段。 第二段。")
+
+    def test_translator_reraises_truncation_when_abstract_short(self):
+        config = {
+            "api_base": "https://api.deepseek.com",
+            "model": "deepseek-v4-flash",
+            "max_retries": 1,
+            "chunk_threshold_chars": 5000,
+            "chunk_size_chars": 1200,
+        }
+        response = MagicMock()
+        response.__enter__.return_value.read.return_value = json.dumps(
+            {"choices": [{"message": {"content": '{"title_zh":"标题","abstract_zh":"未'}, "finish_reason": "length"}]}
+        ).encode("utf-8")
+
+        with patch("scripts.update_papers.urllib.request.urlopen", return_value=response):
+            translator = OpenAICompatibleTranslator(config, "test-key")
+            with self.assertRaises(TruncatedTranslationError):
+                translator.translate({"id": "1", "title": "Title", "abstract": "Abstract"})
+
+    def test_translate_papers_runs_concurrently(self):
+        papers = [
+            {"id": str(index), "title": f"Title {index}", "abstract": "Abstract"} for index in range(1, 5)
+        ]
+        config = {
+            "api_base": "https://api.deepseek.com",
+            "model": "deepseek-v4-flash",
+            "max_concurrent": 4,
+            "max_consecutive_failures": 10,
+        }
+
+        concurrency_lock = threading.Lock()
+        observed = {"active": 0, "peak": 0}
+
+        def fake_translate(paper):
+            with concurrency_lock:
+                observed["active"] += 1
+                observed["peak"] = max(observed["peak"], observed["active"])
+            try:
+                # Small sleep increases the chance that multiple workers overlap.
+                import time as _time
+                _time.sleep(0.05)
+                return (f"标题{paper['id']}", f"摘要{paper['id']}")
+            finally:
+                with concurrency_lock:
+                    observed["active"] -= 1
+
+        output = io.StringIO()
+        with patch.dict(os.environ, {"OPENAI_API_KEY": "test-key"}, clear=True):
+            with patch("scripts.update_papers.OpenAICompatibleTranslator") as translator_class:
+                translator_class.return_value.translate.side_effect = fake_translate
+                with redirect_stdout(output):
+                    stats = translate_papers(papers, config)
+
+        self.assertEqual(stats["translated"], 4)
+        self.assertGreaterEqual(observed["peak"], 2)
+        self.assertTrue(all(paper["translation_status"] == "translated" for paper in papers))
+
+    def test_translate_papers_reuses_existing_translations_without_api_calls(self):
+        papers = [
+            {"id": "1", "title": "Title", "abstract": "Abstract", "abstract_zh": "旧摘要", "title_zh": "旧标题"},
+            {"id": "2", "title": "Title", "abstract": "Abstract"},
+        ]
+        config = {
+            "api_base": "https://api.deepseek.com",
+            "model": "deepseek-v4-flash",
+            "max_concurrent": 2,
+        }
+
+        output = io.StringIO()
+        with patch.dict(os.environ, {"OPENAI_API_KEY": "test-key"}, clear=True):
+            with patch("scripts.update_papers.OpenAICompatibleTranslator") as translator_class:
+                translator_class.return_value.translate.return_value = ("新标题", "新摘要")
+                with redirect_stdout(output):
+                    stats = translate_papers(papers, config)
+
+        self.assertEqual(translator_class.return_value.translate.call_count, 1)
+        self.assertEqual(stats, {"translated": 1, "reused": 1, "failed": 0, "skipped": 0, "deferred": 0})
+        self.assertEqual(papers[0]["abstract_zh"], "旧摘要")
+        self.assertEqual(papers[1]["abstract_zh"], "新摘要")
 
 
 if __name__ == "__main__":

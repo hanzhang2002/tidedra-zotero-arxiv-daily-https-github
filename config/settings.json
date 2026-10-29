@@ -49,7 +49,11 @@
     "max_tokens": 4096,
     "timeout_seconds": 90,
     "max_retries": 2,
-    "max_consecutive_failures": 3
+    "max_consecutive_failures": 3,
+    "max_concurrent": 4,
+    "chunk_threshold_chars": 1600,
+    "chunk_size_chars": 1200,
+    "chunk_max_pieces": 8
   },
   "available_categories": [
     {"code": "stat.AP", "name": "应用统计", "group": "统计学"},
